@@ -1,0 +1,45 @@
+.l1-create-acc-btn i {
+  margin-left: 30px;
+}
+
+.l1-create-acc-btn .btn {
+  min-width: 268px;
+  height: 69px;
+  border-radius: 20px;
+  background-color: #FF7139;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  box-shadow: 0 26px 46px rgba(241, 139, 98, 0.5);
+  margin-top: 22px;
+}
+
+.btn-style-02:before {
+  width: 0%;
+  height: 100%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  border-radius: 20px;
+  background: #213053;
+  transition: all .5s;
+  opacity: 0;
+  z-index: -1;
+}
+
+.btn-style-02:hover {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.btn-style-02:hover:before {
+  box-shadow: 0px;
+  color: #fff;
+  opacity: 1;
+  width: 100%;
+}
+
