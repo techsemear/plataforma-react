@@ -4,54 +4,34 @@ import {Button} from '../Button'
 
 export default function Hero() {
   return (
-    <div className="hero-area-l-12 position-relative z-index-1 overflow-hidden">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div
-            className="col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1"
-            data-aos="fade-right"
-            data-aos-duration={800}
-            data-aos-once="true"
-          >
-            <div className="content">
-              <h1>Learn User Centered Design</h1>
-              <p>
-                Create custom landing pages with Shades that convert more
-                visitors than any website—no coding required.
-              </p>
-              <Button />              
-              <Ratings />
-            </div>
-          </div>
-          <div
-            className="col-xl-6 col-lg-5 col-md-8 order-lg-1 order-0"
-            data-aos="fade-left"
-            data-aos-duration={800}
-            data-aos-once="true"
-          >
-            <div className="hero-video-l12 position-relative text-center">
-              <img src="image/l6/l6-hero-img.png" alt="" className="w-100" />
-              <a
-                data-fancybox
-                href="https://www.youtube.com/watch?v=9yc1lfFZX-I"
-              >
-                <div className="d-inline-block video-icon d-inline-block">
-                  <i className="fas fa-play align-center" />
+      <div className="hero-area-l1  position-relative background-property" style={{background: 'url(./image/landing-1/hero-bg.png)'}}>
+        <div className="container">
+          <div className="row justify-content-center align-items-center">
+            <div className="col-xxl-5 col-xl-6 col-lg-6 col-md-10 order-lg-1 order-1" data-aos="fade-right" data-aos-delay={500} data-aos-duration={1000}>
+              <div className="content">
+                <h2>As conexões que mudarão o seu futuro!</h2>
+                <p>A plataforma desenvolvida para mentores e jovens universitários protagonistas que juntos buscam aprimorar suas habilidades profissionais e alcançar seus sonhos.
+                Conecte-se a nova era de aprendizado !</p>
+                <div className="l1-create-acc-btn">
+                  <a href="#" className="btn btn-style-02">Inscreva-se<i className="fas fa-angle-right" /></a>
                 </div>
-              </a>
-              <div className="video-area-shape-l-12">
-                <img src="image/l6/shape-2.svg" alt="" />
+              </div>
+            </div>
+            <div className="offset-xxl-2 col-xxl-5 offset-xl-1 col-xl-5 col-lg-6 col-md-8 order-lg-1 order-0" data-aos="fade-left" data-aos-delay={700} data-aos-duration={1000}>
+              <div className="hero-image-group-l1">
+                <div className="image-1">
+                  <img className="w-100" src="https://plataformasemear.netlify.app/image/header.png" alt="image" />
+                </div>
+                <div className="image-2">
+                  <img className="horizontal-move" src="https://plataformasemear.netlify.app/image/landing-1/chat-icon.svg" alt="image" />
+                </div>
+                <div className="image-3">
+                  <img className="vertical-move" src="https://plataformasemear.netlify.app/image/landing-1/icon-3d-heart.svg" alt="image" />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="hero-shape-l12-1 d-none d-sm-block">
-        <img src="./image/l6/shape-1.png" alt="" />
-      </div>
-      <div className="hero-shape-l12-2 d-none d-sm-block">
-        <img src="./image/l6/shape-3.png" alt="" />
-      </div>
-    </div>
-  )
+    )
 }
