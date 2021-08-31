@@ -5,6 +5,7 @@ import '../assets/fonts/typography-font/typo.css'
 import '../assets/fonts/fontawesome-5/css/all.css'
 import '../assets/css/aos.min.css'
 import React, { useEffect } from "react";
+import Image from 'next/image';
 
 import AOS from 'aos';
 
@@ -13,7 +14,7 @@ import '../components/Navbar/Navbar.css'
 import '../components/Hero/Hero.css'
 import '../components/Presentation/Presentation.css'
 import '../components/InstitutionalVideo/InstitutionalVideo.css';
-import '../components/Contributors/Contributors.css';
+import '../components/ContributorsList/ContributorsList.css';
 
 function MyApp({Component, pageProps}) {
   useEffect(() => {

@@ -1,5 +1,9 @@
+import Image from 'next/image';
 import {Ratings} from '../Ratings'
 import {Button} from '../Button'
+import headerImage from '../../assets/image/personagens/header.png';
+import chatImage from '../../assets/image/landing-1/chat-icon.svg';
+import heartImage from '../../assets/image/landing-1/chat-icon.svg';
 
 
 export default function Hero() {

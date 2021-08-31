@@ -1,3 +1,5 @@
+import {Button} from '../Button'
+
 export default function InstitutionalVideo() {
   const titulo = "Entenda na Prática";
   const subtitulo = "Assista ao nosso manifesto";

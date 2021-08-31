@@ -1,6 +1,5 @@
-const textButton = "Clique Aqui";
-
-export default function Button() {
+//const textButton = "Clique Aqui";
+export default function Button({textButton}) {
   return (
     <div>
     <div className="l1-create-acc-btn">

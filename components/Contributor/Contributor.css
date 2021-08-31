@@ -27,6 +27,17 @@ color: #878B90;
 margin-bottom: 45px;
 }
 
+.brand-area-l-17 .content h1 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 28px;
+  color: #878B90;
+  margin-bottom: 45px;
+  }
+
+
 .brand-area-l-17-items {
 margin: 0px -20px -45px -20px;
 }
@@ -116,4 +127,21 @@ margin: 0px 20px 45px 20px;
 
 .flex-wrap {
   flex-wrap: wrap !important;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) / -2);
+  margin-left: calc(var(--bs-gutter-x) / -2);
+}
+
+.row > * {
+  flex-shrink: 0;
+  padding-right: calc(var(--bs-gutter-x) / 2);
+  padding-left: calc(var(--bs-gutter-x) / 2);
+  margin-top: var(--bs-gutter-y);
 }
