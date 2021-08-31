@@ -6935,10 +6935,6 @@ fieldset:disabled .btn {
   line-height: 2 !important;
 }
 
-.bg-primary {
-  background-color: #1787FC !important;
-}
-
 .bg-secondary {
   background-color: #FF7139 !important;
 }
@@ -19292,10 +19288,6 @@ fieldset:disabled .btn {
 
 .bg-zumthor {
   background-color: #EBF5FF !important;
-}
-
-.bg-cloudburst {
-  background-color: #213053 !important;
 }
 
 .bg-mirage {

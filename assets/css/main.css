@@ -1072,86 +1072,6 @@ div#loading img {
   line-height: 28px;
 }
 
-.feature-border-l1 {
-  width: 100%;
-  height: 1px;
-  border: 1px solid #E6EAF4;
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-
-@media (min-width: 768px) {
-  .feature-border-l1 {
-    margin-top: 50px;
-    margin-bottom: 70px;
-  }
-}
-
-@media (min-width: 992px) {
-  .feature-border-l1 {
-    margin-top: 80px;
-    margin-bottom: 100px;
-  }
-}
-
-.user-rating-box-area {
-  padding-top: 45px;
-  margin-bottom: -30px;
-}
-
-@media (min-width: 992px) {
-  .user-rating-box-area {
-    padding-top: 0;
-  }
-}
-
-.user-rating-box-area .col-sm-6 {
-  margin-bottom: 30px;
-}
-
-.user-rating-box-area .rate-box {
-  box-shadow: 0 6px 0 rgba(23, 135, 252, 0.65);
-  border-radius: 25px;
-  padding: 30px 40px 35px 40px;
-}
-
-.user-rating-box-area .rate-box h3 {
-  color: #fff;
-  font-size: 60px;
-  font-weight: 600;
-  font-style: normal;
-  letter-spacing: -1px;
-  line-height: 66px;
-  margin-bottom: 30px;
-}
-
-.user-rating-box-area .rate-box p {
-  color: #fff;
-  font-size: 17px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 30px;
-  margin-bottom: 0;
-}
-
-.user-rating-box-area .rate-box ul {
-  margin: 0px -3px 7px -3px;
-}
-
-.user-rating-box-area .rate-box ul li {
-  margin: 0px 3px 0px 3px;
-}
-
-.user-rating-box-area .rate-box ul li i {
-  color: #FF7139;
-  font-size: 18px;
-}
-
-.user-rating-box-area .rate-box-2 {
-  box-shadow: 0 6px 0 rgba(33, 48, 83, 0.65);
-}
-
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
   Content Area-1-L1
         <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
@@ -15211,85 +15131,6 @@ Content Area-1 L-11-2
   color: #0F3D33 !important;
 }
 
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
-            Video Area-L-17
-          <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-.video-area-l-17 {
-  position: relative;
-  background: url(../image/l8/video-bg.png);
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding-top: 60px;
-  padding-bottom: 40px;
-  z-index: 1;
-}
-
-.video-area-l-17:before {
-  position: absolute;
-  content: '';
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(-45deg, #152649 0%, #4f525c 100%);
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: .6;
-}
-
-@media (min-width: 768px) {
-  .video-area-l-17 {
-    padding-top: 80px;
-    padding-bottom: 60px;
-  }
-}
-
-@media (min-width: 992px) {
-  .video-area-l-17 {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-}
-
-.video-area-l-17 .video-content a i {
-  background: #fff;
-  width: 96px;
-  height: 96px;
-  line-height: 96px;
-  border-radius: 50%;
-  text-align: center;
-  color: #50E3C2;
-  margin-bottom: 40px;
-}
-
-@media (min-width: 768px) {
-  .video-area-l-17 .video-content a i {
-    margin-bottom: 55px;
-  }
-}
-
-.video-area-l-17 .video-content h2 {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 50px;
-  letter-spacing: -0.3px;
-  color: #FFFFFF;
-  margin-bottom: 20px;
-}
-
-.video-area-l-17 .video-content p {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 32px;
-  color: #FFFFFF;
-}
 
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
             Pricing Area-L-17
@@ -15660,42 +15501,7 @@ Content Area-1 L-11-2
   background: #50E3C2;
 }
 
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
-            Brand Area-L-17
-          <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-.brand-area-l-17 {
-  padding-bottom: 60px;
-}
 
-@media (min-width: 768px) {
-  .brand-area-l-17 {
-    padding-bottom: 80px;
-  }
-}
-
-@media (min-width: 992px) {
-  .brand-area-l-17 {
-    padding-bottom: 130px;
-  }
-}
-
-.brand-area-l-17 .content p {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
-  color: #878B90;
-  margin-bottom: 45px;
-}
-
-.brand-area-l-17-items {
-  margin: 0px -20px -45px -20px;
-}
-
-.brand-area-l-17-items .single-brand {
-  margin: 0px 20px 45px 20px;
-}
 
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
             Testimonial Area-L-17

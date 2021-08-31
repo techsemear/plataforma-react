@@ -1,0 +1,119 @@
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
+Brand Area-L-17
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+.brand-area-l-17 {
+padding-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+.brand-area-l-17 {
+    padding-bottom: 80px;
+}
+}
+
+@media (min-width: 992px) {
+.brand-area-l-17 {
+    padding-bottom: 130px;
+}
+}
+
+.brand-area-l-17 .content p {
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 28px;
+color: #878B90;
+margin-bottom: 45px;
+}
+
+.brand-area-l-17-items {
+margin: 0px -20px -45px -20px;
+}
+
+.brand-area-l-17-items .single-brand {
+margin: 0px 20px 45px 20px;
+}
+
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container, .container-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container, .container-sm, .container-md {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container, .container-sm, .container-md, .container-lg {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+    max-width: 1320px;
+  }
+}
+
+.col-xl-9 {
+    flex: 0 0 auto;
+    width: 75%;
+}
+
+.col-lg-11 {
+    flex: 0 0 auto;
+    width: 91.66667%;
+}
+
+.col-md-12 {
+  flex: 0 0 auto;
+  width: 80%;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.justify-content-xl-between {
+  justify-content: space-between !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}

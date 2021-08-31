@@ -7,6 +7,8 @@ import Image from 'next/image'
 import { Navbar } from '../components/Navbar'
 import { Hero } from '../components/Hero'
 import { MentorArea } from '../components/MentorArea'
+import { Institutional } from '../components/Institutional'
+//import { Presentation } from '../components/Presentation'
 
 
 export default function Home() {
@@ -14,7 +16,7 @@ export default function Home() {
     <React.Fragment>
       <Navbar />
       <Hero />
-      <MentorArea />
+      <Institutional />
     </React.Fragment>
   )
 }
