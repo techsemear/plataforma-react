@@ -24,7 +24,7 @@ export default function Hero() {
             <div className="offset-xxl-2 col-xxl-5 offset-xl-1 col-xl-5 col-lg-6 col-md-8 order-lg-1 order-0" data-aos="fade-left" data-aos-delay={700} data-aos-duration={1000}>
               <div className="hero-image-group-l1">
                 <div className="image-1">
-                  <img className="w-100" src="https://plataformasemear.netlify.app/image/header.png" alt="image" />
+                  <Image src={headerImage} alt="logo" objectFit="contain"/>
                 </div>
                 <div className="image-2">
                   <img className="horizontal-move" src="https://plataformasemear.netlify.app/image/landing-1/chat-icon.svg" alt="image" />
