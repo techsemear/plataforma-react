@@ -3,7 +3,7 @@ import '../assets/css/bootstrap.css'
 import '../assets/fonts/icon-font/css/style.css'
 import '../assets/fonts/typography-font/typo.css'
 import '../assets/fonts/fontawesome-5/css/all.css'
-import '../assets/css/aos.min.css'
+//import '../assets/css/aos.min.css'
 import React, { useEffect } from "react";
 import Image from 'next/image';
 
