@@ -2,6 +2,55 @@
   Video Area-L-17
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
+.video-modal {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+}
+
+.video-modal .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-wrapper {
+  padding-top: 56.25%;
+  position: relative;
+  width: 100%;
+  background-color: #000;
+}
+
+.video-wrapper iframe,
+.video-wrapper img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border: none;
+}
+
+.video-wrapper .video-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .video-area-l-17 {
   position: relative;
   background: url('../../assets/image/l8/background-semear.jpg');

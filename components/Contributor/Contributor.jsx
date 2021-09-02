@@ -3,6 +3,7 @@ import Image from 'next/image'
 export default function Contributor({logo}) {
   const height = 60
   const width = 2 * height
+  
   return (
     <div
       className="single-brand "
