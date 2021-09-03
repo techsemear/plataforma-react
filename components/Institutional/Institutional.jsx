@@ -4,7 +4,7 @@ import {ContributorsList} from '../ContributorsList'
 
 export default function Institutional() {
   return (
-    <div className="presentation">
+    <div className="presentation" id = "QuemSomos">
         <Presentation />
         <InstitutionalVideo />
         <div className="row">

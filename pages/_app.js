@@ -15,6 +15,8 @@ import '../components/Hero/Hero.css'
 import '../components/Presentation/Presentation.css'
 import '../components/InstitutionalVideo/InstitutionalVideo.css';
 import '../components/ContributorsList/ContributorsList.css';
+import '../components/MentorArea/MentorArea.css';
+import '../components/MentorTestimonial/MentorTestimonial.css';
 
 function MyApp({Component, pageProps}) {
   useEffect(() => {

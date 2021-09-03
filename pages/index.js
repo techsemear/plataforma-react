@@ -8,6 +8,7 @@ import { Navbar } from '../components/Navbar'
 import { Hero } from '../components/Hero'
 import { MentorArea } from '../components/MentorArea'
 import { Institutional } from '../components/Institutional'
+import { MentorTestimonial } from '../components/MentorTestimonial'
 //import { Presentation } from '../components/Presentation'
 
 
@@ -17,6 +18,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Institutional />
+      <MentorArea />
+      <MentorTestimonial />
     </React.Fragment>
   )
 }

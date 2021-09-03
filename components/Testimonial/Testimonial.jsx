@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import mentorImage from '../../assets/image/mentor1.png'
 
-export default function MentorArea() {
+export default function Testimonial() {
   return (
     <div className="content-area-2-l1">
       <div className="container">
