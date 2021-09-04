@@ -1,1 +1,0 @@
-export { default as MentorTestimonial } from './MentorTestimonial'

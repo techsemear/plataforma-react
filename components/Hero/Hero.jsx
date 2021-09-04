@@ -28,7 +28,7 @@ export default function Hero() {
                 aprendizado !
               </p>
 
-              <Button>Inscreva-ses</Button>
+              <Button>Inscreva-se</Button>
             </div>
           </div>
 

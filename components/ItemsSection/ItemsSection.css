@@ -1,22 +1,3 @@
-.content-area-2-l1 {
-  padding-top: 50px;
-  padding-bottom: 60px;
-}
-
-@media (min-width: 768px) {
-  .content-area-2-l1 {
-    padding-top: 70px;
-    padding-bottom: 80px;
-  }
-}
-
-@media (min-width: 992px) {
-  .content-area-2-l1 {
-    padding-top: 130px;
-    padding-bottom: 130px;
-  }
-}
-
 .number-content-box-l1 {
   margin-top: 30px;
   margin-bottom: -60px;
@@ -82,14 +63,4 @@
   font-style: normal;
   letter-spacing: normal;
   line-height: 28px;
-}
-
-.content-2-l1-image-group {
-  position: relative;
-}
-
-.content-2-l1-image-group .image-2 {
-  position: absolute;
-  top: 17%;
-  left: 0%;
 }

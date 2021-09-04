@@ -1,8 +1,8 @@
 import logos from '../../assets/image/apoiadores/index.js'
-import { Contributor } from '../Contributor'
+import {Contributor} from '../Contributor'
 
 export default function ContributorsList() {
-  const titulo = 'Quem apoia e está junto com a gente:'
+  const title = 'Quem apoia e está junto com a gente:'
 
   return (
     <div className="brand-area-l-17">
@@ -10,8 +10,8 @@ export default function ContributorsList() {
         <div className="row justify-content-center">
           <div className="col-xl-9 col-lg-11 col-md-12">
             <div className="content text-center">
-              <h1>{titulo}</h1>
-              
+              <h1>{title}</h1>
+
               <br></br>
             </div>
             <div

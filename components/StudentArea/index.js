@@ -1,1 +1,1 @@
-export { default as MentorArea } from './MentorArea'
+export { default as StudentArea } from './StudentArea'

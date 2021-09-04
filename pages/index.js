@@ -1,16 +1,13 @@
 import React from 'react'
-
 import Head from 'next/head'
 import Image from 'next/image'
 
 // Components
-import { Navbar } from '../components/Navbar'
-import { Hero } from '../components/Hero'
-import { MentorArea } from '../components/MentorArea'
-import { Institutional } from '../components/Institutional'
-import { MentorTestimonial } from '../components/MentorTestimonial'
-//import { Presentation } from '../components/Presentation'
-
+import {Navbar} from '../components/Navbar'
+import {Hero} from '../components/Hero'
+import {MentorArea} from '../components/MentorArea'
+import {Institutional} from '../components/Institutional'
+import {StudentArea} from '../components/StudentArea'
 
 export default function Home() {
   return (
@@ -18,8 +15,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Institutional />
+      <StudentArea />
       <MentorArea />
-      <MentorTestimonial />
     </React.Fragment>
   )
 }

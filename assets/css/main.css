@@ -1294,25 +1294,6 @@ div#loading img {
   opacity: 0.7;
 }
 
-.testimonial-area-l-image-group .image-1 {
-  position: absolute;
-  top: 10%;
-  left: 0%;
-}
-
-@media (min-width: 992px) {
-  .testimonial-area-l-image-group .image-1 {
-    top: 30%;
-    left: 10%;
-  }
-}
-
-.testimonial-area-l-image-group .image-2 {
-  position: absolute;
-  bottom: 10%;
-  right: 10%;
-}
-
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
  Contact form Area-1-L1
         <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
