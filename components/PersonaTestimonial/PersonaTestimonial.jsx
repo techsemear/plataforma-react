@@ -1,5 +1,4 @@
 import Image from 'next/image'
-//import imageProfile from '../../assets/image/landing-1/team-image.png'
 
 export default function PersonaTestimonial({
   subtitle,
