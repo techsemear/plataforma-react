@@ -8,6 +8,7 @@ import {Hero} from '../components/Hero'
 import {MentorArea} from '../components/MentorArea'
 import {Institutional} from '../components/Institutional'
 import {StudentArea} from '../components/StudentArea'
+import {SignUp} from '../components/SignUp'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Institutional />
       <StudentArea />
       <MentorArea />
+      <SignUp />
     </React.Fragment>
   )
 }

@@ -19,6 +19,7 @@ import '../components/MentorArea/MentorArea.css'
 import '../components/StudentArea/StudentArea.css'
 import '../components/Testimonial/Testimonial.css'
 import '../components/PersonaTestimonial/PersonaTestimonial.css'
+import '../components/SignUp/SignUp.css'
 
 function MyApp({Component, pageProps}) {
   return <Component {...pageProps} />
