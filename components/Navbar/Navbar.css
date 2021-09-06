@@ -247,7 +247,7 @@
     align-items: center;
     font-weight: 600;
     font-size: 17px;
-    color: #1D263A;
+    color: #fff;
   }
   
   @media (min-width: 992px) {
@@ -343,10 +343,11 @@
   }
   
   .site-menu-main .nav-link-item {
-    color: #213053;
+    color: #fff;
     font-size: 15px;
     font-weight: 600;
     font-style: normal;
+    font-family: Poppins Light;
     letter-spacing: normal;
     position: relative;
   }

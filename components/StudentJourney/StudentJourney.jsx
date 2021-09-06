@@ -10,9 +10,6 @@ import {Button} from '../Button'
 export default function StudentJourney (){
   return (
     <div className="content-are-l1-1 bg-primary">
-      <div className="curve-image-l1">
-        <img src="./image/landing-1/white-shape-top.svg" alt="image" className="w-100" />
-      </div>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-10 order-2 order-lg-1" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>

@@ -4,12 +4,14 @@ import {Button} from '../Button'
 import headerImage from '../../assets/image/personagens/header.png'
 import chatImage from '../../assets/image/landing-1/chat-icon.svg'
 import heartImage from '../../assets/image/landing-1/chat-icon.svg'
-
+import headerBackgroundImage from '../../assets/image/background-header.png'
+import {Fragment} from 'react' 
 export default function Hero() {
   return (
+    <Fragment>
     <div
       className="hero-area-l1  position-relative background-property"
-      style={{background: 'url(./image/landing-1/hero-bg.png)'}}
+      style={{background: {headerBackgroundImage}}}
     >
       <div className="container">
         <div className="row justify-content-center align-items-center">
@@ -61,5 +63,7 @@ export default function Hero() {
         </div>
       </div>
     </div>
+    <div style={{height: 150, overflow: 'hidden'}}><svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{height: '100%', width: '100%'}}><path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style={{stroke: 'none', fill: '#11115d'}} /></svg></div>
+    </Fragment>
   )
 }

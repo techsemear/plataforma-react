@@ -888,7 +888,8 @@ div#loading img {
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
    Hero Area-L1
         <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-.hero-area-l1 {
+.hero-area-l1 {]
+  background: url("../../assets/image/background-header.png");
   padding-top: 100px;
   padding-bottom: 50px;
 }
