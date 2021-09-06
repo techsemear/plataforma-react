@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import {Testimonial} from '../Testimonial'
 import {ItemsSection} from '../ItemsSection'
+import {StudentJourney} from '../StudentJourney'
 import studentImage from '../../assets/image/footer.png'
 import globeImage from '../../assets/image/landing-1/h1-content-2-globe.png'
 import imageProfile1 from '../../assets/image/landing-1/team-image.png'
@@ -72,6 +73,7 @@ export default function studentArea() {
           </div>
         </div>
       </div>
+      <StudentJourney />
       <Testimonial personas={personas}> {title} </Testimonial>
     </div>
   )

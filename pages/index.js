@@ -9,6 +9,7 @@ import {MentorArea} from '../components/MentorArea'
 import {Institutional} from '../components/Institutional'
 import {StudentArea} from '../components/StudentArea'
 import {SignUp} from '../components/SignUp'
+import { StudentJourney } from '../components/StudentJourney'
 
 export default function Home() {
   return (
