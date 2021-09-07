@@ -51,6 +51,7 @@ const itemsText = [
 export default function studentArea() {
   return (
         <div className="jovem-area">
+          <div style={{height: 150, overflow: 'hidden'}}><svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{height: '100%', width: '100%'}}><path d="M0.00,49.98 C145.31,125.81 392.49,104.11 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style={{stroke: 'none', fill: '#11115d'}} /></svg></div>
           <StudentJourney />
           <div className="content-area-2-l1">
             <div className="container">

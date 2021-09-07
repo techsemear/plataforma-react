@@ -24,7 +24,7 @@ export default function Navbar() {
             <a href="#">
               {/* light version logo (logo must be black)*/}
               <img
-                src="image/logo/logo-black.png"
+                src="https://www.isemear.org.br/wp-content/uploads/2019/12/site200b.png"
                 alt=""
                 className="light-version-logo"
               />

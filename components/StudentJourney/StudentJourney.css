@@ -1,18 +1,18 @@
 .content-are-l1-1 {
   position: relative;
   z-index: 1;
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 @media (min-width: 768px) {
   .content-are-l1-1 {
-    padding-top: 80px;
+    padding-top: 50px;
   }
 }
 
 @media (min-width: 992px) {
   .content-are-l1-1 {
-    padding-top: 130px;
+    padding-top: 60px;
   }
 }
 
@@ -47,7 +47,7 @@
   box-shadow: 0 72px 54px rgba(23, 135, 252, 0.12);
   border-radius: 50px;
   background-color: #fff;
-  padding: 30px;
+  padding: 20px;
 }
 
 @media (min-width: 480px) {
@@ -70,7 +70,7 @@
 
 @media (min-width: 1200px) {
   .content-box-l1-1 {
-    padding: 60px 65px 70px 65px;
+    padding: 40px 50px 40px 50px;
   }
 }
 
@@ -82,9 +82,7 @@
 }
 
 .l1-get-start-btn .btn {
-  width: 247px;
-  height: 69px;
-  box-shadow: 0 26px 46px rgba(241, 139, 98, 0.5);
+  width: 100%;
   border-radius: 20px;
   background-color: #FF7139;
   color: #fff;
@@ -93,7 +91,8 @@
   font-style: normal;
   letter-spacing: normal;
   line-height: 30px;
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .l1-get-start-btn i {
