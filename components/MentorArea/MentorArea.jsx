@@ -52,7 +52,7 @@ export default function MentorArea() {
       <div className="content-area-2-l1">
         <div className="container">
           <div className="row justify-content-center align-items-center">
-            <div className="offset-xxl-1 col-xxl-5 offset-xl-1 col-xl-5 col-lg-6 col-md-10">
+            <div className="offset-xxl-1 col-xxl-5 col-xl-6 col-lg-6 col-md-10">
               <div
                 className="content-2-l1-image-group"
                 data-aos="fade-up"
@@ -69,6 +69,7 @@ export default function MentorArea() {
         </div>
       </div>
       <Testimonial personas={personas}> {title} </Testimonial>
+      <div className="feature-area-l1"></div>
     </div>
   )
 }

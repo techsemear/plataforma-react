@@ -23,6 +23,7 @@ import '../components/StudentJourney/StudentJourney.css'
 import '../components/Testimonial/Testimonial.css'
 import '../components/PersonaTestimonial/PersonaTestimonial.css'
 import '../components/SignUp/SignUp.css'
+import '../components/Institutional/Institutional.css'
 
 function MyApp({Component, pageProps}) {
   return <Component {...pageProps} />

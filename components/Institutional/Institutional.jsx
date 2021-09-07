@@ -10,7 +10,7 @@ export default function Institutional() {
         <InstitutionalVideo />
         <div className="row">
           <div className="col-lg-12">
-            <div className="feature-border-l1" />
+          <div className="feature-area-l1"/>
           </div>
         </div>
         <ContributorsList />
