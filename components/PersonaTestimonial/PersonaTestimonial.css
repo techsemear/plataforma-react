@@ -187,21 +187,21 @@
 }
 
 .feature-area-l1 {
-  padding-top: 100px;
-  padding-bottom: 150px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 @media (min-width: 768px) {
   .feature-area-l1 {
-    padding-top: 100px;
-    padding-bottom: 150px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 
 @media (min-width: 992px) {
   .feature-area-l1 {
-    padding-top: 100px;
-    padding-bottom: 150px;
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 }
 

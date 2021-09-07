@@ -8,7 +8,7 @@ export default function ContributorsList() {
     <div className="brand-area-l-17">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-xl-9 col-lg-11 col-md-12">
+          <div className="col-xl-9 col-lg-11">
             <div className="content text-center">
               <h1>{title}</h1>
 

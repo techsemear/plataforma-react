@@ -34,11 +34,11 @@ const personas = [
 const itemsText = [
   {
     index: '1',
-    text: 'Seja o responsável por agir para a melhoria de oportunidades educacionais no Brasil;',
+    text: 'Seja o responsável por agir para a melhoria de oportunidades educacionais no Brasil',
   },
   {
     index: '2',
-    text: 'Gere Mudanças ! Impacte a vida de diversos jovens que serão o futuro da nossa nação;',
+    text: 'Gere Mudanças ! Impacte a vida de diversos jovens que serão o futuro da nossa nação',
   },
   {
     index: '3',

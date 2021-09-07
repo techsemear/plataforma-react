@@ -6,7 +6,6 @@ export default function Institutional() {
   return (
     <div className="presentation" id = "QuemSomos">
         <Presentation />
-        <p className ="evasaoText" >Atualmente atingimos 100% de não evasão entre nossos bolsistas !</p>
         <InstitutionalVideo />
         <div className="row">
           <div className="col-lg-12">

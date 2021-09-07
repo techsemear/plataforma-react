@@ -17,6 +17,14 @@
   }
 }
 
+.background-dark {
+  background-color: #11115d;
+}
+
+.background-orange {
+  background-color: #FF7139;
+}
+
 .content-2-l1-image-group {
   position: relative;
 }

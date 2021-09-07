@@ -207,3 +207,15 @@
   }
 }
 
+.w-100 {
+  width: 100% !important;
+}
+
+.evasaoText
+{
+    font-family: 'Caveat';
+    font-size: 24pt;
+    text-align: center;
+    color: #FF7139;
+}
+

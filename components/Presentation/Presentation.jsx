@@ -7,6 +7,7 @@ export default function Presentation() {
   const textCard1 = 'Jovens Impactados pelos projetos do ISemear'
   const titleCard2 = '+15000'
   const textCard2 = 'Jovens Impactados por nossos canais digitais'
+  const textEvasion = 'Atualmente atingimos 100% de não evasão entre nossos bolsistas !'
 
   return (
     <div className="feature-area-l1">
@@ -61,5 +62,6 @@ export default function Presentation() {
         </div>
       </div>
     </div>
+    
   )
 }

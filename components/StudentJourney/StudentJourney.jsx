@@ -1,8 +1,5 @@
 import Image from 'next/image'
-import {Testimonial} from '../Testimonial'
-import {ItemsSection} from '../ItemsSection'
-import studentImage from '../../assets/image/footer.png'
-import globeImage from '../../assets/image/landing-1/h1-content-2-globe.png'
+
 import journeyImage from '../../assets/image/journeyImage.png'
 import cardImage from '../../assets/image/landing-1/h1-content2-card-tupi.png'
 import {Button} from '../Button'
@@ -14,20 +11,20 @@ export default function StudentJourney (){
       <div className="content-are-l1-1 bg-primary">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-10 order-2 order-lg-1" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
+          <div className="col-xxl-5 col-xl-6 col-lg-6 col-md-10 order-2 order-lg-1" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
             <div className="content-area-l1-image-group">
               <div className="image-1">
                 <Image className="w-100" src= {journeyImage} alt="image" />
               </div>
             </div>
           </div>
-          <div className="offset-xxl-2 col-xxl-5 offset-xl-1 col-xl-6 col-lg-6 col-md-10 order-0 order-lg-1" data-aos="fade-up" data-aos-delay={800} data-aos-duration={1000}>
+          <div className="offset-xxl-2 col-xxl-5 offset-xl-1 col-xl-5 col-lg-6 col-md-10 order-0 order-lg-1" data-aos="fade-up" data-aos-delay={800} data-aos-duration={1000}>
             <div className="content-box-l1-1 section__heading">
               <div className="cap-image d-none d-sm-block">
                 <Image className="vertical-move" src={cardImage} alt="image" />
               </div>
               <div>
-                <h2>A cada nova DESCOBERTA, uma nova CONQUISTA!</h2>
+                <h3>A cada nova DESCOBERTA, uma nova CONQUISTA!</h3>
                 <p>A sua Jornada no Instituto Semear é construída com base em um conjunto de ferramentas e métodos comprovados que servem para jovens que sentem na pele as dificuldades de se graduar e de <strong>se tornar protagonista da sua própria carreira profissional.</strong>
                 </p>
                 <div className="l1-get-start-btn">

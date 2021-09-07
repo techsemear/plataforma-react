@@ -42,12 +42,18 @@
   background-color: #ff7139;
 }
 
+.number-content-box-l1 .number--3 {
+  box-shadow: 0 5px 0 green;
+  background-color: #7FFF70;
+}
+
 .number-content-box-l1 .content {
   margin-left: 30px;
 }
 
 .number-content-box-l1 .content h4 {
   color: #213053;
+  font-family: Poppins;
   font-size: 24px;
   font-weight: 600;
   font-style: normal;
@@ -58,9 +64,41 @@
 .number-content-box-l1 .content p {
   opacity: 0.8;
   color: #213053;
-  font-size: 15px;
+  font-family: Poppins;
+  font-size: 17px;
   font-weight: 400;
   font-style: normal;
   letter-spacing: normal;
   line-height: 28px;
 }
+
+.text-color-white p {
+  color:#fff !important;
+  text-align: left !important;
+}
+
+.text-color-white h2 {
+  color:#fff !important;
+}
+
+.text-color-white h4 {
+  color: rgba(135, 160, 170, 0.7);
+}
+
+.text-color-dark p {
+  color:#213053 !important;
+  text-align: left !important;
+}
+
+.text-color-dark h2 {
+  color:#213053 !important;
+}
+
+.text-color-dark h4 {
+  color: #6B6B6B;
+}
+
+.content-text-h4 span {
+  border-bottom: 4px solid #FF7139;
+}
+

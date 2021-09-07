@@ -1,90 +1,3 @@
-.content-area-2-l1 {
-  background-color: #11115d;
-  padding-top: 50px;
-  padding-bottom: 60px;
-}
-
-@media (min-width: 768px) {
-  .content-area-2-l1 {
-    padding-top: 70px;
-    padding-bottom: 80px;
-  }
-}
-
-@media (min-width: 992px) {
-  .content-area-2-l1 {
-    padding-top: 130px;
-    padding-bottom: 130px;
-  }
-}
-
-.number-content-box-l1 {
-  margin-top: 30px;
-  margin-bottom: -60px;
-}
-
-@media (min-width: 768px) {
-  .number-content-box-l1 {
-    margin-top: 50px;
-  }
-}
-
-@media (min-width: 992px) {
-  .number-content-box-l1 {
-    margin-top: 70px;
-  }
-}
-
-.number-content-box-l1 li {
-  margin-bottom: 60px;
-}
-
-.number-content-box-l1 .number {
-  width: 100px;
-  height: 66px;
-  line-height: 66px;
-  box-shadow: 0 5px 0 rgba(23, 135, 252, 0.65);
-  border-radius: 20px;
-  background-color: #1787fc;
-  text-align: center;
-}
-
-.number-content-box-l1 .number span {
-  color: #fff;
-  font-size: 32px;
-  font-weight: 500;
-  font-style: normal;
-  letter-spacing: -0.4px;
-}
-
-.number-content-box-l1 .number--2 {
-  box-shadow: 0 5px 0 rgba(255, 113, 57, 0.65);
-  background-color: #ff7139;
-}
-
-.number-content-box-l1 .content {
-  margin-left: 30px;
-}
-
-.number-content-box-l1 .content h4 {
-  color: #213053;
-  font-size: 24px;
-  font-weight: 600;
-  font-style: normal;
-  letter-spacing: -0.3px;
-  line-height: 32px;
-}
-
-.number-content-box-l1 .content p {
-  opacity: 0.8;
-  color: #213053;
-  font-size: 15px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 28px;
-}
-
 .content-2-l1-image-group {
   position: relative;
 }
@@ -142,7 +55,7 @@
 }
 
 .testimonial-area-l1-items .content p span {
-  border-bottom: 4px solid #FF7139;
+  border-bottom: 4px solid #ff7139;
 }
 
 .testimonial-area-l1-items .content h5 {
@@ -177,7 +90,6 @@
   margin-left: calc(var(--bs-gutter-x) / -2);
 }
 
-
 .testimonial-area-l1 {
   padding-top: 60px;
   padding-bottom: 50px;
@@ -196,3 +108,40 @@
     padding-bottom: 124px;
   }
 }
+
+.testimonial-text-white h2 {
+  color: #fff !important;
+  font-weight: 100 !important;
+}
+
+.testimonial-text-white h5 {
+  color: #fff !important;
+  font-weight: 100 !important;
+}
+
+.testimonial-text-white p {
+  color: #fff !important;
+  font-weight: 100 !important;
+}
+
+.testimonial-text-white small {
+  color: #fff !important;
+  font-weight: 100 !important;
+}
+
+.testimonial-text-dark h2 {
+  color: #213053 !important;
+  font-weight: 100 !important;
+}
+
+.testimonial-text-dark h5 {
+  color: #213053 !important;
+  font-weight: 70 !important;
+}
+
+.testimonial-text-dark p {
+  color: #213053 !important;
+  font-weight: 70 !important;
+}
+
+

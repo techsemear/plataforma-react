@@ -6,6 +6,7 @@ export default function PersonaTestimonial({
   name,
   profession,
   imageProfile,
+  dark = false,
 }) {
   return (
     <div
@@ -20,11 +21,13 @@ export default function PersonaTestimonial({
           alt="image-profile"
           objectFit="contain"
         />
-        <p>
-          “<span>{subtitle}</span> {text}”
-        </p>
-        <h5>{name}</h5>
-        <small>{profession}</small>
+        <div className={ dark ? "testimonial-text-white" : "testimonial-text-dark"}>
+          <p>
+            “<span>{subtitle}</span> {text}”
+          </p>
+          <h5>{name}</h5>
+          <small>{profession}</small>
+        </div>
       </div>
     </div>
   )
