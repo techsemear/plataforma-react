@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import {Button} from '../Button'
+import {Button} from '../../components/Button'
 import headerImage from '../../assets/image/personagens/header.png'
 import headerBackgroundImage from '../../assets/image/background-header.png'
 import {Fragment} from 'react'

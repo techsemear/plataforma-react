@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import {PersonaTestimonial} from '../PersonaTestimonial'
+import {PersonaTestimonial} from '../../components/PersonaTestimonial'
 import heartShape from '../../assets/image/landing-1/h1-client-heart-shape.png'
 import startShape from '../../assets/image/landing-1/h1-client-start-shape.png'
 
@@ -10,10 +10,16 @@ export default function Testimonial({
   orange = false,
 }) {
   return (
-    <div
-      className='testimonial-area2-l1 position-relative bg-testimonial' 
-    >
-      <div className={dark ? 'background-dark' : orange ? 'background-orange' : 'background-white'}>
+    <div className="testimonial-area2-l1 position-relative bg-testimonial">
+      <div
+        className={
+          dark
+            ? 'background-dark'
+            : orange
+            ? 'background-orange'
+            : 'background-white'
+        }
+      >
         <div className="curve-image-l1"></div>
         <div className="testimonial-area-l-image-group">
           <div className="image-1">
@@ -36,8 +42,12 @@ export default function Testimonial({
               data-aos-duration={1000}
             >
               <div className="section__heading text-center">
-                <div className={ dark ? "testimonial-text-white" : "testimonial-text-dark"}>
-                  <h2 >{children}</h2>
+                <div
+                  className={
+                    dark ? 'testimonial-text-white' : 'testimonial-text-dark'
+                  }
+                >
+                  <h2>{children}</h2>
                 </div>
               </div>
             </div>

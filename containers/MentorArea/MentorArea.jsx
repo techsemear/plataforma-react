@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import {Testimonial} from '../Testimonial'
-import {ItemsSection} from '../ItemsSection'
+import {ItemsSection} from '../../components/ItemsSection'
 import mentorImage from '../../assets/image/mentor1.png'
 import imageProfile1 from '../../assets/image/landing-1/team-image.png'
 import imageProfile2 from '../../assets/image/landing-1/team-image-2.png'
 import imageProfile3 from '../../assets/image/landing-1/team-image-3.png'
 
-const title = 'Mentores da Rede Semear';
-const journey = 'Jornada do Mentor';
+const title = 'Mentores da Rede Semear'
+const journey = 'Jornada do Mentor'
 const personas = [
   {
     name: 'Alan Farmer',
@@ -30,7 +30,7 @@ const personas = [
     profession: 'Digital Marketer',
     imageProfile: imageProfile3,
   },
-];
+]
 const itemsText = [
   {
     index: '1',
@@ -43,8 +43,8 @@ const itemsText = [
   {
     index: '3',
     text: 'O ISemear possui uma ampla rede de contatos, seja você também parte das conexões que geram o Futuro!',
-  }
-];
+  },
+]
 
 export default function MentorArea() {
   return (

@@ -1,15 +1,13 @@
 import React from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
 
-// Components
-import {Navbar} from '../components/Navbar'
-import {Hero} from '../components/Hero'
-import {MentorArea} from '../components/MentorArea'
-import {Institutional} from '../components/Institutional'
-import {StudentArea} from '../components/StudentArea'
-import {SignUp} from '../components/SignUp'
-import { StudentJourney } from '../components/StudentJourney'
+// Containers
+import {Navbar} from '../containers/Navbar'
+import {Hero} from '../containers/Hero'
+import {MentorArea} from '../containers/MentorArea'
+import {Institutional} from '../containers/Institutional'
+import {StudentArea} from '../containers/StudentArea'
+import {SignUp} from '../containers/SignUp'
 
 export default function Home() {
   return (
