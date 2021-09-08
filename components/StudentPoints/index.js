@@ -1,0 +1,1 @@
+export { default as StudentPoints } from './StudentPoints'

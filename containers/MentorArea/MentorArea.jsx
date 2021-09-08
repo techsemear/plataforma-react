@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import {Testimonial} from '../Testimonial'
 import {ItemsSection} from '../../components/ItemsSection'
+import {Section} from '../../components/Section'
 import mentorImage from '../../assets/image/mentor1.png'
 import imageProfile1 from '../../assets/image/landing-1/team-image.png'
 import imageProfile2 from '../../assets/image/landing-1/team-image-2.png'
@@ -68,8 +69,9 @@ export default function MentorArea() {
           </div>
         </div>
       </div>
+      <Section id ="mentorTestimonial" bgColor="secondary"> 
       <Testimonial personas={personas}> {title} </Testimonial>
-      <div className="feature-area-l1"></div>
+      </Section>
     </div>
   )
 }

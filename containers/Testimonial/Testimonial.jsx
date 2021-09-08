@@ -2,6 +2,7 @@ import Image from 'next/image'
 import {PersonaTestimonial} from '../../components/PersonaTestimonial'
 import heartShape from '../../assets/image/landing-1/h1-client-heart-shape.png'
 import startShape from '../../assets/image/landing-1/h1-client-start-shape.png'
+import { Section } from '../../components/Section'
 
 export default function Testimonial({
   personas,

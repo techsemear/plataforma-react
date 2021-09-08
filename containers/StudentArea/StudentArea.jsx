@@ -2,11 +2,13 @@ import Image from 'next/image'
 import {Testimonial} from '../Testimonial'
 import {ItemsSection} from '../../components/ItemsSection'
 import {StudentJourney} from '../../components/StudentJourney'
+import {StudentPoints} from '../../components/StudentPoints'
 import studentImage from '../../assets/image/footer.png'
 import globeImage from '../../assets/image/landing-1/h1-content-2-globe.png'
 import imageProfile1 from '../../assets/image/landing-1/team-image.png'
 import imageProfile2 from '../../assets/image/landing-1/team-image-2.png'
 import imageProfile3 from '../../assets/image/landing-1/team-image-3.png'
+import { Section } from '../../components/Section'
 
 const title = 'Quem já venceu essa jornada'
 const journey = 'Jornada do Jovem'
@@ -66,36 +68,13 @@ export default function studentArea() {
       </div>
 
       <StudentJourney />
-      <div className="content-area-2-l1 background-dark">
-        <div className="container">
-          <div className="row justify-content-center align-items-center">
-            <ItemsSection itemsText={itemsText} dark={themeDark}>
-              {' '}
-              {journey}{' '}
-            </ItemsSection>
-            <div className="offset-xxl-1 col-xxl-5 offset-xl-1 col-xl-5 col-lg-6 col-md-10">
-              <div
-                className="content-2-l1-image-group"
-                data-aos="fade-up"
-                data-aos-delay={800}
-                data-aos-duration={1000}
-              >
-                <div className="image-1">
-                  <Image src={studentImage} alt="image" />
-                </div>
-                <div className="image-2">
-                  <Image className="w-100 spin" src={globeImage} alt="image" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <StudentPoints />
+      <Section bgColor = "primary" id= "studentTestimonial">
       <Testimonial personas={personas} dark={themeDark}>
         {' '}
         {title}{' '}
       </Testimonial>
+      </Section>
     </div>
   )
 }
