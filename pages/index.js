@@ -19,7 +19,6 @@ export default function Home() {
       <Presentation />
       <About />
       <Partners />
-
       <StudentArea />
       <MentorArea />
       <SignUp />

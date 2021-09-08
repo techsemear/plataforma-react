@@ -16,11 +16,15 @@ const menuItems = [
     linkTo: '#parceiros',
   },
   {
-    label: 'Contato',
+    label: 'Jornada do Jovem',
     linkTo: '#',
   },
   {
-    label: 'Conheça',
+    label: 'Jornada do Mentor',
+    linkTo: '#',
+  },
+  {
+    label: 'Tenho Interesse',
     linkTo: '#',
   },
 ]
