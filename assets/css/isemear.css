@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins;
+}
+
+/*
+* Text Alignment
+*/
+
+.text-start {
+  text-align: left !important;
+}
+
+.text-end {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+/*
+* Background Colors
+*/
+
+.bg-default {
+  background-color: #FFF;
+}
+
+.bg-primary {
+  background-color: #11115d;
+}
+
+.bg-secondary {
+  background-color: #FF7139;
+}
+
+.bg-dark {
+  background-color: #212529;
+}

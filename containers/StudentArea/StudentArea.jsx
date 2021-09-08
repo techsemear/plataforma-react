@@ -64,6 +64,7 @@ export default function studentArea() {
           />
         </svg>
       </div>
+
       <StudentJourney />
       <div className="content-area-2-l1 background-dark">
         <div className="container">
@@ -90,6 +91,7 @@ export default function studentArea() {
           </div>
         </div>
       </div>
+
       <Testimonial personas={personas} dark={themeDark}>
         {' '}
         {title}{' '}

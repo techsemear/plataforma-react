@@ -41,7 +41,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -6872,18 +6872,6 @@ fieldset:disabled .btn {
   text-transform: capitalize !important;
 }
 
-.text-start {
-  text-align: left !important;
-}
-
-.text-end {
-  text-align: right !important;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
 .text-primary {
   color: #1787FC !important;
 }
@@ -6934,10 +6922,6 @@ fieldset:disabled .btn {
 
 .lh-lg {
   line-height: 2 !important;
-}
-
-.bg-secondary {
-  background-color: #FF7139 !important;
 }
 
 .bg-custom-color {
@@ -16490,18 +16474,6 @@ fieldset:disabled .btn {
   text-transform: capitalize !important;
 }
 
-.text-start {
-  text-align: left !important;
-}
-
-.text-end {
-  text-align: right !important;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
 .text-primary {
   color: #1787FC !important;
 }
@@ -16552,14 +16524,6 @@ fieldset:disabled .btn {
 
 .lh-lg {
   line-height: 2 !important;
-}
-
-.bg-primary {
-  background-color: #1787FC !important;
-}
-
-.bg-secondary {
-  background-color: #FF7139 !important;
 }
 
 .bg-custom-color {
@@ -19277,14 +19241,6 @@ fieldset:disabled .btn {
 
 .bg-green {
   background-color: green !important;
-}
-
-.bg-secondary {
-  background-color: #FF7139 !important;
-}
-
-.bg-primary {
-  background-color: #1787FC !important;
 }
 
 .bg-zumthor {

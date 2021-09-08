@@ -1,8 +1,11 @@
+import {Fragment} from 'react'
 import Image from 'next/image'
+
 import {Button} from '../../components/Button'
+import {Wave} from '../../components/Wave'
+
 import headerImage from '../../assets/image/personagens/header.png'
 import headerBackgroundImage from '../../assets/image/background-header.png'
-import {Fragment} from 'react'
 
 export default function Hero() {
   return (
@@ -63,18 +66,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div style={{height: 150, overflow: 'hidden'}}>
-        <svg
-          viewBox="0 0 500 150"
-          preserveAspectRatio="none"
-          style={{height: '100%', width: '100%'}}
-        >
-          <path
-            d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
-            style={{stroke: 'none', fill: '#11115d'}}
-          />
-        </svg>
-      </div>
+
+      <Wave direction="up" />
     </Fragment>
   )
 }

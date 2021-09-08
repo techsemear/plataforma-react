@@ -1,15 +1,13 @@
 import {useState, Fragment} from 'react'
 import Image from 'next/image'
 
-// href="http://i3.ytimg.com/vi/HR1BaFO0R1I/maxresdefault.jpg"
-
-function Modal({children, onClickOutside = () => {}}) {
+function Modal({children, onClickOutside = () => {}, youtubeID}) {
   return (
     <div onClick={onClickOutside} className="video-modal">
       <div className="container">
         <div className="video-wrapper">
           <Image
-            src="https://img.youtube.com/vi/HR1BaFO0R1I/maxresdefault.jpg"
+            src={`https://img.youtube.com/vi/${youtubeID}/maxresdefault.jpg`}
             alt=""
             layout="fill"
           />
@@ -27,7 +25,7 @@ function Modal({children, onClickOutside = () => {}}) {
   )
 }
 
-export default function InstitutionalVideo() {
+export default function Video({youtubeID}) {
   const [isModalOpen, toogleModal] = useState(false)
 
   const handleClick = (event) => {
@@ -63,7 +61,7 @@ export default function InstitutionalVideo() {
       {isModalOpen && (
         <Modal onClickOutside={handleClick}>
           <iframe
-            src="https://www.youtube.com/embed/HR1BaFO0R1I?autoplay=1"
+            src={`https://www.youtube.com/embed/${youtubeID}?autoplay=1`}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

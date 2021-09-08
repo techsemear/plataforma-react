@@ -1,17 +1,19 @@
-import {Fragment} from 'react'
-
 import {Logo} from '../../components/Logo'
 
 import {NavbarItems} from './NavbarItems'
 
 const menuItems = [
   {
-    label: 'Quem Somos',
-    linkTo: '#',
+    label: 'Missão',
+    linkTo: '#missao',
   },
   {
-    label: 'Nosso Objetivo',
-    linkTo: '#',
+    label: 'Quem Somos',
+    linkTo: '#quem-somos',
+  },
+  {
+    label: 'Parceiros',
+    linkTo: '#parceiros',
   },
   {
     label: 'Contato',
