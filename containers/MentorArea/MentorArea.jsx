@@ -9,6 +9,7 @@ import imageProfile3 from '../../assets/image/landing-1/team-image-3.png'
 
 const title = 'Mentores da Rede Semear'
 const journey = 'Jornada do Mentor'
+const themeDark = true
 const personas = [
   {
     name: 'Alan Farmer',
@@ -39,11 +40,11 @@ const itemsText = [
   },
   {
     index: '2',
-    text: 'Gere Mudanças ! Impacte a vida de diversos jovens que serão o futuro da nossa nação',
+    text: 'Gere Mudanças ! Impacte a vida de jovens que serão o futuro da nossa nação',
   },
   {
     index: '3',
-    text: 'O ISemear possui uma ampla rede de contatos, seja você também parte das conexões que geram o Futuro!',
+    text: 'O ISemear possui uma ampla rede de contatos, faça parte gerando futuro para os jovens',
   },
 ]
 
@@ -70,7 +71,10 @@ export default function MentorArea() {
         </div>
       </div>
       <Section id ="mentorTestimonial" bgColor="secondary"> 
-      <Testimonial personas={personas}> {title} </Testimonial>
+      <Testimonial personas={personas} dark={themeDark}>
+        {' '}
+        {title}{' '}
+      </Testimonial>
       </Section>
     </div>
   )

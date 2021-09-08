@@ -43,3 +43,19 @@ body {
 .bg-dark {
   background-color: #212529;
 }
+
+/*
+* Button Alignment
+*/
+
+.button-start {
+  align: left !important;
+}
+
+.button-end {
+  align: right !important;
+}
+
+.button-center {
+  align: center !important;
+}

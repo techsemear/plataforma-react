@@ -19,7 +19,7 @@ export default function SignUp() {
           <div className="col-lg-6">
             <div className="section__heading text-center">
               <h2>Gostou da Nossa proposta ?</h2>
-              <p>Inscreva-se para acompanhar nosso lançamento.</p>
+              <p>Estamos trabalhando para trazer para vocês a melhor e mais amada plataforma de mentoria do Brasil, se você tem interesse em ser um jovem ou mentor, inscreva-se e receba todas as novidades e atualizações sobre o funcionamento da nossa plataforma. </p>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function SignUp() {
                     className="form-control "
                   />
                 </div>
-                <Button>Inscreva-se</Button>
+                <Button horizontalPosition = 'center'>Inscreva-se</Button>
               </form>
             </div>
           </div>

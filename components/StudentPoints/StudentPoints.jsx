@@ -21,7 +21,7 @@ const itemsText = [
   },
   {
     index: '3',
-    text: 'Encontre jovens que passaram pela mesma vivência e hoje são um destaques no mercado',
+    text: 'Encontre jovens que passaram pela mesma vivência e hoje são destaques no mercado',
   },
 ]
 
