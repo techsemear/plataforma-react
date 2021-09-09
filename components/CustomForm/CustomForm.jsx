@@ -36,15 +36,13 @@ const CustomForm = ({ status, message, onValidated }) => {
           />
         )}
 
-        <label>Nome Completo:</label>
-        <div>
+        <label>Nome:</label>
          <input 
             className="form-control "
             ref={node => (name = node)}
             type="text"
-            placeholder="Your name"
+            placeholder="Nome"
          />
-        </div>
         <label>Indique seu melhor email:</label>
         <input
           className="form-control "
