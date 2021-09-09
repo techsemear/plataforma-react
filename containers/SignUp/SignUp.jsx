@@ -2,6 +2,9 @@ import Image from 'next/image'
 import blurImage from '../../assets/image/landing-1/h1-cta-blur-shape-2.png'
 import rocket from '../../assets/image/landing-1/h1-cta-rocket-image.png'
 import {Button} from '../../components/Button'
+import MailchimpSubscribe from "react-mailchimp-subscribe"
+import { MailchimpForm } from '../../components/MailchimpForm'
+
 
 export default function SignUp() {
   return (
@@ -30,34 +33,11 @@ export default function SignUp() {
             data-aos-delay={500}
             data-aos-duration={1000}
           >
-            <div className="contact-form-l1">
-              <form action="#">
-                <div className="form-group">
-                  <label htmlFor="name">Nome Completo:</label>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Type your name"
-                    id="name"
-                    className="form-control "
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email">Indique seu melhor email:</label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    id="email"
-                    className="form-control "
-                  />
-                </div>
-                <Button horizontalPosition = 'center'>Inscreva-se</Button>
-              </form>
+              <MailchimpForm></MailchimpForm>
             </div>
           </div>
         </div>
       </div>
-    </div>
   )
 }
+

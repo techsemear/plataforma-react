@@ -29,9 +29,6 @@ export default function StudentJourney() {
             data-aos-duration={1000}
           >
             <div className="content-box-l1-1 section__heading">
-              <div className="cap-image d-none d-sm-block">
-                <Image className="vertical-move" src={cardImage} alt="image" />
-              </div>
               <div>
                 <h3>A cada nova DESCOBERTA, uma nova CONQUISTA!</h3>
                 <p>

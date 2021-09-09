@@ -1,5 +1,6 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, Component} from 'react'
 import Image from 'next/image'
+import 'jquery';
 
 // Global Styles
 import '../assets/css/bootstrap.css'
@@ -19,6 +20,7 @@ import '../components/PersonaTestimonial/PersonaTestimonial.css'
 import '../components/Section/Section.css'
 import '../components/StudentJourney/StudentJourney.css'
 import '../components/Video/Video.css'
+import '../components/CustomForm/CustomForm.css'
 
 // Containers
 import '../containers/About/About.css'
