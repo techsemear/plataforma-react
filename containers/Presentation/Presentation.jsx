@@ -6,11 +6,12 @@ import {Underline} from '../../components/Underline'
 const content = {
   title: 'A Universidade foi o primeiro passo, e agora?',
   subtitle: 'Conectamos jovens a oportunidades reais',
-  textPart1: 'O Instituto Semear tem como objetivo diminuir a evasão universitária e fornecer aos jovens de baixa renda as condições para que se desenvolvam durante a graduação. Desde então, selecionamos, desenvolvemos e conectamos estudantes universitários de alto potencial que queiram atuar como agentes multiplicadores por um Brasil melhor e mais justo.',
+  textPart1: ' tem como objetivo diminuir a evasão universitária e fornecer aos jovens de baixa renda as condições para que se desenvolvam durante a graduação. Desde então, selecionamos, desenvolvemos e conectamos estudantes universitários de alto potencial que queiram atuar como agentes multiplicadores por um Brasil melhor e mais justo.',
   textPart2: 'Alcançamos esse objetivo por meio de Networking, oferecendo uma ampla rede de contato e da Mentoria Social, onde eles trocam experiências com profissionais renomados nas áreas que atuam.',
   textPart3: 'Por acreditarmos na potência do aprendizado social através do nosso programa de mentorias, queremos convidar você a ',
   textPart4: 'imergir nessa jornada que mudará o seu futuro!',
-  readMore: 'Saiba Mais',
+  textPart5: 'O ',
+  readMore: 'Instituto Semear',
   titleCard1: '1400',
   textCard1: 'Jovens Impactados pelos projetos do ISemear',
   titleCard2: '+15000',
@@ -31,12 +32,13 @@ export default function Presentation() {
               <b>
                 <Underline level="h5">{content.subtitle}</Underline>
               </b>
-              <br className="d-none d-sm-block d-md-none d-xl-block mt-2" />
-              {content.textPart1}
-              <br className="d-none d-sm-block d-md-none d-xl-blo mt-2" />
+              <br className="d-none d-sm-block d-md-none d-xl-block mt-4" />
+              {content.textPart5}
               <a href="https://www.isemear.org.br" target="_blank">
                 {content.readMore}
               </a>
+              {content.textPart1}
+              <br className="d-none d-sm-block d-md-none d-xl-blo mt-2" />
               <br className="d-none d-sm-block d-md-none d-xl-blo mt-2" />
               {content.textPart2}
               <br className="d-none d-sm-block d-md-none d-xl-blo mt-2" />
