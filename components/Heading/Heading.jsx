@@ -4,10 +4,18 @@ const alignment = {
   center: 'text-center',
 }
 
+const colorClasses = {
+  default: 'ft-default',
+  primary: 'ft-primary',
+  secondary: 'ft-secondary',
+  tertiary: 'ft-tertiary ',
+}
+
 export default function Heading({
   children,
   level = 'h2',
   horizontalPosition = 'start',
+  ftColor = 'default',
 }) {
   let output = ''
 
@@ -27,6 +35,13 @@ export default function Heading({
     output = <p>{children}</p>
   }
 
-
-  return <div className={alignment[horizontalPosition]}>{output}</div>
+  return (
+    <div
+      className={[alignment[horizontalPosition], colorClasses[ftColor]].join(
+        ' ',
+      )}
+    >
+      {output}
+    </div>
+  )
 }

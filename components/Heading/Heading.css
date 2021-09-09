@@ -1,0 +1,52 @@
+.text-start h2,
+.text-end h2,
+.text-center h2 {
+    font-size: 36px;
+    font-family: Poppins;
+    font-weight: 600;
+}
+
+.text-start h3,
+.text-end h3,
+.text-center h3 {
+    font-size: 28px;
+    font-family: Poppins;
+}
+
+.text-start h4,
+.text-end h4,
+.text-center h4 {
+    font-size: 24px;
+    font-family: Poppins;
+}
+
+.text-start h5,
+.text-end h5,
+.text-center h5 {
+    font-size: 20px;
+    font-family: Poppins;
+}
+
+.text-start p,
+.text-end p,
+.text-center p {
+    font-size: 16px;
+    font-family: Poppins;
+}
+
+.ft-default {
+    color: #213053;
+}
+
+.ft-primary {
+    color: #fff;
+}
+
+.ft-secondary {
+    color: #6B6B6B;
+}
+
+.ft-tertiary  {
+    color: #79FF8B;
+}
+

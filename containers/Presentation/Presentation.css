@@ -21,7 +21,7 @@
 
 .user-rating-box-area .rate-box h3 {
   color: #fff;
-  font-size: 48px;
+  font-size: 42px;
   font-family: Poppins;
   font-weight: 600;
   font-style: normal;
@@ -32,7 +32,7 @@
 
 .user-rating-box-area .rate-box p {
   color: #fff;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   font-style: normal;
   letter-spacing: normal;
@@ -49,7 +49,7 @@
 }
 
 .user-rating-box-area .rate-box ul li i {
-  color: #FF7139;
+  color: #ff7139;
   font-size: 18px;
 }
 
@@ -64,7 +64,7 @@
 .feature-border-l1 {
   width: 100%;
   height: 1px;
-  border: 1px solid #E6EAF4;
+  border: 1px solid #e6eaf4;
   margin-top: 30px;
   margin-bottom: 50px;
 }
@@ -82,7 +82,6 @@
     margin-bottom: 100px;
   }
 }
-
 
 .d-md-none {
   display: none !important;
@@ -119,31 +118,46 @@
 }
 
 @media (min-width: 576px) {
-  .container, .container-sm {
+  .container,
+  .container-sm {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .container, .container-sm, .container-md {
+  .container,
+  .container-sm,
+  .container-md {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  .container, .container-sm, .container-md, .container-lg {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
     max-width: 1140px;
   }
 }
 
 @media (min-width: 1400px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
     max-width: 1320px;
   }
 }
@@ -171,11 +185,13 @@
   width: 100% !important;
 }
 
-.evasaoText
-{
-    font-family: 'Caveat';
-    font-size: 24pt;
-    text-align: center;
-    color: #FF7139;
+.evasaoText {
+  font-family: 'Caveat';
+  font-size: 24pt;
+  text-align: center;
+  color: #ff7139;
 }
 
+.reference {
+  color:#213053;
+}

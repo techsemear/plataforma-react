@@ -1,9 +1,7 @@
 import Image from 'next/image'
 
 import journeyImage from '../../assets/image/journeyImage.png'
-import cardImage from '../../assets/image/landing-1/h1-content2-card-tupi.png'
 import {Button} from '../../components/Button'
-import {Fragment} from 'react'
 
 export default function StudentJourney() {
   return (

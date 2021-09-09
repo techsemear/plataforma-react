@@ -34,8 +34,10 @@ export default function Video({youtubeID}) {
     toogleModal(!isModalOpen)
   }
 
-  const title = 'Entenda na Prática'
-  const subtitle = 'Assista ao nosso manifesto'
+  const content = {
+    title: 'Entenda na Prática',
+    subtitle: 'Assista ao nosso manifesto',
+  }
 
   return (
     <Fragment>
@@ -50,8 +52,8 @@ export default function Video({youtubeID}) {
                 fa-play font-size-7"
                   />
                 </a>
-                <h2>{title}</h2>
-                <p>{subtitle}</p>
+                <h2>{content.title}</h2>
+                <p>{content.subtitle}</p>
               </div>
             </div>
           </div>
