@@ -23,6 +23,7 @@ import '../components/Section/Section.css'
 import '../components/StudentJourney/StudentJourney.css'
 import '../components/Video/Video.css'
 import '../components/Underline/Underline.css'
+import '../components/CardPersona/CardPersona.css'
 
 // Containers
 import '../containers/About/About.css'

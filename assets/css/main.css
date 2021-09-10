@@ -6819,25 +6819,6 @@ div#loading img {
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
                       Clients Area-L8
         <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-.clients-area-l8 {
-  background: #F9FAFB;
-  padding-top: 55px;
-  padding-bottom: 60px;
-}
-
-@media (min-width: 768px) {
-  .clients-area-l8 {
-    padding-top: 75px;
-    padding-bottom: 80px;
-  }
-}
-
-@media (min-width: 992px) {
-  .clients-area-l8 {
-    padding-top: 125px;
-    padding-bottom: 130px;
-  }
-}
 
 .clients-l8-items {
   margin-bottom: -30px;
@@ -6860,50 +6841,6 @@ div#loading img {
   margin-bottom: 30px;
 }
 
-.client-l8-card {
-  background: #FFFFFF;
-  border: 1px solid #E1ECF0;
-  border-radius: 10px;
-  padding: 40px 40px 35px 40px;
-  height: 100%;
-}
-
-.client-l8-card .image img {
-  width: 179px;
-  height: 179px;
-  border-radius: 10px;
-}
-
-.client-l8-card .content h4 {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: -0.3px;
-  color: #1D263A;
-  padding: 40px 0px 12px 0px;
-}
-
-.client-l8-card .content p {
-  font-size: 17px;
-  line-height: 30px;
-  color: #1D263A;
-  opacity: 0.8;
-}
-
-.client-l8-card .identity h6 {
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 30px;
-  color: #1D263A;
-  margin-bottom: 0;
-}
-
-.client-l8-card .identity span {
-  font-size: 13px;
-  line-height: 22px;
-  color: #1D263A;
-  opacity: 0.6;
-}
 
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
                       CTA Area-L8-2
