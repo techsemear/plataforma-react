@@ -1,6 +1,6 @@
 import React, {useEffect, Component} from 'react'
 import Image from 'next/image'
-import Script from "next/script";
+import Script from 'next/script'
 
 // Global Styles
 import '../assets/css/bootstrap.css'
@@ -36,9 +36,6 @@ import '../containers/StudentArea/StudentArea.css'
 import '../containers/Subscribe/Subscribe.css'
 import '../containers/Testimonial/Testimonial.css'
 
-
-
-
 function MyApp({Component, pageProps}) {
   return (
     <>
@@ -46,7 +43,6 @@ function MyApp({Component, pageProps}) {
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=G-LLXGD8R3Z3`}
       />
-
       <Script strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -55,12 +51,21 @@ function MyApp({Component, pageProps}) {
           gtag('config', 'G-LLXGD8R3Z3');
         `}
       </Script>
+      <Script>
+       {`(function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2575267,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        `}
+      </Script>
 
       <Component {...pageProps} />
-  </>
-);
+    </>
+  )
 }
 
 export default MyApp
-
-
