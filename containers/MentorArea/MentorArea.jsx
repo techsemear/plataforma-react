@@ -50,7 +50,7 @@ const itemsText = [
 
 export default function MentorArea() {
   return (
-    <div className="mentor-area">
+    <div className="mentor-area" id = "jornada-mentor">
       <div className="content-area-2-l1">
         <div className="container">
           <div className="row justify-content-center align-items-center">

@@ -31,13 +31,13 @@ export default function Hero() {
             >
               <div className="content">
                 <Heading ftColor="tertiary"> {content.title} </Heading>
-                <Heading level="p" ftColor="primary" ftColor="primary">
+                <p>
                   {content.text}
-                </Heading>
+                </p>
                 <Heading level="h6" ftColor="primary">
                   <strong> {content.subtitle} </strong>
                 </Heading>
-                <Button>Inscreva-se</Button>
+                <Button href="#subscribe">Inscreva-se</Button>
               </div>
             </div>
 
