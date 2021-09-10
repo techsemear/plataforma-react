@@ -31,9 +31,7 @@ export default function Hero() {
             >
               <div className="content">
                 <Heading ftColor="tertiary"> {content.title} </Heading>
-                <Heading level="p" ftColor="primary" ftColor="primary">
-                  {content.text}
-                </Heading>
+                <p>{content.text}</p>
                 <Heading level="h6" ftColor="primary">
                   <strong> {content.subtitle} </strong>
                 </Heading>

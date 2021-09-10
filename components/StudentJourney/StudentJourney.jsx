@@ -34,11 +34,11 @@ export default function StudentJourney() {
               <div>
                 <Heading level="h4">{title}</Heading>
                 <p>
-                  A sua Jornada no Instituto Semear é construída com base em um
-                  conjunto de ferramentas e métodos comprovados que servem para
-                  jovens que sentem na pele as dificuldades de se graduar e de{' '}
+                  A sua Jornada no ISemear é construída com base em um
+                  conjunto de ferramentas e métodos que servem para
+                  jovens que sentem na pele as dificuldades de se graduar e {' '}
                   <strong>
-                    se tornar protagonista da sua própria carreira profissional.
+                    se tornar protagonista da sua própria carreira.
                   </strong>
                 </p>
                 <div className="l1-get-start-btn">

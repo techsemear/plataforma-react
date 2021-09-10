@@ -21,6 +21,7 @@ import '../components/PersonaTestimonial/PersonaTestimonial.css'
 import '../components/Section/Section.css'
 import '../components/StudentJourney/StudentJourney.css'
 import '../components/Video/Video.css'
+import '../components/Underline/Underline.css'
 
 // Containers
 import '../containers/About/About.css'

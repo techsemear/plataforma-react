@@ -11,10 +11,11 @@ export default function Underline({
   level = 'h2',
   horizontalPosition = 'start',
   color = 'default',
+  ftColor = 'default'
 }) {
   return (
     <div className={colorClasses[color]}>
-      <Heading level={level} horizontalPosition={horizontalPosition}>
+      <Heading level={level} horizontalPosition={horizontalPosition} ftColor={ftColor}>
         <span>{children}</span>
       </Heading>
     </div>

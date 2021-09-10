@@ -29,15 +29,8 @@ export default function Presentation() {
         <div className="col-xl-6 col-lg-5 col-md-10 ">
           <div className="section__heading">
             <Heading level="h2">{content.title}</Heading>
-
-            <Heading
-              data-aos="fade-up"
-              data-aos-delay={800}
-              data-aos-duration={1000}
-              level="p"
-            >
-              <Underline level="h5">{content.subtitle}</Underline>
-
+            <Underline level="h5" ftColor="secondary">{content.subtitle}</Underline>
+            <p data-aos="fade-up" data-aos-delay={800} data-aos-duration={1000}>
               <br className="d-none d-sm-block d-md-none d-xl-block mt-4" />
               {content.textPart5}
               <strong>
@@ -50,7 +43,6 @@ export default function Presentation() {
                   {content.readMore}
                 </a>
               </strong>
-
               {content.textPart1}
               <br className="d-none d-sm-block d-md-none d-xl-blo mt-3" />
 
@@ -60,7 +52,7 @@ export default function Presentation() {
               {content.textPart3}
 
               <strong>{content.textPart4}</strong>
-            </Heading>
+            </p>
           </div>
         </div>
 

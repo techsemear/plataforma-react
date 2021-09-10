@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 export default function Contributor({logo}) {
-  const height = 50
+  const height = 55
   const width = height*2
   
   return (
