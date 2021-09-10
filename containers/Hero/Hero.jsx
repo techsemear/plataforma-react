@@ -35,7 +35,7 @@ export default function Hero() {
                 <Heading level="h6" ftColor="primary">
                   <strong> {content.subtitle} </strong>
                 </Heading>
-                <Button>Inscreva-se</Button>
+                <Button href="#subscribe">Inscreva-se</Button>
               </div>
             </div>
 

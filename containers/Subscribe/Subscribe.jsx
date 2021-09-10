@@ -4,10 +4,11 @@ import {LeadForm} from '../../components/LeadForm'
 
 import blurImage from '../../assets/image/landing-1/h1-cta-blur-shape-2.png'
 import rocket from '../../assets/image/landing-1/h1-cta-rocket-image.png'
+import { Section } from '../../components/Section'
 
 export default function Subscribe() {
   return (
-    <div className="contact-form-area-l1 bg-mirage position-relative">
+    <div className="contact-form-area-l1 bg-mirage position-relative" id="subscribe">
       <div className="contact-area-l-image-group">
         <div className="image-2 ">
           <Image className="w-100 spin" src={blurImage} alt="image" />

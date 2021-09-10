@@ -17,15 +17,15 @@ const menuItems = [
   },
   {
     label: 'Jornada do Jovem',
-    linkTo: '#',
+    linkTo: '#jornada-jovem',
   },
   {
     label: 'Jornada do Mentor',
-    linkTo: '#',
+    linkTo: '#jornada-mentor',
   },
   {
     label: 'Tenho Interesse',
-    linkTo: '#',
+    linkTo: '#subscribe',
   },
 ]
 

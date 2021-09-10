@@ -1,5 +1,6 @@
 import React, {useEffect, Component} from 'react'
 import Image from 'next/image'
+import Script from "next/script";
 
 // Global Styles
 import '../assets/css/bootstrap.css'
@@ -34,8 +35,31 @@ import '../containers/StudentArea/StudentArea.css'
 import '../containers/Subscribe/Subscribe.css'
 import '../containers/Testimonial/Testimonial.css'
 
+
+
+
 function MyApp({Component, pageProps}) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=284396285`}
+      />
+
+      <Script strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-284396285');
+        `}
+      </Script>
+
+      <Component {...pageProps} />
+  </>
+);
 }
 
 export default MyApp
+
+

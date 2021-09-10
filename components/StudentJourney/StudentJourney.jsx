@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 import {Button} from '../../components/Button'
 import {Heading} from '../../components/Heading'
+import {Section} from '../../components/Section'
 
 import journeyImage from '../../assets/image/journeyImage.png'
 
@@ -9,7 +10,7 @@ const title = 'A cada nova DESCOBERTA, uma nova CONQUISTA!';
 
 export default function StudentJourney() {
   return (
-    <div className="content-are-l1-1 bg-primary">
+    <div className="content-are-l1-1 bg-primary" id = "jornada-jovem">
       <div className="container">
         <div className="row justify-content-center">
           <div
@@ -42,7 +43,7 @@ export default function StudentJourney() {
                   </strong>
                 </p>
                 <div className="l1-get-start-btn">
-                  <Button>Inscreva-se</Button>
+                  <Button href="subscribe">Inscreva-se</Button>
                 </div>
                 <p>
                   Com a rede de contatos do ISemear, contamos com apoio de{' '}
