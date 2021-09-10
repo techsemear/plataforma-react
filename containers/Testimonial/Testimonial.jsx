@@ -1,8 +1,12 @@
 import Image from 'next/image'
+
 import {PersonaTestimonial} from '../../components/PersonaTestimonial'
+import {Section} from '../../components/Section'
+import {CardPersona} from '../../components/CardPersona'
+
 import heartShape from '../../assets/image/landing-1/h1-client-heart-shape.png'
 import startShape from '../../assets/image/landing-1/h1-client-start-shape.png'
-import { Section } from '../../components/Section'
+import {Heading} from '../../components/Heading'
 
 export default function Testimonial({
   personas,
@@ -34,33 +38,24 @@ export default function Testimonial({
             <Image className="w-100 spin" src={startShape} alt="image" />
           </div>
         </div>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div
-              className="col-xxl-5 col-xl-6 col-lg-7 col-md-8"
-              data-aos="fade-in"
-              data-aos-delay={500}
-              data-aos-duration={1000}
-            >
-              <div className="section__heading text-center">
-                <div
-                  className={
-                    dark ? 'testimonial-text-white' : 'testimonial-text-dark'
-                  }
-                >
-                  <h2>{children}</h2>
-                </div>
+        <div className="clients-area-l8">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div
+                className="col-xxl-5 col-lg-7 col-md-8"
+                data-aos="fade-in"
+                data-aos-delay={500}
+                data-aos-duration={1000}
+              >
+
+                  <Heading horizontalPosition="center" ftColor="primary">
+                    {children}
+                  </Heading>
               </div>
             </div>
           </div>
-          <div className="row testimonial-area-l1-items justify-content-center">
-            {personas.map((persona, index) => (
-              <PersonaTestimonial
-                persona={persona}
-                key={index}
-                dark={dark}
-              />
-            ))}
+          <div className="row justify-content-center">
+            <CardPersona personasProfile={personas} />
           </div>
         </div>
       </div>
