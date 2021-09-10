@@ -43,8 +43,7 @@ function MyApp({Component, pageProps}) {
     <>
       <Script
         strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=LLXGD8R3Z3
-        `}
+        src={`https://www.googletagmanager.com/gtag/js?id=LLXGD8R3Z3`}
       />
 
       <Script strategy="lazyOnload">
@@ -52,8 +51,7 @@ function MyApp({Component, pageProps}) {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-LLXGD8R3Z3
-          ');
+          gtag('config', 'G-LLXGD8R3Z3');
         `}
       </Script>
 
