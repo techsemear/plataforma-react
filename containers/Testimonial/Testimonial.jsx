@@ -56,11 +56,7 @@ export default function Testimonial({
           <div className="row testimonial-area-l1-items justify-content-center">
             {personas.map((persona, index) => (
               <PersonaTestimonial
-                subtitle={persona.subtitle}
-                text={persona.text}
-                name={persona.name}
-                profession={persona.profession}
-                imageProfile={persona.imageProfile}
+                persona={persona}
                 key={index}
                 dark={dark}
               />

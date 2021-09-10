@@ -1,7 +1,11 @@
 import Image from 'next/image'
 
-import journeyImage from '../../assets/image/journeyImage.png'
 import {Button} from '../../components/Button'
+import {Heading} from '../../components/Heading'
+
+import journeyImage from '../../assets/image/journeyImage.png'
+
+const title = 'A cada nova DESCOBERTA, uma nova CONQUISTA!';
 
 export default function StudentJourney() {
   return (
@@ -28,7 +32,7 @@ export default function StudentJourney() {
           >
             <div className="content-box-l1-1 section__heading">
               <div>
-                <h3>A cada nova DESCOBERTA, uma nova CONQUISTA!</h3>
+                <Heading level="h4">{title}</Heading>
                 <p>
                   A sua Jornada no Instituto Semear é construída com base em um
                   conjunto de ferramentas e métodos comprovados que servem para

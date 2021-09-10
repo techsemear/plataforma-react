@@ -1,3 +1,13 @@
-.content-text-h4 span {
+.cl-default span {
   border-bottom: 4px solid #FF7139;
 }
+
+.cl-primary span {
+  border-bottom: 4px solid #213053;
+}
+
+.cl-secundary span {
+  border-bottom: 4px solid #79FF8B;
+}
+
+

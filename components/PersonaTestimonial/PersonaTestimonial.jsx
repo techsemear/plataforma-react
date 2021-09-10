@@ -1,11 +1,7 @@
 import Image from 'next/image'
 
 export default function PersonaTestimonial({
-  subtitle,
-  text,
-  name,
-  profession,
-  imageProfile,
+  persona,
   dark = false,
 }) {
   return (
@@ -17,16 +13,18 @@ export default function PersonaTestimonial({
     >
       <div className="content h-100 text-center">
         <Image
-          src={imageProfile}
+          src={persona.imageProfile}
           alt="image-profile"
           objectFit="contain"
         />
-        <div className={ dark ? "testimonial-text-white" : "testimonial-text-dark"}>
+        <div
+          className={dark ? 'testimonial-text-white' : 'testimonial-text-dark'}
+        >
           <p>
-            “<span>{subtitle}</span> {text}”
+            “<span>{persona.subtitle}</span> {persona.text}”
           </p>
-          <h5>{name}</h5>
-          <small>{profession}</small>
+          <h5>{persona.name}</h5>
+          <small>{persona.profession}</small>
         </div>
       </div>
     </div>

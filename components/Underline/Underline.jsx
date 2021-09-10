@@ -1,9 +1,20 @@
 import {Heading} from '../../components/Heading'
 
-export default function Underline({children, level = 'h2'}) {
+const colorClasses = {
+  default: 'cl-default',
+  primary: 'cl-primary',
+  secondary: 'cl-secondary',
+}
+
+export default function Underline({
+  children,
+  level = 'h2',
+  horizontalPosition = 'start',
+  color = 'default',
+}) {
   return (
-    <div className="content-text-h4">
-      <Heading level={level}>
+    <div className={colorClasses[color]}>
+      <Heading level={level} horizontalPosition={horizontalPosition}>
         <span>{children}</span>
       </Heading>
     </div>
