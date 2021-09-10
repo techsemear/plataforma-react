@@ -8,8 +8,8 @@ import {MentorArea} from '../containers/MentorArea'
 import {Navbar} from '../containers/Navbar'
 import {Partners} from '../containers/Partners'
 import {Presentation} from '../containers/Presentation'
-import {SignUp} from '../containers/SignUp'
 import {StudentArea} from '../containers/StudentArea'
+import {Subscribe} from '../containers/Subscribe'
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
       <Partners />
       <StudentArea />
       <MentorArea />
-      <SignUp />
+      <Subscribe />
     </React.Fragment>
   )
 }

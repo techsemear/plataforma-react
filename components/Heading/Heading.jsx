@@ -31,8 +31,6 @@ export default function Heading({
     output = <h5>{children}</h5>
   } else if (level == 'h6') {
     output = <h6>{children}</h6>
-  } else if (level == 'p') {
-    output = <p>{children}</p>
   }
 
   return (

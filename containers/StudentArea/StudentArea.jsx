@@ -8,7 +8,7 @@ import globeImage from '../../assets/image/landing-1/h1-content-2-globe.png'
 import imageProfile1 from '../../assets/image/landing-1/team-image.png'
 import imageProfile2 from '../../assets/image/landing-1/team-image-2.png'
 import imageProfile3 from '../../assets/image/landing-1/team-image-3.png'
-import { Section } from '../../components/Section'
+import {Section} from '../../components/Section'
 
 const title = 'Quem já venceu essa jornada'
 const journey = 'Jornada do Jovem'
@@ -69,11 +69,11 @@ export default function studentArea() {
 
       <StudentJourney />
       <StudentPoints />
-      <Section bgColor = "primary" id= "studentTestimonial">
-      <Testimonial personas={personas} dark={themeDark}>
-        {' '}
-        {title}{' '}
-      </Testimonial>
+      <Section bgColor="primary" id="studentTestimonial">
+        <Testimonial personas={personas} dark={themeDark}>
+          {' '}
+          {title}{' '}
+        </Testimonial>
       </Section>
     </div>
   )

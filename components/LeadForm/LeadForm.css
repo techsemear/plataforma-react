@@ -47,7 +47,7 @@
   font-size: 17px;
   line-height: 30px;
   color: #FFFFFF;
-  padding: 100px 100px;
+  margin-bottom: 10px;
 }
 
 .contact-form-l1 .form-control {
@@ -62,6 +62,7 @@
   mix-blend-mode: normal;
   opacity: 1;
   padding-left: 22px;
+  margin-bottom: 20px;
 }
 
 .contact-form-l1 .form-control::-moz-placeholder {
@@ -163,39 +164,41 @@
 .submitButton
 {
   background-color: #FF7139;
-  width: 100%;
   border-radius: 30px;
-  padding: 15px;
   border: none;
+  color: #E6EAF4;
   font-family: Poppins;
-  align: center;
+  font-weight: 500;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
   transition: transform .2s;
+  width: 100%;
+}
+
+.error-message {
+  text-align: center;
+  color: white;
+  background-color: #f46f7c;
+}
+
+.error-message a {
+  color: #1D263A;
 }
 
 .submitButton:hover
 {
   background-color: #004aad;
-  width: 100%;
-  border-radius: 30px;
-  padding: 15px;
-  border: none;
-  font-family: Poppins;
-  align: center;
   transform: scale(1.1);
 }
 
-.submitButtonText
-{
-  color: #E6EAF4;
-  font-weight: 500;
-  text-decoration: none;
-
+.submitButton.submitButton--success {
+  color: #212529;
+  background-color: #79FF8B;
 }
 
-.submitButtonText:hover
+.submitButton.submitButton--success:hover
 {
-  color: #E6EAF4;
-  font-weight: 500;
-  text-decoration: none;
-
+  background-color: #79FF8B;
+  transform: scale(1);
 }

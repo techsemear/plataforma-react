@@ -1,3 +1,5 @@
+import {OrderedItems} from '../OrderedItems'
+
 export default function ItemsSection({children, itemsText, dark = false}) {
   return (
     <div
@@ -12,27 +14,14 @@ export default function ItemsSection({children, itemsText, dark = false}) {
             <h2 className="content-text-h2-a4">
               O que posso descobrir nessa jornada ?
             </h2>
+
             <h4 className="content-text-h4">
               <span>{children}</span>
             </h4>
           </div>
         </div>
-        <ul className="list-unstyled number-content-box-l1">
-          {itemsText.map((item) => (
-            <li className="d-flex align-items-start">
-              <div className={dark ? 'number number--3' : 'number number--2'}>
-                <span>{item.index}</span>
-              </div>
-              <div
-                className={
-                  dark ? 'content text-color-white' : 'content text-color-dark'
-                }
-              >
-                <p>{item.text} </p>
-              </div>
-            </li>
-          ))}
-        </ul>
+
+        <OrderedItems itemsTextList={itemsText} dark={dark} />
       </div>
     </div>
   )

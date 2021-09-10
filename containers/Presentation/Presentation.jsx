@@ -36,9 +36,8 @@ export default function Presentation() {
               data-aos-duration={1000}
               level="p"
             >
-              <b>
-                <Underline level="h5">{content.subtitle}</Underline>
-              </b>
+              <Underline level="h5">{content.subtitle}</Underline>
+
               <br className="d-none d-sm-block d-md-none d-xl-block mt-4" />
               {content.textPart5}
               <strong>
@@ -46,19 +45,25 @@ export default function Presentation() {
                   className="reference"
                   href="https://www.isemear.org.br"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   {content.readMore}
                 </a>
               </strong>
+
               {content.textPart1}
               <br className="d-none d-sm-block d-md-none d-xl-blo mt-3" />
+
               {content.textPart2}
               <br className="d-none d-sm-block d-md-none d-xl-blo mt-3" />
+
               {content.textPart3}
+
               <strong>{content.textPart4}</strong>
             </Heading>
           </div>
         </div>
+
         <div className="col-xl-5 col-lg-6 offset-xl-1">
           <div className="row user-rating-box-area">
             <div
@@ -68,10 +73,14 @@ export default function Presentation() {
               data-aos-duration={1000}
             >
               <div className="h-100 rate-box bg-primary">
-                <Heading level="h3" ftColor="primary">{content.titleCard1}</Heading>
-                <Heading level="p" ftColor="primary"> {content.textCard1} </Heading>
+                <Heading level="h3" ftColor="primary">
+                  {content.titleCard1}
+                </Heading>
+
+                <p>{content.textCard1} </p>
               </div>
             </div>
+
             <div
               className="col-sm-6 col-xs-8"
               data-aos="fade-left"
@@ -82,7 +91,8 @@ export default function Presentation() {
                 <Heading level="h3" ftColor="primary">
                   {content.titleCard2}
                 </Heading>
-                <Heading level="p" ftColor="primary"> {content.textCard2} </Heading>
+
+                <p>{content.textCard2}</p>
               </div>
             </div>
           </div>

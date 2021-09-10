@@ -102,13 +102,13 @@
 
 .l1-create-acc-btn .btn {
   min-width: 268px;
-  height: 54px;
   border-radius: 30px;
   background-color: #FF7139;
   color: #fff;
   font-family: Poppins;
   font-size: 17px;
   font-weight: 400;
+  padding: 14px;
   font-style: normal;
   letter-spacing: normal;
   box-shadow: 0 10px 20px rgba(241, 139, 98, 0.2);
