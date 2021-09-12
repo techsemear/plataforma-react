@@ -13,6 +13,7 @@ export default function CardPersona({personasProfile}) {
               data-aos="fade-right"
               data-aos-delay={500}
               data-aos-duration={1000}
+              key={index}
             >
               <div className="client-l8-card">
                 <div className="image">
