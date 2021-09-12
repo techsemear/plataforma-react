@@ -17,7 +17,7 @@ const personas = [
     text: '"Há tempos eu vinha sentindo vontade de contribuir com o crescimento de outras pessoas e colocar minha vivência a serviço disso. Conforme vou crescendo, percebo que recebi muito da vida e que às vezes uma palavra, um gesto ou uma dica, pode transformar a vida de alguém, assim como a minha foi também transformada."',
     profession: 'Researcher & Brand Strategist - Float',
     imageProfile: imageProfile1,
-    linkedin:"https://www.linkedin.com/in/camila-cintra-0064348a/"
+    linkedin:"https://www.linkedin.com/in/camila-cintra-0064348a/",
   },
   {
     name: ' Giovanni Luigi',
@@ -25,7 +25,7 @@ const personas = [
     text: '"Eu encontrei muitas histórias parecidas com a minha, o que me fez refletir muito sobre propósito, acho incrível o efeito que os jovens têm sobre a gente. Assim como compartilhamos experiência e conhecimentos, eles fornecem energia e esperança!"',
     profession: 'Digital Data Marketing Specialist - Publicis Brasil',
     imageProfile: imageProfile2,
-    linkedin:"https://www.linkedin.com/in/giovanni-luigi-mkt/"
+    linkedin:"https://www.linkedin.com/in/giovanni-luigi-mkt/",
   },
   {
     name: ' Lucas Carvalho',
@@ -33,7 +33,7 @@ const personas = [
     text: '"A oportunidade de dividir anseios, dúvidas, perspectivas de carreira e ensinamentos com jovens tão atentos é, sem dúvida, excepcional e um exercício de aprendizado. Tenho um carinho especial pela mentoria que me possibilitou conhecer um jovem inteligente, cheio de sonhos e que tem uma trajetória muito parecida com a que eu tive."',
     profession: 'Advogado júnior - Demarest Advogados',
     imageProfile: imageProfile3,
-    linkedin:"https://www.linkedin.com/in/lucas-vieira-carvalho-62a8aa18b/"
+    linkedin:"https://www.linkedin.com/in/lucas-vieira-carvalho-62a8aa18b/",
   },
 ]
 const itemsText = [
