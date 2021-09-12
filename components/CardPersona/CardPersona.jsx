@@ -23,7 +23,7 @@ export default function CardPersona({personasProfile}) {
                 </div>
                 <div className="identity mt-4">
                   <Heading level="h6">
-                    <a href={persona.linkedin}>
+                    <a href="">
                       <Image src ={LinkedinLogo} />
                     </a>
                     <strong className="namePersona">{persona.name}</strong>

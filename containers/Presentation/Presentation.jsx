@@ -38,7 +38,6 @@ export default function Presentation() {
                   className="reference"
                   href="https://www.isemear.org.br"
                   target="_blank"
-                  rel="noreferrer"
                 >
                   {content.readMore}
                 </a>
