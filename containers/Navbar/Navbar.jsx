@@ -41,6 +41,7 @@ export default function Navbar() {
           {/* mobile menu trigger */}
           <div className="mobile-menu-trigger">
             <span />
+            <NavbarItems items={menuItems} />
           </div>
           {/*/.Mobile Menu Hamburger Ends*/}
         </div>

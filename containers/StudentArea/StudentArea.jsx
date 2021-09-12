@@ -5,9 +5,9 @@ import {StudentJourney} from '../../components/StudentJourney'
 import {StudentPoints} from '../../components/StudentPoints'
 import studentImage from '../../assets/image/footer.png'
 import globeImage from '../../assets/image/landing-1/h1-content-2-globe.png'
-import imageProfile1 from '../../assets/image/landing-1/team-image.png'
-import imageProfile2 from '../../assets/image/landing-1/team-image-2.png'
-import imageProfile3 from '../../assets/image/landing-1/team-image-3.png'
+import imageProfile1 from '../../assets/image/landing-1/student1.png'
+import imageProfile2 from '../../assets/image/landing-1/student2.png'
+import imageProfile3 from '../../assets/image/landing-1/student3.png'
 import {Section} from '../../components/Section'
 
 const title = 'Quem já venceu essa jornada'
@@ -15,25 +15,29 @@ const journey = 'Jornada do Jovem'
 const themeDark = true
 const personas = [
   {
-    name: 'Alan Farmer',
+    name: ' Pedro Masetti',
     subtitle: 'You made it so simple.',
-    text: 'My new site is so much faster and easier to work with than my old site.',
-    profession: 'Digital Marketer',
+    text: '"A oportunidade de poder me conectar através das mentorias com pessoas já ambientadas no mercado de trabalho vêm trazendo diversos benefícios, e principalmente, auxiliando no meu autoconhecimento"',
+    profession: 'Engenharia Ambiental',
     imageProfile: imageProfile1,
+    linkedin: "https://www.linkedin.com/in/pedro-masetti-3535321a9/"
+
   },
   {
-    name: 'Alan Farmer',
+    name: ' Mariana Ferraz',
     subtitle: 'Better than all the rest.',
-    text: 'Simply the best. I’d recommend this product to beginners and advanced users.',
-    profession: 'Digital Marketer',
+    text: '"Na primeira mentoria eu não sabia quem eu era, definir meus sonhos ou para onde eu estava indo. Ter a oportunidade de ser mentorada no primeiro semestre da minha (tão sonhada) faculdade fez total diferença. Hoje, sinto que me conheço mais, sei como e o que estou fazendo para alcançar meus sonhos."',
+    profession: 'Engenharia de Produção',
     imageProfile: imageProfile2,
+    linkedin:"https://www.linkedin.com/in/mariana-ferraz-991181215/"
   },
   {
-    name: 'Alan Farmer',
-    subtitle: 'Must have service',
-    text: ' for all, who want to be successful Product Designer or Interaction Designer.',
-    profession: 'Digital Marketer',
+    name: ' Kerolen Rodrigues',
+    subtitle: 'Super indico a mentoria do semear',
+    text: '"A troca de experiências é enriquecedora e muito motivadora para continuar estudando e focada nos objetivos futuros. Conheci muitas áreas na tecnologia que me fizeram ter uma visão mais abrangente da área que estou estudando. Super indico a mentoria do Semear"',
+    profession: 'Tecnologia da Informação',
     imageProfile: imageProfile3,
+    linkedin:"https://www.linkedin.com/in/kerolen-rodrigues-326809181/"
   },
 ]
 const itemsText = [

@@ -3,34 +3,37 @@ import {Testimonial} from '../Testimonial'
 import {ItemsSection} from '../../components/ItemsSection'
 import {Section} from '../../components/Section'
 import mentorImage from '../../assets/image/mentor1.png'
-import imageProfile1 from '../../assets/image/landing-1/team-image.png'
-import imageProfile2 from '../../assets/image/landing-1/team-image-2.png'
-import imageProfile3 from '../../assets/image/landing-1/team-image-3.png'
+import imageProfile1 from '../../assets/image/landing-1/mentor1.png'
+import imageProfile2 from '../../assets/image/landing-1/mentor2.png'
+import imageProfile3 from '../../assets/image/landing-1/mentor3.png'
 
 const title = 'Mentores da Rede Semear'
 const journey = 'Jornada do Mentor'
 const themeDark = true
 const personas = [
   {
-    name: 'Alan Farmer',
+    name: ' Camila Cintra',
     subtitle: 'You made it so simple.',
-    text: 'My new site is so much faster and easier to work with than my old site.',
-    profession: 'Digital Marketer',
+    text: '"Há tempos eu vinha sentindo vontade de contribuir com o crescimento de outras pessoas e colocar minha vivência a serviço disso. Conforme vou crescendo, percebo que recebi muito da vida e que às vezes uma palavra, um gesto ou uma dica, pode transformar a vida de alguém, assim como a minha foi também transformada."',
+    profession: 'Researcher & Brand Strategist - Float',
     imageProfile: imageProfile1,
+    linkedin:"https://www.linkedin.com/in/camila-cintra-0064348a/"
   },
   {
-    name: 'Alan Farmer',
+    name: ' Giovanni Luigi',
     subtitle: 'Better than all the rest.',
-    text: 'Simply the best. I’d recommend this product to beginners and advanced users.',
-    profession: 'Digital Marketer',
+    text: '"Eu encontrei muitas histórias parecidas com a minha, o que me fez refletir muito sobre propósito, acho incrível o efeito que os jovens têm sobre a gente. Assim como compartilhamos experiência e conhecimentos, eles fornecem energia e esperança!"',
+    profession: 'Digital Data Marketing Specialist - Publicis Brasil',
     imageProfile: imageProfile2,
+    linkedin:"https://www.linkedin.com/in/giovanni-luigi-mkt/"
   },
   {
-    name: 'Alan Farmer',
+    name: ' Lucas Carvalho',
     subtitle: 'Must have service',
-    text: ' for all, who want to be successful Product Designer or Interaction Designer.',
-    profession: 'Digital Marketer',
+    text: '"A oportunidade de dividir anseios, dúvidas, perspectivas de carreira e ensinamentos com jovens tão atentos é, sem dúvida, excepcional e um exercício de aprendizado. Tenho um carinho especial pela mentoria que me possibilitou conhecer um jovem inteligente, cheio de sonhos e que tem uma trajetória muito parecida com a que eu tive."',
+    profession: 'Advogado júnior - Demarest Advogados',
     imageProfile: imageProfile3,
+    linkedin:"https://www.linkedin.com/in/lucas-vieira-carvalho-62a8aa18b/"
   },
 ]
 const itemsText = [

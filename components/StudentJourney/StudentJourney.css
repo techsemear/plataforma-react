@@ -6,13 +6,13 @@
 
 @media (min-width: 768px) {
   .content-are-l1-1 {
-    padding-top: 30px;
+    padding-top: 50px;
   }
 }
 
 @media (min-width: 992px) {
   .content-are-l1-1 {
-    padding-top: 40px;
+    padding-top: 90px;
   }
 }
 

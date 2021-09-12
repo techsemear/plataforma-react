@@ -31,6 +31,7 @@
   width: 179px;
   height: 179px;
   border-radius: 10px;
+  align-content: center;
 }
 
 .justify-content-center {
@@ -58,3 +59,15 @@
   }
 }
 
+p
+{
+  font-size: 11pt;
+  color:grey;
+  line-height: 14pt;
+  text-align:left;
+}
+
+.namePersona
+{
+  vertical-align: super;
+}

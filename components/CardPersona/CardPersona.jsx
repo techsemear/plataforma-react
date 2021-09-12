@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import {Heading} from '../Heading'
 
-import imageProfile1 from '../../assets/image/landing-1/team-image.png'
-import imageProfile2 from '../../assets/image/landing-1/team-image-2.png'
-import imageProfile3 from '../../assets/image/landing-1/team-image-3.png'
+import LinkedinLogo from '../../assets/image/landing-1/linkedin.png'
 import {Underline} from '../Underline'
 
 export default function CardPersona({personasProfile}) {
@@ -21,12 +19,15 @@ export default function CardPersona({personasProfile}) {
                   <Image src={persona.imageProfile} alt="image" />
                 </div>
                 <div className="content mt-2">
-                  <Underline level="h5"> "{persona.subtitle}"</Underline>
-                  <br />
-                  <Heading level="h6">{persona.text}</Heading>
+                  <p>{persona.text}</p>
                 </div>
                 <div className="identity mt-4">
-                  <Heading level="h6"><strong>{persona.name}</strong></Heading>
+                  <Heading level="h6">
+                    <a href={persona.linkedin} target="_blank">
+                      <Image src ={LinkedinLogo} alt = ""/>
+                    </a>
+                    <strong className="namePersona">{persona.name}</strong>
+                  </Heading>
                   <small>{persona.profession}</small>
                 </div>
               </div>
