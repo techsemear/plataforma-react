@@ -24,8 +24,8 @@ export default function Partners() {
             data-aos-duration={500}
             data-aos-once="true"
           >
-            { logos.map((item, index) => (
-              <LogoImage logo={item} key={index} />
+            {logos.map((item, index) => (
+              <LogoImage logo={item} key={index} resize={true} />
             ))}
           </div>
         </div>

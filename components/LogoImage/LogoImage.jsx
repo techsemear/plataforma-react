@@ -1,13 +1,20 @@
 import Image from 'next/image'
 
-import { Heading } from '../Heading'
+import {Heading} from '../Heading'
 const heightLogo = 55
 const widthLogo = heightLogo * 2
 
-export default function LogoImage({logo, height = heightLogo, width = widthLogo, level="h2", children}) {
+export default function LogoImage({
+  logo,
+  height = heightLogo,
+  width = widthLogo,
+  level,
+  children,
+  resize = false,
+}) {
   return (
     <div
-      className="single-brand "
+      className={resize ? "single-brand resize-image" : "single-brand"}
       data-aos="fade-right"
       data-aos-duration={500}
       data-aos-once="true"

@@ -24,6 +24,7 @@ import '../components/StudentJourney/StudentJourney.css'
 import '../components/Video/Video.css'
 import '../components/Underline/Underline.css'
 import '../components/CardPersona/CardPersona.css'
+import '../components/LogoImage/LogoImage.css'
 
 // Containers
 import '../containers/About/About.css'
@@ -35,6 +36,7 @@ import '../containers/Presentation/Presentation.css'
 import '../containers/StudentArea/StudentArea.css'
 import '../containers/Subscribe/Subscribe.css'
 import '../containers/Testimonial/Testimonial.css'
+
 
 function MyApp({Component, pageProps}) {
   return (

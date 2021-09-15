@@ -11,7 +11,6 @@ import imageProfile3 from '../../assets/image/landing-1/mentor3.png'
 
 const title = 'Mentores da Rede Semear'
 const journey = 'Jornada do Mentor'
-const themeDark = true
 const personas = [
   {
     name: ' Camila Cintra',
@@ -76,9 +75,9 @@ export default function MentorArea() {
         </div>
       </div>
       <Section id ="mentorTestimonial" bgColor="secondary"> 
-      <Testimonial personas={personas} dark={themeDark}>
-        {title}
-      </Testimonial>
+        <Testimonial personas={personas}>
+          {title}
+        </Testimonial>
       </Section>
     </div>
   )

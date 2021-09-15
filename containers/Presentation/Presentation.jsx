@@ -8,9 +8,7 @@ const content = {
   textPart1:
     ' tem como objetivo diminuir a evasão universitária e fornecer aos jovens de baixa renda as condições para que se desenvolvam durante a graduação. Desde então, selecionamos, desenvolvemos e conectamos estudantes universitários de alto potencial que queiram atuar como agentes multiplicadores por um Brasil melhor e mais justo.',
   textPart2:
-    'Alcançamos esse objetivo por meio de Networking, oferecendo uma ampla rede de contato e da Mentoria Social, onde eles trocam experiências com profissionais renomados nas áreas que atuam.',
-  textPart3:
-    'Por acreditarmos na potência do aprendizado social através do nosso programa de mentorias, queremos convidar você a ',
+    'Alcançamos esse objetivo por meio de Networking, oferecendo uma ampla rede de contatos e da Mentoria Social, onde estes jovens podem trocam experiências com profissionais renomados nas áreas que atuam. Por acreditarmos na potência do aprendizado social através do nosso Programa de Mentoria, queremos convidar você a ',
   textPart4: 'imergir nessa jornada que mudará o seu futuro!',
   textPart5: 'O ',
   readMore: 'Instituto Semear',
@@ -29,7 +27,9 @@ export default function Presentation() {
         <div className="col-xl-6 col-lg-5 col-md-10 ">
           <div className="section__heading">
             <Heading level="h2">{content.title}</Heading>
-            <Underline level="h5" ftColor="secondary">{content.subtitle}</Underline>
+            <Underline level="h5" ftColor="secondary">
+              {content.subtitle}
+            </Underline>
             <p data-aos="fade-up" data-aos-delay={800} data-aos-duration={1000}>
               <br className="d-none d-sm-block d-md-none d-xl-block mt-4" />
               {content.textPart5}
@@ -43,13 +43,8 @@ export default function Presentation() {
                 </a>
               </strong>
               {content.textPart1}
-              <br className="d-none d-sm-block d-md-none d-xl-blo mt-3" />
-
+              <br className="d-none d-sm-block d-md-none d-xl-blo mt-2" />
               {content.textPart2}
-              <br className="d-none d-sm-block d-md-none d-xl-blo mt-3" />
-
-              {content.textPart3}
-
               <strong>{content.textPart4}</strong>
             </p>
           </div>

@@ -7,7 +7,6 @@ import {Section} from '../Section'
 import studentImage from '../../assets/image/footer.png'
 import globeImage from '../../assets/image/landing-1/h1-content-2-globe.png'
 
-const title = 'Quem já venceu essa jornada'
 const journey = 'Jornada do Jovem'
 const themeDark = true
 
@@ -26,7 +25,7 @@ const itemsText = [
 export default function StudentPoints() {
   return (
     <Section bgColor="primary">
-      <div className="content-area-2-l1 background-dark">
+      <div className="content-area-2-l1">
         <div className="container">
           <div className="row justify-content-center align-items-center">
             <ItemsSection itemsText={itemsText} dark={themeDark}>

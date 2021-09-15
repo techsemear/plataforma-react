@@ -17,15 +17,11 @@ export default function PersonaTestimonial({
           alt="image-profile"
           objectFit="contain"
         />
-        <div
-          className={dark ? 'testimonial-text-white' : 'testimonial-text-dark'}
-        >
           <p>
             “<span>{persona.subtitle}</span> {persona.text}”
           </p>
-          <h5>{persona.name}</h5>
+          <Heading level="h5" ftColor={dark ? 'primary' : 'default'}>{persona.name}</Heading>
           <small>{persona.profession}</small>
-        </div>
       </div>
     </div>
   )

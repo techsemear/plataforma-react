@@ -1,5 +1,6 @@
 import {OrderedItems} from '../OrderedItems'
-
+import {Heading} from '../Heading'
+import {Underline} from '../Underline'
 export default function ItemsSection({children, itemsText, dark = false}) {
   return (
     <div
@@ -8,20 +9,20 @@ export default function ItemsSection({children, itemsText, dark = false}) {
       data-aos-delay={500}
       data-aos-duration={1000}
     >
-      <div className="content-box-2-l1 section__heading">
+      <div className="content-box-2-l1">
         <div>
-          <div className={dark ? 'text-color-white' : 'text-color-dark'}>
-            <h2 className="content-text-h2-a4">
-              O que posso descobrir nessa jornada ?
-            </h2>
-
-            <h4 className="content-text-h4">
-              <span>{children}</span>
-            </h4>
-          </div>
+          <Heading ftColor={dark ? 'primary' : 'default'}>
+            O que posso descobrir nessa jornada ?
+          </Heading>
+          <Underline
+            level="h4"
+            ftColor={dark ? 'quartenary' : 'secondary'}
+            underline={true}
+          >
+            <span>{children}</span>
+          </Underline>
         </div>
-
-        <OrderedItems itemsTextList={itemsText} dark={dark} />
+        <OrderedItems itemsTextList={itemsText} colorDefault={dark} />
       </div>
     </div>
   )

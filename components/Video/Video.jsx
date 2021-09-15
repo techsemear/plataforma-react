@@ -1,5 +1,7 @@
-import {useState, Fragment} from 'react'
 import Image from 'next/image'
+import {useState, Fragment} from 'react'
+
+import {Heading} from '../Heading'
 
 function Modal({children, onClickOutside = () => {}, youtubeID}) {
   return (
@@ -25,18 +27,18 @@ function Modal({children, onClickOutside = () => {}, youtubeID}) {
   )
 }
 
-export default function Video({youtubeID}) {
+const content = {
+  title: 'Entenda na Prática',
+  subtitle: 'Assista ao nosso manifesto',
+}
+
+export default function Video({youtubeID, contentText = content}) {
   const [isModalOpen, toogleModal] = useState(false)
 
   const handleClick = (event) => {
     event.preventDefault()
 
     toogleModal(!isModalOpen)
-  }
-
-  const content = {
-    title: 'Entenda na Prática',
-    subtitle: 'Assista ao nosso manifesto',
   }
 
   return (
@@ -52,8 +54,8 @@ export default function Video({youtubeID}) {
                 fa-play font-size-7"
                   />
                 </a>
-                <h2>{content.title}</h2>
-                <p>{content.subtitle}</p>
+                <Heading horizontalPosition="center">{contentText.title}</Heading>
+                <p>{contentText.subtitle}</p>
               </div>
             </div>
           </div>

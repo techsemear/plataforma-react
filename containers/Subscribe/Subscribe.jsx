@@ -1,10 +1,10 @@
 import Image from 'next/image'
 
 import {LeadForm} from '../../components/LeadForm'
+import {Heading} from '../../components/Heading'
 
 import blurImage from '../../assets/image/landing-1/h1-cta-blur-shape-2.png'
 import rocket from '../../assets/image/landing-1/h1-cta-rocket-image.png'
-import { Section } from '../../components/Section'
 
 export default function Subscribe() {
   return (
@@ -22,7 +22,7 @@ export default function Subscribe() {
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="section__heading text-center">
-              <h2>Gostou da Nossa proposta ?</h2>
+              <Heading horizontalPosition="center">Gostou da Nossa proposta ?</Heading >
               <p>
                 Estamos trabalhando para trazer para vocês a melhor e mais amada
                 plataforma de mentoria do Brasil, se você tem interesse em ser
