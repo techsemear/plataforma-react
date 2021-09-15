@@ -14,13 +14,18 @@ export default function LogoImage({
 }) {
   return (
     <div
-      className={resize ? "single-brand resize-image" : "single-brand"}
+      className={resize ? 'single-brand resize-image' : 'single-brand'}
       data-aos="fade-right"
       data-aos-duration={500}
       data-aos-once="true"
     >
       <Heading level={level}>
-        <a href={logo.link} target="_blank">
+        <a
+          className="reference"
+          href={logo.link}
+          target="_blank"
+          rel="noreferrer"
+        >
           <Image
             src={logo.image}
             alt="logo"

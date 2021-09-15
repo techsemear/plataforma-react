@@ -12,7 +12,7 @@ export default function CardPersona({personasProfile}) {
     persona.image = linkedinImage;
     persona.link = persona.linkedin;
   })
-  console.log(personasProfile[0]);
+
   return (
     <div className="row justify-content-center clients-l8-items">
       {personasProfile.map((persona, index) => (
