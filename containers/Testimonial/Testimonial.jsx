@@ -1,12 +1,10 @@
 import Image from 'next/image'
 
-import {PersonaTestimonial} from '../../components/PersonaTestimonial'
-import {Section} from '../../components/Section'
 import {CardPersona} from '../../components/CardPersona'
+import {Heading} from '../../components/Heading'
 
 import heartShape from '../../assets/image/landing-1/h1-client-heart-shape.png'
 import startShape from '../../assets/image/landing-1/h1-client-start-shape.png'
-import {Heading} from '../../components/Heading'
 
 export default function Testimonial({
   personas,
@@ -47,10 +45,9 @@ export default function Testimonial({
                 data-aos-delay={500}
                 data-aos-duration={1000}
               >
-
-                  <Heading horizontalPosition="center" ftColor="primary">
-                    {children}
-                  </Heading>
+                <Heading horizontalPosition="center" ftColor="primary">
+                  {children}
+                </Heading>
               </div>
             </div>
           </div>

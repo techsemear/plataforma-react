@@ -19,27 +19,87 @@ import logo18 from './ultra.png';
 import logo19 from './vetor.png';
 import logo20 from './visagio.png';
 
-const images = {
-    logo1,
-    logo2,
-    logo3,
-    logo4,
-    logo5,
-    logo6,
-    logo7,
-    logo8,
-    logo9,
-    logo10,
-    logo11,
-    logo12,
-    logo13,
-    logo14,
-    logo15,
-    logo16,
-    logo17,
-    logo18,
-    logo19,
-    logo20
-};
+const images = [
+  {
+    image: logo1,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo2,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo3,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo4,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo5,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo6,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo7,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo8,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo9,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo10,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo11,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo12,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo13,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo14,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo15,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo16,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo17,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo18,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo19,
+    link: 'https://arcoeducacao.com.br/',
+  },
+  {
+    image: logo20,
+    link: 'https://arcoeducacao.com.br/',
+  }
+];
 
 export default images;

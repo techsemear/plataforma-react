@@ -1,9 +1,10 @@
 import Image from 'next/image'
 
-export default function Contributor({logo}) {
-  const height = 50
-  const width = height*2
-  
+import { Heading } from '../Heading'
+const heightLogo = 55
+const widthLogo = heightLogo * 2
+
+export default function LogoImage({logo, height = heightLogo, width = widthLogo, level="h2", children}) {
   return (
     <div
       className="single-brand "
@@ -11,13 +12,18 @@ export default function Contributor({logo}) {
       data-aos-duration={500}
       data-aos-once="true"
     >
-      <Image
-        src={logo}
-        alt="logo"
-        objectFit="contain"
-        width={width}
-        height={height}
-      />
+      <Heading level={level}>
+        <a href={logo.link} target="_blank">
+          <Image
+            src={logo.image}
+            alt="logo"
+            objectFit="contain"
+            width={width}
+            height={height}
+          />
+        </a>
+        {children}
+      </Heading>
     </div>
   )
 }

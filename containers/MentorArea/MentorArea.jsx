@@ -1,7 +1,9 @@
 import Image from 'next/image'
+
 import {Testimonial} from '../Testimonial'
 import {ItemsSection} from '../../components/ItemsSection'
 import {Section} from '../../components/Section'
+
 import mentorImage from '../../assets/image/mentor1.png'
 import imageProfile1 from '../../assets/image/landing-1/mentor1.png'
 import imageProfile2 from '../../assets/image/landing-1/mentor2.png'
@@ -31,7 +33,7 @@ const personas = [
     name: ' Lucas Carvalho',
     subtitle: 'Must have service',
     text: '"A oportunidade de dividir anseios, dúvidas, perspectivas de carreira e ensinamentos com jovens tão atentos é, sem dúvida, excepcional e um exercício de aprendizado. Tenho um carinho especial pela mentoria que me possibilitou conhecer um jovem inteligente, cheio de sonhos e que tem uma trajetória muito parecida com a que eu tive."',
-    profession: 'Advogado júnior - Demarest Advogados',
+    profession: 'Advogado Júnior - Demarest Advogados',
     imageProfile: imageProfile3,
     linkedin:"https://www.linkedin.com/in/lucas-vieira-carvalho-62a8aa18b/",
   },
@@ -75,8 +77,7 @@ export default function MentorArea() {
       </div>
       <Section id ="mentorTestimonial" bgColor="secondary"> 
       <Testimonial personas={personas} dark={themeDark}>
-        {' '}
-        {title}{' '}
+        {title}
       </Testimonial>
       </Section>
     </div>

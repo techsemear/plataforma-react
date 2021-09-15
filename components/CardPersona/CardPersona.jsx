@@ -1,10 +1,18 @@
 import Image from 'next/image'
-import {Heading} from '../Heading'
 
-import LinkedinLogo from '../../assets/image/landing-1/linkedin-2.png'
-import {Underline} from '../Underline'
+import {Heading} from '../Heading'
+import {LogoImage} from '../LogoImage'
+
+import linkedinImage from '../../assets/image/landing-1/linkedin-2.png'
+
+const height = 24;
 
 export default function CardPersona({personasProfile}) {
+  personasProfile.map((persona) => {
+    persona.image = linkedinImage;
+    persona.link = persona.linkedin;
+  })
+  console.log(personasProfile[0]);
   return (
     <div className="row justify-content-center clients-l8-items">
       {personasProfile.map((persona, index) => (
@@ -17,21 +25,13 @@ export default function CardPersona({personasProfile}) {
         >
           <div className="client-l8-card">
             <div className="image">
-              <Image
-                src={persona.imageProfile}
-                alt="image"
-              />
+              <Image src={persona.imageProfile} alt="image" />
             </div>
             <div className="content mt-2">
               <p>{persona.text}</p>
             </div>
-            <div className="identity mt-4">
-              <Heading level="h6">
-                <a href="">
-                  <Image src={LinkedinLogo} />
-                </a>
-                <strong className="namePersona">{persona.name}</strong>
-              </Heading>
+            <div className="identity">
+              <LogoImage logo={persona} width={height} height={height} level="h6"> <strong className="namePersona">{persona.name}</strong> </LogoImage>
               <small>{persona.profession}</small>
             </div>
           </div>

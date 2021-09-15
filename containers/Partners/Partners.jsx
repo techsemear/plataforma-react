@@ -1,5 +1,5 @@
 import logos from '../../assets/image/apoiadores/index.js'
-import {Contributor} from '../../components/Contributor'
+import {LogoImage} from '../../components/LogoImage'
 import {Section} from '../../components/Section'
 import {Heading} from '../../components/Heading'
 
@@ -24,8 +24,8 @@ export default function Partners() {
             data-aos-duration={500}
             data-aos-once="true"
           >
-            {Object.keys(logos).map((item, index) => (
-              <Contributor logo={logos[item]} key={index} />
+            { logos.map((item, index) => (
+              <LogoImage logo={item} key={index} />
             ))}
           </div>
         </div>
