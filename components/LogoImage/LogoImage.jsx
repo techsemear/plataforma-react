@@ -10,11 +10,11 @@ export default function LogoImage({
   width = widthLogo,
   level,
   children,
-  resize = false,
+  hover = false,
 }) {
   return (
     <div
-      className={resize ? 'single-brand resize-image' : 'single-brand'}
+      className={hover ? 'single-brand resize-image' : 'single-brand'}
       data-aos="fade-right"
       data-aos-duration={500}
       data-aos-once="true"

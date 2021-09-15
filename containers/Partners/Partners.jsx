@@ -25,7 +25,7 @@ export default function Partners() {
             data-aos-once="true"
           >
             {logos.map((item, index) => (
-              <LogoImage logo={item} key={index} resize={true} />
+              <LogoImage logo={item} key={index} hover={true} />
             ))}
           </div>
         </div>
