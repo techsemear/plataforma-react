@@ -5,12 +5,12 @@ import {Underline} from '../../components/Underline'
 const content = {
   title: 'A Universidade foi o primeiro passo, e agora?',
   subtitle: 'Conectamos jovens a oportunidades reais',
-  textPart1:
-    ' tem como objetivo diminuir a evasão universitária e fornecer aos jovens de baixa renda as condições para que se desenvolvam durante a graduação. Desde então, selecionamos, desenvolvemos e conectamos estudantes universitários de alto potencial que queiram atuar como agentes multiplicadores por um Brasil melhor e mais justo.',
+  textPart1: 'O ',
   textPart2:
+    ' tem como objetivo diminuir a evasão universitária e fornecer aos jovens de baixa renda as condições para que se desenvolvam durante a graduação. Desde então, selecionamos, desenvolvemos e conectamos estudantes universitários de alto potencial que queiram atuar como agentes multiplicadores por um Brasil melhor e mais justo.',
+  textPart3:
     'Alcançamos esse objetivo por meio de Networking, oferecendo uma ampla rede de contatos e da Mentoria Social, onde estes jovens podem trocam experiências com profissionais renomados nas áreas que atuam. Por acreditarmos na potência do aprendizado social através do nosso Programa de Mentoria, queremos convidar você a ',
   textPart4: 'imergir nessa jornada que mudará o seu futuro!',
-  textPart5: 'O ',
   readMore: 'Instituto Semear',
   titleCard1: '1400',
   textCard1: 'Jovens Impactados pelos projetos do ISemear',
@@ -32,7 +32,7 @@ export default function Presentation() {
             </Underline>
             <p data-aos="fade-up" data-aos-delay={800} data-aos-duration={1000}>
               <br className="d-none d-sm-block d-md-none d-xl-block mt-4" />
-              {content.textPart5}
+              {content.textPart1}
               <strong>
                 <a
                   className="reference"
@@ -42,9 +42,11 @@ export default function Presentation() {
                   {content.readMore}
                 </a>
               </strong>
-              {content.textPart1}
-              <br className="d-none d-sm-block d-md-none d-xl-blo mt-2" />
               {content.textPart2}
+            </p>
+            <p data-aos="fade-up" data-aos-delay={800} data-aos-duration={1000}>
+              <br className="d-none d-sm-block d-md-none d-xl-block mt-2" />
+              {content.textPart3}
               <strong>{content.textPart4}</strong>
             </p>
           </div>
@@ -62,7 +64,6 @@ export default function Presentation() {
                 <Heading level="h3" ftColor="primary">
                   {content.titleCard1}
                 </Heading>
-
                 <p>{content.textCard1} </p>
               </div>
             </div>
