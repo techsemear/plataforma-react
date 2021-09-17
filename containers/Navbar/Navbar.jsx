@@ -1,6 +1,9 @@
 import {Logo} from '../../components/Logo'
 
 import {NavbarItems} from './NavbarItems'
+import {LoginButton} from '../../components/LoginButton'
+
+
 
 const menuItems = [
   {
@@ -23,10 +26,6 @@ const menuItems = [
     label: 'Jornada do Mentor',
     linkTo: '#jornada-mentor',
   },
-  {
-    label: 'Tenho Interesse',
-    linkTo: '#subscribe',
-  },
 ]
 
 export default function Navbar() {
@@ -37,7 +36,9 @@ export default function Navbar() {
           <Logo />
 
           <NavbarItems items={menuItems} />
-
+          <LoginButton>
+            Login
+          </LoginButton>
           {/* mobile menu trigger */}
           <div className="mobile-menu-trigger">
             <span />
