@@ -7228,50 +7228,6 @@ div#loading img {
 }
 
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
-               Content-Area 01-L9
-        <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-.content-area-l9-1 {
-  padding-top: 50px;
-  padding-bottom: 60px;
-}
-
-@media (min-width: 768px) {
-  .content-area-l9-1 {
-    padding-top: 70px;
-    padding-bottom: 80px;
-  }
-}
-
-@media (min-width: 992px) {
-  .content-area-l9-1 {
-    padding-top: 120px;
-    padding-bottom: 110px;
-  }
-}
-
-.content-area-l9-1 .content-area-l9-1-items {
-  margin-bottom: -30px;
-}
-
-.content-area-l9-1 .content-area-l9-1-items .col-lg-4 {
-  margin-bottom: 30px;
-}
-
-.content-area-l9-1 .content h2 {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: -0.3px;
-  color: #1D263A;
-}
-
-.content-area-l9-1 .content p {
-  font-size: 15px;
-  line-height: 28px;
-  color: #1D263A;
-}
-
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      
                Content-Area 02-L9
         <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .content-area-l9-2 {

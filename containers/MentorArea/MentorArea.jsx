@@ -9,8 +9,11 @@ import imageProfile1 from '../../assets/image/landing-1/mentor1.png'
 import imageProfile2 from '../../assets/image/landing-1/mentor2.png'
 import imageProfile3 from '../../assets/image/landing-1/mentor3.png'
 
-const title = 'Mentores da Rede Semear'
-const journey = 'Jornada do Mentor'
+const content = {
+  title: 'Mentores da Rede Semear',
+  journey: 'Jornada do Mentor',
+}
+
 const personas = [
   {
     name: ' Camila Cintra',
@@ -70,13 +73,13 @@ export default function MentorArea() {
                 </div>
               </div>
             </div>
-            <ItemsSection itemsText={itemsText}> {journey} </ItemsSection>
+            <ItemsSection itemsText={itemsText}> {content.journey} </ItemsSection>
           </div>
         </div>
       </div>
       <Section id ="mentorTestimonial" bgColor="secondary"> 
         <Testimonial personas={personas}>
-          {title}
+          {content.title}
         </Testimonial>
       </Section>
     </div>
