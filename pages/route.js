@@ -1,13 +1,15 @@
 import React from 'react'
 import {Route, IndexRoute} from 'react-router'
 
-import App from './_app'
+import MyApp from './_app'
 import Home from './index'
-import Login from './Login'
+import Login from './login'
+import Onboarding from './onboarding'
 
 export default (
-  <Route path="/" component={App}>
+  <Route path="/" component={MyApp}>
     <IndexRoute component={Home} />
-    <Route path="/some/where" component={Login} />
+    <Route path="/login" component={Login} />
+    <Route path="/onboarding" component={Onboarding} />
   </Route>
 )

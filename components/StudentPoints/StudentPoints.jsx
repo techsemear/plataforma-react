@@ -10,19 +10,7 @@ import globeImage from '../../assets/image/landing-1/h1-content-2-globe.png'
 const journey = 'Jornada do Jovem'
 const themeDark = true
 
-const itemsText = [
-  {
-    text: 'Converse com mentores que tiveram sucesso na escolha de suas carreiras',
-  },
-  {
-    text: 'Conheça programas para encontrar oportunidades em organizações parceiras',
-  },
-  {
-    text: 'Encontre jovens que passaram pela mesma vivência e hoje são destaques no mercado',
-  },
-]
-
-export default function StudentPoints() {
+export default function StudentPoints({itemsText}) {
   return (
     <Section bgColor="primary">
       <div className="content-area-2-l1">

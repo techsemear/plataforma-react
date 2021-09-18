@@ -30,7 +30,18 @@ const personas = [
     imageProfile: imageProfile3,
     linkedin: 'https://www.linkedin.com/in/gonsalvesjessica/',
   },
-]
+];
+const itemsText = [
+  {
+    text: 'Converse com mentores que tiveram sucesso na escolha de suas carreiras',
+  },
+  {
+    text: 'Conheça programas para encontrar oportunidades em organizações parceiras',
+  },
+  {
+    text: 'Encontre jovens que passaram pela mesma vivência e hoje são destaques no mercado',
+  },
+];
 export default function studentArea() {
   return (
     <div className="jovem-area">
@@ -48,7 +59,7 @@ export default function studentArea() {
       </div>
 
       <StudentJourney />
-      <StudentPoints />
+      <StudentPoints itemsText={itemsText}/>
       <Section bgColor="primary" id="studentTestimonial">
         <Testimonial personas={personas}>{title}</Testimonial>
       </Section>
