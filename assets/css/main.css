@@ -24095,7 +24095,7 @@ img.spin {
 }
 
 .image-hover-style-01 img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: all 1s ease-out;
   filter: brightness(0.7);
 }

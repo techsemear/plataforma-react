@@ -39,6 +39,8 @@ import '../containers/Subscribe/Subscribe.css'
 import '../containers/Testimonial/Testimonial.css'
 import '../containers/MaslowTheory/MaslowTheory.css'
 //import '../containers/LoginPage/LoginPage.css'
+import '../containers/IntroOnboarding/IntroOnboarding.css'
+import '../containers/Challenges/Challenges.css'
 
 
 
