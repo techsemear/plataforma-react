@@ -37,8 +37,8 @@ import '../containers/Presentation/Presentation.css'
 import '../containers/StudentArea/StudentArea.css'
 import '../containers/Subscribe/Subscribe.css'
 import '../containers/Testimonial/Testimonial.css'
-//import '../containers/LoginPage/LoginPage.css'
-
+import '../containers/LoginPage/LoginPage.css'
+import '../containers/SignUpPage/SignUpPage.css'
 
 
 function MyApp({Component, pageProps}) {

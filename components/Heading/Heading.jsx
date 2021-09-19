@@ -10,6 +10,7 @@ const colorClasses = {
   secondary: 'ft-secondary',
   tertiary: 'ft-tertiary ',
   quartenary: 'ft-quartenary',
+  quinary: 'ft-quinary',
 }
 
 export default function Heading({

@@ -25,8 +25,9 @@ export default function LoginPage(){
             </div>
             <div className="heading">
               <Heading level="h2">Bem-vindo</Heading>
-              <h6>Ainda não se registrou?</h6>
-              <a href="#" className="toggle"> Entre aqui</a>
+              <Heading level= "h6">Ainda não se registrou?  
+              <a href="#" className="toggle"> Entre aqui</a> 
+              </Heading>
             </div>
             <div className="actual-form">
               <div className="input-wrap">
@@ -39,15 +40,15 @@ export default function LoginPage(){
               </div>
               <input type="submit" defaultValue="Sign In" className="sign-btn" />
               <div className="sign-with">
-                <h3 className="login-with">Login With</h3>
+                <Heading level="h6" ftColor = "quartenary" horizontalPosition="center" className="login-with">Login With</Heading>
                 <div className="sign-with-btn">
-                    <a href="#" className="btn-face m-b-20">
-                    <Image src={facebookLogo} alt="FACEBOOK" />
-                    Facebook
+                    <a href="#" className="btn-face">
+                      <Image src={facebookLogo} alt="FACEBOOK" />
+                      Facebook
                     </a>
-                    <a href="#" className="btn-google m-b-20">
-                    <Image src={googleLogo} alt="GOOGLE" />
-                    Google
+                    <a href="#" className="btn-google">
+                      <Image src={googleLogo} alt="GOOGLE" />
+                      Google
                     </a>
                 </div>
               </div>
@@ -90,9 +91,9 @@ export default function LoginPage(){
         </div>
         <div className="carousel">
           <div className="images-wrapper">
-            <Image src={imageLogin1} className="image-1 image img-1 show" alt="" />
-            <Image src={imageLogin2} className="image-2 image img-2" alt="" />
-            <Image src={imageLogin3} className="image-3 image img-3" alt="" />
+            <Image src={imageLogin1} className="loginImage-1 images lImg-1 show" alt="" />
+            <Image src={imageLogin2} className="loginImage-2 images lImg-2" alt="" />
+            <Image src={imageLogin3} className="loginImage-3 images lImg-3" alt="" />
           </div>
           <div className="text-slider">
             <div className="text-wrap">
