@@ -19,7 +19,7 @@ export default function MaslowFeatures() {
     <div className="row">
       <div className="offset-xxl-1 col-xxl-5 offset-xl-1 col-xl-6 col-lg-8" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
         <div className="service-l4-head-content section__heading-2">
-          <Heading level="h3">"Ual que oportunidade incrível! Mas como funciona para fazer parte de tudo isso ?"</Heading>
+          <Heading level="h3">Ual que oportunidade incrível! Mas como funciona para fazer parte de tudo isso ?</Heading>
           <Heading level ="h6" ftColor="quartenary">Pode ficar tranquilo(a) que nós te explicamos o passo a passo de como vai funcionar esse processo.</Heading>
         </div>
       </div>
