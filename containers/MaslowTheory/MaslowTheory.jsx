@@ -4,7 +4,7 @@ import Image from 'next/image'
 import {Heading} from '../../components/Heading'
 import {Section} from '../../components/Section'
 
-import maslowPyramid from '../../assets/image/landing-9/content-1-img-1.png'
+import maslowPyramid from '../../assets/image/triangle.png'
 
 const content = {
   title:
@@ -14,7 +14,7 @@ const content = {
 
 export default function MaslowTheory() {
   return (
-    <Section>
+    <Section bgColor="primary">
       <div className="content-area-l9-1">
         <div className="container">
           <div className="row content-area-l9-1-items justify-content-center">
@@ -25,7 +25,7 @@ export default function MaslowTheory() {
               data-aos-duration={1000}
             >
               <div className="content">
-                <Heading level="h4">{content.title}</Heading>
+                <Heading level="h4" ftColor="primary">{content.title}</Heading>
               </div>
             </div>
             <div

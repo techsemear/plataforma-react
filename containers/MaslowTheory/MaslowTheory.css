@@ -15,8 +15,8 @@
 
 @media (min-width: 992px) {
   .content-area-l9-1 {
-    padding-top: 120px;
-    padding-bottom: 110px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
@@ -31,7 +31,7 @@
 .content-area-l9-1 .content p {
   font-size: 15px;
   line-height: 28px;
-  color: #1d263a;
+  color: #fff;
 }
 
 .overflow-hidden {
