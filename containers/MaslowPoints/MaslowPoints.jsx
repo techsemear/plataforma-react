@@ -27,30 +27,32 @@ export default function MaslowPoints() {
         <div className="content-l7-2-content-box">
           <Heading level="h6" ftColor="primary">Ela categoriza as principais necessidades humanas em um gráfico de pirâmide! Segue com a gente:</Heading>
           <div className="item d-flex flex-wrap " data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
-            <div className="item-icon">
-              <span>3°</span>
+          <div className="feature-box-l2 h-100">
+              <div className="d-flex">
+                <div className="color-box bg-dark" />
+                <div className="content-box">
+                  <Heading level ="h4" ftColor="primary">3° Nível</Heading>
+                  <Heading level ="h6" ftColor="primary">Desafios de Autorrealização</Heading>
+                </div>
+              </div>
             </div>
-            <div className="item-content">
-              <Heading level = "h4" ftColor="primary">Nível</Heading>
-              <p>Desafio da Autorrealização</p>
+            <div className="feature-box-l2 h-100">
+              <div className="d-flex">
+                <div className="color-box bg-mint" />
+                <div className="content-box">
+                  <Heading level ="h4" ftColor="primary">2° Nível</Heading>
+                  <Heading level ="h6" ftColor="primary">Desafios Psicológicos    </Heading>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="item d-flex flex-wrap" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
-            <div className="item-icon">
-              <span>2°</span>
-            </div>
-            <div className="item-content">
-              <Heading level = "h4" ftColor="primary">Nível</Heading>
-              <p>Desafios Psicológicos</p>
-            </div>
-          </div>
-          <div className="item d-flex flex-wrap" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
-            <div className="item-icon">
-              <span>1°</span>
-            </div>
-            <div className="item-content">
-              <Heading level = "h4" ftColor="primary">Nível</Heading>
-              <p>Desafios de Base</p>
+            <div className="feature-box-l2 h-100">
+              <div className="d-flex">
+                <div className="color-box bg-secondBlue" />
+                <div className="content-box">
+                  <Heading level ="h4" ftColor="primary">1° Nível</Heading>
+                  <Heading level ="h6" ftColor="primary">Desafios de Base</Heading>
+                </div>
+              </div>
             </div>
           </div>
         </div>
