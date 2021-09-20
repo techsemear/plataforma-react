@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Image from 'next/image'
+
 
 import {Heading} from '../../components/Heading'
 import {Section} from '../../components/Section'
+import {MaslowFeatures} from '../../components/MaslowFeatures'
 
 import maslowPiramid from '../../assets/image/maslow.png'
 
 
+
 export default function MaslowPoints() {
   return (
+    <Fragment>
     <Section bgColor="primary">
     <div className="content-area-l7-2">
     <div className="container">
@@ -29,7 +33,7 @@ export default function MaslowPoints() {
             </div>
             <div className="item-content">
               <Heading level = "h4" ftColor="primary">Nível</Heading>
-              <p>Contray to popular belief, Lorem ipsum</p>
+              <p>Desafio da Autorrealização</p>
             </div>
           </div>
           <div className="item d-flex flex-wrap" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
@@ -38,7 +42,7 @@ export default function MaslowPoints() {
             </div>
             <div className="item-content">
               <Heading level = "h4" ftColor="primary">Nível</Heading>
-              <p>Contray to popular belief, Lorem ipsum</p>
+              <p>Desafios Psicológicos</p>
             </div>
           </div>
           <div className="item d-flex flex-wrap" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
@@ -47,7 +51,7 @@ export default function MaslowPoints() {
             </div>
             <div className="item-content">
               <Heading level = "h4" ftColor="primary">Nível</Heading>
-              <p>Contray to popular belief, Lorem ipsum</p>
+              <p>Desafios de Base</p>
             </div>
           </div>
         </div>
@@ -59,7 +63,9 @@ export default function MaslowPoints() {
       </div>
     </div>
     </div>
-    </div>
+    </div>    
   </Section>
- )
+  <MaslowFeatures/>
+  </Fragment>
+  )
 }
