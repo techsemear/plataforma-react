@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import {Heading} from '../../components/Heading'
 import {Section} from '../../components/Section'
+import {Wave} from '../../components/Wave'
 import {MaslowFeatures} from '../../components/MaslowFeatures'
 
 import maslowPiramid from '../../assets/image/triangulo-blue.png'
@@ -13,6 +14,7 @@ import maslowPiramid from '../../assets/image/triangulo-blue.png'
 export default function MaslowPoints() {
   return (
     <Fragment>
+    <Wave/>
     <Section bgColor="primary">
     <div className="content-area-l7-2">
     <div className="row content-area-l7-2-heading align-items-center justify-content-lg-start justify-content-center">
@@ -29,10 +31,10 @@ export default function MaslowPoints() {
           <div className="item d-flex flex-wrap " data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-l2 h-100">
               <div className="d-flex">
-                <div className="color-box bg-dark" />
+                <div className="color-box bg-grey1" />
                 <div className="content-box">
-                  <Heading level ="h4" ftColor="primary">3° Nível</Heading>
-                  <Heading level ="h6" ftColor="primary">Desafios de Autorrealização</Heading>
+                  <Heading level ="h5" ftColor="primary">Desafio da Autorrealização</Heading>
+                  <Heading level ="h6" ftColor="primary">Viver de Acordo ao seu Máximo Potencial</Heading>
                 </div>
               </div>
             </div>
@@ -40,8 +42,8 @@ export default function MaslowPoints() {
               <div className="d-flex">
                 <div className="color-box bg-mint" />
                 <div className="content-box">
-                  <Heading level ="h4" ftColor="primary">2° Nível</Heading>
-                  <Heading level ="h6" ftColor="primary">Desafios Psicológicos    </Heading>
+                  <Heading level ="h5" ftColor="primary">Desafios Psicológicos</Heading>
+                  <Heading level ="h6" ftColor="primary">Autoestima, Reconhecimento e Pertencimento Social</Heading>
                 </div>
               </div>
             </div>
@@ -49,8 +51,8 @@ export default function MaslowPoints() {
               <div className="d-flex">
                 <div className="color-box bg-secondBlue" />
                 <div className="content-box">
-                  <Heading level ="h4" ftColor="primary">1° Nível</Heading>
-                  <Heading level ="h6" ftColor="primary">Desafios de Base</Heading>
+                  <Heading level ="h5" ftColor="primary">Desafios de Base</Heading>
+                  <Heading level ="h6" ftColor="primary">Alimentação, Moradia, Saúde e Segurança</Heading>
                 </div>
               </div>
             </div>

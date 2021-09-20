@@ -14,7 +14,7 @@ const content = {
 
 export default function MaslowTheory() {
   return (
-    <Section bgColor="primary">
+    <Section>
       <div className="content-area-l9-1">
         <div className="container">
           <div className="row content-area-l9-1-items justify-content-center">
@@ -25,7 +25,7 @@ export default function MaslowTheory() {
               data-aos-duration={1000}
             >
               <div className="content">
-                <Heading level="h4" ftColor="primary">{content.title}</Heading>
+                <Heading level="h4">{content.title}</Heading>
               </div>
             </div>
             <div
