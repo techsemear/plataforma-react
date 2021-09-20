@@ -48,6 +48,8 @@ import '../containers/IntroOnboarding/IntroOnboarding.css'
 import '../containers/Challenges/Challenges.css'
 import '../containers/MaslowTheory/MaslowTheory.css'
 import '../containers/MaslowPoints/MaslowPoints.css'
+import '../containers/GetStarted/GetStarted.css'
+
 
 
 

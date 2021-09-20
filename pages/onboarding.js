@@ -6,6 +6,8 @@ import {Challenges} from '../containers/Challenges'
 import {MaslowTheory} from '../containers/MaslowTheory'
 import {MaslowPoints} from '../containers/MaslowPoints'
 import {StepsMentoring} from '../containers/StepsMentoring'
+import {GetStarted} from '../containers/GetStarted'
+
 
 // Components
 
@@ -16,7 +18,7 @@ export default function Onboarding() {
       <Challenges />
       <MaslowTheory />
       <MaslowPoints />
-      <StepsMentoring />
+      <GetStarted />
     </React.Fragment>
   )
 }
