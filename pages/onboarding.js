@@ -7,12 +7,11 @@ import {Navbar} from '../containers/Navbar'
 import {IndexPage} from '../components/IndexPage'
 import {LoginPage} from '../containers/LoginPage'
 
-export default function Login() {
+export default function Onboarding() {
   return (
     <React.Fragment>
       <IndexPage />
       <Navbar />
-      <LoginPage />
     </React.Fragment>
   )
 }
