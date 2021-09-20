@@ -9,7 +9,7 @@ import {StepsMentoring} from '../containers/StepsMentoring'
 
 // Components
 
-export default function Login() {
+export default function Onboarding() {
   return (
     <React.Fragment>
       <IntroOnboarding />
