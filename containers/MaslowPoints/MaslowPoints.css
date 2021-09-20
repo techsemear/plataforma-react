@@ -1,5 +1,6 @@
 .content-area-l7-2 {
-  padding-bottom: 55px;
+  margin-bottom: 50px;
+  
 }
 
 @media (min-width: 768px) {
@@ -10,7 +11,7 @@
 
 @media (min-width: 992px) {
   .content-area-l7-2 {
-    padding-bottom: 125px;
+    padding-bottom: 150px;
   }
 }
 

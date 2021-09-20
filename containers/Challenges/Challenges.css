@@ -1,20 +1,20 @@
 .content-are-l2-1 {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 0px;
   background-color: #11115d;
 }
 
 @media (min-width: 768px) {
   .content-are-l2-1 {
     padding-top: 73px;
-    padding-bottom: 80px;
+    padding-bottom: 0px;
   }
 }
 
 @media (min-width: 992px) {
   .content-are-l2-1 {
     padding-top: 130px;
-    padding-bottom: 130px;
+    padding-bottom: 0px;
   }
 }
 
