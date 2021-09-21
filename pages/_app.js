@@ -49,7 +49,7 @@ import '../containers/MaslowPoints/MaslowPoints.css'
 import '../containers/MaslowFeatures/MaslowFeatures.css'
 import '../containers/GetStarted/GetStarted.css'
 import '../containers/ChallengeVideos/ChallengeVideos.css'
-
+import '../containers/TrainingVideos/TrainingVideos.css'
 
 
 function MyApp({Component, pageProps}) {

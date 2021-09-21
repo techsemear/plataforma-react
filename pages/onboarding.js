@@ -24,6 +24,8 @@ export default function Onboarding() {
       <MaslowTheory />
       <MaslowPoints />
       <MaslowFeatures />
+      <ChallengeVideos />
+      <TrainingVideos />
       <GetStarted />
     </React.Fragment>
   )
