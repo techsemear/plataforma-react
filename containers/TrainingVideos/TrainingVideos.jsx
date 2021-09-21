@@ -5,7 +5,6 @@ import {Heading} from '../../components/Heading'
 import {VideoSide} from '../../components/Video'
 
 import Cover from '../../assets/image/l6/l6-hero-img.png'
-import CoverE from '../../assets/image/l8/background-semear.jpg'
 
 const challengeContent = [
   {
@@ -18,7 +17,7 @@ const challengeContent = [
   {
     title: 'Moradia',
     text: 'Create custom landing pages with Shades that convert more visitors than any website—no coding required.Create custom landing pages with Shades that convert more visitors than any website—no coding required.Create custom landing pages with Shades that convert more visitors than any website—no coding required.',
-    coverImage: CoverE,
+    coverImage: Cover,
     positionVideo: 'left',
     youtubeID: 'HR1BaFO0R1I',
   },
