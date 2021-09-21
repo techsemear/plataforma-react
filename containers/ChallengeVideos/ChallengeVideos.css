@@ -1,0 +1,152 @@
+.text-center {
+  text-align: center !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.vertical-align {
+  vertical-align: middle !important;
+}
+
+.testimonial-area-l-12 {
+  padding-bottom: 60px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .testimonial-area-l-12 {
+    padding-bottom: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  .testimonial-area-l-12 {
+    padding-bottom: 130px;
+  }
+}
+
+.testimonial-area-l-12 .testimonial-border-area-l-12 {
+  border-top: 1px solid #e5e5e5;
+  margin: 50px 0px 50px 0px;
+}
+
+@media (min-width: 768px) {
+  .testimonial-area-l-12 .testimonial-border-area-l-12 {
+    margin: 70px 0px 70px 0px;
+  }
+}
+
+@media (min-width: 992px) {
+  .testimonial-area-l-12 .testimonial-border-area-l-12 {
+    margin: 130px 0px 120px 0px;
+  }
+}
+
+.testimonial-area-l-12 .testimonial-area-l12-shape {
+  position: absolute;
+  right: 5%;
+  bottom: -33%;
+}
+
+@media (min-width: 992px) {
+  .testimonial-area-l-12 .section-heading-6 {
+    padding-right: 35px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .testimonial-area-l-12 .section-heading-6 {
+    padding-right: 85px;
+  }
+}
+
+.testimonial-area-l-12 .section-heading-6 h2 {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+  .testimonial-area-l-12 .section-heading-6 h2 {
+    margin-bottom: 60px;
+  }
+}
+
+.l-12-slider-arrow-1 {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+  .l-12-slider-arrow-1 {
+    margin-bottom: 0px;
+  }
+}
+
+.l-12-slider-arrow-1 i {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: #4ebe86;
+  background: #ddf7ea;
+  border-radius: 50%;
+  margin: 0px 6px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.l-12-slider-arrow-1 .slick-active {
+  color: #fff;
+  background: #4ebe86;
+}
+
+.testimonial-slider-l-12 {
+  margin: 0px -15px;
+}
+
+.testimonial-slider-l-12 .single-item {
+  margin: 0px 15px;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.text-end {
+  text-align: right !important;
+}
+
+.col-xxl-5 {
+  flex: 0 0 auto;
+  width: 41.66667%;
+}
+
+.col-xl-4 {
+  flex: 0 0 auto;
+  width: 33.33333%;
+}
+
+.col-lg-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.col-md-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.testimonial-slider-l2-1 .slick-list {
+  display: grid;
+}
+
+

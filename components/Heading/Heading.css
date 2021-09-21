@@ -1,3 +1,10 @@
+.text-start h1,
+.text-end h1,
+.text-center h1 {
+  font-size: 48px;
+  font-family: Poppins;
+  font-weight: 600;
+}
 .text-start h2,
 .text-end h2,
 .text-center h2 {
@@ -11,7 +18,7 @@
 .text-center h3 {
   font-size: 28px;
   font-family: Poppins;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .text-start h4,
@@ -19,7 +26,7 @@
 .text-center h4 {
   font-size: 24px;
   font-family: Poppins;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .text-start h5,

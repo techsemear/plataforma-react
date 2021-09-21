@@ -13,7 +13,7 @@ export default function GetStarted() {
       <div className="newsletter-area-l-12 position-relative overflow-hidden">
         <div className="container" data-aos="fade-down" data-aos-duration={800} data-aos-once="true">
         <div className="news-letter-l-12-shape d-md-block">
-           <Image src = {triangleImage} alt="" class="w-100 mt-n10"/>
+           <Image src = {triangleImage} alt="" className="w-100 mt-n10"/>
         </div>
           <div className="row justify-content-center">
            <div className="col-xl-6 col-lg-8 col-md-10">

@@ -25,8 +25,6 @@ import '../components/Underline/Underline.css'
 import '../components/CardPersona/CardPersona.css'
 import '../components/LogoImage/LogoImage.css'
 import '../components/LoginButton/LoginButton.css'
-import '../components/MaslowFeatures/MaslowFeatures.css'
-
 
 // Containers
 // Home
@@ -48,8 +46,9 @@ import '../containers/IntroOnboarding/IntroOnboarding.css'
 import '../containers/Challenges/Challenges.css'
 import '../containers/MaslowTheory/MaslowTheory.css'
 import '../containers/MaslowPoints/MaslowPoints.css'
+import '../containers/MaslowFeatures/MaslowFeatures.css'
 import '../containers/GetStarted/GetStarted.css'
-
+import '../containers/ChallengeVideos/ChallengeVideos.css'
 
 
 

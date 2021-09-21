@@ -1,10 +1,8 @@
 import React, { Fragment } from 'react'
 import Image from 'next/image'
 
-
 import {Heading} from '../../components/Heading'
 import {Section} from '../../components/Section'
-import {MaslowFeatures} from '../../components/MaslowFeatures'
 
 import maslowPiramid from '../../assets/image/triangulo-blue.png'
 
@@ -65,7 +63,6 @@ export default function MaslowPoints() {
     </div> 
     </div>
   </Section>
-  <MaslowFeatures/>
   </Fragment>
   )
 }
