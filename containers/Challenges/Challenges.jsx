@@ -12,6 +12,7 @@ import upImage from '../../assets/image/boia.png'
 
 export default function Challenges(){
     return(
+      <Fragment>
       <div className="content-are-l2-1">
         <Heading level = "h3"horizontalPosition="center" ftColor = "primary">É circunstâncial que você, estudante, <br/>encontre obstáculos pelo caminho percorrido <br/> até o momento de ingressar na faculdade. </Heading>
       <div className="container">
@@ -26,16 +27,15 @@ export default function Challenges(){
               <div data-aos="fade-up" data-aos-delay={300} data-aos-duration={1000}>
                 <div className="content-l2-2-image-1 image-hover-style-01 overflow-hidden">
                   <Image className="" src={cloudCharacter} alt="image" />
-                  <div className="logo-1">
-                    <Image src={upImage} alt="image" />
-                  </div>
-                </div>
+                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <Wave color = "#fff" bgColor = "#11115d"/>
+    </Fragment>
     
     )
 }

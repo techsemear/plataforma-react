@@ -19,7 +19,7 @@ export default function GetStarted() {
            <div className="col-xl-6 col-lg-8 col-md-10">
              <div className="text-center">
               <Heading level ="h5" horizontalPosition="center">
-                Ao logar, você acessa seu perfil pessoal! Ou você pode acessar agora!
+                Ao logar, você acessa seu <a>perfil pessoal!</a> Ou você pode acessar agora!
               </Heading>
               <Heading level ="h2" horizontalPosition="center">
                 Comece sua jornada aqui com a gente!
