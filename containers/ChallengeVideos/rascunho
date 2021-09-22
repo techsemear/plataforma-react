@@ -1,8 +1,37 @@
+import React from 'react'
+import Image from 'next/image'
+
+import {Section} from '../../components/Section'
+import {Heading} from '../../components/Heading'
+import {VideoColumn} from '../../components/Video'
+
+import Cover from '../../assets/image/l6/l6-hero-img.png'
+import Shape7 from '../../assets/image/l6/shape-7.svg'
+
+const challengeContent = [
+  {
+    title: 'Alimentação',
+    subtitle: 'Desafio 1',
+    text: 'Create custom landing pages with Shades that convert more visitors than any website—no coding required.Create custom landing pages with Shades that convert more visitors than any website—no coding required.Create custom landing pages with Shades that convert more visitors than any website—no coding required.',
+    coverImage: Cover,
+    youtubeID: 'HR1BaFO0R1I',
+  },
+  {
+    title: 'Moradia',
+    subtitle: 'Desafio 2',
+    text: 'Create custom landing pages with Shades that convert more visitors than any website—no coding required.Create custom landing pages with Shades that convert more visitors than any website—no coding required.Create custom landing pages with Shades that convert more visitors than any website—no coding required.',
+    coverImage: Cover,
+    youtubeID: 'HR1BaFO0R1I',
+  },
+]
+
+export default function ChallengeVideos() {
+  return (
     <div className="testimonial-area-l-12">
       <div className="container position-relative">
         <div className="testimonial-border-area-l-12" />
         <div className="testimonial-area-l12-shape">
-          <img src={Shape7} alt="" />
+          <img src="image/l6/shape-7.svg" alt="" className="w-100" />
         </div>
         <div className="row">
           <div className="col-xxl-7 col-xl-8 col-lg-9 col-md-12">
@@ -12,316 +41,479 @@
           </div>
           <div className="col-xxl-5 col-xl-4 col-lg-3 col-md-12">
             <div className="l-12-slider-arrow-1 text-end">
-              <i className="prev9  icon icon-tail-left slick-arrow" />
-              <i className="next9 icon icon-tail-right slick-arrow slick-active" />
+              <i className="prev9 icon icon-tail-left slick-arrow" style={{}} />
+              <i
+                className="next9 icon icon-tail-right slick-active slick-arrow"
+                style={{}}
+              />
             </div>
           </div>
         </div>
         <div className="row testimonial-items-l-12">
           <div className="col-12">
-            <div className="testimonial-slider-l-12 col-12">
-              <VideoColumn contentInfo={challengeContent[0]} />
-              <VideoColumn contentInfo={challengeContent[1]} />
+            <div className="testimonial-slider-l-12 slick-initialized slick-slider">
+              <div className="slick-list draggable">
+                <div
+                  className="slick-track"
+                  style={{
+                    opacity: 1,
+                    width: 4862,
+                    transform: 'translate3d(-1768px, 0px, 0px)',
+                  }}
+                >
+                  <div
+                    className="single-item focus-reset aos-init aos-animate slick-slide slick-cloned"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                    data-aos-once="true"
+                    style={{width: 412}}
+                    tabIndex={-1}
+                    data-slick-index={-3}
+                    id
+                    aria-hidden="true"
+                  >
+                    <div className="card--testimonial-l-12">
+                      <div className="testimonial-l-12-image">
+                        <img
+                          className="w-100"
+                          src="image/l6/blog-img-2.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="testimonial-l-12-content">
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div className="lecturer-identity">
+                            <h6>Annie Reyes</h6>
+                            <span>Designer</span>
+                          </div>
+                          <div className="video-area">
+                            <a
+                              data-fancybox
+                              href="https://www.youtube.com/watch?v=9yc1lfFZX-I"
+                              className="focus-reset"
+                              tabIndex={-1}
+                            >
+                              <div className="d-inline-block video-icon d-inline-block">
+                                <i className="fas fa-play align-center" />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="single-item focus-reset aos-init aos-animate slick-slide slick-cloned"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                    data-aos-once="true"
+                    style={{width: 412}}
+                    tabIndex={-1}
+                    data-slick-index={-2}
+                    id
+                    aria-hidden="true"
+                  >
+                    <div className="card--testimonial-l-12">
+                      <div className="testimonial-l-12-image">
+                        <img
+                          className="w-100"
+                          src="image/l6/blog-img-3.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="testimonial-l-12-content">
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div className="lecturer-identity">
+                            <h6>Annie Reyes</h6>
+                            <span>Designer</span>
+                          </div>
+                          <div className="video-area">
+                            <a
+                              data-fancybox
+                              href="https://www.youtube.com/watch?v=9yc1lfFZX-I"
+                              className="focus-reset"
+                              tabIndex={-1}
+                            >
+                              <div className="d-inline-block video-icon d-inline-block">
+                                <i className="fas fa-play align-center" />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="single-item focus-reset aos-init aos-animate slick-slide slick-cloned"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                    data-aos-once="true"
+                    style={{width: 412}}
+                    tabIndex={-1}
+                    data-slick-index={-1}
+                    id
+                    aria-hidden="true"
+                  >
+                    <div className="card--testimonial-l-12">
+                      <div className="testimonial-l-12-image">
+                        <img
+                          className="w-100"
+                          src="image/l6/blog-img-2.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="testimonial-l-12-content">
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div className="lecturer-identity">
+                            <h6>Annie Reyes</h6>
+                            <span>Designer</span>
+                          </div>
+                          <div className="video-area">
+                            <a
+                              data-fancybox
+                              href="https://www.youtube.com/watch?v=9yc1lfFZX-I"
+                              className="focus-reset"
+                              tabIndex={-1}
+                            >
+                              <div className="d-inline-block video-icon d-inline-block">
+                                <i className="fas fa-play align-center" />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="single-item focus-reset aos-init aos-animate slick-slide"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                    data-aos-once="true"
+                    style={{width: 412}}
+                    tabIndex={-1}
+                    data-slick-index={0}
+                    aria-hidden="true"
+                  >
+                    <div className="card--testimonial-l-12">
+                      <div className="testimonial-l-12-image">
+                        <img
+                          className="w-100"
+                          src="image/l6/blog-img-1.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="testimonial-l-12-content">
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div className="lecturer-identity">
+                            <h6>Annie Reyes</h6>
+                            <span>Designer</span>
+                          </div>
+                          <div className="video-area">
+                            <a
+                              data-fancybox
+                              href="https://www.youtube.com/watch?v=9yc1lfFZX-I"
+                              className="focus-reset"
+                              tabIndex={-1}
+                            >
+                              <div className="d-inline-block video-icon d-inline-block">
+                                <i className="fas fa-play align-center" />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="single-item focus-reset aos-init aos-animate slick-slide slick-current slick-active"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                    data-aos-once="true"
+                    style={{width: 412}}
+                    tabIndex={0}
+                    data-slick-index={1}
+                    aria-hidden="false"
+                  >
+                    <div className="card--testimonial-l-12">
+                      <div className="testimonial-l-12-image">
+                        <img
+                          className="w-100"
+                          src="image/l6/blog-img-2.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="testimonial-l-12-content">
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div className="lecturer-identity">
+                            <h6>Annie Reyes</h6>
+                            <span>Designer</span>
+                          </div>
+                          <div className="video-area">
+                            <a
+                              data-fancybox
+                              href="https://www.youtube.com/watch?v=9yc1lfFZX-I"
+                              className="focus-reset"
+                              tabIndex={0}
+                            >
+                              <div className="d-inline-block video-icon d-inline-block">
+                                <i className="fas fa-play align-center" />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="single-item focus-reset aos-init aos-animate slick-slide slick-active"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                    data-aos-once="true"
+                    style={{width: 412}}
+                    tabIndex={0}
+                    data-slick-index={2}
+                    aria-hidden="false"
+                  >
+                    <div className="card--testimonial-l-12">
+                      <div className="testimonial-l-12-image">
+                        <img
+                          className="w-100"
+                          src="image/l6/blog-img-3.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="testimonial-l-12-content">
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div className="lecturer-identity">
+                            <h6>Annie Reyes</h6>
+                            <span>Designer</span>
+                          </div>
+                          <div className="video-area">
+                            <a
+                              data-fancybox
+                              href="https://www.youtube.com/watch?v=9yc1lfFZX-I"
+                              className="focus-reset"
+                              tabIndex={0}
+                            >
+                              <div className="d-inline-block video-icon d-inline-block">
+                                <i className="fas fa-play align-center" />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="single-item focus-reset aos-init aos-animate slick-slide slick-active"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                    data-aos-once="true"
+                    style={{width: 412}}
+                    tabIndex={0}
+                    data-slick-index={3}
+                    aria-hidden="false"
+                  >
+                    <div className="card--testimonial-l-12">
+                      <div className="testimonial-l-12-image">
+                        <img
+                          className="w-100"
+                          src="image/l6/blog-img-2.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="testimonial-l-12-content">
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div className="lecturer-identity">
+                            <h6>Annie Reyes</h6>
+                            <span>Designer</span>
+                          </div>
+                          <div className="video-area">
+                            <a
+                              data-fancybox
+                              href="https://www.youtube.com/watch?v=9yc1lfFZX-I"
+                              className="focus-reset"
+                              tabIndex={0}
+                            >
+                              <div className="d-inline-block video-icon d-inline-block">
+                                <i className="fas fa-play align-center" />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="single-item focus-reset aos-init aos-animate slick-slide slick-cloned"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                    data-aos-once="true"
+                    style={{width: 412}}
+                    tabIndex={-1}
+                    data-slick-index={4}
+                    id
+                    aria-hidden="true"
+                  >
+                    <div className="card--testimonial-l-12">
+                      <div className="testimonial-l-12-image">
+                        <img
+                          className="w-100"
+                          src="image/l6/blog-img-1.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="testimonial-l-12-content">
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div className="lecturer-identity">
+                            <h6>Annie Reyes</h6>
+                            <span>Designer</span>
+                          </div>
+                          <div className="video-area">
+                            <a
+                              data-fancybox
+                              href="https://www.youtube.com/watch?v=9yc1lfFZX-I"
+                              className="focus-reset"
+                              tabIndex={-1}
+                            >
+                              <div className="d-inline-block video-icon d-inline-block">
+                                <i className="fas fa-play align-center" />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="single-item focus-reset aos-init aos-animate slick-slide slick-cloned"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                    data-aos-once="true"
+                    style={{width: 412}}
+                    tabIndex={-1}
+                    data-slick-index={5}
+                    id
+                    aria-hidden="true"
+                  >
+                    <div className="card--testimonial-l-12">
+                      <div className="testimonial-l-12-image">
+                        <img
+                          className="w-100"
+                          src="image/l6/blog-img-2.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="testimonial-l-12-content">
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div className="lecturer-identity">
+                            <h6>Annie Reyes</h6>
+                            <span>Designer</span>
+                          </div>
+                          <div className="video-area">
+                            <a
+                              data-fancybox
+                              href="https://www.youtube.com/watch?v=9yc1lfFZX-I"
+                              className="focus-reset"
+                              tabIndex={-1}
+                            >
+                              <div className="d-inline-block video-icon d-inline-block">
+                                <i className="fas fa-play align-center" />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="single-item focus-reset aos-init aos-animate slick-slide slick-cloned"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                    data-aos-once="true"
+                    style={{width: 412}}
+                    tabIndex={-1}
+                    data-slick-index={6}
+                    id
+                    aria-hidden="true"
+                  >
+                    <div className="card--testimonial-l-12">
+                      <div className="testimonial-l-12-image">
+                        <img
+                          className="w-100"
+                          src="image/l6/blog-img-3.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="testimonial-l-12-content">
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div className="lecturer-identity">
+                            <h6>Annie Reyes</h6>
+                            <span>Designer</span>
+                          </div>
+                          <div className="video-area">
+                            <a
+                              data-fancybox
+                              href="https://www.youtube.com/watch?v=9yc1lfFZX-I"
+                              className="focus-reset"
+                              tabIndex={-1}
+                            >
+                              <div className="d-inline-block video-icon d-inline-block">
+                                <i className="fas fa-play align-center" />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="single-item focus-reset aos-init aos-animate slick-slide slick-cloned"
+                    data-aos="fade-up"
+                    data-aos-duration={800}
+                    data-aos-once="true"
+                    style={{width: 412}}
+                    tabIndex={-1}
+                    data-slick-index={7}
+                    id
+                    aria-hidden="true"
+                  >
+                    <div className="card--testimonial-l-12">
+                      <div className="testimonial-l-12-image">
+                        <img
+                          className="w-100"
+                          src="image/l6/blog-img-2.png"
+                          alt="image"
+                        />
+                      </div>
+                      <div className="testimonial-l-12-content">
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div className="lecturer-identity">
+                            <h6>Annie Reyes</h6>
+                            <span>Designer</span>
+                          </div>
+                          <div className="video-area">
+                            <a
+                              data-fancybox
+                              href="https://www.youtube.com/watch?v=9yc1lfFZX-I"
+                              className="focus-reset"
+                              tabIndex={-1}
+                            >
+                              <div className="d-inline-block video-icon d-inline-block">
+                                <i className="fas fa-play align-center" />
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-
-    .testimonial-area-l-12 {
-  padding-bottom: 60px;
-  position: relative;
+  )
 }
-
-@media (min-width: 768px) {
-  .testimonial-area-l-12 {
-    padding-bottom: 80px;
-  }
-}
-
-@media (min-width: 992px) {
-  .testimonial-area-l-12 {
-    padding-bottom: 130px;
-  }
-}
-
-.testimonial-area-l-12 .testimonial-border-area-l-12 {
-  border-top: 1px solid #E5E5E5;
-  margin: 50px 0px 50px 0px;
-}
-
-@media (min-width: 768px) {
-  .testimonial-area-l-12 .testimonial-border-area-l-12 {
-    margin: 70px 0px 70px 0px;
-  }
-}
-
-@media (min-width: 992px) {
-  .testimonial-area-l-12 .testimonial-border-area-l-12 {
-    margin: 130px 0px 120px 0px;
-  }
-}
-
-.testimonial-area-l-12 .testimonial-area-l12-shape {
-  position: absolute;
-  right: 5%;
-  bottom: -33%;
-}
-
-@media (min-width: 992px) {
-  .testimonial-area-l-12 .section-heading-6 {
-    padding-right: 35px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .testimonial-area-l-12 .section-heading-6 {
-    padding-right: 85px;
-  }
-}
-
-.testimonial-area-l-12 .section-heading-6 h2 {
-  margin-bottom: 30px;
-}
-
-@media (min-width: 992px) {
-  .testimonial-area-l-12 .section-heading-6 h2 {
-    margin-bottom: 60px;
-  }
-}
-
-.card--testimonial-l-12 {
-  background: #FFFFFF;
-  border: 1px solid #E5E5E5;
-  box-sizing: border-box;
-  border-radius: 10px;
-  transition: all 0.4s ease-in-out;
-  height: 100%;
-}
-
-.testimonial-l-12-content {
-  padding: 25px 30px 27px 30px;
-}
-
-.testimonial-l-12-content span {
-  font-family: Karla;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 28px;
-  letter-spacing: -0.642857px;
-  color: #666666;
-}
-
-.testimonial-l-12-content h6 {
-  font-family: Karla;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 28px;
-  letter-spacing: -0.425px;
-  color: #000000;
-  margin-bottom: 0;
-}
-
-.testimonial-l-12-content .video-area i {
-  width: 54px;
-  height: 54px;
-  line-height: 54px;
-  border-radius: 50%;
-  font-size: 12px;
-  text-align: center;
-  background: #4EBE86;
-  color: #fff;
-}
-
-.l-12-slider-arrow-1 {
-  margin-bottom: 30px;
-}
-
-@media (min-width: 992px) {
-  .l-12-slider-arrow-1 {
-    margin-bottom: 0px;
-  }
-}
-
-.l-12-slider-arrow-1 i {
-  width: 48px;
-  height: 48px;
-  line-height: 48px;
-  text-align: center;
-  color: #4EBE86;
-  background: #DDF7EA;
-  border-radius: 50%;
-  margin: 0px 6px;
-  cursor: pointer;
-  transition: all 0.4s ease-in-out;
-}
-
-.l-12-slider-arrow-1 .slick-active {
-  color: #fff;
-  background: #4EBE86;
-}
-
-.testimonial-slider-l-12 {
-  margin: 0px -15px;
-}
-
-.testimonial-slider-l-12 .single-item {
-  margin: 0px 15px;
-}
-
-
-.text-center {
-  text-align: center !important;
-}
-
-.justify-content-center {
-  justify-content: center !important;
-}
-
-.overflow-hidden {
-  overflow: hidden !important;
-}
-
-.z-index-1 {
-  z-index: 1;
-}
-
-.vertical-align {
-  vertical-align: middle !important;
-}
-
-.testimonial-area-l-12 {
-  padding-bottom: 60px;
-  position: relative;
-}
-
-@media (min-width: 768px) {
-  .testimonial-area-l-12 {
-    padding-bottom: 80px;
-  }
-}
-
-@media (min-width: 992px) {
-  .testimonial-area-l-12 {
-    padding-bottom: 130px;
-  }
-}
-
-.testimonial-area-l-12 .testimonial-border-area-l-12 {
-  border-top: 1px solid #e5e5e5;
-  margin: 50px 0px 50px 0px;
-}
-
-@media (min-width: 768px) {
-  .testimonial-area-l-12 .testimonial-border-area-l-12 {
-    margin: 70px 0px 70px 0px;
-  }
-}
-
-@media (min-width: 992px) {
-  .testimonial-area-l-12 .testimonial-border-area-l-12 {
-    margin: 130px 0px 120px 0px;
-  }
-}
-
-.testimonial-area-l-12 .testimonial-area-l12-shape {
-  position: absolute;
-  right: 5%;
-  bottom: -33%;
-}
-
-@media (min-width: 992px) {
-  .testimonial-area-l-12 .section-heading-6 {
-    padding-right: 35px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .testimonial-area-l-12 .section-heading-6 {
-    padding-right: 85px;
-  }
-}
-
-.testimonial-area-l-12 .section-heading-6 h2 {
-  margin-bottom: 30px;
-}
-
-@media (min-width: 992px) {
-  .testimonial-area-l-12 .section-heading-6 h2 {
-    margin-bottom: 60px;
-  }
-}
-
-.l-12-slider-arrow-1 {
-  margin-bottom: 30px;
-}
-
-@media (min-width: 992px) {
-  .l-12-slider-arrow-1 {
-    margin-bottom: 0px;
-  }
-}
-
-.l-12-slider-arrow-1 i {
-  width: 48px;
-  height: 48px;
-  line-height: 48px;
-  text-align: center;
-  color: #4ebe86;
-  background: #ddf7ea;
-  border-radius: 50%;
-  margin: 0px 6px;
-  cursor: pointer;
-  transition: all 0.4s ease-in-out;
-}
-
-.l-12-slider-arrow-1 .slick-active {
-  color: #fff;
-  background: #4ebe86;
-}
-
-.testimonial-slider-l-12 {
-  margin: 0px -15px;
-}
-
-.testimonial-slider-l-12 .single-item {
-  margin: 0px 15px;
-}
-
-.col-12 {
-  flex: 0 0 auto;
-  width: 100%;
-}
-
-.text-end {
-  text-align: right !important;
-}
-
-.col-xxl-5 {
-  flex: 0 0 auto;
-  width: 41.66667%;
-}
-
-.col-xl-4 {
-  flex: 0 0 auto;
-  width: 33.33333%;
-}
-
-.col-lg-3 {
-  flex: 0 0 auto;
-  width: 25%;
-}
-
-.col-md-12 {
-  flex: 0 0 auto;
-  width: 100%;
-}
-
-.testimonial-slider-l2-1 .slick-list {
-  display: grid;
-}
-
-
