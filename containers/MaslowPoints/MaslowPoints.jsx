@@ -27,7 +27,7 @@ export default function MaslowPoints() {
           <div className="item d-flex flex-wrap " data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-l2 h-100">
               <div className="d-flex">
-                <div className="color-box bg-dark" />
+                <div className="color-box bg-grey1" />
                 <div className="content-box">
                   <Heading level ="h4" ftColor="primary">3° Nível</Heading>
                   <Heading level ="h6" ftColor="primary">Desafios de Autorrealização</Heading>
