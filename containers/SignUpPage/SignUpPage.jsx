@@ -18,32 +18,32 @@ export default function SignUpPage(){
      <form id="msform">
       <ul id="progressbar">
         <li className="active">Infos da Conta</li>
-        <li>Redes Sociais</li>
+        <li>Dados Sobre Você 🎲</li>
         <li>Suas Infos 🧡</li>
       </ul>
       <fieldset>
         <div className="plataforma-logo">
           <Image src = {plataformaLogo}/>
         </div>
-        <Heading level = "h2" horizontalPosition = "center" ftColor = "quinary" className="fs-title">Crie sua Conta🌱</Heading>
-        <Heading level = "h5" horizontalPosition = "center" ftColor = "quinary" className="fs-subtitle">Você está no: Passo 1</Heading>
-        <input type="text" name="email" placeholder="Email" />
-        <input type="password" name="pass" placeholder="Password" />
-        <input type="password" name="cpass" placeholder="Confirm Password" />
-        <input type="button" name="next" className="next action-button" defaultValue="Próximo" />
+        <Heading level = "h3" horizontalPosition = "center" ftColor = "quinary" className="fs-title">Crie sua Conta🌱</Heading>
+        <Heading level = "h6" horizontalPosition = "center" ftColor = "quinary" className="fs-subtitle">Passo 1</Heading>
+        <input type="text" name="email" placeholder="Digite seu melhor email:" />
+        <input type="text" name="user" placeholder="Crie seu nome de usuário:" />
+        <input type="password" name="pass" placeholder="Crie sua senha:" />
+        <input type="password" name="cpass" placeholder="Confirme sua senha:" />
+        <input type="button" name="next" className="next action-button" defaultValue="Próximo"/>
       </fieldset>
       <fieldset>
         <Heading level = "h2" horizontalPosition = "center" ftColor = "quinary" className="fs-title">Redes Sociais</Heading>
-        <Heading level = "h5" horizontalPosition = "center" ftColor = "quinary" className="fs-subtitle">Você está no: Passo 2</Heading>
-        <input type="text" name="twitter" placeholder="Twitter" />
-        <input type="text" name="facebook" placeholder="Facebook" />
-        <input type="text" name="gplus" placeholder="Google Plus" />
+        <Heading level = "h5" horizontalPosition = "center" ftColor = "quinary" className="fs-subtitle">Passo 2</Heading>
+        <input type="number" name="whatsapp" placeholder="Qual seu Whatsapp:" />
+        <input type="date" name="birthday" placeholder="Qual sua data de aniversário:" />
         <input type="button" name="previous" className="previous action-button" defaultValue="Previous" />
         <input type="button" name="next" className="next action-button" defaultValue="Next" />
       </fieldset>
       <fieldset>
         <Heading level = "h2" horizontalPosition = "center" ftColor = "quinary" className="fs-title">Suas Infos 🧡</Heading>
-        <Heading level = "h5" horizontalPosition = "center" ftColor = "quinary" className="fs-subtitle">Você está no: Passo 3</Heading>
+        <Heading level = "h5" horizontalPosition = "center" ftColor = "quinary" className="fs-subtitle">Passo 3</Heading>
         <input type="text" name="fname" placeholder="First Name" />
         <input type="text" name="lname" placeholder="Last Name" />
         <input type="text" name="phone" placeholder="Phone" />

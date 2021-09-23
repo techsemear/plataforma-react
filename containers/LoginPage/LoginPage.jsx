@@ -26,7 +26,7 @@ export default function LoginPage(){
             <div className="heading">
               <Heading level="h2">Bem-vindo</Heading>
               <Heading level= "h6">Ainda não se registrou?  
-              <a href="#" className="toggle"> Entre aqui</a> 
+              <a href="/signUp" className="toggle"> Entre aqui</a> 
               </Heading>
             </div>
             <div className="actual-form">

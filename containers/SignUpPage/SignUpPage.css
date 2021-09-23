@@ -9,18 +9,19 @@ html {
 	/*Image only BG fallback*/
 	
 	/*background = gradient + image pattern combo*/
-	background-image:  url('../../assets/image/background-login-green.png');
+	background-image:  url('../../assets/image/background-login-plantyou.png');
 }
 
 body {
 	font-family: montserrat, arial, verdana;
-  margin-top: 90px;
-  background-image:  url('../../assets/image/background-login-green.png');
+  margin-top: 70px;
+  margin-bottom: 50px;
+  background-image:  url('../../assets/image/background-login-plantyou.png');
 }
 
 .plataforma-logo
 {
-    width: 40%;
+    width: 15%;
     margin: auto;
 }
 
@@ -73,7 +74,8 @@ body {
 	padding: 10px 5px;
 	margin: 10px 5px;
 }
-#msform .action-button:hover, #msform .action-button:focus {
+#msform .action-button:hover, 
+#msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
 }
 /*headings*/
