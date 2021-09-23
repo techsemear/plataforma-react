@@ -1,13 +1,13 @@
 .cl-default span {
-  border-bottom: 4px solid #FF7139;
+  border-bottom: 3px solid #FF7139;
 }
 
 .cl-primary span {
-  border-bottom: 4px solid #213053;
+  border-bottom: 3px solid #213053;
 }
 
 .cl-secondary span {
-  border-bottom: 4px solid #79FF8B;
+  border-bottom: 2px solid #79FF8B;
 }
 
 

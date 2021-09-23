@@ -13,9 +13,8 @@ import upImage from '../../assets/image/boia.png'
 import Cover from '../../assets/image/l6/l6-hero-img.png'
 
 const content = {
-  title: 'Join us!',
+  title: 'É comum encontrar obstáculos pelo caminho percorrido até ingressar na faculdade.',
   text: [
-    'É circunstâncial que você, estudante, encontre obstáculos pelo caminho percorrido  até o momento de ingressar na faculdade.',
     'Como se isso não fosse o suficiente, ainda existem 16 desafios principais que estão na base para o seu sucesso durante este novo período.',
     'Create custom landing pages with Shades that convert more visitors than any website—no coding required.Create custom landing pages with Shades that convert more visitors than any website—no coding required.Create custom landing pages with Shades that convert more visitors than any website—no coding required.',
   ],
@@ -60,7 +59,7 @@ function TextConfig({contentInfo}) {
       data-aos-once="true"
     >
       <div className="content">
-        <Underline level="h1" ftColor="primary" color="secondary">
+        <Underline level="h3" ftColor="primary" color="secondary" horizontalPosition = 'start'>
           {contentInfo.title}
         </Underline>
         <div className="mt-5">
