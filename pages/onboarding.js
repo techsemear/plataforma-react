@@ -20,7 +20,6 @@ export default function Onboarding() {
     <React.Fragment>
       <IntroOnboarding />
       <Challenges />
-      <MaslowTheory />
       <MaslowPoints />
       <MaslowFeatures />
       <ChallengeVideos />
