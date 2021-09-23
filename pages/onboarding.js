@@ -9,7 +9,6 @@ import {Challenges} from '../containers/Challenges'
 import {MaslowTheory} from '../containers/MaslowTheory'
 import {MaslowPoints} from '../containers/MaslowPoints'
 import {MaslowFeatures} from '../containers/MaslowFeatures'
-import {ChallengeVideos} from '../containers/ChallengeVideos'
 import {GetStarted} from '../containers/GetStarted'
 
 
@@ -23,7 +22,6 @@ export default function Onboarding() {
       <MaslowTheory />
       <MaslowPoints />
       <MaslowFeatures />
-      <ChallengeVideos />
       <GetStarted />
     </React.Fragment>
   )
