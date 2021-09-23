@@ -5,7 +5,7 @@ import { Fade } from 'react-slideshow-image';
 
 import imageLogin1 from '../../assets/image/loginImage1.png'
 import imageLogin2 from '../../assets/image/loginImage2.png'
-import imageLogin3 from '../../assets/image/loginImage3.png'
+import imageLogin3 from '../../assets/image/loginImage3.jpg'
 
 
 const SlideShow = () => {
