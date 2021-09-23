@@ -69,7 +69,10 @@ export default function LoginPage(){
           </form>
         </div>
         <div className="slider">
-          <SlideShow/>
+          <SlideShow
+           duration={500}
+           transitionDuration	={500}
+          />
           <Heading className="slider-text" level="h3" ftColor = "default" horizontalPosition="center" >Faça parte dessa jornada !</Heading>
         </div>
         </div>
