@@ -3,11 +3,12 @@ import Head from 'next/head'
 
 // Containers
 import {Navbar} from '../containers/Navbar'
+import { LoginPage } from '../containers/LoginPage'
 
 
 // Components
 import { IndexPage } from '../components/IndexPage'
-import { LoginPage } from '../containers/LoginPage'
+
 
 export default function Login() {
   return (

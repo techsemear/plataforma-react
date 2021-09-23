@@ -2,6 +2,7 @@ import React, {useEffect, Component} from 'react'
 import Image from 'next/image'
 import Script from 'next/script'
 
+
 // Global Styles
 import '../assets/css/bootstrap.css'
 import '../assets/css/isemear.css'
@@ -26,6 +27,7 @@ import '../components/Underline/Underline.css'
 import '../components/CardPersona/CardPersona.css'
 import '../components/LogoImage/LogoImage.css'
 import '../components/LoginButton/LoginButton.css'
+import '../components/SlideShow/SlideShow.css'
 
 // Containers
 import '../containers/About/About.css'

@@ -1,7 +1,10 @@
 import React from "react"
 import Image from "next/dist/client/image"
 
+
 import {Heading} from '../../components/Heading'
+import {SlideShow} from '../../components/SlideShow'
+
 
 import plataformaLogo from '../../assets/image/logo-semear.png'
 import facebookLogo from '../../assets/image/facebook-logo2.png'
@@ -89,11 +92,9 @@ export default function LoginPage(){
             </div>
           </form>
         </div>
-        <div className="carousel">
-          <div className="images-wrapper">
-            <Image src={imageLogin1} className="loginImage-1 images lImg-1 show" alt="" />
-            <Image src={imageLogin2} className="loginImage-2 images lImg-2" alt="" />
-            <Image src={imageLogin3} className="loginImage-3 images lImg-3" alt="" />
+        <div className = "carrossel" >
+          <div className = "images-wrapper" >
+            <SlideShow/>
           </div>
           <div className="text-slider">
             <div className="text-wrap">
