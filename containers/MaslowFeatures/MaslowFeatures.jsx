@@ -1,5 +1,4 @@
 import React, {Fragment} from 'react'
-import Image from 'next/image'
 
 import {Heading} from '../../components/Heading'
 import {Section} from '../../components/Section'
