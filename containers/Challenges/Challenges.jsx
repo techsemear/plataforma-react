@@ -46,7 +46,6 @@ export default function Challenges() {
           </div>
         </div>
       </Section>
-      <Wave color="#fff" bgColor="#11115d" />
     </Fragment>
   )
 }

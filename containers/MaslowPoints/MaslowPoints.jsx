@@ -17,6 +17,7 @@ export default function MaslowPoints() {
       <div className="col-lg-9 col-md-7">
         <div className="section__heading-3">
           <Heading level="h4" horizontalPosition="center" ftColor="primary">Seguimos um conceito científico aqui no Instituto chamado 'Pirâmide de Maslow</Heading>
+          <br/>
           <Heading level="h6" horizontalPosition="center" ftColor="primary">Abraham Maslow, o pai da Psicologia Humanista, é o autor do livro A Teoria da Motivação Humana, no qual ele discorre sobre os princípios da motivação e hierarquiza as necessidades humanas em forma de pirâmide.</Heading>
         </div>
       </div>
