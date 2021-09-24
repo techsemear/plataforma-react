@@ -76,7 +76,7 @@ class MultiStepForm extends Component {
     // If the current step is not 1, then render the "previous" button
     if (currentStep !== 1) {
       return (
-        <button color="secondary float-left" onClick={this._prev}>
+        <button className="btn-signup" color="secondary float-left" onClick={this._prev}>
           Anterior
         </button>
       );
@@ -91,7 +91,7 @@ class MultiStepForm extends Component {
     // If the current step is not 3, then render the "next" button
     if (currentStep < 3) {
       return (
-        <button color="primary float-right" onClick={this._next}>
+        <button className="btn-signup"color="primary float-right" onClick={this._next}>
           Próximo
         </button>
       );
@@ -105,7 +105,7 @@ class MultiStepForm extends Component {
 
     // If the current step is the last step, then render the "submit" button
     if (currentStep > 2) {
-      return <button color="primary float-right">
+      return <button className="btn-signup" color="primary float-right">
           Enviar
         </button>;
     }
@@ -138,9 +138,11 @@ class MultiStepForm extends Component {
                 fname={this.state.fname}
                 lname={this.state.lname}
             />
+            <div className="btn-container">
               {this.previousbutton}
               {this.nextbutton}
               {this.submitbutton}
+            </div>
         </form>
     );
   }

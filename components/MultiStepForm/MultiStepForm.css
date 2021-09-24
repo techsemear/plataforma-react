@@ -14,3 +14,17 @@
 .indexedStep.accomplished {
   background-color: rgba(0, 116, 217, 1);
 }
+
+
+.btn-signup{
+  color:#004aad;
+  background-color:#fff;
+  margin-bottom: 20px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.btn-signup:hover{
+  background-color:#004aad;
+  color:#fff;
+}

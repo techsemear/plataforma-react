@@ -13,7 +13,7 @@ html {
 }
 
 body {
-	font-family: montserrat, arial, verdana;
+  font-family: montserrat, arial, verdana;
   margin-top: 70px;
   margin-bottom: 50px;
   background-image:  url('../../assets/image/background-login-plantyou.png');
@@ -31,7 +31,7 @@ body {
 	margin: 50px auto;
 	text-align: center;
 	position: relative;
-  max-width: 700px;
+ 	max-width: 700px;
 }
 #msform fieldset {
 	background: white;
@@ -43,6 +43,7 @@ body {
 	width: 80%;
 	margin: 0 10%;
 	margin-top: 30px;
+	margin-bottom: 5px;
 	
 /*stacking fieldsets above each other*/
 	position: relative;
