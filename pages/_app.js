@@ -22,7 +22,7 @@ import '../components/Section/Section.css'
 import '../components/StudentJourney/StudentJourney.css'
 import '../components/Video/Video.css'
 import '../components/Underline/Underline.css'
-import '../components/CardPersona/CardPersona.css'
+import '../components/Card/Card.css'
 import '../components/LogoImage/LogoImage.css'
 import '../components/LoginButton/LoginButton.css'
 

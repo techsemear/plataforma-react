@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-import {Button} from '../../components/Button'
-import {Heading} from '../../components/Heading'
-import {Section} from '../../components/Section'
+import {Button} from '../Button'
+import {Heading} from '../Heading'
+import {Section} from '../Section'
 
 import journeyImage from '../../assets/image/journeyImage.png'
 

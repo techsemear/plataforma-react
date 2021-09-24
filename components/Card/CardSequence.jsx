@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react'
 import Image from 'next/image'
 
-import {Heading} from '../../components/Heading'
+import {Heading} from '../Heading'
 
 import arrowImage from '../../assets/image/landing-4/arrow-right1.png'
 

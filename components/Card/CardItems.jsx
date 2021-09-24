@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react'
 
-import {Heading} from '../../components/Heading'
+import {Heading} from '../Heading'
 
 export default function CardItems({contentInfo = [], reverse = true}) {
   return (

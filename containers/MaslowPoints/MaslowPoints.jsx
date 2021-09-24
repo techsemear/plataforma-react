@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import {Heading} from '../../components/Heading'
 import {Section} from '../../components/Section'
-import {CardItems} from '../../components/CardPersona'
+import {CardItems} from '../../components/Card'
 
 import maslowPiramid from '../../assets/image/triangulo-blue.png'
 

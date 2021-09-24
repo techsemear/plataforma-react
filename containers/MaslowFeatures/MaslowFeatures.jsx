@@ -2,7 +2,7 @@ import React, {Fragment} from 'react'
 
 import {Heading} from '../../components/Heading'
 import {Section} from '../../components/Section'
-import {CardSequence} from '../../components/CardPersona'
+import {CardSequence} from '../../components/Card'
 
 import {Wave} from '../../components/Wave'
 

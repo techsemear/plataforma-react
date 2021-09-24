@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import {CardPersona} from '../../components/CardPersona'
+import {CardPersona} from '../../components/Card'
 import {Heading} from '../../components/Heading'
 
 import heartShape from '../../assets/image/landing-1/h1-client-heart-shape.png'
