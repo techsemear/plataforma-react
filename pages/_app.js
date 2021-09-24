@@ -28,6 +28,8 @@ import '../components/CardPersona/CardPersona.css'
 import '../components/LogoImage/LogoImage.css'
 import '../components/LoginButton/LoginButton.css'
 import '../components/SlideShow/SlideShow.css'
+import '../components/StepProgressBar/StepProgressBar.css'
+import '../components/MultiStepForm/MultiStepForm.css'
 
 // Containers
 import '../containers/About/About.css'
