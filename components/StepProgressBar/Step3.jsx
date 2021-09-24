@@ -12,7 +12,7 @@ const Step3 = props => {
 
   return (
     <fieldset>
-      <div className="plataforma-logo">
+      <div className="plataforma-logo2">
         <Image src = {plataformaLogo}/>
       </div>  
         <Heading level = "h2" horizontalPosition = "center" ftColor = "quinary" className="fs-title">Suas Infos 🧡</Heading>

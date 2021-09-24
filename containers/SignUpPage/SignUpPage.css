@@ -13,15 +13,15 @@ html {
 }
 
 body {
-  font-family: montserrat, arial, verdana;
+  font-family: Poppins, arial, verdana;
   margin-top: 70px;
   margin-bottom: 50px;
   background-image:  url('../../assets/image/background-login-plantyou.png');
 }
 
-.plataforma-logo
+.plataforma-logo2
 {
-    width: 40%;
+    width: 30%;
     margin: auto;
 }
 
@@ -60,7 +60,7 @@ body {
 	margin-bottom: 10px;
 	width: 100%;
 	box-sizing: border-box;
-	font-family: montserrat;
+	font-family: Poppins;
 	color: #2C3E50;
 	font-size: 13px;
 }
