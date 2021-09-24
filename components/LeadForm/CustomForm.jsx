@@ -38,7 +38,6 @@ export function CustomForm({status, message, onValidated}) {
               />
             )}
 
-            <label>Nome:</label>
 
             <input
               className="form-control"
@@ -47,7 +46,6 @@ export function CustomForm({status, message, onValidated}) {
               placeholder="Nome"
             />
 
-            <label>Indique seu melhor email:</label>
 
             <input
               className="form-control"

@@ -9,14 +9,14 @@ html {
 	/*Image only BG fallback*/
 	
 	/*background = gradient + image pattern combo*/
-	background-image:  url('../../assets/image/background-login-plantyou.png');
+	background-image:  url();
 }
 
 body {
   font-family: Poppins, arial, verdana;
   margin-top: 70px;
   margin-bottom: 50px;
-  background-image:  url('../../assets/image/background-login-plantyou.png');
+  background-image:  url();
 }
 
 .plataforma-logo2

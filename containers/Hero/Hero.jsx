@@ -69,7 +69,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <Wave direction="up" />
+      <Wave direction="up" color = '#11115d'bgColor = '#fff' />
     </Fragment>
   )
 }
