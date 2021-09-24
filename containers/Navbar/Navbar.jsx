@@ -1,7 +1,7 @@
 import {Logo} from '../../components/Logo'
 
 import {NavbarItems} from './NavbarItems'
-import {LoginButton} from '../../components/LoginButton'
+import {LoginButton} from '../../components/Button'
 
 
 

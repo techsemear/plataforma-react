@@ -25,7 +25,7 @@ import '../components/Video/Video.css'
 import '../components/Underline/Underline.css'
 import '../components/CardPersona/CardPersona.css'
 import '../components/LogoImage/LogoImage.css'
-import '../components/LoginButton/LoginButton.css'
+import '../components/Button/Button.css'
 
 // Containers
 import '../containers/About/About.css'
