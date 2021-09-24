@@ -1,4 +1,4 @@
-import {Logo} from '../../components/Logo'
+import {LogoSemear} from '../../components/Logo'
 
 import {NavbarItems} from './NavbarItems'
 import {LoginButton} from '../../components/LoginButton'
@@ -33,7 +33,7 @@ export default function Navbar() {
     <header className="site-header site-header--menu-right landing-1-menu site-header--absolute site-header--sticky">
       <nav className="navbar site-navbar">
         <div className="container-fluid">
-          <Logo />
+          <LogoSemear />
 
           <NavbarItems items={menuItems} />
           <LoginButton>

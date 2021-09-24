@@ -1,5 +1,5 @@
 import logos from '../../assets/image/apoiadores/index.js'
-import {LogoImage} from '../../components/LogoImage'
+import {LogoImage} from '../../components/Logo'
 import {Section} from '../../components/Section'
 import {Heading} from '../../components/Heading'
 

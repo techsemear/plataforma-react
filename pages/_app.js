@@ -23,7 +23,7 @@ import '../components/StudentJourney/StudentJourney.css'
 import '../components/Video/Video.css'
 import '../components/Underline/Underline.css'
 import '../components/Card/Card.css'
-import '../components/LogoImage/LogoImage.css'
+import '../components/Logo/Logo.css'
 import '../components/LoginButton/LoginButton.css'
 
 // Containers

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import {LogoImage} from '../LogoImage'
+import {LogoImage} from '../Logo'
 
 import linkedinImage from '../../assets/image/landing-1/linkedin-2.png'
 
