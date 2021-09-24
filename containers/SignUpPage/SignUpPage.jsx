@@ -11,9 +11,9 @@ import MultiStepForm from "../../components/MultiStepForm/MultiStepForm";
 
 export default function SignUpPage(){
   return (
-    <div>
+    <main>
         <MultiStepForm/>
-    </div>   
+    </main>   
   )
 }
 

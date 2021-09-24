@@ -16,7 +16,7 @@ return (
       <div className="plataforma-logo2">
         <Image src = {plataformaLogo}/>
       </div>  
-      <Heading level = "h3" horizontalPosition = "center" ftColor = "quinary" className="fs-title">Crie sua Conta🌱</Heading>
+      <Heading level = "h4" horizontalPosition = "center" ftColor = "quinary" className="fs-title">Crie sua Conta🌱</Heading>
         <Heading level = "h6" horizontalPosition = "center" ftColor = "quinary" className="fs-subtitle">Passo 1</Heading>
            <input 
                 type="text" 

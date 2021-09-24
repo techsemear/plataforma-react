@@ -15,8 +15,8 @@ const Step3 = props => {
       <div className="plataforma-logo2">
         <Image src = {plataformaLogo}/>
       </div>  
-        <Heading level = "h2" horizontalPosition = "center" ftColor = "quinary" className="fs-title">Suas Infos 🧡</Heading>
-            <Heading level = "h5" horizontalPosition = "center" ftColor = "quinary" className="fs-subtitle">Passo 3</Heading>
+        <Heading level = "h4" horizontalPosition = "center" ftColor = "quinary" className="fs-title">Suas Infos 🧡</Heading>
+            <Heading level = "h6" horizontalPosition = "center" ftColor = "quinary" className="fs-subtitle">Passo 3</Heading>
                 <input 
                     type="text" 
                     name="fname" 
