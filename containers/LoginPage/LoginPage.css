@@ -18,7 +18,7 @@ main {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background-image: url('../../assets/image/background-login-green.png');
+  background-image: url('../../assets/image/background-login-plantyou.png');
   padding: 2rem;
   display: flex;
   align-items: center;
@@ -27,7 +27,7 @@ main {
 
 .plataforma-logo
 {
-    width: 40%;
+    width: 60%;
     margin: auto;
 }
 
@@ -85,10 +85,6 @@ form.sign-up-form {
   align-items: center;
 }
 
-.logo img {
-  width: 27px;
-  margin-right: 0.3rem;
-}
 
 .logo h4 {
   font-size: 1.1rem;
@@ -124,8 +120,8 @@ form.sign-up-form {
 
 .input-wrap {
   position: relative;
-  height: 37px;
-  margin-bottom: 2rem;
+  height: 42px;
+  margin-bottom: 1rem;
 }
 
 .input-field {
@@ -178,7 +174,8 @@ label {
 }
 
 .sign-btn:hover {
-  background-color: #8371fd;
+  background-color: #18185C;
+  color:#7FFF70;
 }
 
 .text {
@@ -230,15 +227,15 @@ main.sign-up-mode .carousel {
   transition: 0.8s ease-in-out;
 }
 
-.image-1 {
+.loginImage-1 {
   height: 490px;
 }
 
-.image-2 {
+.loginImage-2 {
   height: 490px;
 }
 
-.image-3 {
+.loginImage-3 {
   height: 490px;
 }
 
@@ -248,7 +245,7 @@ main.sign-up-mode .carousel {
   grid-template-rows: 1fr;
 }
 
-.image {
+.images {
   width: 100%;
   grid-column: 1/2;
   grid-row: 1/2;
@@ -256,19 +253,19 @@ main.sign-up-mode .carousel {
   transition: opacity 0.3s, transform 0.5s;
 }
 
-.img-1 {
+.lImg-1 {
   transform: translate(0, -50px);
 }
 
-.img-2 {
+.lImg-2 {
   transform: scale(0.4, 0.5);
 }
 
-.img-3 {
+.lImg-3 {
   transform: scale(0.3) rotate(-20deg);
 }
 
-.image.show {
+.images.show {
   opacity: 1;
   transform: none;
 }
@@ -369,7 +366,7 @@ main.sign-up-mode .carousel {
   .carousel {
     position: revert;
     height: auto;
-    width: 100%;
+    width: 50%;
     padding: 3rem 2rem;
     display: flex;
   }
@@ -433,6 +430,8 @@ main.sign-up-mode .carousel {
   font-size: 12px;
   font-weight: 400;
   font-family: Poppins-Regular;
+  margin-bottom: 24px;
+  align-items: center;
 }
 
 @media (max-width:430px){
@@ -444,19 +443,21 @@ main.sign-up-mode .carousel {
 .btn-face,
 .btn-google {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  line-height: 1.1;
+  font-size: 14px;
+  line-height: 1.2;
+  text-decoration: none;
+  font-weight: 600;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
-  display: block;
+  display: flex;
   justify-content: center;
-  align-items: center;
-  padding-left: 10px;
-  padding-top: 10px;
-  width: calc((100% - 0px) / 2);
+  align-content: center;
+  vertical-align:middle;
+  width: calc((100%) / 2);
   height: 50px;
+  padding: 20px 10px 10px 10px;
   border-radius: 10px;
   box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
@@ -505,26 +506,25 @@ main.sign-up-mode .carousel {
   font-family: "Poppins", sans-serif;
   color: #fff;
   background-color: #3b5998;
-  margin-right: 5px;
+ 
 }
 
 .btn-face img {
-  width: 30px;
-  margin-right: 5%;
-  padding-bottom: 3px;
+  width: 20px;
+  padding-right: 10px;
 }
 
 @media (max-width:430px){
   .btn-face img
   {
-    margin-left: 20%;
+    padding-right: 10px;
   }
 }
 
 @media (max-width:430px){
   .btn-google img
   {
-    margin-left: 25%;
+    padding-right: 10px;
   }
 }
 
@@ -535,9 +535,7 @@ main.sign-up-mode .carousel {
 }
 
 .btn-google img {
-  width: 25px;
-  margin-right: 10px;
-  padding-bottom: 3px;
+  width: 20px;
 }
 
 .btn-face:hover:before,
@@ -549,3 +547,9 @@ main.sign-up-mode .carousel {
 .btn-google:hover {
   color: #fff;
 }
+
+.slider{
+  margin-left: 50%;
+  margin-top: 20px;
+}
+

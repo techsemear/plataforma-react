@@ -1,0 +1,18 @@
+<div>
+  <select id="ethnicity" name="ethnicity">
+    <option value="white">Branco</option>
+    <option value="black">Preto</option>
+    <option value="brown">Pardo</option>
+    <option value="red">Indigena</option>
+    <option value="yellow">Amarelo</option>
+    <option value="not">Prefiro Não me Identificar</option>
+  </select>
+  <select id="gender" name="gender">
+    <option value="mancis">Homem Cisgênero</option>
+    <option value="womancis">Mulher Cisgênero</option>
+    <option value="mantrans">Homem Trasgênero</option>
+    <option value="womantrans">Mulher Trasgênero</option>
+    <option value="nbi">Não Binário</option>
+    <option value="not">Prefiro Não me Identificar</option>
+  </select>
+</div>

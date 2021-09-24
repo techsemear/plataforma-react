@@ -3,7 +3,13 @@ import {LogoSemear} from '../../components/Logo'
 import {NavbarItems} from './NavbarItems'
 import {LoginButton} from '../../components/Button'
 
-
+const backgroundClasses = {
+  default: 'bg-default',
+  primary: 'bg-primary',
+  secondary: 'bg-secondary',
+  dark: 'bg-dark',
+  other: 'bg-other',
+}
 
 const menuItems = [
   {
@@ -28,16 +34,17 @@ const menuItems = [
   },
 ]
 
-export default function Navbar() {
+export default function Navbar({
+  bgColor = 'default'
+  }
+  ) {
   return (
     <header className="site-header site-header--menu-right landing-1-menu site-header--absolute site-header--sticky">
-      <nav className="navbar site-navbar">
+      <nav  className="navbar site-navbar">
         <div className="container-fluid">
           <LogoSemear />
           <NavbarItems items={menuItems} />
-          <LoginButton>
-            Login
-          </LoginButton>
+          <LoginButton> Login </LoginButton>
           {/* mobile menu trigger */}
           <div className="mobile-menu-trigger">
             <span />

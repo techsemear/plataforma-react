@@ -2,6 +2,7 @@ import React, {useEffect, Component} from 'react'
 import Image from 'next/image'
 import Script from 'next/script'
 
+
 // Global Styles
 import '../assets/css/bootstrap.css'
 import '../assets/css/isemear.css'
@@ -26,6 +27,12 @@ import '../components/Underline/Underline.css'
 import '../components/CardPersona/CardPersona.css'
 import '../components/Logo/Logo.css'
 import '../components/Button/Button.css'
+import '../components/LogoImage/LogoImage.css'
+import '../components/LoginButton/LoginButton.css'
+import '../components/SlideShow/SlideShow.css'
+import '../components/StepProgressBar/StepProgressBar.css'
+import '../components/MultiStepForm/MultiStepForm.css'
+
 
 // Containers
 import '../containers/About/About.css'
@@ -37,8 +44,8 @@ import '../containers/Presentation/Presentation.css'
 import '../containers/StudentArea/StudentArea.css'
 import '../containers/Subscribe/Subscribe.css'
 import '../containers/Testimonial/Testimonial.css'
-//import '../containers/LoginPage/LoginPage.css'
-
+import '../containers/LoginPage/LoginPage.css'
+import '../containers/SignUpPage/SignUpPage.css'
 
 
 function MyApp({Component, pageProps}) {
