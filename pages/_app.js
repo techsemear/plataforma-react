@@ -24,7 +24,7 @@ import '../components/StudentJourney/StudentJourney.css'
 import '../components/Video/Video.css'
 import '../components/Underline/Underline.css'
 import '../components/CardPersona/CardPersona.css'
-import '../components/LogoImage/LogoImage.css'
+import '../components/Logo/Logo.css'
 import '../components/Button/Button.css'
 
 // Containers

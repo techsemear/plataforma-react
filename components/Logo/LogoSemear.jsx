@@ -10,7 +10,6 @@ export default function Logo({to = '#'}) {
           src={semearLogo}
           alt="Instituto Semear"
           objectFit="contain"
-          className="light-version-logo"
         />
       </a>
     </div>

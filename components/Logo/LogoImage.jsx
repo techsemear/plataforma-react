@@ -12,9 +12,12 @@ export default function LogoImage({
   children,
   hover = false,
 }) {
+  const classHover = 'resize-image'
+  const classBrand = 'single-brand'
+  const classLogo = logo.class ? logo.class : classBrand
   return (
     <div
-      className={hover ? 'single-brand resize-image' : 'single-brand'}
+      className={hover ? [classLogo, classHover].join(' ') : classLogo}
       data-aos="fade-right"
       data-aos-duration={500}
       data-aos-once="true"
@@ -23,7 +26,7 @@ export default function LogoImage({
         <a
           className="reference"
           href={logo.link}
-          target="_blank"
+          target= {logo.samePage ? logo.samePage : "_blank"}
           rel="noreferrer"
         >
           <Image
