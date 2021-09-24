@@ -8,7 +8,7 @@ import {Wave} from '../../components/Wave'
 
 const content = {
   title:
-    'Uau que oportunidade incrível! Mas como funciona para fazer parte de tudo isso ?',
+    'Como funciona para fazer parte de tudo isso?',
   subtitle:
     'Pode ficar tranquilo(a) que nós te explicamos o passo a passo de como vai funcionar esse processo.',
 }
@@ -45,12 +45,12 @@ export default function MaslowFeatures() {
           <div className="container">
             <div className="row">
               <div
-                className="offset-xxl-1 col-xxl-5 offset-xl-1 col-xl-6 col-lg-8"
-                data-aos="fade-up"
-                data-aos-delay={500}
-                data-aos-duration={1000}
-              >
-                <div className="service-l4-head-content section__heading-2">
+      className="col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1"
+      data-aos="fade-right"
+      data-aos-duration={800}
+      data-aos-once="true"
+    >
+      <div className="content">
                   <Heading level="h2"> {content.title}</Heading>
                   <Heading level="h6" ftColor="secondary">
                     {content.subtitle}

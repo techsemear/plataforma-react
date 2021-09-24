@@ -22,7 +22,6 @@ export default function VideoSide({contentInfo = []}) {
         data-aos-once="true"
       >
         <div className="hero-video-l12 position-relative">
-          {console.log(contentInfo)}
           <Image src={contentInfo.coverImage ? contentInfo.coverImage : Cover} alt="image-cover" />
           <a onClick={handleClick}>
             <div className="d-inline-block video-icon">
