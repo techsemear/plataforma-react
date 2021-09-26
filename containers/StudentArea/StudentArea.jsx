@@ -7,7 +7,9 @@ import imageProfile2 from '../../assets/image/landing-1/student2.png'
 import imageProfile3 from '../../assets/image/landing-1/student4.jpg'
 import {Section} from '../../components/Section'
 
-const title = 'Quem já venceu essa jornada'
+const content = { 
+  title: 'Quem já venceu essa jornada',
+}
 const personas = [
   {
     name: ' Pedro Masetti',
@@ -61,7 +63,7 @@ export default function studentArea() {
       <StudentJourney />
       <StudentPoints itemsText={itemsText}/>
       <Section bgColor="primary" id="studentTestimonial">
-        <Testimonial personas={personas}>{title}</Testimonial>
+        <Testimonial personas={personas}>{content.title}</Testimonial>
       </Section>
     </div>
   )

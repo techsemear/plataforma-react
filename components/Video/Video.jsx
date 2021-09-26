@@ -75,3 +75,5 @@ export default function Video({youtubeID, contentText = content}) {
     </Fragment>
   )
 }
+
+export {Modal}

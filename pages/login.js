@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 
 // Containers
 import {Navbar} from '../containers/Navbar'

@@ -1,5 +1,4 @@
 import React, {useEffect, Component} from 'react'
-import Image from 'next/image'
 import Script from 'next/script'
 
 
@@ -23,16 +22,16 @@ import '../components/PersonaTestimonial/PersonaTestimonial.css'
 import '../components/Section/Section.css'
 import '../components/StudentJourney/StudentJourney.css'
 import '../components/Video/Video.css'
-import '../components/Underline/Underline.css'
-import '../components/CardPersona/CardPersona.css'
+import '../components/Card/Card.css'
 import '../components/Logo/Logo.css'
+import '../components/Underline/Underline.css'
 import '../components/Button/Button.css'
 import '../components/SlideShow/SlideShow.css'
 import '../components/StepProgressBar/StepProgressBar.css'
 import '../components/MultiStepForm/MultiStepForm.css'
 
-
 // Containers
+// Home
 import '../containers/About/About.css'
 import '../containers/Hero/Hero.css'
 import '../containers/MentorArea/MentorArea.css'
@@ -44,6 +43,18 @@ import '../containers/Subscribe/Subscribe.css'
 import '../containers/Testimonial/Testimonial.css'
 import '../containers/LoginPage/LoginPage.css'
 import '../containers/SignUpPage/SignUpPage.css'
+
+//Login
+//import '../containers/LoginPage/LoginPage.css'
+
+//Onboarding
+import '../containers/IntroOnboarding/IntroOnboarding.css'
+import '../containers/Challenges/Challenges.css'
+import '../containers/MaslowTheory/MaslowTheory.css'
+import '../containers/MaslowPoints/MaslowPoints.css'
+import '../containers/MaslowFeatures/MaslowFeatures.css'
+import '../containers/GetStarted/GetStarted.css'
+import '../containers/ChallengeVideos/ChallengeVideos.css'
 
 
 function MyApp({Component, pageProps}) {

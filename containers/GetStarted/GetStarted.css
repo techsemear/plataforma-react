@@ -1,0 +1,80 @@
+.newsletter-area-l-12 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .newsletter-area-l-12 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  .newsletter-area-l-12 {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+}
+
+.newsletter-area-l-12 .news-letter-l-12-shape {
+  position: absolute;
+  right: -15%;
+  top: -47%;
+}
+
+.newsletter-area-l-12 span {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 2.8125px;
+  text-transform: uppercase;
+  color: #666666;
+}
+
+.newsletter-area-l-12 h2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: -2.53px;
+  color: #000000;
+  margin: 25px 0px 40px 0px;
+}
+
+@media (min-width: 576px) {
+  .newsletter-area-l-12 h2 {
+    font-size: 42px;
+    line-height: 53px;
+  }
+}
+
+@media (min-width: 768px) {
+  .newsletter-area-l-12 h2 {
+    font-size: 48px;
+    line-height: 57px;
+  }
+}
+
+.newsletter-area-l-12 .btn {
+  min-width: 500px;
+  height: 48px;
+  background: #ff7139;
+  border-radius: 15px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.newsletter-area-l-12 .btn:hover
+{
+  background: #004aad;
+}
