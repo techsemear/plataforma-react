@@ -27,12 +27,7 @@ function Modal({children, onClickOutside = () => {}, youtubeID}) {
   )
 }
 
-const content = {
-  title: 'Entenda na Prática',
-  subtitle: 'Assista ao nosso manifesto',
-}
-
-export default function Video({youtubeID, contentText = content}) {
+export default function Video({youtubeID, contentText = []}) {
   const [isModalOpen, toogleModal] = useState(false)
 
   const handleClick = (event) => {
