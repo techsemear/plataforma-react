@@ -4,11 +4,12 @@ import {Button} from '../Button'
 import Step1 from "../StepProgressBar/Step1";
 import Step2 from "../StepProgressBar/Step2";
 import Step3 from "../StepProgressBar/Step3";
+import { VideoColumn } from "../Video";
 
 
 import {StepProgressBar} from "../StepProgressBar";
 
-class MultiStepForm extends Component {
+class AssessmentForm extends Component {
   constructor(props) {
     super(props);
 

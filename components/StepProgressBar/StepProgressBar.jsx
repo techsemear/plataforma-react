@@ -1,51 +1,28 @@
 import React from "react";
-import "../../node_modules/react-step-progress-bar";
-import { ProgressBar, Step } from "../../node_modules/react-step-progress-bar";
+
+import "../../node_modules/react-step-progress-bar"
+import { ProgressBar, Step } from "../../node_modules/react-step-progress-bar"
 
 const StepProgressBar = props => {
-  var stepPercentage = 0;
-
-  if (props.currentStep === 1) {
-    stepPercentage = 0;
-  } else if (props.currentStep === 2) {
-    stepPercentage = 50;
-  } else if (props.currentStep === 3) {
-    stepPercentage = 100;
-  } else {
-    stepPercentage = 0;
-  }
+  const stepPercentage =
+    Math.ceil(100 / (props.numberOfSteps - 1)) * (props.currentStep - 1);
+  const listOfSteps = Array.from(Array(props.numberOfSteps).keys());
 
   return (
     <ProgressBar percent={stepPercentage}>
-      <Step>
-        {({ accomplished, index }) => (
-          <div
-            className={`indexedStep ${accomplished ? "accomplished" : null}`}
-          >
-            {index + 1}
-          </div>
-        )}
-      </Step>
-      <Step>
-        {({ accomplished, index }) => (
-          <div
-            className={`indexedStep ${accomplished ? "accomplished" : null}`}
-          >
-            {index + 1}
-          </div>
-        )}
-      </Step>
-      <Step>
-        {({ accomplished, index }) => (
-          <div
-            className={`indexedStep ${accomplished ? "accomplished" : null}`}
-          >
-            {index + 1}
-          </div>
-        )}
-      </Step>
+      {listOfSteps.map((item) => (
+        <Step key={item + 1}>
+          {({accomplished, index}) => (
+            <div
+              className={`indexedStep ${accomplished ? 'accomplished' : null}`}
+            >
+              {index + 1}
+            </div>
+          )}
+        </Step>
+      ))}
     </ProgressBar>
-  );
+  )
 };
 
 export default StepProgressBar;

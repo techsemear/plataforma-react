@@ -4,12 +4,12 @@ import {Heading} from '../Heading'
 
 import {Modal} from './Video'
 
-import Cover from '../../assets/image/l6/l6-hero-img.png'
+import cover from '../../assets/image/l6/l6-hero-img.png'
 
 const contentDefault =  {
     title: 'Alimentação',
     subtitle: 'Desafio 1',
-    coverImage: Cover,
+    coverImage: cover,
     youtubeID: 'HR1BaFO0R1I',
   }
 
