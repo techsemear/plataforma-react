@@ -23,6 +23,7 @@ const Step2 = props => {
                 placeholder="Qual seu Whatsapp:(examplo: 1198382788)"
                 value={props.phone} 
                 onChange={props.handleChange}  
+                required
             />
             <input 
                 type="date" 
@@ -30,13 +31,15 @@ const Step2 = props => {
                 placeholder="Qual sua data de aniversário:" 
                 value={props.date} 
                 onChange={props.handleChange}  
+                required
             />
             <input 
                 type="number" 
                 name="cpf" 
                 placeholder="Você poderia nos informar seu CPF ? (examplo: 12345678910)" 
                 value={props.cpf} 
-                onChange={props.handleChange}  
+                onChange={props.handleChange}
+                required  
             />
     </fieldset>
   )}

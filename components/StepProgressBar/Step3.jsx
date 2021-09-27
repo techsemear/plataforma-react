@@ -22,16 +22,47 @@ const Step3 = props => {
                     name="fname" 
                     placeholder="First Name" 
                     value={props.fname} 
-                    onChange={props.handleChange} 
+                    onChange={props.handleChange}
+                    required 
                 />
                 <input 
                     type="text" 
                     name="lname" 
                     placeholder="Last Name" 
                     value={props.lname} 
-                    onChange={props.handleChange} 
+                    onChange={props.handleChange}
+                    required 
                 />
+                <input
+                    list="datalist" 
+                    name="level" 
+                    placeholder="Como você se autodeclara ?"
+                    required
+                />
+                <datalist id="datalist">
+                    <option value="Branco"/>
+                    <option value="Preto"/>
+                    <option value="Pardo"/>
+                    <option value="Vermelho"/>
+                    <option value="Amarelo"/>
+                    <option value="Prefiro Não Identificar"/>
+                </datalist>
+                <input
+                    list="datalist2" 
+                    name="level" 
+                    placeholder="Como você classifica seu gênero ?"
+                    required
+                />
+                <datalist id="datalist2">
+                    <option value="Homem Cisgênero"/>
+                    <option value="Homem Transgênero"/>
+                    <option value="Mulher Cisgênero"/>
+                    <option value="Mulher Transgênero"/>
+                    <option value="Não Binário"/>
+                    <option value="Prefiro Não Identificar"/>
+                </datalist>
     </fieldset>
+    
 )}
 
   
