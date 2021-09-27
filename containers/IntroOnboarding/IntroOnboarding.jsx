@@ -55,7 +55,7 @@ export default function IntroOnboarding(){
         </div>
         <Image src={waveImage} className="wave-image" />
         <Wave
-          className="wave"
+          className="wave introWave"
           direction="up"
           color="#f4fcfb"
           bgColor="#11115d"
