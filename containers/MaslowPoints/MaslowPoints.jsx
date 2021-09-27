@@ -4,6 +4,7 @@ import Image from 'next/image'
 import {Heading} from '../../components/Heading'
 import {Section} from '../../components/Section'
 import {CardItems} from '../../components/Card'
+import {Wave} from '../../components/Wave'
 
 import maslowPiramid from '../../assets/image/triangulo-blue.png'
 
@@ -38,6 +39,12 @@ const listText = [
 export default function MaslowPoints() {
   return (
     <Fragment>
+      <Wave
+       className="wave"
+       direction="down"
+       color="#11115d"
+       bgCcolor="#fff"
+     />
       <Section bgColor="primary">
         <div className="content-area-l7-2">
           <div className="row content-area-l7-2-heading align-items-center justify-content-lg-start justify-content-center">
