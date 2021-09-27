@@ -2,7 +2,7 @@
     background: linear-gradient(180deg, rgba(23, 135, 252, 0.26) 0%, rgba(32, 191, 169, 0.16) 55.21%, rgba(199, 210, 240, 0) 100%);
     position: relative;
     z-index: 1;
-    padding-top: 43px;
+    margin-top: 0px;
   }
   
   @media (min-width: 480px) {
