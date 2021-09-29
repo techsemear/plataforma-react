@@ -4,6 +4,7 @@ import {Button} from '../Button'
 import Step1 from "../StepProgressBar/Step1";
 import Step2 from "../StepProgressBar/Step2";
 import Step3 from "../StepProgressBar/Step3";
+import Step4 from "../StepProgressBar/Step4";
 
 
 import {StepProgressBar} from "../StepProgressBar";
@@ -53,8 +54,8 @@ class MultiStepForm extends Component {
   _next() {
     let currentStep = this.state.currentStep;
 
-    // If the current step is 1 or 2, then add one on "next" button click
-    currentStep = currentStep >= 2 ? 3 : currentStep + 1;
+    // If the current step is 1,2 or 3 then add one on "next" button click
+    currentStep = currentStep >= 2 ? 4 : currentStep + 1;
     this.setState({
       currentStep: currentStep
     });
@@ -63,7 +64,7 @@ class MultiStepForm extends Component {
   _prev() {
     let currentStep = this.state.currentStep;
     // If the current step is 2 or 3, then subtract one on "previous" button click
-    currentStep = currentStep <= 1 ? 1 : currentStep - 1;
+    currentStep = currentStep <= 1 ? 2 : currentStep - 1;
     this.setState({
       currentStep: currentStep
     });
@@ -88,8 +89,8 @@ class MultiStepForm extends Component {
 
   get nextbutton() {
     let currentStep = this.state.currentStep;
-    // If the current step is not 3, then render the "next" button
-    if (currentStep < 3) {
+    // If the current step is not 4, then render the "next" button
+    if (currentStep < 4) {
       return (
         <button className="btn-signup"color="primary float-right" onClick={this._next}>
           Próximo
@@ -104,7 +105,7 @@ class MultiStepForm extends Component {
     let currentStep = this.state.currentStep;
 
     // If the current step is the last step, then render the "submit" button
-    if (currentStep > 2) {
+    if (currentStep > 3) {
       return <button className="btn-signup" color="primary float-right">
           Enviar
         </button>;
@@ -133,6 +134,12 @@ class MultiStepForm extends Component {
                 cpf={this.state.cpf}
             />
             <Step3
+                currentStep={this.state.currentStep}
+                handleChange={this.handleChange}
+                fname={this.state.fname}
+                lname={this.state.lname}
+            />
+            <Step4
                 currentStep={this.state.currentStep}
                 handleChange={this.handleChange}
                 fname={this.state.fname}

@@ -12,7 +12,7 @@
 
 @media (min-width: 992px) {
   .newsletter-area-l-12 {
-    padding-top: 140px;
+    padding-top: 10px;
     padding-bottom: 140px;
   }
 }
@@ -77,4 +77,9 @@
 .newsletter-area-l-12 .btn:hover
 {
   background: #004aad;
+}
+
+.wave-coloring
+{
+  width: 100%;
 }

@@ -43,3 +43,8 @@
       background: #0074d9 0.8;
       z-index: -1;
   }
+
+.label
+{
+  position: relative;
+}

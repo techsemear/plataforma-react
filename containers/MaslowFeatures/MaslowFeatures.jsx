@@ -34,12 +34,6 @@ const contentCards = [
 export default function MaslowFeatures() {
   return (
     <Fragment>
-      <Wave
-        className="wave"
-        direction="center"
-        color="#11115d"
-        bgColor="#fff"
-      />
       <Section>
         <div className="service-area-l4-1">
           <div className="container">

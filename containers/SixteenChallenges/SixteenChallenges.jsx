@@ -58,7 +58,7 @@ export default function SixteenChallenges() {
         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-16 h-100">
             <div className="d-flex">
-              <div className="color-box-16 bg-grey1" />
+              <div className="color-box-16 bg-secondBlue" />
               <div className="content-box-16">
                 <Heading level ="h6" ftColor="default">{basicChallenges.title[0]}</Heading>
               </div>
@@ -68,7 +68,7 @@ export default function SixteenChallenges() {
         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-16 h-100">
             <div className="d-flex">
-            <div className="color-box-16 bg-grey1" />
+            <div className="color-box-16 bg-secondBlue" />
               <div className="content-box-16">
                 <Heading level ="h6" ftColor="default">{basicChallenges.title[1]}</Heading>
               </div>
@@ -78,7 +78,7 @@ export default function SixteenChallenges() {
         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-16 h-100">
             <div className="d-flex">
-            <div className="color-box-16 bg-grey1" />
+            <div className="color-box-16 bg-secondBlue" />
               <div className="content-box-16">
                 <Heading level ="h6" ftColor="default">{basicChallenges.title[2]}</Heading>
               </div>
@@ -88,7 +88,7 @@ export default function SixteenChallenges() {
         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-16 h-100">
             <div className="d-flex">
-            <div className="color-box-16 bg-grey1" />
+            <div className="color-box-16 bg-secondBlue" />
               <div className="content-box-16">
                 <Heading level ="h6" ftColor="default">{basicChallenges.title[3]}</Heading>
               </div>
@@ -98,7 +98,7 @@ export default function SixteenChallenges() {
         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-16 h-100">
             <div className="d-flex">
-            <div className="color-box-16 bg-grey1" />
+            <div className="color-box-16 bg-secondBlue" />
               <div className="content-box-16">
                 <Heading level ="h6" ftColor="default">{basicChallenges.title[4]}</Heading>
               </div>
@@ -108,7 +108,7 @@ export default function SixteenChallenges() {
         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-16 h-100">
             <div className="d-flex">
-            <div className="color-box-16 bg-grey1" />
+            <div className="color-box-16 bg-secondBlue" />
               <div className="content-box-16">
                 <Heading level ="h6" ftColor="default">{basicChallenges.title[5]}</Heading>
               </div>
@@ -118,7 +118,7 @@ export default function SixteenChallenges() {
         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-16 h-100">
             <div className="d-flex">
-            <div className="color-box-16 bg-grey1" />
+            <div className="color-box-16 bg-mint" />
               <div className="content-box-16">
                 <Heading level ="h6" ftColor="default">{belongingChallenges.title[0]}</Heading>
               </div>
@@ -128,7 +128,7 @@ export default function SixteenChallenges() {
         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-16 h-100">
             <div className="d-flex">
-            <div className="color-box-16 bg-secondBlue" />
+            <div className="color-box-16 bg-mint" />
               <div className="content-box-16">
                   <Heading level ="h6" ftColor="default">{belongingChallenges.title[1]}</Heading>
               </div>
@@ -138,7 +138,7 @@ export default function SixteenChallenges() {
         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-16 h-100">
             <div className="d-flex">
-            <div className="color-box-16 bg-secondBlue" />
+            <div className="color-box-16 bg-mint" />
               <div className="content-box-16">
                 <Heading level ="h6" ftColor="default">{belongingChallenges.title[2]}</Heading>
               </div>
@@ -148,7 +148,7 @@ export default function SixteenChallenges() {
         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-16 h-100">
             <div className="d-flex">
-            <div className="color-box-16 bg-secondBlue" />
+            <div className="color-box-16 bg-mint" />
               <div className="content-box-16">
                 <Heading level ="h6" ftColor="default">{belongingChallenges.title[3]}</Heading>
               </div>
@@ -158,7 +158,7 @@ export default function SixteenChallenges() {
         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-16 h-100">
             <div className="d-flex">
-            <div className="color-box-16 bg-secondBlue" />
+            <div className="color-box-16 bg-mint" />
               <div className="content-box-16">
                 <Heading level ="h6" ftColor="default">{belongingChallenges.title[4]}</Heading>
               </div>
@@ -168,7 +168,7 @@ export default function SixteenChallenges() {
         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-16 h-100">
             <div className="d-flex">
-            <div className="color-box-16 bg-mint" />
+            <div className="color-box-16 bg-grey1" />
               <div className="content-box-16">
                 <Heading level ="h6" ftColor="default">{employabilityChallenges.title[0]}</Heading>
               </div>
@@ -178,7 +178,7 @@ export default function SixteenChallenges() {
         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-16 h-100">
             <div className="d-flex">
-            <div className="color-box-16 bg-mint" />
+            <div className="color-box-16 bg-grey1" />
               <div className="content-box-16">
                 <Heading level ="h6" ftColor="default">{employabilityChallenges.title[1]}</Heading>
               </div>
@@ -188,7 +188,7 @@ export default function SixteenChallenges() {
         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-16 h-100">
             <div className="d-flex">
-            <div className="color-box-16 bg-mint" />
+            <div className="color-box-16 bg-grey1" />
               <div className="content-box-16">
                 <Heading level ="h6" ftColor="default">{employabilityChallenges.title[2]}</Heading>
               </div>
@@ -198,7 +198,7 @@ export default function SixteenChallenges() {
         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-16 h-100">
             <div className="d-flex">
-            <div className="color-box-16 bg-mint" />
+            <div className="color-box-16 bg-grey1" />
               <div className="content-box-16">
                 <Heading level ="h6" ftColor="default">{employabilityChallenges.title[3]}</Heading>
               </div>
@@ -208,7 +208,7 @@ export default function SixteenChallenges() {
         <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={500} data-aos-duration={1000}>
           <div className="feature-box-16 h-100">
             <div className="d-flex">
-            <div className="color-box-16 bg-mint" />
+            <div className="color-box-16 bg-grey1" />
               <div className="content-box-16">
                 <Heading level ="h6" ftColor="default">{employabilityChallenges.title[4]}</Heading>
               </div>
