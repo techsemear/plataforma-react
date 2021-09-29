@@ -25,12 +25,16 @@
 @media (min-width: 768px) {
   .feature-16-items {
     padding-top: 35px;
+      padding-left: 40px;
+      padding-right: 40px;
   }
 }
 
 @media (min-width: 992px) {
   .feature-16-items {
     padding-top: 45px;
+      padding-left: 40px;
+      padding-right: 40px;
   }
 }
 

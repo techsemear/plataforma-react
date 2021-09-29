@@ -50,7 +50,6 @@ import '../containers/SignUpPage/SignUpPage.css'
 //Onboarding
 import '../containers/IntroOnboarding/IntroOnboarding.css'
 import '../containers/Challenges/Challenges.css'
-import '../containers/MaslowTheory/MaslowTheory.css'
 import '../containers/MaslowPoints/MaslowPoints.css'
 import '../containers/MaslowFeatures/MaslowFeatures.css'
 import '../containers/GetStarted/GetStarted.css'

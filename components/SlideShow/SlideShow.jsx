@@ -1,8 +1,8 @@
-import React from 'react';
-import Image from "next/image"
-import { Fade } from 'react-slideshow-image'
+import React from 'react'
+import Image from 'next/image'
+import {Fade} from 'react-slideshow-image'
 
-const SlideShow = ({contentInfo}) => {
+const SlideShow = ({contentInfo = []}) => {
   return (
     <div className="slide-container">
       <Fade>
@@ -21,4 +21,4 @@ const SlideShow = ({contentInfo}) => {
     </div>
   )
 }
-export default SlideShow;
+export default SlideShow
