@@ -6,39 +6,39 @@ import {Heading} from '../../components/Heading'
 import {Section} from '../../components/Section'
 import {Wave} from '../../components/Wave'
 
-const basicChallenges = {
-  title: [
-    'Moradia',
-    'Descanso',
-    'Pertencimento',
-    'Atividade Física',
-    'Alimentação',
-    'Gestão de Rotina',
-  ],
-  color: 'bg-secondBlue',
-}
-
-const belongingChallenges = {
-  title: [
-    'Expedição de Carreira',
-    'Sonhar Grande',
-    'Autoliderança',
-    'Capital Cultural',
-    'Autoestima',
-  ],
-  color: 'bg-mint',
-}
-
-const employabilityChallenges = {
-  title: [
-    'Expectativa X Realidade',
-    'Fit Carreira X Fit Time',
-    'Lidar com Feedbacks',
-    'Adaptação ao Mercado',
-    'Imediatismo',
-  ],
-  color: 'bg-grey1',
-}
+const challengesInfo = [
+  {
+    title: [
+      'Moradia',
+      'Descanso',
+      'Pertencimento',
+      'Atividade Física',
+      'Alimentação',
+      'Gestão de Rotina',
+    ],
+    color: 'bg-secondBlue',
+  },
+  {
+    title: [
+      'Expedição de Carreira',
+      'Sonhar Grande',
+      'Autoliderança',
+      'Capital Cultural',
+      'Autoestima',
+    ],
+    color: 'bg-mint',
+  },
+  {
+    title: [
+      'Expectativa X Realidade',
+      'Fit Carreira X Fit Time',
+      'Lidar com Feedbacks',
+      'Adaptação ao Mercado',
+      'Imediatismo',
+    ],
+    color: 'bg-grey1',
+  },
+]
 
 export default function SixteenChallenges() {
   return (
@@ -55,22 +55,10 @@ export default function SixteenChallenges() {
           </Heading>
         </div>
         <div className="row feature-16-items justify-content-center">
-          {basicChallenges.title.map((item, index) => (
-            <Card title={item} boxColor={basicChallenges.color} key={index} />
-          ))}
-          {belongingChallenges.title.map((item, index) => (
-            <Card
-              title={item}
-              boxColor={belongingChallenges.color}
-              key={index}
-            />
-          ))}
-          {employabilityChallenges.title.map((item, index) => (
-            <Card
-              title={item}
-              boxColor={employabilityChallenges.color}
-              key={index}
-            />
+          {challengesInfo.map((challengeLevel) => (
+            challengeLevel.title.map((item, index) => (
+              <Card title={item} boxColor={challengeLevel.color} key={index} />
+            ))
           ))}
         </div>
       </Section>
