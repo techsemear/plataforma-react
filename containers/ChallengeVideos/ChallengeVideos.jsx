@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Image from 'next/image'
 
 import {Section} from '../../components/Section'
 import {Heading} from '../../components/Heading'
 import {VideoColumn} from '../../components/Video'
+
 
 import Cover from '../../assets/image/l6/l6-hero-img.png'
 import Shape7 from '../../assets/image/l6/shape-7.svg'

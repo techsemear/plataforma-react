@@ -1,19 +1,29 @@
+.section-getStarted
+{
+  margin-top: 200px;
+}
+
+.wave-section-getStarted
+{
+  margin-bottom: -200px;
+}
+
 .newsletter-area-l-12 {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 10px;
+  padding-bottom: 50px;
 }
 
 @media (min-width: 768px) {
   .newsletter-area-l-12 {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 10px;
+    padding-bottom: 50px;
   }
 }
 
 @media (min-width: 992px) {
   .newsletter-area-l-12 {
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 0px;
+    padding-bottom: 70px;
   }
 }
 
@@ -43,7 +53,6 @@
   line-height: 45px;
   text-align: center;
   letter-spacing: -2.53px;
-  color: #000000;
   margin: 25px 0px 40px 0px;
 }
 
@@ -77,4 +86,11 @@
 .newsletter-area-l-12 .btn:hover
 {
   background: #004aad;
+}
+
+.wave-coloring
+{
+  width: 100%;
+  margin-top: -150px;
+  margin-bottom: -150px;
 }

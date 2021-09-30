@@ -5,13 +5,8 @@ import {Underline} from '../../components/Underline'
 const content = {
   title: 'A Universidade foi o primeiro passo, e agora?',
   subtitle: 'Conectamos jovens a oportunidades reais',
-  textPart1: 'O ',
-  textPart2:
-    ' tem como objetivo diminuir a evasão universitária e fornecer aos jovens de baixa renda as condições para que se desenvolvam durante a graduação. Desde então, selecionamos, desenvolvemos e conectamos estudantes universitários de alto potencial que queiram atuar como agentes multiplicadores por um Brasil melhor e mais justo.',
-  textPart3:
-    'Alcançamos esse objetivo por meio de Networking, oferecendo uma ampla rede de contatos e da Mentoria Social, onde estes jovens podem trocam experiências com profissionais renomados nas áreas que atuam. Por acreditarmos na potência do aprendizado social através do nosso Programa de Mentoria, queremos convidar você a ',
-  textPart4: 'imergir nessa jornada que mudará o seu futuro!',
-  readMore: 'Instituto Semear',
+  text: [ 'O ', 'Instituto Semear', ' tem como objetivo diminuir a evasão universitária e fornecer aos jovens de baixa renda as condições para que se desenvolvam durante a graduação. Desde então, selecionamos, desenvolvemos e conectamos estudantes universitários de alto potencial que queiram atuar como agentes multiplicadores por um Brasil melhor e mais justo.', 'Alcançamos esse objetivo por meio de Networking, oferecendo uma ampla rede de contatos e da Mentoria Social, onde estes jovens podem trocam experiências com profissionais renomados nas áreas que atuam. Por acreditarmos na potência do aprendizado social através do nosso Programa de Mentoria, queremos convidar você a ', 'imergir nessa jornada que mudará o seu futuro!'
+  ],
   titleCard1: '1400',
   textCard1: 'Jovens Impactados pelos projetos do ISemear',
   titleCard2: '+15000',
@@ -32,22 +27,22 @@ export default function Presentation() {
             </Underline>
             <p data-aos="fade-up" data-aos-delay={800} data-aos-duration={1000}>
               <br className="d-none d-sm-block d-md-none d-xl-block mt-4" />
-              {content.textPart1}
+              {content.text[0]}
               <strong>
                 <a
                   className="reference"
                   href="https://www.isemear.org.br"
                   target="_blank"
                 >
-                  {content.readMore}
+                  {content.text[1]}
                 </a>
               </strong>
-              {content.textPart2}
+              {content.text[2]}
             </p>
             <p data-aos="fade-up" data-aos-delay={800} data-aos-duration={1000}>
               <br className="d-none d-sm-block d-md-none d-xl-block mt-2" />
-              {content.textPart3}
-              <strong>{content.textPart4}</strong>
+              {content.text[3]}
+              <strong>{content.text[4]}</strong>
             </p>
           </div>
         </div>

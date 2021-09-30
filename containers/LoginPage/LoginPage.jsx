@@ -13,6 +13,18 @@ import imageLogin1 from '../../assets/image/loginImage1.png'
 import imageLogin2 from '../../assets/image/loginImage2.png'
 import imageLogin3 from '../../assets/image/loginImage3.png'
 
+const content = [
+  {
+    image: imageLogin1,
+  },
+  {
+    image: imageLogin2,
+  },
+  {
+    image: imageLogin3,
+  }
+]
+
 
 
 export default function LoginPage(){
@@ -72,6 +84,7 @@ export default function LoginPage(){
           <SlideShow
            duration={500}
            transitionDuration	={500}
+           contentInfo={content}
           />
           <Heading className="slider-text" level="h3" ftColor = "default" horizontalPosition="center" >Faça parte dessa jornada !</Heading>
         </div>

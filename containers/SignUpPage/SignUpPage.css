@@ -4,20 +4,15 @@
 /*basic reset*/
 * {margin: 0; padding: 0;}
 
-html {
+main {
 	height: 100%;
 	/*Image only BG fallback*/
 	
 	/*background = gradient + image pattern combo*/
 	background-image:  url('../../assets/image/background-login-plantyou.png');
-	
-}
+	font-family: Poppins, arial, verdana;
+	margin-top: 10px;
 
-body {
-  font-family: Poppins, arial, verdana;
-  margin-top: 70px;
-  margin-bottom: 50px;
-  
 }
 
 .plataforma-logo2
@@ -29,10 +24,10 @@ body {
 /*form styles*/
 #msform {
 	width: 100%;
-	margin: 50px auto;
+	margin: auto;
 	text-align: center;
 	position: relative;
- 	max-width: 700px;
+ 	max-width: 1500px;
 }
 #msform fieldset {
 	background: white;
@@ -41,8 +36,8 @@ body {
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
 	padding: 20px 30px;
 	box-sizing: border-box;
-	width: 80%;
-	margin: 0 10%;
+	width: 50%;
+	margin: auto;
 	margin-top: 30px;
 	margin-bottom: 5px;
 	
@@ -97,7 +92,7 @@ body {
 /*progressbar*/
 #progressbar {
 	margin-bottom: 30px;
-  margin-top: 50px;
+  	margin-top: 50px;
 	overflow: hidden;
 	/*CSS counters to number the steps*/
 	counter-reset: step;

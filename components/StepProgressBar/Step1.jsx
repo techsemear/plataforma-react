@@ -24,6 +24,7 @@ return (
                 placeholder="Digite seu melhor email:" 
                 value={props.email}
                 onChange={props.handleChange}
+                required
             />
            <input 
                 type="text" 
@@ -31,6 +32,7 @@ return (
                 placeholder="Crie seu nome de usuário:" 
                 value={props.username}
                 onChange={props.handleChange}
+                required
             />
            <input 
                 type="password" 
@@ -38,6 +40,7 @@ return (
                 placeholder="Crie sua senha:" 
                 value={props.password}
                 onChange={props.handleChange}
+                required
             />
            <input 
                 type="password" 
@@ -45,7 +48,18 @@ return (
                 placeholder="Confirme sua senha:"
                 value={props.cpassword}
                 onChange={props.handleChange} 
+                required
             />
+          <input 
+            list="class" 
+            name="level" 
+            placeholder="Como você classifica em nossa plataforma ?" 
+            required
+          />
+          <datalist id="class">
+            <option value="Sou um Jovem"/>
+            <option value="Sou um Mentor"/>
+          </datalist>
     </fieldset>
     )
 }

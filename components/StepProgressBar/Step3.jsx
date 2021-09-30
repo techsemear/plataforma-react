@@ -20,18 +20,67 @@ const Step3 = props => {
                 <input 
                     type="text" 
                     name="fname" 
-                    placeholder="First Name" 
+                    placeholder="Nome Completo ou Nome Social" 
                     value={props.fname} 
-                    onChange={props.handleChange} 
+                    onChange={props.handleChange}
+                    required 
                 />
-                <input 
-                    type="text" 
-                    name="lname" 
-                    placeholder="Last Name" 
-                    value={props.lname} 
-                    onChange={props.handleChange} 
+                <input
+                    list="datalist" 
+                    name="level" 
+                    placeholder="Como você se autodeclara ?"
+                    required
                 />
+                <datalist id="datalist">
+                    <option value="Branco"/>
+                    <option value="Preto"/>
+                    <option value="Pardo"/>
+                    <option value="Vermelho"/>
+                    <option value="Amarelo"/>
+                    <option value="Prefiro Não Identificar"/>
+                </datalist>
+                <input
+                    list="datalist2" 
+                    name="level" 
+                    placeholder="Como você classifica seu gênero ?"
+                    required
+                />
+                <datalist id="datalist2">
+                    <option value="Homem Cisgênero"/>
+                    <option value="Homem Transgênero"/>
+                    <option value="Mulher Cisgênero"/>
+                    <option value="Mulher Transgênero"/>
+                    <option value="Não Binário"/>
+                    <option value="Prefiro Não Identificar"/>
+                </datalist>
+                <input
+                    list="datalist3" 
+                    name="level" 
+                    placeholder="Qual sua Orientação Sexual ?"
+                    required
+                />
+                <datalist id="datalist3">
+                    <option value="Heterossexual"/>
+                    <option value="Homossexual"/>
+                    <option value="Bissexual"/>
+                    <option value="Assexual"/>
+                    <option value="Pansexual"/>
+                    <option value="Prefiro Não Identificar"/>
+                </datalist>
+                
+                <Heading level="h6"> Você se identifica como PCD ? </Heading>
+                <div>
+                <div>
+                  <input type="radio" id="huey" name="drone" defaultValue="huey" defaultChecked />
+                  <label htmlFor="huey" className="label"> Sim</label>
+                </div>
+                <div>
+                  <input type="radio" id="dewey" name="drone" defaultValue="dewey" />
+                  <label htmlFor="dewey" className="label">Não</label>
+                </div>
+              </div>
     </fieldset>
+    
 )}
 
   
