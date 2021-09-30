@@ -89,7 +89,7 @@ class MultiStepForm extends Component {
   get nextbutton() {
     let currentStep = this.state.currentStep;
     // If the current step is not 4, then render the "next" button
-    if (currentStep < 4) {
+    if (currentStep < 3) {
       return (
         <button className="btn-signup"color="primary float-right" onClick={this._next}>
           Próximo
@@ -104,7 +104,7 @@ class MultiStepForm extends Component {
     let currentStep = this.state.currentStep;
 
     // If the current step is the last step, then render the "submit" button
-    if (currentStep > 3) {
+    if (currentStep > 2) {
       return <button className="btn-signup" color="primary float-right">
           Enviar
         </button>;
