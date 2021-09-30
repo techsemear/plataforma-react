@@ -3,8 +3,9 @@ import React, {Fragment} from 'react'
 import {Heading} from '../../components/Heading'
 import {Section} from '../../components/Section'
 import {CardSequence} from '../../components/Card'
-
 import {Wave} from '../../components/Wave'
+
+import waveImage from '../../assets/image/wave-color.png'
 
 const content = {
   title:
@@ -34,6 +35,11 @@ const contentCards = [
 export default function MaslowFeatures() {
   return (
     <Fragment>
+      <Wave 
+        direction="down"
+        color="#fff"
+        bgColor="#11115d"
+      />
       <Section>
         <div className="service-area-l4-1">
           <div className="container">

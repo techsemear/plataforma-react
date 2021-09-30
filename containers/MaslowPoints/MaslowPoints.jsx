@@ -14,7 +14,7 @@ const contentText = {
   title:
     'Seguimos um conceito científico aqui no Instituto chamado "Pirâmide de Maslow"',
   subtitle:
-    'Abraham Maslow, o pai da Psicologia Humanista, é o autor do livro A Teoria da Motivação Humana, no qual ele discorre sobre os princípios da motivação e hierarquiza as necessidades humanas em forma de pirâmide.',
+    'Abraham Maslow, o pai da Psicologia Humanista, é o autor do livro A Teoria da Motivação Humana, no qual ele discorre sobre os princípios da motivação e hierarquiza as necessidades humanas em forma de pirâmide. Atualmente a nossa piramide se baseia em 16 desafios.',
 }
 
 const listText = [

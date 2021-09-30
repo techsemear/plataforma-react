@@ -54,17 +54,16 @@ class MultiStepForm extends Component {
   _next() {
     let currentStep = this.state.currentStep;
 
-    // If the current step is 1,2 or 3 then add one on "next" button click
-    currentStep = currentStep >= 2 ? 4 : currentStep + 1;
+    // If the current step is 1 or 2  then add one on "next" button click
+    currentStep = currentStep > 2 ? 3 : currentStep + 1;
     this.setState({
       currentStep: currentStep
     });
   }
-
   _prev() {
     let currentStep = this.state.currentStep;
     // If the current step is 2 or 3, then subtract one on "previous" button click
-    currentStep = currentStep <= 1 ? 2 : currentStep - 1;
+    currentStep = currentStep <= 1 ? 1 : currentStep - 1;
     this.setState({
       currentStep: currentStep
     });
