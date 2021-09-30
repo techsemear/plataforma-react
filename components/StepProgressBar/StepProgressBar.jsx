@@ -44,15 +44,6 @@ const StepProgressBar = props => {
           </div>
         )}
       </Step>
-      <Step>
-        {({ accomplished, index }) => (
-          <div
-            className={`indexedStep ${accomplished ? "accomplished" : null}`}
-          >
-            {index + 1}
-          </div>
-        )}
-      </Step>
     </ProgressBar>
   );
 };
