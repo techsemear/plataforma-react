@@ -16,17 +16,6 @@ const StepAssessment = (props) => {
 
   return (
     <fieldset>
-      <Heading
-        level="h1"
-        ftColor="quinary"
-        className="fs-title"
-        horizontalPosition="center"
-      >
-        {props.title}
-      </Heading>
-      <Heading level="h5" horizontalPosition="center">
-        {props.subtitle}
-      </Heading>
       <div className="hero-area-l-12 position-relative z-index-1 overflow-hidden mt-5">
         <div className="container">
           <div className="row justify-content-center">
@@ -37,6 +26,15 @@ const StepAssessment = (props) => {
               data-aos-once="true"
             >
               <div className="content position-text">
+                <Heading
+                  level="h1"
+                  ftColor="quinary"
+                  className="fs-title"
+                >
+                  {props.title}
+                </Heading>
+                <Heading level="h5">{props.subtitle}</Heading>
+                <br />
                 <Heading level="h6"> {props.neutral} </Heading>
               </div>
             </div>
