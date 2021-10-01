@@ -1,10 +1,14 @@
 import React, { Component } from "react";
+import Image from 'next/image'
 
 import {Button} from '../Button'
 import Step1 from "../StepProgressBar/Step1";
 import Step2 from "../StepProgressBar/Step2";
 import Step3 from "../StepProgressBar/Step3";
-import { VideoColumn } from "../Video";
+import StepAssessment from "./StepAssessment";
+
+import image from "../../assets/image/landing-1/mentor3.png"
+
 
 
 import {StepProgressBar} from "../StepProgressBar";
@@ -115,38 +119,80 @@ class AssessmentForm extends Component {
   }
 
   render() {
-    const numberOfSteps = 3
+    const numberOfSteps = 7
+    const contentInfo = [
+      {
+        title: 'Moradia',
+        subtitle: 'Como você avalia o local em que você vive?',
+        neutral:
+          'Nível Neutro: Sei a importância de uma boa alimentação como fonte de  energia para o melhor funcionamento do meu corpo e mente. Com os recursos  que tenho, faço refeições de qualidade nutricional suficiente.',
+        gif: 'https://media.giphy.com/media/3o6MbnfLBGvNY6HwGc/giphy.gif',
+      },
+      {
+        title: 'Alimentação',
+        subtitle: 'Como você avalia a sua alimentação?',
+        neutral:
+          'Nível Neutro: Sei a importância de uma boa alimentação como fonte de  energia para o melhor funcionamento do meu corpo e mente. Com os recursos  que tenho, faço refeições de qualidade nutricional suficiente.',
+        gif: 'https://media.giphy.com/media/jKaFXbKyZFja0/giphy.gif',
+      },
+      {
+        title: 'Gestão de Rotina',
+        subtitle: 'Como você avalia a sua alimentação?',
+        neutral:
+          'Nível Neutro: Sei a importância de uma boa alimentação como fonte de  energia para o melhor funcionamento do meu corpo e mente. Com os recursos  que tenho, faço refeições de qualidade nutricional suficiente.',
+        gif: 'https://media.giphy.com/media/xTiTnxCaP0qE2XYalO/giphy.gif',
+      },
+      {
+        title: 'Pertencimento',
+        subtitle: 'Como você avalia a sua alimentação?',
+        neutral:
+          'Nível Neutro: Sei a importância de uma boa alimentação como fonte de  energia para o melhor funcionamento do meu corpo e mente. Com os recursos  que tenho, faço refeições de qualidade nutricional suficiente.',
+        gif: 'https://media.giphy.com/media/xT5LMIvGZNaWBldvYQ/giphy.gif',
+      },
+      {
+        title: 'Atividade Física',
+        subtitle: 'Como você avalia a sua alimentação?',
+        neutral:
+          'Nível Neutro: Sei a importância de uma boa alimentação como fonte de  energia para o melhor funcionamento do meu corpo e mente. Com os recursos  que tenho, faço refeições de qualidade nutricional suficiente.',
+        gif: 'https://media.giphy.com/media/hNkaMEn1KVhcs/giphy.gif',
+      },
+      {
+        title: 'Descanso',
+        subtitle: 'Como você avalia a sua alimentação?',
+        neutral:
+          'Nível Neutro: Sei a importância de uma boa alimentação como fonte de  energia para o melhor funcionamento do meu corpo e mente. Com os recursos  que tenho, faço refeições de qualidade nutricional suficiente.',
+        gif: 'https://media.giphy.com/media/Avwm4ZRDV0c9O/giphy.gif',
+      },
+    ]
     return (
-        <form id="msform" onSubmit={this.handleSubmit}>
-            <StepProgressBar currentStep={this.state.currentStep} numberOfSteps={numberOfSteps} />
-            <Step1
-                currentStep={this.state.currentStep}
-                handleChange={this.handleChange}
-                email={this.state.email}
-                username={this.state.username}
-                password={this.state.password}
-                cpassword={this.state.cpassword}
-            />
-            <Step2
-                currentStep={this.state.currentStep}
-                handleChange={this.handleChange}
-                phone={this.state.phone}
-                birthday={this.state.date}
-                cpf={this.state.cpf}
-            />
-            <Step3
-                currentStep={this.state.currentStep}
-                handleChange={this.handleChange}
-                fname={this.state.fname}
-                lname={this.state.lname}
-            />
-            <div className="btn-container">
-              {this.previousbutton}
-              {this.nextbutton}
-              {this.submitbutton}
-            </div>
-        </form>
-    );
+      <form id="msform2" onSubmit={this.handleSubmit}>
+        <StepProgressBar
+          currentStep={this.state.currentStep}
+          numberOfSteps={numberOfSteps}
+        />
+        <StepAssessment
+          title={contentInfo[0].title}
+          subtitle={contentInfo[0].subtitle}
+          neutral={contentInfo[0].neutral}
+          gif={contentInfo[0].gif}
+          currentStep={this.state.currentStep}
+          handleChange={this.handleChange}
+        />
+        <StepAssessment
+          title={contentInfo[1].title}
+          subtitle={contentInfo[1].subtitle}
+          neutral={contentInfo[1].neutral}
+          gif={contentInfo[1].gif}
+          currentStep={this.state.currentStep}
+          handleChange={this.handleChange}
+        />
+        <div className="btn-container">
+          {this.previousbutton}
+          {this.nextbutton}
+          {this.submitbutton}
+        </div>
+      </form>
+    )
   }
 }
-export default MultiStepForm;
+export default AssessmentForm;
