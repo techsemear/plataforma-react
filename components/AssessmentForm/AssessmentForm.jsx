@@ -2,16 +2,16 @@ import React, { Component } from "react";
 import Image from 'next/image'
 
 import {Button} from '../Button'
-import Step1 from "../StepProgressBar/Step1";
-import Step2 from "../StepProgressBar/Step2";
-import Step3 from "../StepProgressBar/Step3";
+import Step4 from "../StepProgressBar/Step4";
 import StepAssessment from "./StepAssessment";
+
 
 import image from "../../assets/image/landing-1/mentor3.png"
 
 
 
 import {StepProgressBar} from "../StepProgressBar";
+const numberOfSteps = 7;
 
 class AssessmentForm extends Component {
   constructor(props) {
@@ -59,7 +59,7 @@ class AssessmentForm extends Component {
     let currentStep = this.state.currentStep;
 
     // If the current step is 1 or 2, then add one on "next" button click
-    currentStep = currentStep >= 2 ? 3 : currentStep + 1;
+    currentStep = currentStep >= 2 ? currentStep + 1 : currentStep + 1
     this.setState({
       currentStep: currentStep
     });
@@ -94,7 +94,7 @@ class AssessmentForm extends Component {
   get nextbutton() {
     let currentStep = this.state.currentStep;
     // If the current step is not 3, then render the "next" button
-    if (currentStep < 3) {
+    if (currentStep < 7) {
       return (
         <button className="btn-signup"color="primary float-right" onClick={this._next}>
           Próximo
@@ -109,7 +109,7 @@ class AssessmentForm extends Component {
     let currentStep = this.state.currentStep;
 
     // If the current step is the last step, then render the "submit" button
-    if (currentStep > 2) {
+    if (currentStep == 7 ) {
       return <button className="btn-signup" color="primary float-right">
           Enviar
         </button>;
@@ -117,10 +117,10 @@ class AssessmentForm extends Component {
     // ...else render nothing
     return null;
   }
-
+  
   render() {
-    const numberOfSteps = 7
-    const contentInfo = [
+        const numberOfSteps = 7;
+        const contentInfo = [
       {
         title: 'Moradia',
         subtitle: 'Como você avalia o local em que você vive?',
@@ -147,7 +147,7 @@ class AssessmentForm extends Component {
         subtitle: 'Como você avalia a sua alimentação?',
         neutral:
           'Nível Neutro: Sei a importância de uma boa alimentação como fonte de  energia para o melhor funcionamento do meu corpo e mente. Com os recursos  que tenho, faço refeições de qualidade nutricional suficiente.',
-        gif: 'https://media.giphy.com/media/xT5LMIvGZNaWBldvYQ/giphy.gif',
+        gif: 'https://media.giphy.com/media/xT5LMXR7iA0mSSxOBG/giphy.gif',
       },
       {
         title: 'Atividade Física',
@@ -170,22 +170,24 @@ class AssessmentForm extends Component {
           currentStep={this.state.currentStep}
           numberOfSteps={numberOfSteps}
         />
-        <StepAssessment
-          title={contentInfo[0].title}
-          subtitle={contentInfo[0].subtitle}
-          neutral={contentInfo[0].neutral}
-          gif={contentInfo[0].gif}
-          currentStep={this.state.currentStep}
-          handleChange={this.handleChange}
+        <Step4
+                currentStep={this.state.currentStep}
+                handleChange={this.handleChange}
+                fname={this.state.fname}
+                lname={this.state.lname}
         />
-        <StepAssessment
-          title={contentInfo[1].title}
-          subtitle={contentInfo[1].subtitle}
-          neutral={contentInfo[1].neutral}
-          gif={contentInfo[1].gif}
-          currentStep={this.state.currentStep}
-          handleChange={this.handleChange}
-        />
+          {contentInfo.map((item, index) => (
+          <StepAssessment
+            title={item.title}
+            subtitle={item.subtitle}
+            neutral={item.neutral}
+            gif={item.gif}
+            currentStep={this.state.currentStep}
+            handleChange={this.handleChange}
+            key={index}
+            stepStatus={index+2}
+          />
+        ))}
         <div className="btn-container">
           {this.previousbutton}
           {this.nextbutton}

@@ -6,7 +6,7 @@ import {Heading} from '../Heading'
 import plataformaLogo from '../../assets/image/logo-semear.png'
 
 const Step4 = props => {
-  if (props.currentStep !== 4) {
+  if (props.currentStep !== 1) {
     return null;
   }
 

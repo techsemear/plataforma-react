@@ -9,8 +9,8 @@ import {VideoColumn, Video, VideoSide} from '../Video'
 import plataformaLogo from '../../assets/image/logo-semear.png'
 import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 
-const StepAssessment = (props) => {
-  if (props.currentStep !== 1) {
+let StepAssessment = (props) => {
+  if (props.currentStep !== props.stepStatus) {
     return null
   }
 
