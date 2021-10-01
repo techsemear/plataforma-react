@@ -76,3 +76,7 @@ body {
 body {
     text-rendering: optimizeLegibility;
 }
+
+.block {
+     display: inline-block; 
+}

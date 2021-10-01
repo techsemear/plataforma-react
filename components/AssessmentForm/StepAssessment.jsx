@@ -4,9 +4,7 @@ import Image from 'next/image'
 import { Fragment } from 'react'
 
 import {Heading} from '..//Heading'
-import {VideoColumn, Video, VideoSide} from '../Video'
 
-import plataformaLogo from '../../assets/image/logo-semear.png'
 import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 
 let StepAssessment = (props) => {
@@ -103,7 +101,7 @@ class ReactApp extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="col-xl-8 col-lg-9 col-md-10 col-sm-12 order-lg-1 order-1 block">
         <input
           onInput={this.handleInputChange}
           type="range"
