@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 // Containers
 import {Navbar} from '../containers/Navbar'
-import {SignUpPage} from '../containers/SignUpPage'
+import {AssessmentPage} from '../containers/AssessmentPage'
 
 // Components
 import {IndexPage} from '../components/IndexPage'
@@ -13,7 +13,7 @@ export default function SignUp() {
     <React.Fragment>
       <IndexPage />
       <Navbar />
-      <SignUpPage />
+      <AssessmentPage />
     </React.Fragment>
   )
 }

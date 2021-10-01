@@ -7,7 +7,7 @@ import AssessmentForm from "../../components/AssessmentForm/AssessmentForm";
 
 
 
-export default function Assessment(){
+export default function AssessmentPage(){
   return (
     <main>
         <AssessmentForm/>

@@ -29,6 +29,7 @@ import '../components/Button/Button.css'
 import '../components/SlideShow/SlideShow.css'
 import '../components/StepProgressBar/StepProgressBar.css'
 import '../components/MultiStepForm/MultiStepForm.css'
+import '../components/AssessmentForm/AssessmentForm.css'
 
 // Containers
 // Home
@@ -43,6 +44,7 @@ import '../containers/Subscribe/Subscribe.css'
 import '../containers/Testimonial/Testimonial.css'
 import '../containers/LoginPage/LoginPage.css'
 import '../containers/SignUpPage/SignUpPage.css'
+import '../containers/AssessmentPage/AssessmentPage.css'
 
 //Login
 //import '../containers/LoginPage/LoginPage.css'

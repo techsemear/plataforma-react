@@ -114,7 +114,7 @@ class MultiStepForm extends Component {
   }
 
   render() {
-    const numberOfSteps = 3
+    const numberOfSteps = 4
     return (
         <form id="msform" onSubmit={this.handleSubmit}>
             <StepProgressBar currentStep={this.state.currentStep} numberOfSteps={numberOfSteps} />
