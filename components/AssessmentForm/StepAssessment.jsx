@@ -4,9 +4,7 @@ import Image from 'next/image'
 import { Fragment } from 'react'
 
 import {Heading} from '..//Heading'
-import {VideoColumn, Video, VideoSide} from '../Video'
 
-import plataformaLogo from '../../assets/image/logo-semear.png'
 import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 
 let StepAssessment = (props) => {
@@ -31,11 +29,11 @@ let StepAssessment = (props) => {
                   ftColor="quinary"
                   className="fs-title"
                 >
-                  {props.title}
+                  {props.content.title}
                 </Heading>
-                <Heading level="h5">{props.subtitle}</Heading>
+                <Heading level="h5">{props.content.subtitle}</Heading>
                 <br />
-                <Heading level="h6"> {props.neutral} </Heading>
+                <Heading level="h6"> {props.content.neutral} </Heading>
               </div>
             </div>
             <div
@@ -45,20 +43,21 @@ let StepAssessment = (props) => {
               data-aos-once="true"
             >
               <div className="hero-video-l12 position-relative">
-                <Image src={props.gif} alt="gif" width={400} height={300} />
+                <Image src={props.content.gif} alt="gif" width={400} height={300} />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <ReactApp />
+      <Range props={props}/>
+      <RangeApp />
     </fieldset>
   )
 }
 
 export default StepAssessment
 
-function Range() {
+function Range(props) {
   return (
     <Fragment>
       <input
@@ -68,6 +67,10 @@ function Range() {
         oninput="this.nextElementSibling.value = this.value"
         list="tickmarks"
         className="range"
+        placeholder="Qual seu nível de escolaridade"
+        value={props.rating}
+        onChange={props.handleChange}
+        required
       />
       <datalist id="tickmarks">
         <option value={0} label="0%"></option>
@@ -87,7 +90,7 @@ function Range() {
   )
 }
 
-class ReactApp extends React.Component {
+class RangeApp extends React.Component {
   values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
   constructor(props) {
@@ -103,7 +106,7 @@ class ReactApp extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="col-xl-8 col-lg-9 col-md-10 col-sm-12 order-lg-1 order-1 block">
         <input
           onInput={this.handleInputChange}
           type="range"
