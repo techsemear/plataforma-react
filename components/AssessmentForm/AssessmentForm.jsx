@@ -20,16 +20,13 @@ class AssessmentForm extends Component {
     // Set the intiial input values
     this.state = {
       currentStep: 1,
-      email:"",
-      username:"",
-      password:"",
-      cpassword:"", 
-      phone:"",
-      date:"",
-      cpf:"",
-      fname:"",
-      lname:"",
-    };
+      home: '',
+      food: '',
+      routine: '',
+      belonging: '',
+      rest: '',
+      exercise: '',
+    }
 
     // Bind the submission to handleChange()
     this.handleChange = this.handleChange.bind(this);
@@ -50,7 +47,7 @@ class AssessmentForm extends Component {
   // Trigger an alert on form submission
   handleSubmit = event => {
     event.preventDefault();
-    const { email, username, password, cpassword, phone, date, cpf, fname, lname } = this.state;
+    const { home, food, routine, belonging, rest, exercise } = this.state;
     };
 
   // Test current step with ternary
@@ -59,7 +56,8 @@ class AssessmentForm extends Component {
     let currentStep = this.state.currentStep;
 
     // If the current step is 1 or 2, then add one on "next" button click
-    currentStep = currentStep >= 2 ? currentStep + 1 : currentStep + 1
+    if (currentStep >= 1)
+    currentStep = currentStep + 1
     this.setState({
       currentStep: currentStep
     });
@@ -127,6 +125,7 @@ class AssessmentForm extends Component {
             neutral:
               'Nível Neutro: Entendo a influência do lar sobre mim e considero que moro em  um ambiente com condições de higiene e privacidade onde posso descansar,  e me sinto seguro em relação às pessoas com quem convivo dentro de casa.',
             gif: 'https://media.giphy.com/media/3o6MbnfLBGvNY6HwGc/giphy.gif',
+            rating: this.state.home,
           },
           {
             title: 'Alimentação',
@@ -134,6 +133,7 @@ class AssessmentForm extends Component {
             neutral:
               'Nível Neutro: Sei a importância de uma boa alimentação como fonte de  energia para o melhor funcionamento do meu corpo e mente. Com os recursos  que tenho, faço refeições de qualidade nutricional suficiente.',
             gif: 'https://media.giphy.com/media/jKaFXbKyZFja0/giphy.gif',
+            rating: this.state.food,
           },
           {
             title: 'Gestão de Rotina',
@@ -141,6 +141,7 @@ class AssessmentForm extends Component {
             neutral:
               'Nível Neutro: Sei que existem mais oportunidades à minha disposição do que  tempo disponível, entendo o básico da minha hierarquia de necessidades e  tento aplicar o conceito de gestão de agenda semanal e rotina, e, assim,  tenho tempo para honrar minimamente os compromissos que assumi, sem  prejudicar minha saúde ou relacionamentos.',
             gif: 'https://media.giphy.com/media/xTiTnxCaP0qE2XYalO/giphy.gif',
+            rating: this.state.routine,
           },
           {
             title: 'Pertencimento',
@@ -148,6 +149,7 @@ class AssessmentForm extends Component {
             neutral:
               'Nível Neutro: Sei a importância de uma boa alimentação como fonte de  energia para o melhor funcionamento do meu corpo e mente. Com os recursos  que tenho, faço refeições de qualidade nutricional suficiente.',
             gif: 'https://media.giphy.com/media/xT5LMXR7iA0mSSxOBG/giphy.gif',
+            rating: this.state.belonging,
           },
           {
             title: 'Atividade Física',
@@ -156,6 +158,7 @@ class AssessmentForm extends Component {
             neutral:
               'Nível Neutro: Sei a importância da prática de exercícios físicos como fonte de energia para o melhor funcionamento do meu corpo e mente e tento os praticar pelo menos 3 vezes na semana.',
             gif: 'https://media.giphy.com/media/hNkaMEn1KVhcs/giphy.gif',
+            rating: this.state.exercise,
           },
           {
             title: 'Descanso',
@@ -163,6 +166,7 @@ class AssessmentForm extends Component {
             neutral:
               'Nível Neutro: Sei que o sono e o descanso estão diretamente relacionados com minha  capacidade de aprendizado, meu nível de ansiedade e meu equilíbrio físico e mental. Dessa forma, reservo e priorizo momentos de descanso e sono suficientes para minha recuperação na maior parte do mês.',
             gif: 'https://media.giphy.com/media/Avwm4ZRDV0c9O/giphy.gif',
+            rating: this.state.rest,
           },
         ]
     return (
@@ -179,10 +183,8 @@ class AssessmentForm extends Component {
         />
           {contentInfo.map((item, index) => (
           <StepAssessment
-            title={item.title}
-            subtitle={item.subtitle}
-            neutral={item.neutral}
-            gif={item.gif}
+            content={item}
+            rating={item.rating}
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
             key={index}
