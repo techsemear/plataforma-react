@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Image from 'next/image'
 
 import {Button} from '../Button'
-import Step4 from "../StepProgressBar/Step4";
+import StepInfos from "./StepInfos";
 import StepAssessment from "./StepAssessment";
 
 
@@ -170,7 +170,7 @@ class AssessmentForm extends Component {
           currentStep={this.state.currentStep}
           numberOfSteps={numberOfSteps}
         />
-        <Step4
+        <StepInfos
                 currentStep={this.state.currentStep}
                 handleChange={this.handleChange}
                 fname={this.state.fname}
