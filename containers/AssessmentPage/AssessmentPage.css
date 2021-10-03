@@ -55,7 +55,7 @@ body {
 }
 /*inputs*/
 #msform2 input, #msform2 textarea {
-	padding: 15px;
+	padding: 10px 0px 10px 0px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	margin-bottom: 10px;
