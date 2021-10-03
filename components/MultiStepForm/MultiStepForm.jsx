@@ -4,7 +4,6 @@ import {Button} from '../Button'
 import Step1 from "../StepProgressBar/Step1";
 import Step2 from "../StepProgressBar/Step2";
 import Step3 from "../StepProgressBar/Step3";
-import Step4 from "../StepProgressBar/Step4";
 
 
 import {StepProgressBar} from "../StepProgressBar";
