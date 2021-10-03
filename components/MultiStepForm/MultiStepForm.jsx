@@ -138,12 +138,6 @@ class MultiStepForm extends Component {
                 fname={this.state.fname}
                 lname={this.state.lname}
             />
-            <Step4
-                currentStep={this.state.currentStep}
-                handleChange={this.handleChange}
-                fname={this.state.fname}
-                lname={this.state.lname}
-            />
             <div className="btn-container">
               {this.previousbutton}
               {this.nextbutton}
