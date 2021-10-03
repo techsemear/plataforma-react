@@ -1412,7 +1412,7 @@ const StepInfos = (props) => {
       <input
         list="datalist0"
         name="school"
-        placeholder="Qual seu nível de escolaridade ?"
+        placeholder=" Qual seu nível de escolaridade ?"
         value={props.school}
         onChange={props.handleChange}
         required
@@ -1436,7 +1436,7 @@ const StepInfos = (props) => {
         type="list"
         list="datalist6"
         name="faculdade"
-        placeholder="Qual sua instituição de ensino?"
+        placeholder=" Qual sua instituição de ensino?"
         onChange={props.handleChange}
         required
       />
@@ -1453,7 +1453,7 @@ const StepInfos = (props) => {
         type="list"
         list="datalist4"
         name="courses"
-        placeholder="Qual seu curso?"
+        placeholder=" Qual seu curso?"
         onChange={props.handleChange}
         required
       />
@@ -1466,7 +1466,7 @@ const StepInfos = (props) => {
         type="list"
         list="datalist5"
         name="areas"
-        placeholder="Qual sua principal area de atuação?"
+        placeholder=" Qual sua principal area de atuação?"
         onChange={props.handleChange}
         required
       />
@@ -1479,7 +1479,7 @@ const StepInfos = (props) => {
         type="list"
         list="datalist6"
         name="areas"
-        placeholder="Tem alguma área secundária de atuação?"
+        placeholder=" Tem alguma área secundária de atuação?"
         onChange={props.handleChange}
         required
       />
@@ -1492,7 +1492,7 @@ const StepInfos = (props) => {
       <input
         type="url"
         name="site"
-        placeholder="Você tem algum site pessoal ? (ex.: Linkedin ou Portfólio)"
+        placeholder=" Você tem algum site pessoal ? (ex.: Linkedin ou Portfólio)"
         value={props.site}
         onChange={props.handleChange}
         required

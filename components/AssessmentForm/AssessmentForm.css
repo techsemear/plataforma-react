@@ -73,10 +73,52 @@ body {
     font-size: 16px;
     color: #2c3345;
 }
-body {
-    text-rendering: optimizeLegibility;
-}
 
 .block {
      display: inline-block; 
 }
+
+.teste  {
+    color:black;
+}
+.teste.rangeStatus--success  {
+    color:green;
+}
+.teste.rangeStatus--danger {
+    color:red;
+}
+.teste.rangeStatus--warning  {
+    color:orange;
+}
+.teste.rangeStatus--neutro  {
+    color:yellow;
+}
+
+.rangeAssessmentInput::-webkit-slider-runnable-track {
+    background: #004aad;
+    padding: 0px;
+    font-size: 30pt;
+    border-radius: 10px;
+    border: 1px solid #000;
+    cursor: pointer;
+    height: 20px;
+    width: 30px;
+    -webkit-appearance: none;
+}
+
+.rangeAssessmentInput.rangeStatus--danger::-webkit-slider-runnable-track{
+    background: red;
+}
+
+.rangeAssessmentInput.rangeStatus--warning::-webkit-slider-runnable-track{
+    background: orange;
+}
+
+.rangeAssessmentInput.rangeStatus--neutro::-webkit-slider-runnable-track{
+    background: yellow;
+}
+
+.rangeAssessmentInput.rangeStatus--success::-webkit-slider-runnable-track{
+    background:green;
+}
+
