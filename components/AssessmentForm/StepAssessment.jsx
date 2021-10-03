@@ -64,7 +64,7 @@ function Range(props) {
         type="range"
         min="0"
         max="10"
-        oninput="this.nextElementSibling.value = this.value"
+        onInput="this.nextElementSibling.value = this.value"
         list="tickmarks"
         className="range"
         placeholder="Qual seu nível de escolaridade"
