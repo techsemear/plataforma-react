@@ -4,7 +4,7 @@ import StepInfos from './StepInfos'
 import StepAssessment from './StepAssessment'
 
 import {StepProgressBar} from '../StepProgressBar'
-const numberOfSteps = 7
+const numberOfSteps = 7;
 
 class AssessmentForm extends Component {
   constructor(props) {
@@ -19,6 +19,10 @@ class AssessmentForm extends Component {
       belonging: '',
       rest: '',
       exercise: '',
+    }
+
+    this.constant = {
+      steps: numberOfSteps,
     }
 
     // Bind the submission to handleChange()
@@ -88,7 +92,8 @@ class AssessmentForm extends Component {
   get nextbutton() {
     let currentStep = this.state.currentStep
     // If the current step is not 3, then render the "next" button
-    if (currentStep < 7) {
+
+    if (currentStep < this.constant.steps) {
       return (
         <button
           className="btn-signup"
@@ -107,7 +112,7 @@ class AssessmentForm extends Component {
     let currentStep = this.state.currentStep
 
     // If the current step is the last step, then render the "submit" button
-    if (currentStep == 7) {
+    if (currentStep == this.constant.steps) {
       return (
         <button className="btn-signup" color="primary float-right">
           Enviar
@@ -119,7 +124,6 @@ class AssessmentForm extends Component {
   }
 
   render() {
-    const numberOfSteps = 7
     const contentInfo = [
       {
         title: 'Moradia',
