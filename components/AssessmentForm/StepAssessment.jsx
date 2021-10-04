@@ -64,47 +64,47 @@ export default StepAssessment
 const assessmentStatus = {
   0: {
     icon: <Image src={sad}/>,
-    label: "",
+    label: "Ta puxadasso ! ",
   },
   1: {
     icon: <Image src={sad}/>,
-    label: "",
+    label: "Ta puxadasso !",
   },
   2: {
     icon: <Image src={halfSad}/>,
-    label: "",
+    label: "Ta puxado",
   },
   3: {
     icon: <Image src={halfSad}/>,
-    label: "",
+    label: "Ta puxado",
   },
   4: {
     icon: <Image src={halfSad}/>,
-    label: "",
+    label: "Ta puxado",
   },
   5: {
     icon: <Image src={half}/>,
-    label: "",
+    label: "Ta indo !",
   },
   6: {
     icon: <Image src={half}/>,
-    label: "",
+    label: "Ta indo !",
   },
   7: {
     icon: <Image src={halfHappy}/>,
-    label: "",
+    label: "Ta bacaninha !",
   },
   8: {
     icon: <Image src={happy}/>,
-    label: "",
+    label: "Ta TOP !",
   },
   9: {
     icon: <Image src={happy}/>,
-    label: "",
+    label: "Ta TOP !",
   },
   10: {
     icon: <Image src={happy}/>,
-    label: "",
+    label: "Ta TOP !",
   },
 }
 
@@ -136,9 +136,11 @@ function Range() {
   return (
     <Fragment>
       <div className="rangeAssessmentStatus">
-        <span>{assessmentStatus[inputAssessment].icon}</span>
+        <span className="">{assessmentStatus[inputAssessment].icon}</span>
 
-        <span className={`teste ${getStatusClassName()}`}>{assessmentStatus[inputAssessment].label}</span>
+        <div className="rangeAssessmentTextBox">
+          <span className={`rangeAssessmentText ${getStatusClassName()}`}>{assessmentStatus[inputAssessment].label}</span>
+        </div>
       </div>
 
       <div className="rangeAssessment">

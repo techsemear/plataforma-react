@@ -78,20 +78,20 @@ body {
      display: inline-block; 
 }
 
-.teste  {
-    color:black;
+.rangeAssessmentTextBox
+{
+    background-color: #004aad;
+    width: 150px;
+    height: 40px;
+    padding-top: 10px;
+    margin: auto;
+    border-radius: 10px;
 }
-.teste.rangeStatus--success  {
-    color:green;
-}
-.teste.rangeStatus--danger {
-    color:red;
-}
-.teste.rangeStatus--warning  {
-    color:orange;
-}
-.teste.rangeStatus--neutro  {
-    color:yellow;
+
+.rangeAssessmentText  {
+    color:#fff;
+    font-family: Poppins;
+    font-weight: 700;
 }
 
 .rangeAssessmentInput::-webkit-slider-runnable-track {
@@ -111,7 +111,7 @@ body {
 }
 
 .rangeAssessmentInput.rangeStatus--warning::-webkit-slider-runnable-track{
-    background: orange;
+    background: #E44800;
 }
 
 .rangeAssessmentInput.rangeStatus--neutro::-webkit-slider-runnable-track{
@@ -119,6 +119,6 @@ body {
 }
 
 .rangeAssessmentInput.rangeStatus--success::-webkit-slider-runnable-track{
-    background:green;
+    background:#38C805;
 }
 
