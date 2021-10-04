@@ -1,12 +1,11 @@
 import React, {Fragment} from 'react'
 import Image from 'next/image'
+import {Fade} from 'react-slideshow-image'
 
 import {Heading} from '../../components/Heading'
 import {Section} from '../../components/Section'
 import {CardItems} from '../../components/Card'
 import {Wave} from '../../components/Wave'
-import {Fade} from 'react-slideshow-image'
-import {SixteenChallenges} from '../SixteenChallenges'
 
 import maslowPiramid from '../../assets/image/triangulo-blue.png'
 
@@ -14,7 +13,7 @@ const contentText = {
   title:
     'Seguimos um conceito científico aqui no Instituto chamado "Pirâmide de Maslow"',
   subtitle:
-    'Abraham Maslow, o pai da Psicologia Humanista, é o autor do livro A Teoria da Motivação Humana, no qual ele discorre sobre os princípios da motivação e hierarquiza as necessidades humanas em forma de pirâmide. Atualmente a nossa piramide se baseia em 16 desafios.',
+    'Abraham Maslow, o pai da Psicologia Humanista, é o autor do livro A Teoria da Motivação Humana, no qual ele discorre sobre os princípios da motivação e hierarquiza as necessidades humanas em forma de pirâmide. Dessa forma, atualmente a nossa piramide se baseia em 16 desafios principais.',
 }
 
 const listText = [
@@ -78,8 +77,8 @@ export default function MaslowPoints() {
       <Section bgColor="primary">
         <div className="content-area-l7-2">
           <div className="row content-area-l7-2-heading align-items-center justify-content-lg-start justify-content-center">
-            <div className="col-lg-8 col-md-7">
-              <Heading level="h4" horizontalPosition="center" ftColor="primary">
+            <div className="col-lg-9 col-md-7">
+              <Heading level="h3" horizontalPosition="center" ftColor="primary">
                 {contentText.title}
               </Heading>
               <br />
