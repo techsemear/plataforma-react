@@ -81,11 +81,36 @@ body {
 .rangeAssessmentTextBox
 {
     background-color: #004aad;
-    width: 150px;
+    width: 250px;
     height: 40px;
     padding-top: 10px;
     margin: auto;
     border-radius: 10px;
+}
+
+
+.rangeAssessmentTextBox.rangeStatus--danger
+{
+    background-color: #BB120D;
+}
+
+.rangeAssessmentTextBox.rangeStatus--warning
+{
+    background-color: #E44800;
+}
+.rangeAssessmentTextBox.rangeStatus--atention
+{
+    background-color: #FFBF00;
+}
+
+.rangeAssessmentTextBox.rangeStatus--neutro
+{
+    background-color:#38C805;
+}
+
+.rangeAssessmentTextBox.rangeStatus--success
+{
+    background-color:green;
 }
 
 .rangeAssessmentText  {
@@ -93,6 +118,7 @@ body {
     font-family: Poppins;
     font-weight: 700;
 }
+
 
 .rangeAssessmentInput::-webkit-slider-runnable-track {
     background: #004aad;
@@ -107,18 +133,22 @@ body {
 }
 
 .rangeAssessmentInput.rangeStatus--danger::-webkit-slider-runnable-track{
-    background: red;
+    background: #BB120D;
 }
 
 .rangeAssessmentInput.rangeStatus--warning::-webkit-slider-runnable-track{
     background: #E44800;
 }
 
+.rangeAssessmentInput.rangeStatus--atention::-webkit-slider-runnable-track{
+    background: #FFBF00;
+}
+
 .rangeAssessmentInput.rangeStatus--neutro::-webkit-slider-runnable-track{
-    background: yellow;
+    background: #38C805;
 }
 
 .rangeAssessmentInput.rangeStatus--success::-webkit-slider-runnable-track{
-    background:#38C805;
+    background:green;
 }
 

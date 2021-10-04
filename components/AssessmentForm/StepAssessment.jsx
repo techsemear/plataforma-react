@@ -64,47 +64,47 @@ export default StepAssessment
 const assessmentStatus = {
   0: {
     icon: <Image src={sad}/>,
-    label: "Ta puxadasso ! ",
+    label: "Nada Satisfeito",
   },
   1: {
     icon: <Image src={sad}/>,
-    label: "Ta puxadasso !",
+    label: "Nada Satisfeito",
   },
   2: {
     icon: <Image src={halfSad}/>,
-    label: "Ta puxado",
+    label: "Nada Satisfeito",
   },
   3: {
     icon: <Image src={halfSad}/>,
-    label: "Ta puxado",
+    label: "Pouco Satisfeito",
   },
   4: {
     icon: <Image src={halfSad}/>,
-    label: "Ta puxado",
+    label: "Minimamente Satisfeito",
   },
   5: {
     icon: <Image src={half}/>,
-    label: "Ta indo !",
+    label: "Minimamente Satisfeito",
   },
   6: {
     icon: <Image src={half}/>,
-    label: "Ta indo !",
+    label:"Minimamente Satisfeito",
   },
   7: {
     icon: <Image src={halfHappy}/>,
-    label: "Ta bacaninha !",
+    label: "Satisfeito",
   },
   8: {
     icon: <Image src={happy}/>,
-    label: "Ta TOP !",
+    label: "Muito Satisfeito",
   },
   9: {
     icon: <Image src={happy}/>,
-    label: "Ta TOP !",
+    label:"Muito Satisfeito",
   },
   10: {
     icon: <Image src={happy}/>,
-    label: "Ta TOP !",
+    label: "Muito Satisfeito",
   },
 }
 
@@ -116,13 +116,17 @@ function Range() {
     setInputAssessment(value)
   }
   const getStatusClassName = () => {
-      if (inputAssessment >= 0 && inputAssessment < 4)  
+      if (inputAssessment >= 0 && inputAssessment < 2)  
       {
         return "rangeStatus--danger"
       }
-      if(inputAssessment > 3 && inputAssessment < 7)  
+      if(inputAssessment >=2  && inputAssessment < 4)  
       {
         return "rangeStatus--warning"
+      }
+      if(inputAssessment >= 4 && inputAssessment < 7)  
+      {
+        return "rangeStatus--atention"
       }
       if(inputAssessment == 7)  
       {
@@ -138,7 +142,7 @@ function Range() {
       <div className="rangeAssessmentStatus">
         <span className="">{assessmentStatus[inputAssessment].icon}</span>
 
-        <div className="rangeAssessmentTextBox">
+        <div className={`rangeAssessmentTextBox ${getStatusClassName()}`}>
           <span className={`rangeAssessmentText ${getStatusClassName()}`}>{assessmentStatus[inputAssessment].label}</span>
         </div>
       </div>
