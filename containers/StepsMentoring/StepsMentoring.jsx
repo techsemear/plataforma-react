@@ -32,7 +32,7 @@ const contentCards = [
   },
 ]
 
-export default function MaslowFeatures() {
+export default function StepsMentoring() {
   return (
     <Fragment>
       <Wave direction="down" color="#fff" bgColor="#11115d" />

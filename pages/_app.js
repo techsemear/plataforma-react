@@ -51,7 +51,7 @@ import '../containers/SignUpPage/SignUpPage.css'
 import '../containers/IntroOnboarding/IntroOnboarding.css'
 import '../containers/Challenges/Challenges.css'
 import '../containers/MaslowPoints/MaslowPoints.css'
-import '../containers/MaslowFeatures/MaslowFeatures.css'
+import '../containers/StepsMentoring/StepsMentoring.css'
 import '../containers/GetStarted/GetStarted.css'
 
 
