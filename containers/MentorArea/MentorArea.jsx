@@ -74,8 +74,7 @@ export default function MentorArea() {
               </div>
             </div>
             <ItemsSection itemsText={itemsText}>
-              {' '}
-              {content.journey}{' '}
+              {content.journey}
             </ItemsSection>
           </div>
         </div>
