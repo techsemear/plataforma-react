@@ -12,16 +12,34 @@ export function NavbarItems({items = []}) {
           <div className="current-menu-title" />
           <div className="mobile-menu-close">×</div>
         </div>
-
         <ul className="site-menu-main">
           {!!items.length &&
-            items.map((menuItem, index) => (
-              <li key={`nav-item-${index}`} className="nav-item">
-                <a href={menuItem.linkTo} className="nav-link-item">
-                  {menuItem.label}
-                </a>
-              </li>
-            ))}
+            items.map((menuItem, index) =>
+              menuItem.children ? (
+                <li
+                  key={`nav-item-${index}`}
+                  className="nav-item nav-item-has-children"
+                >
+                  <a href="#" className="nav-link-item drop-trigger">
+                    {menuItem.label}
+                    <i className="fas fa-angle-down" />
+                  </a>
+                  <ul className="sub-menu" id="submenu-1">
+                    {menuItem.children.map((itemChildren, index) => (
+                      <li key={`sub-menu-${index}`} className="sub-menu--item">
+                        <a href={itemChildren.linkTo}>{itemChildren.label}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ) : (
+                <li key={`nav-item-${index}`} className="nav-item">
+                  <a href={menuItem.linkTo} className="nav-link-item">
+                    {menuItem.label}
+                  </a>
+                </li>
+              ),
+            )}
         </ul>
       </nav>
     </div>

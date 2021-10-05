@@ -25,22 +25,41 @@ const menuItems = [
     linkTo: '#parceiros',
   },
   {
-    label: 'Jornada do Jovem',
-    linkTo: '#jornada-jovem',
+    label: 'Jovem',
+    children: [
+      {
+        label: 'Protagonismo',
+        linkTo: '#protagonismo-jovem',
+      },
+      {
+        label: 'Jornada do Jovem',
+        linkTo: '#jornada-jovem',
+      },
+      {
+        label: 'Testemunhos',
+        linkTo: '#testemunho-jovem',
+      },
+    ],
   },
   {
-    label: 'Jornada do Mentor',
-    linkTo: '#jornada-mentor',
+    label: 'Mentor',
+    children: [
+      {
+        label: 'Jornada do Mentor',
+        linkTo: '#jornada-mentor',
+      },
+      {
+        label: 'Testemunhos',
+        linkTo: '#testemunho-mentor',
+      },
+    ],
   },
 ]
 
-export default function Navbar({
-  bgColor = 'default'
-  }
-  ) {
+export default function Navbar({bgColor = 'default'}) {
   return (
     <header className="site-header site-header--menu-right landing-1-menu site-header--absolute site-header--sticky">
-      <nav  className="navbar site-navbar">
+      <nav className="navbar site-navbar">
         <div className="container-fluid">
           <LogoSemear />
           <NavbarItems items={menuItems} />
