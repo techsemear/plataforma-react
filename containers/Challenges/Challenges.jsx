@@ -87,7 +87,7 @@ function TextConfig({contentInfo}) {
           >
             {contentInfo.title}
           </Underline>
-          <div className={contentInfo.title ? "mt-4" : ""}>
+          <div className={contentInfo.title ? "mt-5" : ""}>
             {contentInfo.text.map((item, index) => (
               <Heading level="h6" ftColor={contentInfo.textColor} key={index}>
                 {item}
