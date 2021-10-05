@@ -25,8 +25,11 @@ export function NavbarItems({items = []}) {
                     <i className="fas fa-angle-down" />
                   </a>
                   <ul className="sub-menu" id="submenu-1">
-                    {menuItem.children.map((itemChildren, index) => (
-                      <li key={`sub-menu-${index}`} className="sub-menu--item">
+                    {menuItem.children.map((itemChildren, indexChildren) => (
+                      <li
+                        key={`sub-menu-${indexChildren}`}
+                        className="sub-menu--item"
+                      >
                         <a href={itemChildren.linkTo}>{itemChildren.label}</a>
                       </li>
                     ))}
