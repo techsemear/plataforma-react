@@ -3,12 +3,12 @@ import React from 'react'
 // Components
 
 // Containers
-import {Challenges} from '../containers/Challenges'
+import {ChallengeVideos} from '../containers/ChallengeVideos'
 
 export default function Waitroom() {
   return (
     <React.Fragment>
-      <Challenges />
+      <ChallengeVideos />
     </React.Fragment>
   )
 }
