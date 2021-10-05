@@ -4,7 +4,7 @@ import React from 'react'
 import {About} from '../containers/About'
 import {Hero} from '../containers/Hero'
 import {MentorArea} from '../containers/MentorArea'
-import {Navbar} from '../containers/Navbar'
+import {NavbarMain} from '../containers/NavbarMain'
 import {Partners} from '../containers/Partners'
 import {Presentation} from '../containers/Presentation'
 import {StudentArea} from '../containers/StudentArea'
@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <React.Fragment>
       <IndexPage/>
-      <Navbar />
+      <NavbarMain />
       <Hero />
       <Presentation />
       <About />
