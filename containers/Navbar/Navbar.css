@@ -375,6 +375,8 @@
     margin-top: 25px;
     opacity: 0;
     visibility: hidden;
+    border: solid 0.5px;
+    border-color: rgba(167, 167, 167, 0.548);
   }
   
   @media (min-width: 992px) {
@@ -548,7 +550,7 @@
       z-index: 99;
       pointer-events: visible;
       border-radius: 0px 0px 15px 15px;
-      border-top: 3px solid #1787FC;
+      border-top: 3px solid #ff7139;
     }
   }
   
