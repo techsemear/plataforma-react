@@ -1,7 +1,8 @@
 import React, {Fragment, useState} from 'react'
 import Image from 'next/image'
 
-import {Heading} from '..//Heading'
+import {Heading} from '../Heading'
+import {Underline} from '../Underline'
 
 import sad from '../../assets/image/1.png'
 import halfSad from '../../assets/image/2.png'
@@ -31,9 +32,13 @@ let StepAssessment = (props) => {
                 <Heading level="h1" ftColor="quinary" className="fs-title">
                   {props.content.title}
                 </Heading>
-                <Heading level="h5">{props.content.subtitle}</Heading>
-                <br />
-                <Heading level="h6"> {props.content.neutral} </Heading>
+                <Underline level="h5" ftColor="secondary">
+                  {props.content.subtitle}
+                </Underline>
+                <Heading level="h6" ftColor="quinary">
+                  {' '}
+                  {props.content.neutral}{' '}
+                </Heading>
               </div>
             </div>
             <div
@@ -54,7 +59,11 @@ let StepAssessment = (props) => {
           </div>
         </div>
       </div>
-      <Range props={props} />
+      <div className="row justify-content-center">
+        <div className="col-xl-7 col-lg-8 col-md-9 col-sm-12 order-lg-1">
+          <Range />
+        </div>
+      </div>
     </fieldset>
   )
 }
@@ -63,48 +72,48 @@ export default StepAssessment
 
 const assessmentStatus = {
   0: {
-    icon: <Image src={sad}/>,
-    label: "Nada Satisfeito",
+    icon: <Image src={sad} />,
+    label: 'Nada Satisfeito',
   },
   1: {
-    icon: <Image src={sad}/>,
-    label: "Nada Satisfeito",
+    icon: <Image src={sad} />,
+    label: 'Nada Satisfeito',
   },
   2: {
-    icon: <Image src={halfSad}/>,
-    label: "Nada Satisfeito",
+    icon: <Image src={halfSad} />,
+    label: 'Nada Satisfeito',
   },
   3: {
-    icon: <Image src={halfSad}/>,
-    label: "Pouco Satisfeito",
+    icon: <Image src={halfSad} />,
+    label: 'Pouco Satisfeito',
   },
   4: {
-    icon: <Image src={halfSad}/>,
-    label: "Minimamente Satisfeito",
+    icon: <Image src={halfSad} />,
+    label: 'Minimamente Satisfeito',
   },
   5: {
-    icon: <Image src={half}/>,
-    label: "Minimamente Satisfeito",
+    icon: <Image src={half} />,
+    label: 'Minimamente Satisfeito',
   },
   6: {
-    icon: <Image src={half}/>,
-    label:"Minimamente Satisfeito",
+    icon: <Image src={half} />,
+    label: 'Minimamente Satisfeito',
   },
   7: {
-    icon: <Image src={halfHappy}/>,
-    label: "Satisfeito",
+    icon: <Image src={halfHappy} />,
+    label: 'Satisfeito',
   },
   8: {
-    icon: <Image src={happy}/>,
-    label: "Muito Satisfeito",
+    icon: <Image src={happy} />,
+    label: 'Muito Satisfeito',
   },
   9: {
-    icon: <Image src={happy}/>,
-    label:"Muito Satisfeito",
+    icon: <Image src={happy} />,
+    label: 'Muito Satisfeito',
   },
   10: {
-    icon: <Image src={happy}/>,
-    label: "Muito Satisfeito",
+    icon: <Image src={happy} />,
+    label: 'Muito Satisfeito',
   },
 }
 
@@ -116,49 +125,47 @@ function Range() {
     setInputAssessment(value)
   }
   const getStatusClassName = () => {
-      if (inputAssessment >= 0 && inputAssessment < 2)  
-      {
-        return "rangeStatus--danger"
-      }
-      if(inputAssessment >=2  && inputAssessment < 4)  
-      {
-        return "rangeStatus--warning"
-      }
-      if(inputAssessment >= 4 && inputAssessment < 7)  
-      {
-        return "rangeStatus--atention"
-      }
-      if(inputAssessment == 7)  
-      {
-        return "rangeStatus--neutro"
-      }
-      if(inputAssessment > 7)  
-      {
-        return "rangeStatus--success"
-      }
+    if (inputAssessment >= 0 && inputAssessment < 2) {
+      return 'rangeStatus--danger'
     }
+    if (inputAssessment >= 2 && inputAssessment < 4) {
+      return 'rangeStatus--warning'
+    }
+    if (inputAssessment >= 4 && inputAssessment < 7) {
+      return 'rangeStatus--atention'
+    }
+    if (inputAssessment == 7) {
+      return 'rangeStatus--neutro'
+    }
+    if (inputAssessment > 7) {
+      return 'rangeStatus--success'
+    }
+  }
   return (
     <Fragment>
       <div className="rangeAssessmentStatus">
-        <span className="">{assessmentStatus[inputAssessment].icon}</span>
-
-        <div className={`rangeAssessmentTextBox ${getStatusClassName()}`}>
-          <span className={`rangeAssessmentText ${getStatusClassName()}`}>{assessmentStatus[inputAssessment].label}</span>
+        <div
+          className={`rangeAssessmentTextBox mt-4 mb-2 ${getStatusClassName()}`}
+        >
+          <span className={`rangeAssessmentText ${getStatusClassName()}`}>
+            {`${assessmentStatus[inputAssessment].label}: ${inputAssessment}`}
+          </span>
         </div>
+        <span>{assessmentStatus[inputAssessment].icon}</span>
       </div>
-
-      <div className="rangeAssessment">
-        <input
-          className={`rangeAssessmentInput ${getStatusClassName()}`}
-          type="range"
-          min="0"
-          max="10"
-          step="1"
-          value={inputAssessment}
-          onChange={handleChange}
-          required
-        />
-        <span>{inputAssessment}</span>
+      <div className="container">
+        <div className="order-1 rangeAssessment">
+          <input
+            className={`rangeAssessmentInput ${getStatusClassName()}`}
+            type="range"
+            min="0"
+            max="10"
+            step="1"
+            value={inputAssessment}
+            onChange={handleChange}
+            required
+          />
+        </div>
       </div>
     </Fragment>
   )
