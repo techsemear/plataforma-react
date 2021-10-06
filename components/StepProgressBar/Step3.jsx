@@ -70,8 +70,8 @@ const Step3 = props => {
                 
                 <Heading level="h6"> Você se identifica como PCD ? </Heading>
                 <div>
-                <div>
-                  <input type="radio" id="huey" name="drone" defaultValue="huey" defaultChecked />
+                <div className="form-check form-check-inline">
+                  <input  type="radio" id="huey" name="drone" defaultValue="huey" defaultChecked />
                   <label htmlFor="huey" className="label"> Sim</label>
                 </div>
                 <div>

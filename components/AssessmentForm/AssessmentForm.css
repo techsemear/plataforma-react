@@ -78,6 +78,18 @@ body {
      display: inline-block; 
 }
 
+.multiSelectInput
+{
+    font-size: 12pt;
+    
+    margin-bottom: 10px;
+}
+  
+
+.label-picture{
+    margin-top: 50px;
+}
+
 .rangeAssessmentTextBox
 {
     background-color: #004aad;

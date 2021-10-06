@@ -55,7 +55,7 @@ body {
 }
 /*inputs*/
 #msform2 input, #msform2 textarea {
-	padding: 10px 0px 10px 0px;
+	padding: 10px 10px 10px 0px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	margin-bottom: 10px;
@@ -146,5 +146,12 @@ body {
 	color: white;
 }
 
-
-
+.select-checkbox option::before {
+	content: "\2610";
+	width: 1.3em;
+	text-align: center;
+	display: inline-block;
+  }
+  .select-checkbox option:checked::before {
+	content: "\2611";
+  }
