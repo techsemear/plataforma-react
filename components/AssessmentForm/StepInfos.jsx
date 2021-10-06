@@ -37,7 +37,7 @@ const StepInfos = (props) => {
   return (
     <fieldset>
       <div className="plataforma-logo2 mt-2">
-        <Image src={plataformaLogo} width={150} height={150}/>
+        <Image src={plataformaLogo} width={150} height={150} />
       </div>
       <Heading
         level="h4"
@@ -76,7 +76,7 @@ const StepInfos = (props) => {
       </datalist>
 
       <div className="row justify-content-center mt-2">
-        <div className="col-6">
+        <div className="col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1">
           <Heading level="h6" className="label-picture">
             Faculdade:
           </Heading>
@@ -95,7 +95,7 @@ const StepInfos = (props) => {
             ))}
           </datalist>
         </div>
-        <div className="col-6">
+        <div className="col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1">
           <Heading level="h6" className="label-picture">
             Curso:
           </Heading>
@@ -116,7 +116,7 @@ const StepInfos = (props) => {
       </div>
 
       <div className="row justify-content-center mt-2">
-        <div className="col-6">
+        <div className="col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1">
           <Heading level="h6" className="label-picture">
             Área de Interesse:
           </Heading>
@@ -135,7 +135,7 @@ const StepInfos = (props) => {
             ))}
           </datalist>
         </div>
-        <div className="col-6">
+        <div className="col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1">
           <Heading level="h6" className="label-picture">
             Subáreas de Interesse:
           </Heading>
@@ -147,7 +147,7 @@ const StepInfos = (props) => {
       </div>
 
       <div className="row justify-content-center mt-2">
-        <div className="col-6">
+        <div className="col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1">
           <Heading level="h6" className="label-picture">
             Site Pessoal:
           </Heading>
@@ -161,7 +161,7 @@ const StepInfos = (props) => {
             required
           />
         </div>
-        <div className="col-6">
+        <div className="col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1">
           <Heading level="h6" className="label-picture">
             Gostaria de Adicionar uma Imagem ao seu perfil ?
           </Heading>
