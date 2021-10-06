@@ -150,14 +150,14 @@ function Range() {
     <Fragment>
       <div className="container mt-3">
         <div className="row justify-content-center">
-          <div className="rangeAssessmentStatus col-xl-4 col-lg-4 col-md-5 col-sm-8 order-lg-0 order-0">
+          <div className="rangeAssessmentStatus col-xl-4 col-lg-8 col-md-8 col-sm-12 order-lg-0">
             <div className={`rangeAssessmentTextBox ${getStatusClassName()}`}>
               <span className={`rangeAssessmentText ${getStatusClassName()}`}>
                 {`${inputAssessment}: ${assessmentStatus[inputAssessment].label}`}
               </span>
             </div>
           </div>
-          <div className="col-xl-2 col-lg-2 col-md-3 col-sm-5 order-lg-1 order-1">
+          <div className="col-xl-2 col-lg-3 col-md-8 col-sm-12 order-lg-1 order-1">
             <span>{assessmentStatus[inputAssessment].icon}</span>
           </div>
         </div>
