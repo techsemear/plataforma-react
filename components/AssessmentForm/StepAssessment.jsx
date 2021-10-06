@@ -150,28 +150,30 @@ function Range() {
     <Fragment>
       <div className="container mt-3">
         <div className="row justify-content-center">
-          <div className="rangeAssessmentStatus col-4">
+          <div className="rangeAssessmentStatus col-xl-4 col-lg-4 col-md-5 col-sm-8 order-lg-0 order-0">
             <div className={`rangeAssessmentTextBox ${getStatusClassName()}`}>
               <span className={`rangeAssessmentText ${getStatusClassName()}`}>
                 {`${inputAssessment}: ${assessmentStatus[inputAssessment].label}`}
               </span>
             </div>
           </div>
-          <div className="col-2">
+          <div className="col-xl-2 col-lg-2 col-md-3 col-sm-5 order-lg-1 order-1">
             <span>{assessmentStatus[inputAssessment].icon}</span>
-          </div>        </div>        </div>
-          <div className="order-1 rangeAssessment mb-3">
-            <input
-              className={`rangeAssessmentInput ${getStatusClassName()}`}
-              type="range"
-              min="1"
-              max="10"
-              step="1"
-              value={inputAssessment}
-              onChange={handleChange}
-              required
-            />
           </div>
+        </div>
+      </div>
+      <div className="order-1 rangeAssessment mb-3">
+        <input
+          className={`rangeAssessmentInput ${getStatusClassName()}`}
+          type="range"
+          min="1"
+          max="10"
+          step="1"
+          value={inputAssessment}
+          onChange={handleChange}
+          required
+        />
+      </div>
     </Fragment>
   )
 }

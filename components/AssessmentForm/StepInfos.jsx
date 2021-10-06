@@ -47,36 +47,38 @@ const StepInfos = (props) => {
       >
         Infos Acadêmicas e Profissionais 📋
       </Heading>
-
-      <Heading level="h6" className="label-picture">
-        Nível de Escolaridade:
-      </Heading>
-
-      <input
-        list="datalist0"
-        name="school"
-        placeholder=" Qual seu nível de escolaridade ?"
-        value={props.school}
-        onChange={props.handleChange}
-        required
-      />
-      <datalist id="datalist0">
-        <option value="Fundamental - Incompleto" />
-        <option value="Fundamental - Completo" />
-        <option value="Médio - Incompleto" />
-        <option value="Médio - Completo" />
-        <option value="Superior - Cursando" />
-        <option value="Superior - Completo" />
-        <option value="Pós-graduação - Incompleto" />
-        <option value="Pós-graduação - Completo" />
-        <option value="Mestrado - Incompleto" />
-        <option value="Mestrado - Completo" />
-        <option value="Doutorado - Incompleto" />
-        <option value="Doutorado - Completo" />
-      </datalist>
+      <div className="row justify-content-center mt-2">
+        <div className="col-xl-12 col-lg-10 col-md-10 col-sm-12 order-lg-1 order-1">
+          <Heading level="h6" className="label-picture">
+            Nível de Escolaridade:
+          </Heading>
+          <input
+            list="datalist0"
+            name="school"
+            placeholder=" Qual seu nível de escolaridade ?"
+            value={props.school}
+            onChange={props.handleChange}
+            required
+          />
+          <datalist id="datalist0">
+            <option value="Fundamental - Incompleto" />
+            <option value="Fundamental - Completo" />
+            <option value="Médio - Incompleto" />
+            <option value="Médio - Completo" />
+            <option value="Superior - Cursando" />
+            <option value="Superior - Completo" />
+            <option value="Pós-graduação - Incompleto" />
+            <option value="Pós-graduação - Completo" />
+            <option value="Mestrado - Incompleto" />
+            <option value="Mestrado - Completo" />
+            <option value="Doutorado - Incompleto" />
+            <option value="Doutorado - Completo" />
+          </datalist>
+        </div>
+      </div>
 
       <div className="row justify-content-center mt-2">
-        <div className="col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1">
+        <div className="col-xl-6 col-lg-10 col-md-10 col-sm-12 order-lg-1 order-1">
           <Heading level="h6" className="label-picture">
             Faculdade:
           </Heading>
@@ -95,7 +97,7 @@ const StepInfos = (props) => {
             ))}
           </datalist>
         </div>
-        <div className="col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1">
+        <div className="col-xl-6 col-lg-10 col-md-10 col-sm-12 order-lg-1 order-1">
           <Heading level="h6" className="label-picture">
             Curso:
           </Heading>
@@ -116,7 +118,7 @@ const StepInfos = (props) => {
       </div>
 
       <div className="row justify-content-center mt-2">
-        <div className="col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1">
+        <div className="col-xl-6 col-lg-10 col-md-10 col-sm-12 order-lg-1 order-1">
           <Heading level="h6" className="label-picture">
             Área de Interesse:
           </Heading>
@@ -135,7 +137,7 @@ const StepInfos = (props) => {
             ))}
           </datalist>
         </div>
-        <div className="col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1">
+        <div className="col-xl-6 col-lg-10 col-md-10 col-sm-12 order-lg-1 order-1">
           <Heading level="h6" className="label-picture">
             Subáreas de Interesse:
           </Heading>
@@ -147,7 +149,7 @@ const StepInfos = (props) => {
       </div>
 
       <div className="row justify-content-center mt-2">
-        <div className="col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1">
+        <div className="col-xl-6 col-lg-10 col-md-10 col-sm-12 order-lg-1 order-1">
           <Heading level="h6" className="label-picture">
             Site Pessoal:
           </Heading>
@@ -161,7 +163,7 @@ const StepInfos = (props) => {
             required
           />
         </div>
-        <div className="col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1">
+        <div className="col-xl-6 col-lg-10 col-md-10 col-sm-12 order-lg-1 order-1">
           <Heading level="h6" className="label-picture">
             Gostaria de Adicionar uma Imagem ao seu perfil ?
           </Heading>

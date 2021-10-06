@@ -39,7 +39,7 @@ body {
 	border: 0 none;
 	border-radius: 50px;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-	padding: 0px 30px;
+	padding: 10px 30px;
 	box-sizing: border-box;
 	width: 80%;
 	margin: 0 10%;
@@ -55,7 +55,7 @@ body {
 }
 /*inputs*/
 #msform2 input, #msform2 textarea {
-	padding: 10px 10px 10px 0px;
+	padding: 10px 10px 10px 10px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	margin-bottom: 10px;
