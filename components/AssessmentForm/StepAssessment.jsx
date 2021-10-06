@@ -23,7 +23,7 @@ let StepAssessment = (props) => {
         <div className="container">
           <div className="row justify-content-center">
             <div
-              className="col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1"
+              className="col-xl-7 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1"
               data-aos="fade-right"
               data-aos-duration={800}
               data-aos-once="true"
@@ -32,17 +32,16 @@ let StepAssessment = (props) => {
                 <Heading level="h1" ftColor="quinary" className="fs-title">
                   {props.content.title}
                 </Heading>
-                <Underline level="h5" ftColor="secondary">
+                <Heading level="h5" ftColor="secondary">
                   {props.content.subtitle}
-                </Underline>
+                </Heading>
                 <Heading level="h6" ftColor="quinary">
-                  {' '}
-                  {props.content.neutral}{' '}
+                  {props.content.neutral}
                 </Heading>
               </div>
             </div>
             <div
-              className="col-xl-6 col-lg-5 col-md-8 order-lg-1 order-0"
+              className="col-xl-5 col-lg-5 col-md-8 order-lg-1 order-0"
               data-aos="fade-left"
               data-aos-duration={800}
               data-aos-once="true"
@@ -57,11 +56,16 @@ let StepAssessment = (props) => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="row justify-content-center">
-        <div className="col-xl-7 col-lg-8 col-md-9 col-sm-12 order-lg-1">
-          <Range />
+          <div className="row justify-content-center">
+            <div
+              className="col-xl-10 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1"
+              data-aos="fade-right"
+              data-aos-duration={800}
+              data-aos-once="true"
+            >
+              <Range />
+            </div>
+          </div>
         </div>
       </div>
     </fieldset>
@@ -124,6 +128,7 @@ function Range() {
     const value = event.currentTarget.value
     setInputAssessment(value)
   }
+
   const getStatusClassName = () => {
     if (inputAssessment >= 0 && inputAssessment < 2) {
       return 'rangeStatus--danger'
@@ -143,30 +148,30 @@ function Range() {
   }
   return (
     <Fragment>
-      <div className="rangeAssessmentStatus">
-        <div
-          className={`rangeAssessmentTextBox mt-4 mb-2 ${getStatusClassName()}`}
-        >
-          <span className={`rangeAssessmentText ${getStatusClassName()}`}>
-            {`${assessmentStatus[inputAssessment].label}: ${inputAssessment}`}
-          </span>
-        </div>
-        <span>{assessmentStatus[inputAssessment].icon}</span>
-      </div>
-      <div className="container">
-        <div className="order-1 rangeAssessment">
-          <input
-            className={`rangeAssessmentInput ${getStatusClassName()}`}
-            type="range"
-            min="0"
-            max="10"
-            step="1"
-            value={inputAssessment}
-            onChange={handleChange}
-            required
-          />
-        </div>
-      </div>
+      <div className="container mt-3">
+        <div className="row justify-content-center">
+          <div className="rangeAssessmentStatus col-4">
+            <div className={`rangeAssessmentTextBox ${getStatusClassName()}`}>
+              <span className={`rangeAssessmentText ${getStatusClassName()}`}>
+                {`${inputAssessment}: ${assessmentStatus[inputAssessment].label}`}
+              </span>
+            </div>
+          </div>
+          <div className="col-2">
+            <span>{assessmentStatus[inputAssessment].icon}</span>
+          </div>        </div>        </div>
+          <div className="order-1 rangeAssessment mb-3">
+            <input
+              className={`rangeAssessmentInput ${getStatusClassName()}`}
+              type="range"
+              min="1"
+              max="10"
+              step="1"
+              value={inputAssessment}
+              onChange={handleChange}
+              required
+            />
+          </div>
     </Fragment>
   )
 }

@@ -127,15 +127,17 @@ class AssessmentForm extends Component {
     const contentInfo = [
       {
         title: 'Moradia',
-        subtitle: 'Como você avalia o local em que você vive?',
+        subtitle:
+          'Com base no nível neutro, como você avalia o local em que você vive?',
         neutral:
           'Nível Neutro: Entendo a influência do lar sobre mim e considero que moro em  um ambiente com condições de higiene e privacidade onde posso descansar,  e me sinto seguro em relação às pessoas com quem convivo dentro de casa.',
-        gif: 'https://media.giphy.com/media/3o6MbnfLBGvNY6HwGc/giphy.gif',
+        gif: 'https://media.giphy.com/media/3orifebk0oO42ZWN20/giphy.gif',
         rating: this.state.home,
       },
       {
         title: 'Alimentação',
-        subtitle: 'Como você avalia a sua alimentação?',
+        subtitle:
+          'Com base no nível neutro, como você avalia a sua alimentação?',
         neutral:
           'Nível Neutro: Sei a importância de uma boa alimentação como fonte de  energia para o melhor funcionamento do meu corpo e mente. Com os recursos  que tenho, faço refeições de qualidade nutricional suficiente.',
         gif: 'https://media.giphy.com/media/jKaFXbKyZFja0/giphy.gif',
@@ -143,7 +145,8 @@ class AssessmentForm extends Component {
       },
       {
         title: 'Gestão de Rotina',
-        subtitle: 'Como você avalia sua gestão de rotina?',
+        subtitle:
+          'Com base no nível neutro, como você avalia sua gestão de rotina?',
         neutral:
           'Nível Neutro: Sei que existem mais oportunidades à minha disposição do que  tempo disponível, entendo o básico da minha hierarquia de necessidades e  tento aplicar o conceito de gestão de agenda semanal e rotina, e, assim,  tenho tempo para honrar minimamente os compromissos que assumi, sem  prejudicar minha saúde ou relacionamentos.',
         gif: 'https://media.giphy.com/media/xTiTnxCaP0qE2XYalO/giphy.gif',
@@ -151,7 +154,8 @@ class AssessmentForm extends Component {
       },
       {
         title: 'Pertencimento',
-        subtitle: 'Como você avalia a sua alimentação?',
+        subtitle:
+          'Com base no nível neutro, como você avalia a sua sensação de pertencimento no núcleo familiar?',
         neutral:
           'Nível Neutro: Sei a importância de uma boa alimentação como fonte de  energia para o melhor funcionamento do meu corpo e mente. Com os recursos  que tenho, faço refeições de qualidade nutricional suficiente.',
         gif: 'https://media.giphy.com/media/xT5LMXR7iA0mSSxOBG/giphy.gif',
@@ -160,18 +164,19 @@ class AssessmentForm extends Component {
       {
         title: 'Atividade Física',
         subtitle:
-          'Você faz atividade física? Quanto ela é importante pra você?',
+          'Com base no nível neutro, como você avalia a sua prática de exercícios físicos?',
         neutral:
           'Nível Neutro: Sei a importância da prática de exercícios físicos como fonte de energia para o melhor funcionamento do meu corpo e mente e tento os praticar pelo menos 3 vezes na semana.',
-        gif: 'https://media.giphy.com/media/hNkaMEn1KVhcs/giphy.gif',
+        gif: 'https://media.giphy.com/media/3oriNZoNvn73MZaFYk/giphy.gif',
         rating: this.state.exercise,
       },
       {
         title: 'Descanso',
-        subtitle: 'Como você avalia a qualidade do seu descanso?',
+        subtitle:
+          'Com base no nível neutro, como você avalia a qualidade do seu descanso?',
         neutral:
           'Nível Neutro: Sei que o sono e o descanso estão diretamente relacionados com minha  capacidade de aprendizado, meu nível de ansiedade e meu equilíbrio físico e mental. Dessa forma, reservo e priorizo momentos de descanso e sono suficientes para minha recuperação na maior parte do mês.',
-        gif: 'https://media.giphy.com/media/Avwm4ZRDV0c9O/giphy.gif',
+        gif: 'https://media.giphy.com/media/Jap1tdjahS0rm/giphy.gif',
         rating: this.state.rest,
       },
     ]
