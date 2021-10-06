@@ -23,6 +23,6 @@ const menuItems = [
 
 export default function NavbarGeneral() {
   return (
-      <Navbar contentInfo={menuItems} btnInfo={menuItems} bgColor={'bg-null'} />
+      <Navbar contentInfo={menuItems} bgColor={'bg-null'} />
   )
 }
