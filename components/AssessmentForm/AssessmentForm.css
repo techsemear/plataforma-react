@@ -1,5 +1,4 @@
-.indexedStep 
-{
+.indexedStep {
   color: white;
   width: 20px;
   height: 20px;
@@ -15,140 +14,214 @@
   background-color: rgba(0, 116, 217, 1);
 }
 
-
-.btn-signup{
-  color:#004aad;
-  background-color:#fff;
+.btn-signup {
+  color: #004aad;
+  background-color: #fff;
   margin-bottom: 20px;
   font-weight: 700;
   margin-left: 10px;
 }
 
-.btn-signup:hover{
-  background-color:#004aad;
-  color:#fff;
+.btn-signup:hover {
+  background-color: #004aad;
+  color: #fff;
 }
 
 .position-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .form-line {
-    margin-top: 12px;
-    margin-bottom: 12px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
-.form-line, ul.page-section {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+.form-line,
+ul.page-section {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .form-line {
-    padding: 12px 10px;
-    margin: 12px 4px;
-        margin-top: 12px;
-        margin-bottom: 12px;
-    border-radius: 3px;
-    position: relative;
-    width: 100%;
-    transition: background-color .15s;
+  padding: 12px 10px;
+  margin: 12px 4px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border-radius: 3px;
+  position: relative;
+  width: 100%;
+  transition: background-color 0.15s;
 }
-.form-line, [data-wrapper-react="true"] {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: start;
-    align-items: flex-start;
+.form-line,
+[data-wrapper-react='true'] {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
-*, ::after, ::before {
-    box-sizing: border-box;
+*,
+::after,
+::before {
+  box-sizing: border-box;
 }
 ul.page-section {
-    list-style: none;
+  list-style: none;
 }
 body {
-    font-family: Inter,sans-serif;
-    font-size: 16px;
-    color: #2c3345;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  color: #2c3345;
 }
 
 .block {
-     display: inline-block; 
+  display: inline-block;
 }
 
-.rangeAssessmentTextBox
-{
-    background-color: #004aad;
-    width: 250px;
-    height: 40px;
-    padding-top: 10px;
-    margin: auto;
-    border-radius: 10px;
+.rangeAssessmentTextBox {
+  background-color: #004aad;
+  width: 220px;
+  height: 40px;
+  padding-top: 10px;
+  margin: auto;
+  border-radius: 10px;
 }
 
-
-.rangeAssessmentTextBox.rangeStatus--danger
-{
-    background-color: #BB120D;
+.rangeAssessmentTextBox.rangeStatus--danger {
+  background-color: #bb120d;
 }
 
-.rangeAssessmentTextBox.rangeStatus--warning
-{
-    background-color: #E44800;
+.rangeAssessmentTextBox.rangeStatus--warning {
+  background-color: #e44800;
 }
-.rangeAssessmentTextBox.rangeStatus--atention
-{
-    background-color: #FFBF00;
+.rangeAssessmentTextBox.rangeStatus--atention {
+  background-color: #ffbf00;
 }
 
-.rangeAssessmentTextBox.rangeStatus--neutro
-{
-    background-color:#38C805;
+.rangeAssessmentTextBox.rangeStatus--neutro {
+  background-color: #38c805;
 }
 
-.rangeAssessmentTextBox.rangeStatus--success
-{
-    background-color:green;
+.rangeAssessmentTextBox.rangeStatus--success {
+  background-color: green;
 }
 
-.rangeAssessmentText  {
-    color:#fff;
-    font-family: Poppins;
-    font-weight: 700;
+.rangeAssessmentText {
+  color: #fff;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 15px;
 }
 
 
-.rangeAssessmentInput::-webkit-slider-runnable-track {
-    background: #004aad;
-    padding: 0px;
-    font-size: 30pt;
-    border-radius: 10px;
-    border: 1px solid #000;
-    cursor: pointer;
-    height: 20px;
-    width: 30px;
-    -webkit-appearance: none;
+.rangeAssessment {
+  overflow: hidden;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.rangeAssessmentInput.rangeStatus--danger::-webkit-slider-runnable-track{
-    background: #BB120D;
+.rangeAssessmentInput {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  height: 50px; /* Specified height */
+  background: #ffffff; /* Grey background */
+  opacity: 0.8; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.1s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.1s;
+  border-radius: 30rem;
+  box-shadow: 1px 5px 5px rgba(black, 0.3);
 }
 
-.rangeAssessmentInput.rangeStatus--warning::-webkit-slider-runnable-track{
-    background: #E44800;
+/*Cursor*/
+.rangeAssessmentInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border-width: thin;
+  background: #ffffff;
+  border-style: solid;
+  border-color: rgba(51, 51, 51, 0.493);
+  margin-top: -10px;
+  box-shadow: 2px 2px 2px rgba(#000, 0.5);
+  cursor: pointer;
 }
 
-.rangeAssessmentInput.rangeStatus--atention::-webkit-slider-runnable-track{
-    background: #FFBF00;
+.rangeAssessmentInput::-webkit-slider-runnable-track
+ {
+  height: 10px;
+  border-radius: 3rem;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
-.rangeAssessmentInput.rangeStatus--neutro::-webkit-slider-runnable-track{
-    background: #38C805;
+.rangeAssessmentInput.rangeStatus--danger::-webkit-slider-runnable-track {
+  background-color: #bb120d;
 }
 
-.rangeAssessmentInput.rangeStatus--success::-webkit-slider-runnable-track{
-    background:green;
+.rangeAssessmentInput.rangeStatus--warning::-webkit-slider-runnable-track {
+  background: #e44800;
 }
+
+.rangeAssessmentInput.rangeStatus--atention::-webkit-slider-runnable-track {
+  background: #ffbf00;
+}
+
+.rangeAssessmentInput.rangeStatus--neutro::-webkit-slider-runnable-track {
+  background: #38c805;
+}
+
+.rangeAssessmentInput.rangeStatus--success::-webkit-slider-runnable-track {
+  background: green;
+}
+
+
+/* Mozila */
+.rangeAssessmentInput::-moz-range-thumb {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border-width: thin;
+  background: #ffffff;
+  border-style: solid;
+  border-color: rgba(51, 51, 51, 0.493);
+  margin-top: -10px;
+  box-shadow: 2px 2px 2px rgba(#000, 0.5);
+  cursor: pointer;
+}
+
+.rangeAssessmentInput::-moz-range-track
+ {
+  height: 10px;
+  border-radius: 3rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.rangeAssessmentInput.rangeStatus--danger::-moz-range-track {
+  background-color: #bb120d;
+}
+
+.rangeAssessmentInput.rangeStatus--warning::-moz-range-track {
+  background: #e44800;
+}
+
+.rangeAssessmentInput.rangeStatus--atention::-moz-range-track {
+  background: #ffbf00;
+}
+
+.rangeAssessmentInput.rangeStatus--neutro::-moz-range-track {
+  background: #38c805;
+}
+
+.rangeAssessmentInput.rangeStatus--success::-moz-range-track {
+  background: green;
+}
+
 
