@@ -81,7 +81,7 @@ body {
 }
 
 .rangeAssessmentTextBox {
-  background-color: #004aad;
+  background-color: #000000;
   width: 220px;
   height: 40px;
   padding-top: 10px;
@@ -115,30 +115,24 @@ body {
   font-size: 15px;
 }
 
-
 .rangeAssessment {
-  overflow: hidden;
-  color: #333;
+  color: rgb(0, 0, 0);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .rangeAssessmentInput {
   -webkit-appearance: none; /* Override default CSS styles */
   appearance: none;
-  height: 50px; /* Specified height */
   background: #ffffff; /* Grey background */
   opacity: 0.8; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: 0.1s; /* 0.2 seconds transition on hover */
   transition: opacity 0.1s;
-  border-radius: 30rem;
-  box-shadow: 1px 5px 5px rgba(black, 0.3);
+  border-style: none !important;
 }
 
-/*Cursor*/
+/*Webkit*/
+/*Cursor Webkit*/
 .rangeAssessmentInput::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 30px;
@@ -149,18 +143,18 @@ body {
   border-style: solid;
   border-color: rgba(51, 51, 51, 0.493);
   margin-top: -10px;
-  box-shadow: 2px 2px 2px rgba(#000, 0.5);
   cursor: pointer;
 }
 
-.rangeAssessmentInput::-webkit-slider-runnable-track
- {
+/*Barra*/
+.rangeAssessmentInput::-webkit-slider-runnable-track {
   height: 10px;
   border-radius: 3rem;
   transition: all 0.5s;
   cursor: pointer;
 }
 
+/*Rage de Cores*/
 .rangeAssessmentInput.rangeStatus--danger::-webkit-slider-runnable-track {
   background-color: #bb120d;
 }
@@ -181,8 +175,8 @@ body {
   background: green;
 }
 
-
 /* Mozila */
+/*Cursor */
 .rangeAssessmentInput::-moz-range-thumb {
   height: 30px;
   width: 30px;
@@ -196,14 +190,15 @@ body {
   cursor: pointer;
 }
 
-.rangeAssessmentInput::-moz-range-track
- {
+/*Barra*/
+.rangeAssessmentInput::-moz-range-track {
   height: 10px;
   border-radius: 3rem;
   transition: all 0.5s;
   cursor: pointer;
 }
 
+/*Rage de Cores*/
 .rangeAssessmentInput.rangeStatus--danger::-moz-range-track {
   background-color: #bb120d;
 }
@@ -223,5 +218,3 @@ body {
 .rangeAssessmentInput.rangeStatus--success::-moz-range-track {
   background: green;
 }
-
-
