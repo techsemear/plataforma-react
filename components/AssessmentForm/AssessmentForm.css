@@ -62,6 +62,7 @@ ul.page-section {
   -ms-flex-align: start;
   align-items: flex-start;
 }
+
 *,
 ::after,
 ::before {
@@ -71,7 +72,7 @@ ul.page-section {
   list-style: none;
 }
 body {
-  font-family: Inter, sans-serif;
+  font-family: Poppins;
   font-size: 16px;
   color: #2c3345;
 }
