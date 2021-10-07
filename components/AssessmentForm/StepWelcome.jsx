@@ -45,7 +45,6 @@ const StepWelcome = (props) => {
                 </Heading>
                 <div className="readMore">
                   <a
-                    className="reference"
                     href="https://www.isemear.org.br"
                     target="_blank"
                   >
