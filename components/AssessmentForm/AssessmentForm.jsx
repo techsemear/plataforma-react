@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
 
+import StepWelcome from './StepWelcome'
 import StepInfos from './StepInfos'
 import StepAssessment from './StepAssessment'
 
 import {StepProgressBar} from '../StepProgressBar'
-const numberOfSteps = 7;
+const numberOfSteps = 8
 
 class AssessmentForm extends Component {
   constructor(props) {
@@ -13,6 +14,13 @@ class AssessmentForm extends Component {
     // Set the intiial input values
     this.state = {
       currentStep: 1,
+      schooling: '',
+      college: '',
+      course: '',
+      area: '',
+      subarea: '',
+      personalSite: '',
+      imageProfile: '',
       home: '',
       food: '',
       routine: '',
@@ -184,13 +192,25 @@ class AssessmentForm extends Component {
       <form id="msform2" onSubmit={this.handleSubmit}>
         <StepProgressBar
           currentStep={this.state.currentStep}
-          numberOfSteps={numberOfSteps}
+          handleChange={this.handleChange}
+          numberOfSteps={this.constant.steps}
+        />
+        <StepWelcome
+          currentStep={this.state.currentStep}
+          handleChange={this.handleChange}
+          stepStatus={1}
         />
         <StepInfos
           currentStep={this.state.currentStep}
           handleChange={this.handleChange}
-          fname={this.state.fname}
-          lname={this.state.lname}
+          schooling={this.state.schooling}
+          college={this.state.college}
+          course={this.state.course}
+          area={this.state.area}
+          subarea={this.state.subarea}
+          personalSite={this.state.personalSite}
+          imageProfile={this.state.imageProfile}
+          stepStatus={2}
         />
         {contentInfo.map((item, index) => (
           <StepAssessment
@@ -199,7 +219,7 @@ class AssessmentForm extends Component {
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
             key={index}
-            stepStatus={index + 2}
+            stepStatus={index + 3}
           />
         ))}
         <div className="btn-container">

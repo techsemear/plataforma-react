@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: Poppins, arial, verdana;
+  font-family: Poppins;
   margin-top: 70px;
   margin-bottom: 50px;
 }
@@ -34,12 +34,13 @@ body {
   position: relative;
   max-width: 1200px;
 }
+
 #msform2 fieldset {
   background: white;
   border: 0 none;
   border-radius: 50px;
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-  padding: 10px 30px;
+  padding: 0px 30px 40px 30px;
   box-sizing: border-box;
   width: 80%;
   margin: 0 10%;
@@ -49,6 +50,15 @@ body {
   /*stacking fieldsets above each other*/
   position: relative;
 }
+
+@media (max-width: 992px) {
+  #msform2 {
+    padding: 0px;
+    margin: 0px auto;
+  }
+}
+
+
 /*Hide all except first fieldset*/
 #msform2 fieldset:not(:first-of-type) {
   display: none;
