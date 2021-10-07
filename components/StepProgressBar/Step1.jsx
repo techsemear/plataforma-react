@@ -18,6 +18,18 @@ return (
       </div>  
       <Heading level = "h4" horizontalPosition = "center" ftColor = "quinary" className="fs-title">Crie sua Conta🌱</Heading>
         <Heading level = "h6" horizontalPosition = "center" ftColor = "quinary" className="fs-subtitle">Passo 1</Heading>
+
+            <Heading level = "h6" horizontalPosition = "start" ftColor = "default" className="fs-subtitle">Digite seu nome completo:</Heading>
+            <input 
+              type="text" 
+              name="fname" 
+              placeholder="Nome Completo" 
+              defaultvalue="{props.fname}" 
+              onchange="{props.handleChange}" 
+              required 
+            />
+          
+          <Heading level = "h6" horizontalPosition = "start" ftColor = "default" className="fs-subtitle">Digite seu email:</Heading>
            <input 
                 type="text" 
                 name="email" 
@@ -26,7 +38,9 @@ return (
                 onChange={props.handleChange}
                 required
             />
-           <input 
+
+          <Heading level = "h6" horizontalPosition = "start" ftColor = "default" className="fs-subtitle">Digite seu nome de usuário:</Heading>
+          <input 
                 type="text" 
                 name="username" 
                 placeholder="Crie seu nome de usuário:" 
@@ -34,6 +48,8 @@ return (
                 onChange={props.handleChange}
                 required
             />
+
+           <Heading level = "h6" horizontalPosition = "start" ftColor = "default" className="fs-subtitle">Digite sua senha:</Heading>
            <input 
                 type="password" 
                 name="password" 
@@ -42,6 +58,8 @@ return (
                 onChange={props.handleChange}
                 required
             />
+
+           <Heading level = "h6" horizontalPosition = "start" ftColor = "default" className="fs-subtitle">Digite sua senha:</Heading> 
            <input 
                 type="password" 
                 name="cpassword" 
@@ -50,16 +68,6 @@ return (
                 onChange={props.handleChange} 
                 required
             />
-          <input 
-            list="class" 
-            name="level" 
-            placeholder="Como você classifica em nossa plataforma ?" 
-            required
-          />
-          <datalist id="class">
-            <option value="Sou um Jovem"/>
-            <option value="Sou um Mentor"/>
-          </datalist>
     </fieldset>
     )
 }

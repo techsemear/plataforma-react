@@ -17,14 +17,7 @@ const Step3 = props => {
       </div>  
         <Heading level = "h4" horizontalPosition = "center" ftColor = "quinary" className="fs-title">Suas Infos 🧡</Heading>
             <Heading level = "h6" horizontalPosition = "center" ftColor = "quinary" className="fs-subtitle">Passo 3</Heading>
-                <input 
-                    type="text" 
-                    name="fname" 
-                    placeholder="Nome Completo ou Nome Social" 
-                    value={props.fname} 
-                    onChange={props.handleChange}
-                    required 
-                />
+
                 <input
                     list="datalist" 
                     name="level" 
