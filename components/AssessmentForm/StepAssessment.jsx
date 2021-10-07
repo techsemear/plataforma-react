@@ -23,7 +23,7 @@ let StepAssessment = (props) => {
         <div className="container">
           <div className="row justify-content-center">
             <div
-              className="col-xl-7 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1"
+              className="col-xl-7 col-lg-7 col-md-11 col-sm-12 order-lg-1 order-1"
               data-aos="fade-right"
               data-aos-duration={800}
               data-aos-once="true"
@@ -41,7 +41,7 @@ let StepAssessment = (props) => {
               </div>
             </div>
             <div
-              className="col-xl-5 col-lg-5 col-md-8 order-lg-1 order-0"
+              className="col-xl-5 col-lg-7 col-md-10 order-lg-1 order-0"
               data-aos="fade-left"
               data-aos-duration={800}
               data-aos-once="true"
