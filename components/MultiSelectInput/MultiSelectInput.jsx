@@ -18,7 +18,7 @@ class MultiSelectInput extends Component {
   render() {
     const { values } = this.state;
     return (
-      <div>
+      <div className="react-select__value-container">
         <Select
           hideSelectedOptions={values.length < 3 ? true : false}
           isMulti

@@ -30,6 +30,7 @@ import '../components/SlideShow/SlideShow.css'
 import '../components/StepProgressBar/StepProgressBar.css'
 import '../components/MultiStepForm/MultiStepForm.css'
 import '../components/AssessmentForm/AssessmentForm.css'
+import '../components/MultiSelectInput/MultiSelectInput.css'
 
 // Containers
 // Home
