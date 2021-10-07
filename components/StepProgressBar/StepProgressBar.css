@@ -43,6 +43,7 @@
       background: #0074d9 0.8;
       z-index: -1;
   }
+<<<<<<< HEAD
 
 .label
 {
@@ -86,3 +87,25 @@
   top: 0;
   transition: all 0.3s ease-in-out;
 }
+||||||| parent of 43c464c (Update react-select SignUp)
+=======
+
+.label
+{
+  position: relative;
+}
+
+.select-escolaridade
+{
+  font-size: 10pt;
+  text-align: left;
+  height: 50px;
+}
+
+.select-class
+{
+  font-size: 10pt;
+  text-align: left;
+  height: 50px;
+}
+>>>>>>> 43c464c (Update react-select SignUp)

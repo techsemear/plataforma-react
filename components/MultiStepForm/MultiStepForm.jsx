@@ -24,6 +24,8 @@ class MultiStepForm extends Component {
       cpf:"",
       fname:"",
       lname:"",
+      classes:"",
+      escolaridade:"",
     };
 
     // Bind the submission to handleChange()
@@ -37,15 +39,15 @@ class MultiStepForm extends Component {
   // Use the submitted data to set the state
   handleChange(event) {
     const { name, value } = event.target;
-    this.setState({
-      [name]: value
+    this.setState({ 
+      name: value,
     });
   }
 
   // Trigger an alert on form submission
   handleSubmit = event => {
     event.preventDefault();
-    const { email, username, password, cpassword, phone, date, cpf, fname, lname } = this.state;
+    const { email, username, password, cpassword, phone, date, cpf, fname, lname, escolaridade, classes } = this.state;
     };
 
   // Test current step with ternary
