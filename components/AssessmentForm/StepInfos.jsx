@@ -49,30 +49,6 @@ const StepInfos = (props) => {
       </Heading>
       <div className="row justify-content-center mt-2">
         <div className="col-xl-12 col-lg-10 col-md-10 col-sm-12 order-lg-1 order-1">
-          <Heading level="h6" className="label-picture">
-            Nível de Escolaridade:
-          </Heading>
-          <input
-            list="datalist0"
-            name="school"
-            placeholder="Qual seu nível de escolaridade?"
-            onChange={props.handleChange}
-            required
-          />
-          <datalist id="datalist0">
-            <option value="Fundamental - Incompleto" />
-            <option value="Fundamental - Completo" />
-            <option value="Médio - Incompleto" />
-            <option value="Médio - Completo" />
-            <option value="Superior - Cursando" />
-            <option value="Superior - Completo" />
-            <option value="Pós-graduação - Incompleto" />
-            <option value="Pós-graduação - Completo" />
-            <option value="Mestrado - Incompleto" />
-            <option value="Mestrado - Completo" />
-            <option value="Doutorado - Incompleto" />
-            <option value="Doutorado - Completo" />
-          </datalist>
         </div>
       </div>
 
