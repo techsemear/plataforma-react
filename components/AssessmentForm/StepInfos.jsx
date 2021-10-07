@@ -30,7 +30,7 @@ const macroArea = [
 ]
 
 const StepInfos = (props) => {
-  if (props.currentStep !== 1) {
+  if (props.currentStep !== props.stepStatus) {
     return null
   }
 
@@ -55,8 +55,7 @@ const StepInfos = (props) => {
           <input
             list="datalist0"
             name="school"
-            placeholder="Qual seu nível de escolaridade ?"
-            value={props.school}
+            placeholder="Qual seu nível de escolaridade?"
             onChange={props.handleChange}
             required
           />
