@@ -56,6 +56,11 @@ body {
     padding: 0px;
     margin: 0px auto;
   }
+  #msform2 fieldset {
+    padding: 10px 10px;
+    width: 90%;
+    margin: 5% 0% 3% 5%;
+  }
 }
 
 
