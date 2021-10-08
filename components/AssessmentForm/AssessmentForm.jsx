@@ -5,11 +5,14 @@ import StepInfos from './StepInfos'
 import StepAssessment from './StepAssessment'
 
 import {StepProgressBar} from '../StepProgressBar'
+
 const numberOfSteps = 8
 
 class AssessmentForm extends Component {
   constructor(props) {
     super(props)
+
+    this.myRef = React.createRef()
 
     // Set the intiial input values
     this.state = {
@@ -131,6 +134,19 @@ class AssessmentForm extends Component {
     return null
   }
 
+  componentDidMount = () => this.handleScroll()
+
+  componentDidUpdate = () => this.handleScroll()
+
+  handleScroll = () => {
+    const {index, selected} = this.props
+    if (index === selected) {
+      setTimeout(() => {
+        this.myRef.current.scrollIntoView({behavior: 'auto'})
+      }, 10)
+    }
+  }
+
   render() {
     const contentInfo = [
       {
@@ -189,7 +205,11 @@ class AssessmentForm extends Component {
       },
     ]
     return (
-      <form id="msform2" onSubmit={this.handleSubmit}>
+      <form
+        id="msform2"
+        onSubmit={this.handleSubmit}
+        ref={this.myRef}
+      >
         <StepProgressBar
           currentStep={this.state.currentStep}
           handleChange={this.handleChange}

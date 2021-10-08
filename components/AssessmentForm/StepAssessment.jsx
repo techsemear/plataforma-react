@@ -2,7 +2,6 @@ import React, {Fragment, useState} from 'react'
 import Image from 'next/image'
 
 import {Heading} from '../Heading'
-import {Underline} from '../Underline'
 
 import sad from '../../assets/image/1.png'
 import halfSad from '../../assets/image/2.png'
@@ -22,16 +21,16 @@ let StepAssessment = (props) => {
       <div className="hero-area-l-12 position-relative z-index-1 overflow-hidden mt-5">
         <div className="container">
           <div className="row justify-content-center">
+            <Heading level="h1" ftColor="quinary" className="fs-title">
+              {props.content.title}
+            </Heading>
             <div
-              className="col-xl-7 col-lg-7 col-md-11 col-sm-12 order-lg-1 order-1"
+              className="col-xl-8 col-lg-7 col-md-11 col-sm-12 order-lg-1 order-1"
               data-aos="fade-right"
               data-aos-duration={800}
               data-aos-once="true"
             >
               <div className="content position-text">
-                <Heading level="h1" ftColor="quinary" className="fs-title">
-                  {props.content.title}
-                </Heading>
                 <Heading level="h5" ftColor="secondary">
                   {props.content.subtitle}
                 </Heading>
@@ -41,7 +40,7 @@ let StepAssessment = (props) => {
               </div>
             </div>
             <div
-              className="col-xl-5 col-lg-7 col-md-10 order-lg-1 order-0"
+              className="col-xl-4 col-lg-7 col-md-10 order-lg-1 order-0"
               data-aos="fade-left"
               data-aos-duration={800}
               data-aos-once="true"
@@ -56,16 +55,7 @@ let StepAssessment = (props) => {
               </div>
             </div>
           </div>
-          <div className="row justify-content-center">
-            <div
-              className="col-xl-10 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1"
-              data-aos="fade-right"
-              data-aos-duration={800}
-              data-aos-once="true"
-            >
-              <Range />
-            </div>
-          </div>
+          <Range />
         </div>
       </div>
     </fieldset>
@@ -148,31 +138,38 @@ function Range() {
   }
   return (
     <Fragment>
-      <div className="container mt-3">
-        <div className="row justify-content-center">
-          <div className="rangeAssessmentStatus col-xl-4 col-lg-8 col-md-8 col-sm-12 order-lg-0">
-            <div className={`rangeAssessmentTextBox ${getStatusClassName()}`}>
-              <span className={`rangeAssessmentText ${getStatusClassName()}`}>
-                {`${inputAssessment}: ${assessmentStatus[inputAssessment].label}`}
-              </span>
+      <div
+        className="order-lg-1 order-1"
+        data-aos="fade-right"
+        data-aos-duration={800}
+        data-aos-once="true"
+      >
+        <div className="container mt-3">
+          <div className="row justify-content-center">
+            <div className="col-xl-10 col-xl-4 col-lg-4 col-md-4 col-sm-4 order-lg-0">
+              <div className="order-1 rangeAssessment">
+                <input
+                  className={`rangeAssessmentInput ${getStatusClassName()}`}
+                  type="range"
+                  min="1"
+                  max="10"
+                  step="1"
+                  id="rangeId"
+                  value={inputAssessment}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className="rangeAssessmentStatus col-xl-10 col-lg-4 col-md-4 col-sm-4 order-1 order-lg-1 mt-1">
+              <div className={`rangeAssessmentTextBox ${getStatusClassName()}`}>
+                <span className={`rangeAssessmentText ${getStatusClassName()}`}>
+                  {`${inputAssessment}: ${assessmentStatus[inputAssessment].label}`}
+                </span>
+              </div>
             </div>
           </div>
-          <div className="col-xl-2 col-lg-3 col-md-8 col-sm-12 order-lg-1 order-1">
-            <span>{assessmentStatus[inputAssessment].icon}</span>
-          </div>
         </div>
-      </div>
-      <div className="order-1 rangeAssessment mb-3">
-        <input
-          className={`rangeAssessmentInput ${getStatusClassName()}`}
-          type="range"
-          min="1"
-          max="10"
-          step="1"
-          value={inputAssessment}
-          onChange={handleChange}
-          required
-        />
       </div>
     </Fragment>
   )

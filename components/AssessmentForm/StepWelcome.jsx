@@ -35,11 +35,11 @@ const StepWelcome = (props) => {
                   {content.subtitle}
                 </Heading>
                 <Heading level="h6" ftColor="quinary">
-                  Agora você passará pela fase que chamamos de{' '}
-                  <strong>Roda da Trilha </strong>, em que aqui te ajudaremos a
+                  Agora você passará pela fase que chamamos de 
+                  <strong> Roda da Trilha</strong>, em que aqui te ajudaremos a
                   mapear os seus principais desafios!
                   <br />
-                  Depois, nossa <strong>Calculadora de Matches</strong>{' '}
+                  Depois, nossa <strong>Calculadora de Matches</strong>
                   encontrará o mentor mais qualificado para trabalhar em
                   soluções junto com você.
                 </Heading>
