@@ -86,8 +86,11 @@ body {
   width: 220px;
   height: 40px;
   padding-top: 10px;
+  opacity: 0.8;
   margin: auto;
   border-radius: 10px;
+  -webkit-transition: 0.1s; /* 0.1 seconds transition on hover */
+  transition: opacity 0.1s;
 }
 
 .rangeAssessmentTextBox.rangeStatus--danger {
@@ -102,7 +105,7 @@ body {
 }
 
 .rangeAssessmentTextBox.rangeStatus--neutro {
-  background-color: #38c805;
+  background-color: #2ab63c;
 }
 
 .rangeAssessmentTextBox.rangeStatus--success {
@@ -123,11 +126,9 @@ body {
 }
 
 .rangeAssessmentInput {
-  -webkit-appearance: none; /* Override default CSS styles */
   appearance: none;
-  background: #ffffff; /* Grey background */
   opacity: 0.8; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: 0.1s; /* 0.2 seconds transition on hover */
+  -webkit-transition: 0.1s; /* 0.1 seconds transition on hover */
   transition: opacity 0.1s;
   border-style: none !important;
 }
@@ -147,15 +148,61 @@ body {
   cursor: pointer;
 }
 
+.rangeAssessmentInput.rangeStatus--danger::-webkit-slider-thumb:hover {
+  background-image: url('../../assets/image/1.png');
+  background-position: center;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  margin-top: -20px;
+}
+
+.rangeAssessmentInput.rangeStatus--warning::-webkit-slider-thumb:hover {
+  background: url('../../assets/image/2.png');
+  background-position: center;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  margin-top: -20px;
+}
+
+.rangeAssessmentInput.rangeStatus--atention::-webkit-slider-thumb:hover {
+  background: url('../../assets/image/3.png');
+  background-position: center;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  margin-top: -20px;
+}
+
+.rangeAssessmentInput.rangeStatus--neutro::-webkit-slider-thumb:hover {
+  background: url('../../assets/image/4.png');
+  background-position: center;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  margin-top: -20px;
+}
+
+.rangeAssessmentInput.rangeStatus--success::-webkit-slider-thumb:hover {
+  background: url('../../assets/image/5.png');
+  background-position: center;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  margin-top: -20px;
+}
+
 /*Barra*/
 .rangeAssessmentInput::-webkit-slider-runnable-track {
   height: 10px;
   border-radius: 3rem;
   transition: all 0.5s;
   cursor: pointer;
+  background-color: #fff;
 }
 
-/*Rage de Cores*/
+/*Range de Cores*/
 .rangeAssessmentInput.rangeStatus--danger::-webkit-slider-runnable-track {
   background-color: #bb120d;
 }
@@ -169,12 +216,13 @@ body {
 }
 
 .rangeAssessmentInput.rangeStatus--neutro::-webkit-slider-runnable-track {
-  background: #38c805;
+  background: #2ab63c;
 }
 
 .rangeAssessmentInput.rangeStatus--success::-webkit-slider-runnable-track {
   background: green;
 }
+
 
 /* Mozila */
 /*Cursor */
@@ -191,31 +239,219 @@ body {
   cursor: pointer;
 }
 
+.rangeAssessmentInput.rangeStatus--danger::-moz-range-thumb {
+  background-image: url('../../assets/image/1.png');
+  background-position: center;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  margin-top: -20px;
+}
+
+.rangeAssessmentInput.rangeStatus--warning::-moz-range-thumb {
+  background: url('../../assets/image/2.png');
+  background-position: center;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  margin-top: -20px;
+}
+
+.rangeAssessmentInput.rangeStatus--atention::-moz-range-thumb {
+  background: url('../../assets/image/3.png');
+  background-position: center;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  margin-top: -20px;
+}
+
+.rangeAssessmentInput.rangeStatus--neutro::-moz-range-thumb {
+  background: url('../../assets/image/4.png');
+  background-position: center;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  margin-top: -20px;
+}
+
+.rangeAssessmentInput.rangeStatus--success::-moz-range-thumb {
+  background: url('../../assets/image/5.png');
+  background-position: center;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  margin-top: -20px;
+}
+
 /*Barra*/
 .rangeAssessmentInput::-moz-range-track {
   height: 10px;
   border-radius: 3rem;
   transition: all 0.5s;
   cursor: pointer;
+  background-color: #004aad;
 }
 
-/*Rage de Cores*/
-.rangeAssessmentInput.rangeStatus--danger::-moz-range-track {
+/*Range de Cores*/
+.rangeAssessmentInput.rangeStatus--danger::-moz-range-progress {
   background-color: #bb120d;
+  height: 10px;
+  border-radius: 3rem;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
-.rangeAssessmentInput.rangeStatus--warning::-moz-range-track {
+.rangeAssessmentInput.rangeStatus--warning::-moz-range-progress {
   background: #e44800;
+  height: 10px;
+  border-radius: 3rem;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
-.rangeAssessmentInput.rangeStatus--atention::-moz-range-track {
+.rangeAssessmentInput.rangeStatus--atention::-moz-range-progress {
   background: #ffbf00;
+  height: 10px;
+  border-radius: 3rem;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
-.rangeAssessmentInput.rangeStatus--neutro::-moz-range-track {
-  background: #38c805;
+.rangeAssessmentInput.rangeStatus--neutro::-moz-range-progress {
+  background: #2ab63c;
+  height: 10px;
+  border-radius: 3rem;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
-.rangeAssessmentInput.rangeStatus--success::-moz-range-track {
+.rangeAssessmentInput.rangeStatus--success::-moz-range-progress {
   background: green;
+  height: 10px;
+  border-radius: 3rem;
+  transition: all 0.5s;
+  cursor: pointer;
 }
+
+/* IE */
+/*Cursor */
+.rangeAssessmentInput::-ms-thumb {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border-width: thin;
+  background: #ffffff;
+  border-style: solid;
+  border-color: rgba(51, 51, 51, 0.493);
+  margin-top: -10px;
+  box-shadow: 2px 2px 2px rgba(#000, 0.5);
+  cursor: pointer;
+}
+
+.rangeAssessmentInput.rangeStatus--danger::-ms-thumb {
+  background-image: url('../../assets/image/1.png');
+  background-position: center;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  margin-top: -20px;
+}
+
+.rangeAssessmentInput.rangeStatus--warning::-ms-thumb {
+  background: url('../../assets/image/2.png');
+  background-position: center;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  margin-top: -20px;
+}
+
+.rangeAssessmentInput.rangeStatus--atention::-ms-thumb {
+  background: url('../../assets/image/3.png');
+  background-position: center;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  margin-top: -20px;
+}
+
+.rangeAssessmentInput.rangeStatus--neutro::-ms-thumb {
+  background: url('../../assets/image/4.png');
+  background-position: center;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  margin-top: -20px;
+}
+
+.rangeAssessmentInput.rangeStatus--success::-ms-thumb {
+  background: url('../../assets/image/5.png');
+  background-position: center;
+  background-color: #fff;
+  height: 50px;
+  width: 50px;
+  margin-top: -20px;
+}
+
+/*Barra*/
+.rangeAssessmentInput::-ms-track {
+  height: 10px;
+  border-radius: 3rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+/*Range de Cores*/
+.rangeAssessmentInput::-ms-fill-upper {
+  background-color: #004aad;;
+  height: 10px;
+  border-radius: 3rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.rangeAssessmentInput.rangeStatus--danger::-ms-fill-lower {
+  background-color: #bb120d;
+  height: 10px;
+  border-radius: 3rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.rangeAssessmentInput.rangeStatus--warning::-ms-fill-lower {
+  background: #e44800;
+  height: 10px;
+  border-radius: 3rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.rangeAssessmentInput.rangeStatus--atention::-ms-fill-lower {
+  background: #ffbf00;
+  height: 10px;
+  border-radius: 3rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.rangeAssessmentInput.rangeStatus--neutro::-ms-fill-lower {
+  background: #2ab63c;
+  height: 10px;
+  border-radius: 3rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.rangeAssessmentInput.rangeStatus--success::-ms-fill-lower {
+  background: green;
+  height: 10px;
+  border-radius: 3rem;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+
+
+
+/*********** teste ************/
