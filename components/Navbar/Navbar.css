@@ -5,8 +5,9 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 0px;
-    background-color: #11115d;
   }
+
+  .
   
   @media (min-width: 576px) {
     .site-navbar {
@@ -371,10 +372,12 @@
     background-color: #fff;
     box-shadow: -2px 2px 70px -25px rgba(0, 0, 0, 0.3);
     padding: 20px 0px;
-    transition: opacity 0.5s ease, top 0.5s ease, margin-top 0.5s ease, background-color 0.5s ease;
+    transition: opacity 0.1s ease, top 0.1s ease, margin-top 0.1s ease, background-color 0.1s ease;
     margin-top: 25px;
     opacity: 0;
     visibility: hidden;
+    border: solid 0.5px;
+    border-color: rgba(167, 167, 167, 0.548);
   }
   
   @media (min-width: 992px) {
@@ -548,7 +551,7 @@
       z-index: 99;
       pointer-events: visible;
       border-radius: 0px 0px 15px 15px;
-      border-top: 3px solid #1787FC;
+      border-top: 3px solid #ff7139;
     }
   }
   

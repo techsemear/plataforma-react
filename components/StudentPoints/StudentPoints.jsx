@@ -13,7 +13,7 @@ const themeDark = true
 export default function StudentPoints({itemsText}) {
   return (
     <Section bgColor="primary">
-      <div className="content-area-2-l1">
+      <div className="content-area-2-l1" id="jornada-jovem">
         <div className="container">
           <div className="row justify-content-center align-items-center">
             <ItemsSection itemsText={itemsText} dark={themeDark}>

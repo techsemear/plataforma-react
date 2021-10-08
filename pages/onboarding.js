@@ -1,24 +1,26 @@
 import React from 'react'
 
 // Components
-
+import {IndexPage} from '../components/IndexPage'
 
 // Containers
 import {IntroOnboarding} from '../containers/IntroOnboarding'
 import {Challenges} from '../containers/Challenges'
 import {MaslowPoints} from '../containers/MaslowPoints'
-import {MaslowFeatures} from '../containers/MaslowFeatures'
+import {StepsMentoring} from '../containers/StepsMentoring'
 import {GetStarted} from '../containers/GetStarted'
-import {SixteenChallenges} from '../containers/SixteenChallenges'
+import {NavbarGeneral} from '../containers/NavbarMain'
 
 
 export default function Onboarding() {
   return (
     <React.Fragment>
+      <IndexPage />
+      <NavbarGeneral />
       <IntroOnboarding />
       <Challenges />
       <MaslowPoints />
-      <MaslowFeatures />
+      <StepsMentoring />
       <GetStarted />
     </React.Fragment>
   )

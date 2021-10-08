@@ -1,33 +1,86 @@
-.content-2-l1-image-group {
-  position: relative;
+.service-area-l4-1 {
+  padding-bottom: 60px;
 }
 
-.content-2-l1-image-group .image-2 {
-  position: absolute;
-  top: 17%;
-  left: 0%;
-}
-
-.testimonial-area-l-image-group .image-1 {
-  position: absolute;
-  top: 10%;
-  left: 0%;
-}
-
-@media (min-width: 992px) {
-  .testimonial-area-l-image-group .image-1 {
-    top: 30%;
-    left: 10%;
+@media (min-width: 768px) {
+  .service-area-l4-1 {
+    padding-bottom: 80px;
   }
 }
 
-.testimonial-area-l-image-group .image-2 {
-  position: absolute;
-  bottom: 10%;
-  right: 10%;
+@media (min-width: 992px) {
+  .service-area-l4-1 {
+    padding-bottom: 50px;
+  }
 }
 
-#mentorTestimonial
-{
-  border-radius: 300px 300px 0px 0px;
+@media (min-width: 1200px) {
+  .service-l4-head-content {
+    margin-left: -30px;
+  }
+}
+
+.service-l4-card-items {
+  padding-top: 30px;
+  margin-bottom: -30px;
+}
+
+@media (min-width: 768px) {
+  .service-l4-card-items {
+    padding-top: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .service-l4-card-items {
+    padding-top: 80px;
+  }
+}
+
+.service-l4-card-items .col-lg-4 {
+  margin-bottom: 30px;
+}
+
+.service-l4-card {
+  padding: 45px 0px 0px 50px;
+  background: #EBF5FF;
+  transition: all 0.4s ease-in-out;
+}
+
+.service-l4-card .content {
+  padding-right: 30px;
+}
+
+.service-l4-card h4 {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 30px;
+  color: #1D263A;
+}
+
+.service-l4-card p {
+  font-size: 17px;
+  line-height: 30px;
+  color: #1D263A;
+  padding: 25px 0px 25px 0px;
+}
+
+.service-l4-card .number-icon-area .number h1 {
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 65px;
+  letter-spacing: -1px;
+  color: #000;
+  opacity: 0.05;
+  margin-bottom: 0;
+  margin-right: -4px;
+  transition: all 0.4s ease-in-out;
+}
+
+.service-l4-card:hover {
+  background: #FF8121;
+}
+
+.service-l4-card:hover .number h1 {
+  opacity: 1;
 }

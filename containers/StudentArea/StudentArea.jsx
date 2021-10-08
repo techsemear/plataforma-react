@@ -62,7 +62,7 @@ export default function studentArea() {
 
       <StudentJourney />
       <StudentPoints itemsText={itemsText}/>
-      <Section bgColor="primary" id="studentTestimonial">
+      <Section bgColor="primary" id="testemunho-jovem">
         <Testimonial personas={personas}>{content.title}</Testimonial>
       </Section>
     </div>

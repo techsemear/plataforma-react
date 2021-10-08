@@ -1,1 +1,0 @@
-export {default as ChallengeVideos} from './ChallengeVideos'

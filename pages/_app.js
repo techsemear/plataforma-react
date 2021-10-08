@@ -1,10 +1,12 @@
 import React, {useEffect, Component} from 'react'
 import Script from 'next/script'
+//import AOS from 'aos'
 
 
 // Global Styles
 import '../assets/css/bootstrap.css'
 import '../assets/css/isemear.css'
+//import '../assets/css/aos.min.css'
 
 // Global Font Styles
 import '../assets/fonts/Caveat/index.css'
@@ -12,7 +14,6 @@ import '../assets/fonts/Poppins/style.css'
 import '../assets/fonts/fontawesome-5/css/all.css'
 import '../assets/fonts/icon-font/css/style.css'
 import '../assets/fonts/typography-font/typo.css'
-//import '../assets/css/aos.min.css'
 
 // Components
 import '../components/LeadForm/LeadForm.css'
@@ -37,7 +38,7 @@ import '../components/MultiSelectInput/MultiSelectInput.css'
 import '../containers/About/About.css'
 import '../containers/Hero/Hero.css'
 import '../containers/MentorArea/MentorArea.css'
-import '../containers/Navbar/Navbar.css'
+import '../components/Navbar/Navbar.css'
 import '../containers/Partners/Partners.css'
 import '../containers/Presentation/Presentation.css'
 import '../containers/StudentArea/StudentArea.css'
@@ -54,10 +55,9 @@ import '../containers/AssessmentPage/AssessmentPage.css'
 import '../containers/IntroOnboarding/IntroOnboarding.css'
 import '../containers/Challenges/Challenges.css'
 import '../containers/MaslowPoints/MaslowPoints.css'
-import '../containers/MaslowFeatures/MaslowFeatures.css'
+import '../containers/StepsMentoring/StepsMentoring.css'
 import '../containers/GetStarted/GetStarted.css'
-import '../containers/ChallengeVideos/ChallengeVideos.css'
-import '../containers/SixteenChallenges/SixteenChallenges.css'
+
 
 function MyApp({Component, pageProps}) {
   return (
@@ -75,7 +75,7 @@ function MyApp({Component, pageProps}) {
         `}
       </Script>
       <Script>
-       {`(function(h,o,t,j,a,r){
+        {`(function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:2575267,hjsv:6};
         a=o.getElementsByTagName('head')[0];

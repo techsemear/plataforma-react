@@ -6,11 +6,11 @@ import {Section} from '../Section'
 
 import journeyImage from '../../assets/image/journeyImage.png'
 
-const title = 'A cada nova DESCOBERTA, uma nova CONQUISTA!';
+const title = 'A cada nova DESCOBERTA, uma nova CONQUISTA!'
 
 export default function StudentJourney() {
   return (
-    <div className="content-are-l1-1 bg-primary" id = "jornada-jovem">
+    <div className="content-are-l1-1 bg-primary" id="protagonismo-jovem">
       <div className="container">
         <div className="row justify-content-center">
           <div
@@ -35,9 +35,9 @@ export default function StudentJourney() {
               <div>
                 <Heading level="h4">{title}</Heading>
                 <p>
-                  A sua Jornada no ISemear é construída com base em um
-                  conjunto de ferramentas e métodos que servem para
-                  jovens que sentem na pele as dificuldades de se graduar e {' '}
+                  A sua Jornada no ISemear é construída com base em um conjunto
+                  de ferramentas e métodos que servem para jovens que sentem na
+                  pele as dificuldades de se graduar e{' '}
                   <strong>
                     se tornar protagonista da sua própria carreira.
                   </strong>
