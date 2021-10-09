@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 // Containers
-import {Navbar} from '../containers/Navbar'
+import {NavbarGeneral} from '../containers/NavbarMain'
 import {AssessmentPage} from '../containers/AssessmentPage'
 
 // Components
@@ -12,7 +12,7 @@ export default function SignUp() {
   return (
     <React.Fragment>
       <IndexPage />
-      <Navbar />
+      <NavbarGeneral />
       <AssessmentPage />
     </React.Fragment>
   )

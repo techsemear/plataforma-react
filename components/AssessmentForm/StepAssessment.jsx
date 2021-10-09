@@ -18,14 +18,14 @@ let StepAssessment = (props) => {
 
   return (
     <fieldset>
-      <div className="hero-area-l-12 position-relative z-index-1 overflow-hidden mt-5">
+      <div className="assessment-area position-relative z-index-1 overflow-hidden mt-5">
         <div className="container">
+          <Heading level="h1" ftColor="quinary" className="fs-title">
+            {props.content.title}
+          </Heading>
           <div className="row justify-content-center">
-            <Heading level="h1" ftColor="quinary" className="fs-title">
-              {props.content.title}
-            </Heading>
             <div
-              className="col-xl-8 col-lg-7 col-md-11 col-sm-12 order-lg-1 order-1"
+              className="col-xl-7 col-lg-8 col-md-11 col-sm-12 order-0"
               data-aos="fade-right"
               data-aos-duration={800}
               data-aos-once="true"
@@ -40,17 +40,18 @@ let StepAssessment = (props) => {
               </div>
             </div>
             <div
-              className="col-xl-4 col-lg-7 col-md-10 order-lg-1 order-0"
+              className="col-xl-5 col-lg-4 col-md-7 col-sm-8 order-1"
               data-aos="fade-left"
               data-aos-duration={800}
               data-aos-once="true"
             >
-              <div className="hero-video-l12 position-relative">
+              <div className="assessment-gif position-relative">
                 <Image
                   src={props.content.gif}
                   alt="gif"
                   width={400}
                   height={300}
+                  layout="responsive"
                 />
               </div>
             </div>
@@ -146,7 +147,7 @@ function Range() {
       >
         <div className="container mt-3">
           <div className="row justify-content-center">
-            <div className="col-xl-10 col-xl-4 col-lg-4 col-md-4 col-sm-4 order-lg-0">
+            <div className="col-xl-10 col-xl-10 col-lg-10 col-md-10 col-sm-12 order-lg-0">
               <div className="order-1 rangeAssessment">
                 <input
                   className={`rangeAssessmentInput ${getStatusClassName()}`}
@@ -161,7 +162,7 @@ function Range() {
                 />
               </div>
             </div>
-            <div className="rangeAssessmentStatus col-xl-10 col-lg-4 col-md-4 col-sm-4 order-1 order-lg-1 mt-1">
+            <div className="rangeAssessmentStatus col-xl-10 col-lg-10 col-md-10 col-sm-10 order-1 order-lg-1 mt-1">
               <div className={`rangeAssessmentTextBox ${getStatusClassName()}`}>
                 <span className={`rangeAssessmentText ${getStatusClassName()}`}>
                   {`${inputAssessment}: ${assessmentStatus[inputAssessment].label}`}

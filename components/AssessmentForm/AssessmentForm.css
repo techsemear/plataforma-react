@@ -81,6 +81,17 @@ body {
   display: inline-block;
 }
 
+.assessment-area .content {
+  position: relative;
+  z-index: 5;
+}
+
+@media (min-width: 1200px) {
+  .assessment-area .content {
+    padding-right: 10px;
+  }
+}
+
 .rangeAssessmentTextBox {
   background-color: #000000;
   width: 220px;
