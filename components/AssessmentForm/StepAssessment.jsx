@@ -3,12 +3,6 @@ import Image from 'next/image'
 
 import {Heading} from '../Heading'
 
-import sad from '../../assets/image/1.png'
-import halfSad from '../../assets/image/2.png'
-import half from '../../assets/image/3.png'
-import halfHappy from '../../assets/image/4.png'
-import happy from '../../assets/image/5.png'
-
 import {loadGetInitialProps} from 'next/dist/shared/lib/utils'
 
 let StepAssessment = (props) => {
@@ -66,48 +60,34 @@ let StepAssessment = (props) => {
 export default StepAssessment
 
 const assessmentStatus = {
-  0: {
-    icon: <Image src={sad} />,
-    label: 'Nada Satisfeito',
-  },
   1: {
-    icon: <Image src={sad} />,
     label: 'Nada Satisfeito',
   },
   2: {
-    icon: <Image src={halfSad} />,
     label: 'Nada Satisfeito',
   },
   3: {
-    icon: <Image src={halfSad} />,
     label: 'Pouco Satisfeito',
   },
   4: {
-    icon: <Image src={halfSad} />,
-    label: 'Minimamente Satisfeito',
+    label: 'Pouco Satisfeito',
   },
   5: {
-    icon: <Image src={half} />,
     label: 'Minimamente Satisfeito',
   },
   6: {
-    icon: <Image src={half} />,
     label: 'Minimamente Satisfeito',
   },
   7: {
-    icon: <Image src={halfHappy} />,
     label: 'Satisfeito',
   },
   8: {
-    icon: <Image src={happy} />,
     label: 'Muito Satisfeito',
   },
   9: {
-    icon: <Image src={happy} />,
     label: 'Muito Satisfeito',
   },
   10: {
-    icon: <Image src={happy} />,
     label: 'Muito Satisfeito',
   },
 }
@@ -121,13 +101,13 @@ function Range() {
   }
 
   const getStatusClassName = () => {
-    if (inputAssessment >= 0 && inputAssessment < 2) {
+    if (inputAssessment >= 1 && inputAssessment < 3) {
       return 'rangeStatus--danger'
     }
-    if (inputAssessment >= 2 && inputAssessment < 4) {
+    if (inputAssessment >= 3 && inputAssessment < 5) {
       return 'rangeStatus--warning'
     }
-    if (inputAssessment >= 4 && inputAssessment < 7) {
+    if (inputAssessment >= 5 && inputAssessment < 7) {
       return 'rangeStatus--atention'
     }
     if (inputAssessment == 7) {
