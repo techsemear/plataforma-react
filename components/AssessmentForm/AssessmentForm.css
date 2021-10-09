@@ -160,48 +160,58 @@ body {
 }
 
 .rangeAssessmentInput.rangeStatus--danger::-webkit-slider-thumb:hover {
-  background-image: url('../../assets/image/1.png');
+  background-image: url('../../assets/image/emojis/danger.png');
   background-position: center;
   background-color: #fff;
   height: 50px;
   width: 50px;
   margin-top: -20px;
+  background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--warning::-webkit-slider-thumb:hover {
-  background: url('../../assets/image/2.png');
+  background: url('../../assets/image/emojis/warning.png');
   background-position: center;
   background-color: #fff;
   height: 50px;
   width: 50px;
   margin-top: -20px;
+  background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--atention::-webkit-slider-thumb:hover {
-  background: url('../../assets/image/3.png');
+  background: url('../../assets/image/emojis/attention.png');
   background-position: center;
   background-color: #fff;
   height: 50px;
   width: 50px;
   margin-top: -20px;
+  background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--neutro::-webkit-slider-thumb:hover {
-  background: url('../../assets/image/4.png');
+  background: url('../../assets/image/emojis/neutral.png');
   background-position: center;
   background-color: #fff;
   height: 50px;
   width: 50px;
   margin-top: -20px;
+  background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--success::-webkit-slider-thumb:hover {
-  background: url('../../assets/image/5.png');
+  background: url('../../assets/image/emojis/happy.png');
   background-position: center;
   background-color: #fff;
   height: 50px;
   width: 50px;
   margin-top: -20px;
+  background-repeat: no-repeat;
+    background-size: contain;
 }
 
 /*Barra*/
@@ -234,7 +244,6 @@ body {
   background: green;
 }
 
-
 /* Mozila */
 /*Cursor */
 .rangeAssessmentInput::-moz-range-thumb {
@@ -251,48 +260,60 @@ body {
 }
 
 .rangeAssessmentInput.rangeStatus--danger::-moz-range-thumb {
-  background-image: url('../../assets/image/1.png');
+  background-image: url('../../assets/image/emojis/danger.png');
   background-position: center;
   background-color: #fff;
   height: 50px;
   width: 50px;
   margin-top: -20px;
+  background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--warning::-moz-range-thumb {
-  background: url('../../assets/image/2.png');
+  background: url('../../assets/image/emojis/warning.png');
   background-position: center;
   background-color: #fff;
   height: 50px;
   width: 50px;
   margin-top: -20px;
+  background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--atention::-moz-range-thumb {
-  background: url('../../assets/image/3.png');
+  background: url('../../assets/image/emojis/attention.png');
   background-position: center;
   background-color: #fff;
   height: 50px;
   width: 50px;
   margin-top: -20px;
+  background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--neutro::-moz-range-thumb {
-  background: url('../../assets/image/4.png');
+  background: url('../../assets/image/emojis/neutral.png');
   background-position: center;
   background-color: #fff;
   height: 50px;
   width: 50px;
   margin-top: -20px;
+  background-repeat: no-repeat;
+
+  background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--success::-moz-range-thumb {
-  background: url('../../assets/image/5.png');
+  background: url('../../assets/image/emojis/happy.png');
   background-position: center;
   background-color: #fff;
   height: 50px;
   width: 50px;
   margin-top: -20px;
+  background-repeat: no-repeat;
+    background-size: contain;
+
 }
 
 /*Barra*/
@@ -361,48 +382,58 @@ body {
 }
 
 .rangeAssessmentInput.rangeStatus--danger::-ms-thumb {
-  background-image: url('../../assets/image/1.png');
+  background-image: url('../../assets/image/emojis/danger.png');
   background-position: center;
   background-color: #fff;
   height: 50px;
   width: 50px;
   margin-top: -20px;
+  background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--warning::-ms-thumb {
-  background: url('../../assets/image/2.png');
+  background: url('../../assets/image/emojis/warning.png');
   background-position: center;
   background-color: #fff;
   height: 50px;
   width: 50px;
   margin-top: -20px;
+  background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--atention::-ms-thumb {
-  background: url('../../assets/image/3.png');
+  background: url('../../assets/image/emojis/attention.png');
   background-position: center;
   background-color: #fff;
   height: 50px;
   width: 50px;
   margin-top: -20px;
+  background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--neutro::-ms-thumb {
-  background: url('../../assets/image/4.png');
+  background: url('../../assets/image/emojis/neutral.png');
   background-position: center;
   background-color: #fff;
   height: 50px;
   width: 50px;
   margin-top: -20px;
+  background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--success::-ms-thumb {
-  background: url('../../assets/image/5.png');
+  background: url('../../assets/image/emojis/happy.png');
   background-position: center;
   background-color: #fff;
   height: 50px;
   width: 50px;
   margin-top: -20px;
+  background-repeat: no-repeat;
+    background-size: contain;
 }
 
 /*Barra*/
@@ -415,7 +446,7 @@ body {
 
 /*Range de Cores*/
 .rangeAssessmentInput::-ms-fill-upper {
-  background-color: #004aad;;
+  background-color: #004aad;
   height: 10px;
   border-radius: 3rem;
   transition: all 0.5s;
@@ -461,8 +492,5 @@ body {
   transition: all 0.5s;
   cursor: pointer;
 }
-
-
-
 
 /*********** teste ************/
