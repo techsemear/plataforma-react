@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export function NavbarItems({items = []}) {
   return (
     <div className="menu-block-wrapper">
@@ -20,7 +22,10 @@ export function NavbarItems({items = []}) {
                   key={`nav-item-${index}`}
                   className="nav-item nav-item-has-children"
                 >
-                  <a href="#" className="nav-link-item drop-trigger">
+                  <a
+                    href={menuItem.linkTo}
+                    className="nav-link-item drop-trigger"
+                  >
                     {menuItem.label}
                     <i className="fas fa-angle-down" />
                   </a>
@@ -39,6 +44,16 @@ export function NavbarItems({items = []}) {
                 <li key={`nav-item-${index}`} className="nav-item">
                   <a href={menuItem.linkTo} className="nav-link-item">
                     {menuItem.label}
+                    {menuItem.image ? (
+                      <div className="mx-2">
+                        <Image
+                          src={menuItem.image}
+                          alt="icon"
+                          width={30}
+                          height={30}
+                        />
+                      </div>
+                    ) : null}
                   </a>
                 </li>
               ),

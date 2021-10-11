@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Containers
-import {Navbar} from '../containers/Navbar'
+import {NavbarGeneral} from '../containers/NavbarMain'
 import { LoginPage } from '../containers/LoginPage'
 
 
@@ -12,8 +12,8 @@ import { IndexPage } from '../components/IndexPage'
 export default function Login() {
   return (
     <React.Fragment>
-      <IndexPage/>
-      <Navbar />
+      <IndexPage />
+      <NavbarGeneral />
       <LoginPage />
     </React.Fragment>
   )

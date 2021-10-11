@@ -32,8 +32,7 @@ export default function GetStarted() {
                     ftColor="primary"
                     horizontalPosition="center"
                   >
-                    Ao logar, você acessa seu <a>perfil pessoal</a> ou você pode
-                    acessar agora e completar as informações necessárias
+                    Você pode preencher a Roda da Trilha ao acessar seu <a>perfil pessoal</a> ou através do botão abaixo
                   </Heading>
                   <Heading
                     level="h2"
