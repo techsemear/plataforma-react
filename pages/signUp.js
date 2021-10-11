@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
+
 // Containers
 import {NavbarGeneral} from '../containers/NavbarMain'
 import {SignUpPage} from '../containers/SignUpPage'
