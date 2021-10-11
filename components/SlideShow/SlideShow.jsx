@@ -13,6 +13,7 @@ const SlideShow = ({contentInfo = []}) => {
                 src={item.image}
                 width={item.width ? item.width : 550}
                 height={item.height ? item.height : 550}
+                alt=""
               />
             </div>
           </div>

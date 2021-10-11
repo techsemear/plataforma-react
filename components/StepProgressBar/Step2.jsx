@@ -13,7 +13,7 @@ const Step2 = props => {
   return (
     <fieldset>
       <div className="plataforma-logo2">
-        <Image src = {plataformaLogo}/>
+        <Image src = {plataformaLogo} alt ="Logo Plataforma Semear"/>
       </div>  
         <Heading level = "h4" horizontalPosition = "center" ftColor = "quinary" className="fs-title">Identificação e Contato</Heading>
         <Heading level = "h6" horizontalPosition = "center" ftColor = "quinary" className="fs-subtitle">Passo 2</Heading>
@@ -33,7 +33,7 @@ const Step2 = props => {
                 name="cpf" 
                 placeholder="Você poderia nos informar seu CPF ? (examplo: 12345678910)" 
                 defaultvalue={props.cpf} 
-                onchange={props.handleChange}
+                onChange={props.handleChange}
                 required
             />
 

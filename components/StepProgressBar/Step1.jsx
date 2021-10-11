@@ -14,7 +14,7 @@ const Step1 = props => {
 return (
     <fieldset>
       <div className="plataforma-logo2">
-        <Image src = {plataformaLogo}/>
+        <Image src = {plataformaLogo} alt="Logo Plataforma Semear"/>
       </div>  
       <Heading level = "h4" horizontalPosition = "center" ftColor = "quinary" className="fs-title">Crie sua Conta🌱</Heading>
         <Heading level = "h6" horizontalPosition = "center" ftColor = "quinary" className="fs-subtitle">Passo 1</Heading>
@@ -25,7 +25,7 @@ return (
               name="fname" 
               placeholder="Nome Completo" 
               defaultvalue="{props.fname}" 
-              onchange="{props.handleChange}" 
+              onChange="{props.handleChange}" 
               required 
             />
           
