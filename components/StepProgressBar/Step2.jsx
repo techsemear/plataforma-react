@@ -37,7 +37,7 @@ const Step2 = props => {
                 required
             />
 
-            <Heading level = "h6" horizontalPosition = "start" ftColor = "default" className="fs-subtitle">Digite sua data de aniversário:</Heading>
+            <Heading level = "h6" horizontalPosition = "start" ftColor = "default" className="fs-subtitle">Digite sua data de Nascimento:</Heading>
             <input 
                 type="date" 
                 name="birthday" 
@@ -57,6 +57,35 @@ const Step2 = props => {
                 required
             />
             
+            <div>
+
+          <Heading level = "h6" horizontalPosition = "start" ftColor = "default" className="fs-subtitle">Nível de Escolaridade:</Heading>
+          <input 
+            list="datalist0" 
+            name="school" 
+            placeholder="Qual seu nível de escolaridade" 
+            defaultValue={props.school} 
+            onChange={props.handleChange}
+            required 
+          />
+
+          <datalist id="datalist0">
+              <option value="Fundamental - Incompleto">
+              </option><option value="Fundamental - Completo">
+              </option><option value="Médio - Incompleto">
+              </option><option value="Médio - Completo">
+              </option><option value="Superior - Cursando">
+              </option><option value="Superior - Completo">
+              </option><option value="Pós-graduação - Incompleto">
+              </option><option value="Pós-graduação - Completo">
+              </option><option value="Mestrado - Incompleto">
+              </option><option value="Mestrado - Completo">
+              </option><option value="Doutorado - Incompleto">
+              </option><option value="Doutorado - Completo">
+              </option>
+          </datalist>
+</div>
+
     </fieldset>
   )}
 

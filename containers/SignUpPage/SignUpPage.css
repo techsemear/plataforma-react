@@ -40,9 +40,14 @@ main {
 	margin: auto;
 	margin-top: 30px;
 	margin-bottom: 5px;
-	
 /*stacking fieldsets above each other*/
 	position: relative;
+}
+
+@media (max-width:900px){
+	#msform fieldset{
+		width: 100%;
+	}
 }
 /*Hide all except first fieldset*/
 #msform fieldset:not(:first-of-type) {

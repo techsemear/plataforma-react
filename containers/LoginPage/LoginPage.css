@@ -388,6 +388,7 @@ main.sign-up-mode .carousel {
 
   .box {
     border-radius: 2rem;
+    margin-top: 80px;
   }
 
   .inner-box {
@@ -554,3 +555,9 @@ main.sign-up-mode .carousel {
   margin-top: 20px;
 }
 
+@media (max-width: 845px){
+.slider{
+  margin-left: 2%;
+  margin-top: 20px;
+}
+}

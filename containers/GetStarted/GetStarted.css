@@ -61,7 +61,6 @@
 }
 
 .newsletter-area-l-12 .btn {
-  min-width: 500px;
   height: 48px;
   background: #ff7139;
   border-radius: 15px;
@@ -71,6 +70,24 @@
   font-size: 18px;
   text-align: center;
   color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+  .newsletter-area-l-12 .btn {
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .newsletter-area-l-12 .btn {
+    width: 70%;
+  }
+}
+
+
+.btn-area
+{
+  margin:auto
 }
 
 .newsletter-area-l-12 .btn:hover

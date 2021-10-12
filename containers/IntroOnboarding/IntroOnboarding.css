@@ -25,6 +25,7 @@
   
   .hero-area-l6 .hero-l6-content {
     padding-top: 45px;
+    margin-bottom: 80px;
   }
   
   @media (min-width: 992px) {
@@ -32,7 +33,12 @@
       padding-top: 0;
     }
   }
-  
+
+  @media (max-width: 576px) {
+    .text-paragraph {
+      margin-bottom: 100px;
+    }
+  }
   
   @media (min-width: 576px) {
     .hero-area-l6 .hero-l6-content h2 {

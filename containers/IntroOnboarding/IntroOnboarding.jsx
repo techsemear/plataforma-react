@@ -33,6 +33,7 @@ export default function IntroOnboarding(){
                   level="h5"
                   ftColor="default"
                   horizontalPosition="center"
+                  className="text-paragraph"
                 >
                   <br />O caminho para a independência e conforto financeiro é
                   árduo e o vestibular foi só o primeiro passo. Vamos percorrer
