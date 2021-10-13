@@ -35,7 +35,7 @@ const StepWelcome = (props) => {
                   {content.subtitle}
                 </Heading>
                 <Heading level="h6" ftColor="quinary">
-                  Agora você passará pela fase que chamamos de 
+                  Agora você passará pela fase que chamamos de
                   <strong> Roda da Trilha</strong>, em que aqui te ajudaremos a
                   mapear os seus principais desafios!
                   <br />
@@ -47,6 +47,7 @@ const StepWelcome = (props) => {
                   <a
                     href="https://www.isemear.org.br"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Saiba mais sobre a Calculadora de Matches
                   </a>
