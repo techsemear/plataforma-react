@@ -29,7 +29,7 @@ import '../components/Underline/Underline.css'
 import '../components/Button/Button.css'
 import '../components/SlideShow/SlideShow.css'
 import '../components/StepProgressBar/StepProgressBar.css'
-import '../components/MultiStepForm/MultiStepForm.css'
+
 
 // Containers
 // Home
@@ -43,7 +43,8 @@ import '../containers/StudentArea/StudentArea.css'
 import '../containers/Subscribe/Subscribe.css'
 import '../containers/Testimonial/Testimonial.css'
 import '../containers/LoginPage/LoginPage.css'
-import '../containers/SignUpPage/SignUpPage.css'
+import '../containers/MultiStepSignUp/MultiStepForm.css'
+import '../containers/MultiStepSignUp/SignUpPage.css'
 
 //Login
 //import '../containers/LoginPage/LoginPage.css'

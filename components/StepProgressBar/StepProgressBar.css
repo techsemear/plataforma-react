@@ -47,4 +47,42 @@
 .label
 {
   position: relative;
+}.step-progress-bar {
+  position: relative;
+	height: 13px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  max-width: 700px;
+}
+
+.progress-bar-step {
+  align-items: center;
+  background-color: #A7B7BB;
+  border-radius: 50px;
+  color: white;
+  display: flex;
+  height: 25px;
+  justify-content: center;
+  width: 25px;
+  position: relative;
+}
+
+.progress-bar-step[data-current="true"],
+.progress-bar-step[data-accomplished="true"] {
+  background-color: #2977D0;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2)
+}
+
+.progress-bar-completed {
+  background: #2977D0;
+  border-radius: 20px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease-in-out;
 }

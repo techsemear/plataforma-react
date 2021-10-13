@@ -6,6 +6,7 @@ import imageProfile1 from '../../assets/image/landing-1/student1.png'
 import imageProfile2 from '../../assets/image/landing-1/student2.png'
 import imageProfile3 from '../../assets/image/landing-1/student4.jpg'
 import {Section} from '../../components/Section'
+import { Wave } from '../../components/Wave'
 
 const content = { 
   title: 'Quem já venceu essa jornada',
@@ -48,16 +49,7 @@ export default function studentArea() {
   return (
     <div className="jovem-area">
       <div style={{height: 150, overflow: 'hidden'}}>
-        <svg
-          viewBox="0 0 500 150"
-          preserveAspectRatio="none"
-          style={{height: '100%', width: '100%'}}
-        >
-          <path
-            d="M0.00,49.98 C145.31,125.81 392.49,104.11 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-            style={{stroke: 'none', fill: '#11115d'}}
-          />
-        </svg>
+        <Wave/>
       </div>
 
       <StudentJourney />

@@ -1,42 +1,37 @@
-import React from "react";
-import "../../node_modules/react-step-progress-bar";
-import { ProgressBar, Step } from "../../node_modules/react-step-progress-bar";
+import React from 'react'
 
-const StepProgressBar = props => {
-  var stepPercentage = 0;
-
-  if (props.currentStep === 0) {
-    stepPercentage = 0;
-  } else if (props.currentStep === 1) {
-    stepPercentage = 50;
-  } else if (props.currentStep === 2) {
-    stepPercentage = 100;
-  } else {
-    stepPercentage = 0;
-  }
+const StepProgressBar = ({steps = 1, currentStep = 1}) => {
+  const stepsList = Array.from(Array(steps), (_, x) => x)
+  const stepBarWidth = 100 / (steps - 1)
+  const progressBarWidth = (stepBarWidth * currentStep - stepBarWidth).toFixed(
+    0,
+  )
 
   return (
-    <ProgressBar percent={stepPercentage}>
-      <Step>
-        {({ accomplished, index }) => (
-          <div
-            className={`indexedStep ${accomplished ? "accomplished" : null}`}
-          >
-            {index + 1}
-          </div>
-        )}
-      </Step>
-      <Step>
-        {({ accomplished, index }) => (
-          <div
-            className={`indexedStep ${accomplished ? "accomplished" : null}`}
-          >
-            {index + 1}
-          </div>
-        )}
-      </Step>
-    </ProgressBar>
-  );
-};
+    <div className="step-progress-bar">
+      <div
+        className="progress-bar-completed"
+        style={{width: `${progressBarWidth}%`}}
+      />
 
-export default StepProgressBar;
+      {stepsList.map((_, index) => {
+        const step = index + 1
+        const isCurrent = step === currentStep
+        const accomplished = step < currentStep
+
+        return (
+          <div
+            className="progress-bar-step"
+            data-accomplished={accomplished}
+            data-current={isCurrent}
+            key={`step-${step}`}
+          >
+            {step}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+export default StepProgressBar

@@ -1,22 +1,19 @@
 import React from 'react'
 import Head from 'next/head'
 
-
 // Containers
 import {NavbarGeneral} from '../containers/NavbarMain'
-import {SignUpPage} from '../containers/SignUpPage'
-
+import {MultiStepSignUp} from '../containers/MultiStepSignUp'
 
 // Components
-import { IndexPage } from '../components/IndexPage'
-
+import {IndexPage} from '../components/IndexPage'
 
 export default function SignUp() {
   return (
     <React.Fragment>
-      <IndexPage/>
-      <NavbarGeneral/>
-      <SignUpPage />
+      <IndexPage />
+      <NavbarGeneral />
+      <MultiStepSignUp />
     </React.Fragment>
   )
 }
