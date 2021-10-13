@@ -1,12 +1,12 @@
+/*custom font*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 
 body {
-	height: 100%;
-	background-image:  url('../../assets/image/background-login-plantyou.png');
-	font-family: Poppins, arial, verdana;
-	margin-top: 0px;
-
+  font-family: Poppins, arial, verdana;
+  margin-top: 90px;
+  margin-bottom: 50px;
+  background-image:  url('../../assets/image/background-login-plantyou.png');
 }
 
 .plataforma-logo2
@@ -22,8 +22,6 @@ body {
 	text-align: center;
 	position: relative;
  	max-width: 700px;
-	background-image:  url('../../assets/image/background-login-plantyou.png');
-	font-family: Poppins, arial, verdana;
 }
 
 #msform fieldset {
@@ -44,7 +42,7 @@ body {
 
 /*inputs*/
 #msform input, #msform textarea {
-	padding: 10px;
+	padding: 15px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	margin-bottom: 10px;
@@ -83,3 +81,6 @@ body {
 	color: #666;
 	margin-bottom: 20px;
 }
+
+
+

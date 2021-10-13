@@ -2,7 +2,6 @@ import React, {useEffect, Component} from 'react'
 import Script from 'next/script'
 //import AOS from 'aos'
 
-
 // Global Styles
 import '../assets/css/bootstrap.css'
 import '../assets/css/isemear.css'
@@ -29,19 +28,28 @@ import '../components/Underline/Underline.css'
 import '../components/Button/Button.css'
 import '../components/SlideShow/SlideShow.css'
 import '../components/StepProgressBar/StepProgressBar.css'
+<<<<<<< HEAD
 
+||||||| parent of a613e23 (♻️ Refactor MultistepForm)
+import '../components/MultiStepForm/MultiStepForm.css'
+=======
+>>>>>>> a613e23 (♻️ Refactor MultistepForm)
 
 // Containers
 // Home
 import '../containers/About/About.css'
 import '../containers/Hero/Hero.css'
+import '../containers/LoginPage/LoginPage.css'
 import '../containers/MentorArea/MentorArea.css'
 import '../components/Navbar/Navbar.css'
 import '../containers/Partners/Partners.css'
 import '../containers/Presentation/Presentation.css'
+import '../containers/MultiStepSignUp/SignUpPage.css'
+import '../containers/MultiStepSignUp/MultiStepForm.css'
 import '../containers/StudentArea/StudentArea.css'
 import '../containers/Subscribe/Subscribe.css'
 import '../containers/Testimonial/Testimonial.css'
+<<<<<<< HEAD
 import '../containers/LoginPage/LoginPage.css'
 import '../containers/MultiStepSignUp/MultiStepForm.css'
 import '../containers/MultiStepSignUp/SignUpPage.css'
@@ -56,6 +64,12 @@ import '../containers/MaslowPoints/MaslowPoints.css'
 import '../containers/StepsMentoring/StepsMentoring.css'
 import '../containers/GetStarted/GetStarted.css'
 
+||||||| parent of a613e23 (♻️ Refactor MultistepForm)
+import '../containers/LoginPage/LoginPage.css'
+import '../containers/SignUpPage/SignUpPage.css'
+
+=======
+>>>>>>> a613e23 (♻️ Refactor MultistepForm)
 
 function MyApp({Component, pageProps}) {
   return (
