@@ -50,7 +50,7 @@ let StepAssessment = (props) => {
               </div>
             </div>
           </div>
-          <Range />
+          <NumberInput />
         </div>
       </div>
     </fieldset>
@@ -62,34 +62,86 @@ export default StepAssessment
 const assessmentStatus = {
   1: {
     label: 'Nada Satisfeito',
+    class: 'rangeStatus--danger',
   },
   2: {
     label: 'Nada Satisfeito',
+    class: 'rangeStatus--danger',
   },
   3: {
     label: 'Pouco Satisfeito',
+    class: 'rangeStatus--warning',
   },
   4: {
     label: 'Pouco Satisfeito',
+    class: 'rangeStatus--warning',
   },
   5: {
     label: 'Minimamente Satisfeito',
+    class: 'rangeStatus--attention',
   },
   6: {
     label: 'Minimamente Satisfeito',
+    class: 'rangeStatus--attention',
   },
   7: {
     label: 'Satisfeito',
+    class: 'rangeStatus--neutral',
   },
   8: {
     label: 'Muito Satisfeito',
+    class: 'rangeStatus--success',
   },
   9: {
     label: 'Muito Satisfeito',
+    class: 'rangeStatus--success',
   },
   10: {
     label: 'Muito Satisfeito',
+    class: 'rangeStatus--success',
   },
+}
+
+function NumberInput() {
+  const [inputAssessment, setInputAssessment] = useState(7)
+
+  const handleChange = (event) => {
+    const value = event.currentTarget.value
+    setInputAssessment(value)
+  }
+
+  return (
+    <Fragment>
+      <div className="row justify-content-center mt-3">
+        {Object.keys(assessmentStatus).map((item) =>
+          parseInt(item) <= inputAssessment ? (
+            <button
+              type="button"
+              className={`btn-assessment d-flex justify-content-center rangeChoosen`}
+              key={`btn-${parseInt(item) + 1}`}
+              onClick={handleChange}
+              value={parseInt(item)}
+            >
+              <span>{item}</span>
+            </button>
+          ) : (
+            <button
+              type="submit"
+              className={`btn-assessment d-flex justify-content-center ${
+                assessmentStatus[parseInt(item)].class
+              }`}
+              key={`btn-${parseInt(item) + 1}`}
+              onClick={handleChange}
+              value={parseInt(item)}
+            >
+              <span>{item}</span>
+            </button>
+          ),
+        )}
+        <input type="hidden" value={inputAssessment}/>
+      </div>
+    </Fragment>
+  )
 }
 
 function Range() {
@@ -111,7 +163,7 @@ function Range() {
       return 'rangeStatus--atention'
     }
     if (inputAssessment == 7) {
-      return 'rangeStatus--neutro'
+      return 'rangeStatus--neutral'
     }
     if (inputAssessment > 7) {
       return 'rangeStatus--success'

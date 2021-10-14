@@ -115,7 +115,7 @@ body {
   background-color: #ffbf00;
 }
 
-.rangeAssessmentTextBox.rangeStatus--neutro {
+.rangeAssessmentTextBox.rangeStatus--neutral {
   background-color: #2ab63c;
 }
 
@@ -167,7 +167,7 @@ body {
   width: 50px;
   margin-top: -20px;
   background-repeat: no-repeat;
-    background-size: contain;
+  background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--warning::-webkit-slider-thumb:hover {
@@ -178,7 +178,7 @@ body {
   width: 50px;
   margin-top: -20px;
   background-repeat: no-repeat;
-    background-size: contain;
+  background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--atention::-webkit-slider-thumb:hover {
@@ -189,10 +189,10 @@ body {
   width: 50px;
   margin-top: -20px;
   background-repeat: no-repeat;
-    background-size: contain;
+  background-size: contain;
 }
 
-.rangeAssessmentInput.rangeStatus--neutro::-webkit-slider-thumb:hover {
+.rangeAssessmentInput.rangeStatus--neutral::-webkit-slider-thumb:hover {
   background: url('../../assets/image/emojis/neutral.png');
   background-position: center;
   background-color: #fff;
@@ -200,7 +200,7 @@ body {
   width: 50px;
   margin-top: -20px;
   background-repeat: no-repeat;
-    background-size: contain;
+  background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--success::-webkit-slider-thumb:hover {
@@ -211,7 +211,7 @@ body {
   width: 50px;
   margin-top: -20px;
   background-repeat: no-repeat;
-    background-size: contain;
+  background-size: contain;
 }
 
 /*Barra*/
@@ -236,7 +236,7 @@ body {
   background: #ffbf00;
 }
 
-.rangeAssessmentInput.rangeStatus--neutro::-webkit-slider-runnable-track {
+.rangeAssessmentInput.rangeStatus--neutral::-webkit-slider-runnable-track {
   background: #2ab63c;
 }
 
@@ -267,7 +267,7 @@ body {
   width: 50px;
   margin-top: -20px;
   background-repeat: no-repeat;
-    background-size: contain;
+  background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--warning::-moz-range-thumb {
@@ -278,7 +278,7 @@ body {
   width: 50px;
   margin-top: -20px;
   background-repeat: no-repeat;
-    background-size: contain;
+  background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--atention::-moz-range-thumb {
@@ -289,10 +289,10 @@ body {
   width: 50px;
   margin-top: -20px;
   background-repeat: no-repeat;
-    background-size: contain;
+  background-size: contain;
 }
 
-.rangeAssessmentInput.rangeStatus--neutro::-moz-range-thumb {
+.rangeAssessmentInput.rangeStatus--neutral::-moz-range-thumb {
   background: url('../../assets/image/emojis/neutral.png');
   background-position: center;
   background-color: #fff;
@@ -312,8 +312,7 @@ body {
   width: 50px;
   margin-top: -20px;
   background-repeat: no-repeat;
-    background-size: contain;
-
+  background-size: contain;
 }
 
 /*Barra*/
@@ -350,7 +349,7 @@ body {
   cursor: pointer;
 }
 
-.rangeAssessmentInput.rangeStatus--neutro::-moz-range-progress {
+.rangeAssessmentInput.rangeStatus--neutral::-moz-range-progress {
   background: #2ab63c;
   height: 10px;
   border-radius: 3rem;
@@ -389,7 +388,7 @@ body {
   width: 50px;
   margin-top: -20px;
   background-repeat: no-repeat;
-    background-size: contain;
+  background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--warning::-ms-thumb {
@@ -400,7 +399,7 @@ body {
   width: 50px;
   margin-top: -20px;
   background-repeat: no-repeat;
-    background-size: contain;
+  background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--atention::-ms-thumb {
@@ -411,10 +410,10 @@ body {
   width: 50px;
   margin-top: -20px;
   background-repeat: no-repeat;
-    background-size: contain;
+  background-size: contain;
 }
 
-.rangeAssessmentInput.rangeStatus--neutro::-ms-thumb {
+.rangeAssessmentInput.rangeStatus--neutral::-ms-thumb {
   background: url('../../assets/image/emojis/neutral.png');
   background-position: center;
   background-color: #fff;
@@ -422,7 +421,7 @@ body {
   width: 50px;
   margin-top: -20px;
   background-repeat: no-repeat;
-    background-size: contain;
+  background-size: contain;
 }
 
 .rangeAssessmentInput.rangeStatus--success::-ms-thumb {
@@ -433,7 +432,7 @@ body {
   width: 50px;
   margin-top: -20px;
   background-repeat: no-repeat;
-    background-size: contain;
+  background-size: contain;
 }
 
 /*Barra*/
@@ -477,7 +476,7 @@ body {
   cursor: pointer;
 }
 
-.rangeAssessmentInput.rangeStatus--neutro::-ms-fill-lower {
+.rangeAssessmentInput.rangeStatus--neutral::-ms-fill-lower {
   background: #2ab63c;
   height: 10px;
   border-radius: 3rem;
@@ -493,4 +492,40 @@ body {
   cursor: pointer;
 }
 
-/*********** teste ************/
+/*********************************** teste *********************************************/
+/*********************************** teste *********************************************/
+.btn-assessment {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+  background-color: #ffffff;
+  font-size: 20px;
+  border: 2px solid #79FF8B;
+  color: #79FF8B;
+
+}
+
+.btn-assessment:hover {
+  background-color: #ffffff;
+  font-size: 20px;
+  border: 2px solid #79FF8B;
+}
+
+.btn-assessment.rangeChoosen {
+  color: #fff;
+  background-color: #79FF8B;
+  border-color: none;
+  outline:mediumblue;
+}
+
+.btn-assessment.rangeChoosen:active {
+  color: #004aad;
+  border-color: #004aad;
+}
+
+.btn-assessment.rangeChoosen:focus {
+  background-color: #004aad;
+}
+
+
