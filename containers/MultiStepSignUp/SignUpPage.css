@@ -1,47 +1,41 @@
-/*custom font*/
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-
-body {
-  font-family: Poppins, arial, verdana;
-  margin-top: 90px;
-  margin-bottom: 50px;
-  background-image:  url('../../assets/image/background-login-plantyou.png');
-}
-
-.plataforma-logo2
-{
+.plataforma-logo2 {
     width: 20%;
     margin: auto;
 }
 
-/*form styles*/
-#msform {
-	width: 100%;
-	margin: 50px auto;
-	text-align: center;
-	position: relative;
- 	max-width: 700px;
+.signUpPage {
+  padding-top: 90px;
+  align-items: center;
+  background-image:  url('../../assets/image/background-login-plantyou.png');
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh);
+  justify-content: center;
 }
 
-#msform fieldset {
+/*form styles*/
+.signUpForm {
+	width: 100%;
+  margin: auto;
+ 	max-width: 600px;
+}
+
+.signUpForm fieldset {
 	background: white;
-	border: 0 none;
 	border-radius: 50px;
+	border: 0 none;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-	padding: 20px 30px;
 	box-sizing: border-box;
-	width: 80%;
-	margin: 0 10%;
-	margin-top: 30px;
 	margin-bottom: 5px;
+	margin-top: 30px;
+	padding: 20px;
 	
 /*stacking fieldsets above each other*/
 	position: relative;
 }
 
 /*inputs*/
-#msform input, #msform textarea {
+.signUpForm input, .signUpForm textarea {
 	padding: 15px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
@@ -53,7 +47,7 @@ body {
 	font-size: 13px;
 }
 /*buttons*/
-#msform .action-button {
+.signUpForm .action-button {
 	width: 100px;
 	background: #27AE60;
 	font-weight: bold;
@@ -64,8 +58,8 @@ body {
 	padding: 10px 5px;
 	margin: 10px 5px;
 }
-#msform .action-button:hover, 
-#msform .action-button:focus {
+.signUpForm .action-button:hover, 
+.signUpForm .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
 }
 /*headings*/

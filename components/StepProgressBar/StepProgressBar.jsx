@@ -1,5 +1,9 @@
 import React from 'react'
 
+import styles from './StepProgressBar.module.css'
+
+const {stepProgressBar, progressBarCompleted, progressBarStep} = styles
+
 const StepProgressBar = ({steps = 1, currentStep = 1}) => {
   const stepsList = Array.from(Array(steps), (_, x) => x)
   const stepBarWidth = 100 / (steps - 1)
@@ -8,9 +12,9 @@ const StepProgressBar = ({steps = 1, currentStep = 1}) => {
   )
 
   return (
-    <div className="step-progress-bar">
+    <div className={stepProgressBar}>
       <div
-        className="progress-bar-completed"
+        className={progressBarCompleted}
         style={{width: `${progressBarWidth}%`}}
       />
 
@@ -21,7 +25,7 @@ const StepProgressBar = ({steps = 1, currentStep = 1}) => {
 
         return (
           <div
-            className="progress-bar-step"
+            className={progressBarStep}
             data-accomplished={accomplished}
             data-current={isCurrent}
             key={`step-${step}`}

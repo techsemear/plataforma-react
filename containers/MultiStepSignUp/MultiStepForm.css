@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-.indexedStep 
-{
+.indexedStep {
   color: white;
   width: 20px;
   height: 20px;
@@ -29,44 +27,3 @@
   background-color:#004aad;
   color:#fff;
 }
-
-.select-class, 
-.select-escolaridade
-{
-  font-size: 10pt;
-  text-align: start;
-  margin-bottom: 5px;
-}
-||||||| parent of a613e23 (♻️ Refactor MultistepForm)
-=======
-.indexedStep 
-{
-  color: white;
-  width: 20px;
-  height: 20px;
-  font-size: 12px;
-  background-color: rgba(211, 211, 211, 0.8);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.indexedStep.accomplished {
-  background-color: rgba(0, 116, 217, 1);
-}
-
-
-.btn-signup{
-  color:#004aad;
-  background-color:#fff;
-  margin-bottom: 20px;
-  font-weight: 700;
-  margin-left: 10px;
-}
-
-.btn-signup:hover{
-  background-color:#004aad;
-  color:#fff;
-}
->>>>>>> a613e23 (♻️ Refactor MultistepForm)
