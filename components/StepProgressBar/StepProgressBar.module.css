@@ -1,0 +1,37 @@
+.stepProgressBar {
+	height: 13px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+}
+
+.progressBarStep {
+  align-items: center;
+  background-color: #A7B7BB;
+  border-radius: 50px;
+  color: white;
+  display: flex;
+  height: 25px;
+  justify-content: center;
+  width: 25px;
+  position: relative;
+}
+
+.progressBarStep[data-current="true"],
+.progressBarStep[data-accomplished="true"] {
+  background-color: #2977D0;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2)
+}
+
+.progressBarCompleted {
+  background: #2977D0;
+  border-radius: 20px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+}

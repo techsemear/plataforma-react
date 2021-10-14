@@ -319,43 +319,45 @@ const MultiStepForm = () => {
   }
 
   return (
-    <form id="msform" onSubmit={handleSubmit}>
-      <StepProgressBar steps={steps.length} currentStep={currentStep} />
+    <div className="signUpPage">
+      <form className="signUpForm" onSubmit={handleSubmit}>
+        <StepProgressBar steps={steps.length} currentStep={currentStep} />
 
-      {createElement(stepView, {
-        fields,
-        handleChange,
-        handleSelectChange,
-      })}
+        {createElement(stepView, {
+          fields,
+          handleChange,
+          handleSelectChange,
+        })}
 
-      <div className="btn-container">
-        {stepIndex > 0 && (
-          <button
-            className="btn-signup"
-            color="primary float-right"
-            onClick={onClickPreviousStep}
-          >
-            Anterior
-          </button>
-        )}
+        <div className="btn-container">
+          {stepIndex > 0 && (
+            <button
+              className="btn-signup"
+              color="primary float-right"
+              onClick={onClickPreviousStep}
+            >
+              Anterior
+            </button>
+          )}
 
-        {stepIndex < steps.length - 1 && (
-          <button
-            className="btn-signup"
-            color="primary float-right"
-            onClick={onClickNextStep}
-          >
-            Próximo
-          </button>
-        )}
+          {stepIndex < steps.length - 1 && (
+            <button
+              className="btn-signup"
+              color="primary float-right"
+              onClick={onClickNextStep}
+            >
+              Próximo
+            </button>
+          )}
 
-        {stepIndex === steps.length - 1 && (
-          <button className="btn-signup" color="primary float-right">
-            Enviar
-          </button>
-        )}
-      </div>
-    </form>
+          {stepIndex === steps.length - 1 && (
+            <button className="btn-signup" color="primary float-right">
+              Enviar
+            </button>
+          )}
+        </div>
+      </form>
+    </div>
   )
 }
 
