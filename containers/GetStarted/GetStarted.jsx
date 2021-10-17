@@ -47,6 +47,7 @@ export default function GetStarted() {
                       size="large"
                       href="/assessment"
                       class="centerButton"
+                      hoverScale="true"
                     >
                       Quero Preencher Agora!
                     </Button>
