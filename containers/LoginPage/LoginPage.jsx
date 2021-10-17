@@ -72,11 +72,14 @@ export default function LoginPage() {
                     />
                     <label>Senha</label>
                   </div>
-                  <input
+                  <Button
+                    size="compact"
+                    bgColor="secondary"
+                    class="signInBtn w-100"
                     type="submit"
-                    defaultValue="Sign In"
-                    className="sign-btn"
-                  />
+                  >
+                    Entrar
+                  </Button>
                   <div className="sign-with">
                     <Heading
                       level="h6"
@@ -84,17 +87,39 @@ export default function LoginPage() {
                       horizontalPosition="center"
                       className="login-with"
                     >
-                      Login With
+                      Entre com
                     </Heading>
                     <div className="sign-with-btn">
-                      <a href="#" className="btn-face">
-                        <Image src={facebookLogo} alt="FACEBOOK" />
+                      <Button
+                        size="compact"
+                        bgColor="minimal"
+                        href="#"
+                        class="btn-face"
+                      >
+                        <Image
+                          src={facebookLogo}
+                          alt="FACEBOOK"
+                          className="iconLogin"
+                          width={18}
+                          height={18}
+                        />
                         Facebook
-                      </a>
-                      <a href="#" className="btn-google">
-                        <Image src={googleLogo} alt="GOOGLE" />
+                      </Button>
+                      <Button
+                        size="compact"
+                        bgColor="minimal"
+                        href="#"
+                        class="btn-google"
+                      >
+                        <Image
+                          src={googleLogo}
+                          alt="GOOGLE"
+                          className="iconLogin"
+                          width={18}
+                          height={18}
+                        />
                         Google
-                      </a>
+                      </Button>
                     </div>
                   </div>
                   <p className="text">

@@ -59,7 +59,6 @@ export default function Button(props) {
     </Link>
   ) : (
     <React.Fragment>
-      {console.log(props.children, scaleButton)}
       <button
         className={`${styles.btn} ${bgButton} ${sizeButton} ${shapeButton} ${scaleButton} ${classButton}`}
         onClick={props.onClick}
