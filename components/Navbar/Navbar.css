@@ -381,8 +381,8 @@
   @media (min-width: 992px) {
     .site-menu-main .sub-menu {
       top: 100%;
-      min-width: 227px;
-      max-width: 227px;
+      min-width: 210px;
+      max-width: 210px;
     }
   }
   
