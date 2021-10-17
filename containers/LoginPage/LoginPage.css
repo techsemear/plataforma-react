@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 *,
 *::before,
@@ -10,11 +10,11 @@
 
 body,
 input {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .login-main {
-  margin-top: 90px;
+  margin-top: 0;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
@@ -25,10 +25,10 @@ input {
   justify-content: center;
 }
 
-.plataforma-logo
-{
-    width: 60%;
-    margin: auto;
+.plataforma-logo {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .box {
@@ -45,7 +45,7 @@ input {
 .inner-box {
   position: absolute;
   width: calc(100% - 4.1rem);
-  height: calc(100% - 4.1rem);
+  height: calc(100% - 3rem);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -85,7 +85,6 @@ form.sign-up-form {
   display: flex;
   align-items: center;
 }
-
 
 .logo h4 {
   font-size: 1.1rem;
@@ -169,26 +168,26 @@ label {
   cursor: pointer;
   border-radius: 0.8rem;
   font-size: 0.8rem;
-  margin-bottom: 2rem;
-  font-family: "Poppins", sans-serif;
+  margin-bottom: 10rem;
+  font-family: 'Poppins', sans-serif;
   transition: 0.3s;
 }
 
 .sign-btn:hover {
-  background-color: #18185C;
-  color:#7FFF70;
+  background-color: #18185c;
+  color: #7fff70;
 }
 
 .text {
   color: #bbb;
   font-size: 0.7rem;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .text a {
   color: #bbb;
   transition: 0.3s;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .text a:hover {
@@ -413,23 +412,18 @@ main.sign-up-mode .carousel {
   }
 }
 
-.sign-with
-{
+.sign-with {
   align-items: center;
   justify-content: space-around;
   margin-top: 10px;
 }
-.login-with
-{
-  font-size: 12pt;
-  color: #bbb;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
+
+.sign-with h6 {
+  margin-bottom: 0;
 }
-.sign-with-btn
-{
-  display:flex;
+
+.sign-with-btn {
+  display: flex;
   font-size: 12px;
   font-weight: 400;
   font-family: Poppins-Regular;
@@ -437,8 +431,8 @@ main.sign-up-mode .carousel {
   align-items: center;
 }
 
-@media (max-width:430px){
-  .sign-with-btn{
+@media (max-width: 430px) {
+  .sign-with-btn {
     flex-direction: column;
   }
 }
@@ -453,7 +447,7 @@ main.sign-up-mode .carousel {
   display: flex;
   justify-content: center;
   align-content: center;
-  vertical-align:middle;
+  vertical-align: middle;
   width: calc((100%) / 2);
   box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
@@ -470,7 +464,7 @@ main.sign-up-mode .carousel {
 
 .btn-google::before,
 .btn-face::before {
-  content: "";
+  content: '';
   display: flex;
   position: absolute;
   z-index: -1;
@@ -479,10 +473,10 @@ main.sign-up-mode .carousel {
   top: 0;
   left: 0;
   background: #a64bf4;
-  background: -webkit-linear-gradient(45deg, #18185C, #7FFF70);
-  background: -o-linear-gradient(45deg, #18185C, #7FFF70);
-  background: -moz-linear-gradient(45deg, #18185C, #7FFF70);
-  background: linear-gradient(45deg, #18185C, #7FFF70);
+  background: -webkit-linear-gradient(45deg, #18185c, #7fff70);
+  background: -o-linear-gradient(45deg, #18185c, #7fff70);
+  background: -moz-linear-gradient(45deg, #18185c, #7fff70);
+  background: linear-gradient(45deg, #18185c, #7fff70);
   opacity: 0;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -490,9 +484,9 @@ main.sign-up-mode .carousel {
   transition: all 0.4s;
 }
 
-@media (max-width:430px){
+@media (max-width: 430px) {
   .btn-face,
-  .btn-google{
+  .btn-google {
     width: 100%;
   }
 }
@@ -500,14 +494,12 @@ main.sign-up-mode .carousel {
 .btn-face {
   color: #fff !important;
   background-color: #3b5998 !important;
- 
 }
 
 .btn-google {
   color: #000 !important;
   background-color: #fff !important;
 }
-
 
 .btn-face:hover:before,
 .btn-google:hover:before {
@@ -519,16 +511,16 @@ main.sign-up-mode .carousel {
   color: #fff !important;
 }
 
-.slider{
+.slider {
   margin-left: 50%;
   margin-top: 20px;
 }
 
-@media (max-width: 845px){
-.slider{
-  margin-left: 2%;
-  margin-top: 20px;
-}
+@media (max-width: 845px) {
+  .slider {
+    margin-left: 2%;
+    margin-top: 20px;
+  }
 }
 
 .signInBtn {

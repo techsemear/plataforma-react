@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/dist/client/image'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import {Heading} from '../../components/Heading'
@@ -37,7 +37,7 @@ export default function LoginPage() {
               className="sign-in-form"
             >
               <div className="plataforma-logo">
-                <Image src={plataformaLogo} width={550} height={550} alt="" />
+                <Image src={plataformaLogo} alt="logo" layout="responsive"/>
               </div>
               <div className="actual-form">
                 <div className="heading">
@@ -142,7 +142,7 @@ export default function LoginPage() {
               ftColor="default"
               horizontalPosition="center"
             >
-              Faça parte dessa jornada !
+              Faça parte dessa jornada!
             </Heading>
           </div>
         </div>
