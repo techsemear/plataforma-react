@@ -15,7 +15,6 @@ import '../assets/fonts/icon-font/css/style.css'
 import '../assets/fonts/typography-font/typo.css'
 
 // Components
-import '../components/Button/Button.css'
 import '../components/Card/Card.css'
 import '../components/Heading/Heading.css'
 import '../components/ItemsSection/ItemsSection.css'

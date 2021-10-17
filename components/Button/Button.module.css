@@ -9,6 +9,11 @@
   overflow: hidden;
 }
 
+.btn:focus {
+  box-shadow: 0 0 0 0.1rem rgb(23 135 252 / 25%);
+  outline: none;
+}
+
 .btnScale:hover {
   transform: scale(1.05);
 }
@@ -44,7 +49,7 @@
 }
 
 .bgSecond:hover {
-  background-color: #11115d;
+  background-color: #0460da;
   color: #fff;
 }
 
@@ -123,4 +128,20 @@
   width: 58px;
   height: 58px;
   padding: 1px;
+}
+
+/*
+* Button Alignment
+*/
+
+.btnStart {
+  align: left !important;
+}
+
+.btnEnd {
+  align: right !important;
+}
+
+.btnCenter {
+  align: center !important;
 }

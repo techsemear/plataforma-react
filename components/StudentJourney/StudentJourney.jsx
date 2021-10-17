@@ -42,8 +42,8 @@ export default function StudentJourney() {
                     se tornar protagonista da sua própria carreira.
                   </strong>
                 </p>
-                <div className="l1-get-start-btn">
-                  <Button href="subscribe">Inscreva-se</Button>
+                <div className="l1-get-start-btn centerButton">
+                  <Button href="#subscribe">Inscreva-se</Button>
                 </div>
                 <p>
                   Com a rede de contatos do ISemear, contamos com apoio de{' '}

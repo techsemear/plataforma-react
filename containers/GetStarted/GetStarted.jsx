@@ -3,6 +3,7 @@ import {Fragment} from 'react'
 
 import {Heading} from '../../components/Heading'
 import {Wave} from '../../components/Wave'
+import {Button} from '../../components/Button'
 
 import blurImage from '../../assets/image/landing-1/h1-cta-blur-shape-2.png'
 import rocket from '../../assets/image/landing-1/h1-cta-rocket-image.png'
@@ -32,7 +33,8 @@ export default function GetStarted() {
                     ftColor="primary"
                     horizontalPosition="center"
                   >
-                    Você pode preencher a Roda da Trilha ao acessar seu <a>perfil pessoal</a> ou através do botão abaixo
+                    Você pode preencher a Roda da Trilha ao acessar seu{' '}
+                    <a>perfil pessoal</a> ou através do botão abaixo
                   </Heading>
                   <Heading
                     level="h2"
@@ -41,11 +43,13 @@ export default function GetStarted() {
                   >
                     Comece sua jornada aqui com a gente!
                   </Heading>
-                </div>
-                <div className="btn-area d-flex justify-content-center">
-                  <a href="#" className="btn">
-                    Quero Preencher Agora!
-                  </a>
+                    <Button
+                      size="large"
+                      href="/assessment"
+                      class="centerButton"
+                    >
+                      Quero Preencher Agora!
+                    </Button>
                 </div>
               </div>
             </div>

@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 import {Heading} from '../../components/Heading'
 import {SlideShow} from '../../components/SlideShow'
+import {Button} from '../../components/Button'
 
 import plataformaLogo from '../../assets/image/logo-semear.png'
 import facebookLogo from '../../assets/image/facebook-logo2.png'
@@ -40,12 +41,13 @@ export default function LoginPage() {
               </div>
               <div className="actual-form">
                 <div className="heading">
-                  <Heading level="h2">Bem-vindo</Heading>
+                  <Heading level="h2" horizontalPosition="center">
+                    Bem-vindo
+                  </Heading>
                   <Heading level="h6">
                     Ainda não se registrou?
                     <a href="/signup" className="toggle">
-                      {' '}
-                      Entre aqui
+                      {' Entre aqui'}
                     </a>
                   </Heading>
                 </div>

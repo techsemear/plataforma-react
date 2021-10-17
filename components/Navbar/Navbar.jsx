@@ -1,6 +1,6 @@
 import {NavbarItems} from './NavbarItems'
 import {LogoSemear} from '../../components/Logo'
-import {LoginButton} from '../../components/Button'
+import {Button} from '../../components/Button'
 
 const backgroundClasses = {
   default: 'bg-default',
@@ -23,7 +23,11 @@ export default function Navbar({
         <div className="container-fluid">
           <LogoSemear />
           <NavbarItems items={contentInfo} />
-          {btnInfo.label ? <LoginButton> {btnInfo.label} </LoginButton> : null}
+          {btnInfo.label && (
+            <Button size="compact" bgColor="secondary" href="/login">
+              {btnInfo.label}
+            </Button>
+          )}
           {/* mobile menu trigger */}
           <div className="mobile-menu-trigger">
             <span />

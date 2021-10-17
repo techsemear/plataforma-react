@@ -119,3 +119,9 @@
     right: 20%;
   }
 }
+
+.centerButton {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}

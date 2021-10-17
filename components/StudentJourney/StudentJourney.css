@@ -84,7 +84,7 @@
 .l1-get-start-btn .btn {
   width: 100%;
   border-radius: 20px;
-  background-color: #FF7139;
+  background-color: #ff7139;
   color: #fff;
   font-size: 17px;
   font-weight: 400;
@@ -145,4 +145,10 @@
     font-size: 26px;
     line-height: 40px;
   }
+}
+
+.centerButton {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
 }

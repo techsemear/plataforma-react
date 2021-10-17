@@ -3,6 +3,8 @@
 // Email Cadastrado com Sucesso !
 import {Fragment} from 'react'
 
+import {Button} from '../Button'
+
 export function CustomForm({status, message, onValidated}) {
   let email, name
 
@@ -38,14 +40,12 @@ export function CustomForm({status, message, onValidated}) {
               />
             )}
 
-
             <input
               className="form-control"
               ref={(node) => (name = node)}
               type="text"
               placeholder="Nome"
             />
-
 
             <input
               className="form-control"
@@ -56,18 +56,18 @@ export function CustomForm({status, message, onValidated}) {
             />
           </Fragment>
         )}
-
-        <button
-          className={`btn w-100 submitButton ${
+        <Button
+          class={`btn w-100 submitButton ${
             status === 'success' ? 'submitButton--success' : ''
           }`}
           onClick={submit}
+          hoverScale="true"
         >
           {status === 'sending' && 'Enviando...'}
           {status !== 'success' && status !== 'sending'
             ? 'Inscreva-se'
             : message}
-        </button>
+        </Button>
       </div>
     </div>
   )

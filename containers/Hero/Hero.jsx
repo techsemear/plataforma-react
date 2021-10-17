@@ -35,7 +35,9 @@ export default function Hero() {
                 <Heading level="h6" ftColor="primary">
                   <strong> {content.subtitle} </strong>
                 </Heading>
-                <Button href="#subscribe">Inscreva-se</Button>
+                <div className="centerButton">
+                  <Button href="#subscribe">Inscreva-se</Button>
+                </div>
               </div>
             </div>
 
@@ -69,7 +71,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <Wave direction="up" color = '#11115d'bgColor = '#fff' />
+      <Wave direction="up" color="#11115d" bgColor="#fff" />
     </Fragment>
   )
 }
