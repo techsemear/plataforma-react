@@ -152,9 +152,11 @@
   }
 }
 
-.centerButton {
-  margin: auto;
-  width: 60%;
-  padding: 10px;
+.heroButtonContent{
+  width: 50%;
+}
+
+.heroButton {
+  margin-left: 0 !important;
 }
 

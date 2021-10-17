@@ -57,7 +57,7 @@ export function CustomForm({status, message, onValidated}) {
           </Fragment>
         )}
         <Button
-          class={`btn w-100 submitButton ${
+          class={`w-100 submitButton ${
             status === 'success' ? 'submitButton--success' : ''
           }`}
           onClick={submit}

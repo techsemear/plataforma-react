@@ -35,8 +35,8 @@ export default function Hero() {
                 <Heading level="h6" ftColor="primary">
                   <strong> {content.subtitle} </strong>
                 </Heading>
-                <div className="centerButton">
-                  <Button href="#subscribe">Inscreva-se</Button>
+                <div className="heroButtonContent">
+                  <Button href="#subscribe" class="w-100 heroButton">Inscreva-se</Button>
                 </div>
               </div>
             </div>
