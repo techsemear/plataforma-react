@@ -40,5 +40,6 @@ button {
 }
 button:hover {
   background-color: #ff7139;
-  transform: scale(1.1);
 }
+
+

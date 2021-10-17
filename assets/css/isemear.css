@@ -48,17 +48,12 @@ body {
   background-color: #ababac;
 }
 
-
 .bg-mint {
   background-color: #8aec82;
 }
 
 .bg-secondBlue {
   background-color: #004aad;
-}
-
-.bg-grey1 {
-  background-color: #ababac;
 }
 
 
@@ -77,4 +72,20 @@ body {
 
 .button-center {
   align: center !important;
+}
+
+/*
+* Text Color
+*/
+
+.ft-default {
+  color:#11115d;
+}
+
+.ft-primary {
+  color:#FFF;
+}
+
+.ft-secondary {
+  color: #004aad;
 }
