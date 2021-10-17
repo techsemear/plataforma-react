@@ -1,35 +1,8 @@
-import React from 'react'
-import Image from 'next/image'
+import React, {Fragment} from 'react'
 
-import {Heading} from '../../components/Heading'
-
-import plataformaLogo from '../../assets/image/logo-semear.png'
-
-const Step1 = ({handleChange, fields}) => {
+const Step1Form = ({handleChange, fields}) => {
   return (
-    <fieldset>
-      <div className="plataforma-logo2">
-        <Image src={plataformaLogo} alt="" />
-      </div>
-
-      <Heading
-        level="h3"
-        horizontalPosition="center"
-        ftColor="quinary"
-        className="fs-title"
-      >
-        Crie sua Conta🌱
-      </Heading>
-
-      <Heading
-        level="h6"
-        horizontalPosition="center"
-        ftColor="quinary"
-        className="fs-subtitle"
-      >
-        Passo 1
-      </Heading>
-
+    <Fragment>
       <input
         type="text"
         name="email"
@@ -69,8 +42,8 @@ const Step1 = ({handleChange, fields}) => {
         value={fields.passwordConfirmation}
         onChange={handleChange}
       />
-    </fieldset>
+    </Fragment>
   )
 }
 
-export default Step1
+export default Step1Form

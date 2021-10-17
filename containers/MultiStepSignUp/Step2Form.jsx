@@ -1,10 +1,9 @@
-import React from 'react'
-import Image from 'next/image'
+import React, {Fragment} from 'react'
 import Select from 'react-select'
 
 import {Heading} from '../../components/Heading'
 
-import plataformaLogo from '../../assets/image/logo-semear.png'
+import styles from './MultiStepSignUp.module.css'
 
 const escolaridade = [
   {value: 'Fundamental - Incompleto', label: 'Fundamental - Incompleto'},
@@ -26,39 +25,12 @@ const classes = [
   {value: 'Sou um Mentor', label: 'Sou um Mentor'},
 ]
 
-const Step2 = ({handleChange, handleSelectChange, fields}) => {
-  console.log(fields)
-
+const Step2Form = ({handleChange, handleSelectChange, fields}) => {
   return (
-    <fieldset>
-      <div className="plataforma-logo2">
-        <Image src={plataformaLogo} alt="" />
-      </div>
-
-      <Heading
-        level="h4"
-        horizontalPosition="center"
-        ftColor="quinary"
-        className="fs-title"
-      >
-        Identificação e Contato
-      </Heading>
-
-      <Heading
-        level="h6"
-        horizontalPosition="center"
-        ftColor="quinary"
-        className="fs-subtitle"
-      >
-        Passo 2
-      </Heading>
-
-      <Heading level="h6" className="label-picture">
-        Nível de Escolaridade:
-      </Heading>
+    <Fragment>
+      <Heading level="h6">Nível de Escolaridade:</Heading>
 
       <Select
-        className="select-escolaridade"
         defaultValue={fields.schooling}
         name="schooling"
         onChange={handleSelectChange}
@@ -71,13 +43,12 @@ const Step2 = ({handleChange, handleSelectChange, fields}) => {
         level="h6"
         horizontalPosition="start"
         ftColor="default"
-        className="fs-subtitle"
+        className={styles.subtitle}
       >
         Classificação:
       </Heading>
 
       <Select
-        className="select-class"
         defaultValue={fields.classes}
         name="classes"
         onChange={handleSelectChange}
@@ -90,7 +61,7 @@ const Step2 = ({handleChange, handleSelectChange, fields}) => {
         level="h6"
         horizontalPosition="start"
         ftColor="default"
-        className="fs-subtitle"
+        className={styles.subtitle}
       >
         Digite seu cpf:
       </Heading>
@@ -118,8 +89,8 @@ const Step2 = ({handleChange, handleSelectChange, fields}) => {
         value={fields.cpf}
         onChange={handleChange}
       />
-    </fieldset>
+    </Fragment>
   )
 }
 
-export default Step2
+export default Step2Form

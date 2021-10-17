@@ -1,6 +1,6 @@
-.plataforma-logo2 {
-    width: 20%;
-    margin: auto;
+.logo {
+  width: 20%;
+  margin: auto;
 }
 
 .signUpPage {
@@ -46,6 +46,7 @@
 	color: #2C3E50;
 	font-size: 13px;
 }
+
 /*buttons*/
 .signUpForm .action-button {
 	width: 100px;
@@ -58,23 +59,71 @@
 	padding: 10px 5px;
 	margin: 10px 5px;
 }
+
 .signUpForm .action-button:hover, 
 .signUpForm .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
 }
+
 /*headings*/
-.fs-title {
+.title {
 	font-size: 15px;
 	text-transform: uppercase;
 	color: #2C3E50;
 	margin-bottom: 10px;
 }
-.fs-subtitle {
+
+.subtitle {
 	font-weight: normal;
 	font-size: 13px;
 	color: #666;
 	margin-bottom: 20px;
 }
 
+.indexedStep {
+  color: white;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  background-color: rgba(211, 211, 211, 0.8);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.indexedStep.accomplished {
+  background-color: rgba(0, 116, 217, 1);
+}
+
+
+.btnSignup {
+  cursor: pointer;
+  background-color:#fff;
+  color:#004aad;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.btnSignup:hover {
+  background-color:#004aad;
+  color:#fff;
+}
+
+.btnSignup:disabled {
+  opacity: 0.7;
+}
+
+.btnSignup:disabled:hover {
+  transform: scale(1);
+  opacity: 0.7;
+  background-color:#fff;
+  color:#004aad;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  cursor: not-allowed;
+}
 
 

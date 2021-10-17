@@ -1,44 +1,43 @@
 import React, {createElement, useReducer} from 'react'
+import styles from './MultiStepSignUp.module.css'
 
 import {StepProgressBar} from '../../components/StepProgressBar'
-import Step1 from './Step1'
-import Step2 from './Step2'
-import Step3 from './Step3'
+import StepTemplate from './StepTemplate'
+import Step1Form from './Step1Form'
+import Step2Form from './Step2Form'
 
-const views = {
-  step1: Step1,
-  step2: Step2,
-}
+console.log(styles)
 
 const initialState = {
   currentStep: 1,
   steps: [
     {
-      email: '',
-      password: '',
-      passwordConfirmation: '',
-      name: '',
-      username: '',
-      view: 'step1',
+      fields: {
+        email: '',
+        password: '',
+        passwordConfirmation: '',
+        name: '',
+        username: '',
+      },
+      title: 'Crie sua Conta🌱',
+      subtitle: 'Passo 1',
+      view: Step1Form,
       completed: false,
+      disabled: true,
     },
     {
-      birthday: '',
-      classes: '',
-      cpf: '',
-      schooling: '',
-      phone: '',
-      view: 'step2',
+      fields: {
+        birthday: '',
+        classes: '',
+        cpf: '',
+        schooling: '',
+        phone: '',
+      },
+      title: 'Identificação e Contato',
+      subtitle: 'Passo 2',
+      view: Step2Form,
       completed: false,
-    },
-    {
-      birthday: '',
-      classes: '',
-      cpf: '',
-      schooling: '',
-      phone: '',
-      view: 'step2',
-      completed: false,
+      disabled: true,
     },
   ],
 }
@@ -62,10 +61,19 @@ const multistepSate = (state, action) => {
     case 'UPDATE_FIELD': {
       const {name, value, stepIndex} = action.payload
       const steps = state.steps.map((step, index) => {
+        const fields = {
+          ...step.fields,
+          [name]: value,
+        }
+
+        const isEmpty = Object.keys(fields).some((key) => fields[key] === '')
+
         if (index === stepIndex) {
           return {
             ...step,
-            [name]: value,
+            fields,
+            completed: !isEmpty,
+            disabled: isEmpty,
           }
         }
 
@@ -92,8 +100,9 @@ const MultiStepForm = () => {
   const [state, dispatch] = useReducer(multistepSate, initialState)
   const {currentStep, steps} = state
   const stepIndex = currentStep - 1
-  const fields = steps[stepIndex]
-  const stepView = views[steps[stepIndex].view]
+  const fields = steps[stepIndex].fields
+  const stepView = steps[stepIndex].view
+  const currentStepData = steps[stepIndex]
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -140,32 +149,35 @@ const MultiStepForm = () => {
     })
   }
 
+  console.log({currentStepData})
+
   return (
-    <div className="signUpPage">
-      <form className="signUpForm" onSubmit={handleSubmit}>
+    <div className={styles.signUpPage}>
+      <form className={styles.signUpForm} onSubmit={handleSubmit}>
         <StepProgressBar steps={steps.length} currentStep={currentStep} />
 
-        {createElement(stepView, {
-          fields,
-          handleChange,
-          handleSelectChange,
-        })}
+        <StepTemplate
+          title={currentStepData.title}
+          subtitle={currentStepData.subtitle}
+        >
+          {createElement(stepView, {
+            fields,
+            handleChange,
+            handleSelectChange,
+          })}
+        </StepTemplate>
 
-        <div className="btn-container">
+        <div className={styles.btnContainer}>
           {stepIndex > 0 && (
-            <button
-              className="btn-signup"
-              color="primary float-right"
-              onClick={onClickPreviousStep}
-            >
+            <button className={styles.btnSignup} onClick={onClickPreviousStep}>
               Anterior
             </button>
           )}
 
           {stepIndex < steps.length - 1 && (
             <button
-              className="btn-signup"
-              color="primary float-right"
+              disabled={currentStepData.disabled}
+              className={styles.btnSignup}
               onClick={onClickNextStep}
             >
               Próximo
@@ -173,9 +185,7 @@ const MultiStepForm = () => {
           )}
 
           {stepIndex === steps.length - 1 && (
-            <button className="btn-signup" color="primary float-right">
-              Enviar
-            </button>
+            <button className={styles.btnSignup}>Enviar</button>
           )}
         </div>
       </form>
