@@ -22,7 +22,7 @@ export default function Subscribe() {
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="section__heading text-center">
-              <Heading horizontalPosition="center">Gostou da Nossa proposta ?</Heading >
+              <Heading horizontalPosition="center">Gostou da nossa proposta ?</Heading >
               <p>
                 Estamos trabalhando para trazer para vocês a melhor e mais amada
                 plataforma de mentoria do Brasil, se você tem interesse em ser

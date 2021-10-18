@@ -10,7 +10,7 @@ import headerBackgroundImage from '../../assets/image/background-header.png'
 
 const content = {
   title: 'As conexões que mudarão o seu futuro!',
-  subtitle: 'Conecte-se a nova era de aprendizado !',
+  subtitle: 'Conecte-se a nova era de aprendizado!',
   text: 'A plataforma desenvolvida para mentores e jovens universitários protagonistas que juntos buscam aprimorar suas habilidades profissionais e alcançar seus sonhos.',
 }
 
@@ -32,7 +32,7 @@ export default function Hero() {
               <div className="content">
                 <Heading ftColor="tertiary"> {content.title} </Heading>
                 <p>{content.text}</p>
-                <Heading level="h6" ftColor="primary">
+                <Heading level="h5" ftColor="primary">
                   <strong> {content.subtitle} </strong>
                 </Heading>
                 <div className="heroButtonContent">
