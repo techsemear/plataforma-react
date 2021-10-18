@@ -32,13 +32,13 @@ export default function HeaderNavigation({
       <nav className="navbar site-navbar">
         <div className="container-fluid">
           <div className="brandLogo">
-            <Link href="#">
+            <a href="/">
               <Image
                 src={semearLogo}
                 alt="Instituto Semear"
                 objectFit="contain"
               />
-            </Link>
+            </a>
           </div>
           <div className={positionClasses[navItemsPosition]}>
             <NavbarItems items={contentInfo} />

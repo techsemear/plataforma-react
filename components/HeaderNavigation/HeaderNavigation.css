@@ -930,3 +930,7 @@ li.sub-menu--item.nav-item-has-children i {
 .navItemsCenter {
   margin: auto;
 }
+
+.brandLogo {
+  cursor: pointer;
+}
