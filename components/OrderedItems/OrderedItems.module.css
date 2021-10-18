@@ -25,7 +25,6 @@
   line-height: 66px;
   box-shadow: 0 5px 0 rgba(23, 135, 252, 0.65);
   border-radius: 20px;
-  background-color: #1787fc;
   text-align: center;
 }
 
@@ -47,45 +46,34 @@
   background-color: #7fff70;
 }
 
-.textColorDefault, 
-.textColorPrimary {
+.numberContentBox .numberSecondary {
+  box-shadow: 0 5px 0 rgb(0, 0, 201)0da;
+  background-color: #0460da;
+}
+
+
+.contentText {
   margin-left: 20px;
 }
 
-.textColorPrimary p {
+.contentText p {
+  text-align: left;
+  font-size: 17px;
+  line-height: 28px;
   opacity: 0.8;
   font-family: Poppins;
   font-style: normal;
   letter-spacing: normal;
-  color: #fff;
-  text-align: left;
-  font-size: 17px;
-  line-height: 28px;
-}
-
-.textColorPrimary h2 {
-  color: #fff;
-}
-
-.textColorPrimary h4 {
-  color: rgba(135, 160, 170, 0.7);
 }
 
 .textColorDefault p {
   color: #213053;
-  text-align: left;
-  font-size: 17px;
-  line-height: 28px;
-    opacity: 0.8;
-  font-family: Poppins;
-  font-style: normal;
-  letter-spacing: normal;
 }
 
-.textColorDefault h2 {
-  color: #213053;
+.textColorPrimary p {
+  color: #fff;
 }
 
-.textColorDefault h4 {
-  color: #6b6b6b;
+.textColorSecondary p {
+  color: black;
 }

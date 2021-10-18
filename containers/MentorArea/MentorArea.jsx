@@ -1,8 +1,10 @@
 import Image from 'next/image'
 
 import {Testimonial} from '../Testimonial'
-import {ItemsSection} from '../../components/ItemsSection'
+import {ItemsSection, OrderedItems} from '../../components/OrderedItems'
 import {Section} from '../../components/Section'
+import {Heading} from '../../components/Heading'
+import {Underline} from '../../components/Underline'
 
 import mentorImage from '../../assets/image/mentor1.png'
 import imageProfile1 from '../../assets/image/landing-1/mentor1.png'
@@ -10,8 +12,8 @@ import imageProfile2 from '../../assets/image/landing-1/mentor2.png'
 import imageProfile3 from '../../assets/image/landing-1/mentor3.png'
 
 const content = {
-  title: 'Mentores da Rede Semear',
-  journey: 'Jornada do Mentor',
+  title: ['O que posso descobrir nessa jornada?', 'Mentores da Rede Semear'],
+  subtitle: 'Jornada do Mentor',
 }
 
 const personas = [
@@ -73,14 +75,23 @@ export default function MentorArea() {
                 </div>
               </div>
             </div>
-            <ItemsSection itemsText={itemsText} title="O que posso descobrir nessa jornada?">
-              {content.journey}
-            </ItemsSection>
+            <div
+              className="offset-xxl-1 col-xxl-4 col-xl-5 col-lg-6 col-md-10"
+              data-aos="fade-up"
+              data-aos-delay={500}
+              data-aos-duration={1000}
+            >
+              <div>
+                <Heading>{content.title[0]}</Heading>
+                <Underline level="h4" ftColor="secondary">{content.subtitle}</Underline>
+              </div>
+              <OrderedItems itemsTextList={itemsText} textColor="secondary" />
+            </div>
           </div>
         </div>
       </div>
       <Section id="testemunho-mentor" bgColor="secondary">
-        <Testimonial personas={personas}>{content.title}</Testimonial>
+        <Testimonial personas={personas}>{content.title[1]}</Testimonial>
       </Section>
     </div>
   )

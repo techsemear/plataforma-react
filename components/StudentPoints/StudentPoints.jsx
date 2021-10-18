@@ -1,13 +1,18 @@
 import React from 'react'
 import Image from 'next/image'
 
-import {ItemsSection} from '../ItemsSection'
 import {Section} from '../Section'
+import {OrderedItems} from '../OrderedItems'
+import { Heading } from '../Heading'
+import { Underline } from '../Underline'
 
 import studentImage from '../../assets/image/footer.png'
 import globeImage from '../../assets/image/landing-1/h1-content-2-globe.png'
 
-const journey = 'Jornada do Jovem'
+const content = {
+  title : 'O que posso aprender nessa jornada?',
+  subtitle : 'Jornada do Jovem',
+}
 
 export default function StudentPoints({itemsText}) {
   return (
@@ -15,14 +20,20 @@ export default function StudentPoints({itemsText}) {
       <div className="content-area-2-l1" id="jornada-jovem">
         <div className="container">
           <div className="row justify-content-center align-items-center">
-            <ItemsSection
-              itemsText={itemsText}
-              kindColor='primary'
-              title="O que posso descobrir nessa jornada?"
+            <div
+              className="offset-xxl-1 col-xxl-4 col-xl-5 col-lg-6 col-md-10"
+              data-aos="fade-up"
+              data-aos-delay={500}
+              data-aos-duration={1000}
             >
-              {journey}
-            </ItemsSection>
-
+              <div>
+                <Heading ftColor="primary">{content.title}</Heading>
+                <Underline level="h4" ftColor="quartenary">
+                  {content.subtitle}
+                </Underline>
+              </div>
+              <OrderedItems itemsTextList={itemsText} boxColor="primary" textColor="primary" />
+            </div>
             <div className="offset-xxl-1 col-xxl-5 offset-xl-1 col-xl-5 col-lg-6 col-md-10">
               <div
                 className="content-2-l1-image-group"
