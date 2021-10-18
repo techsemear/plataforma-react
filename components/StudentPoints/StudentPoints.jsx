@@ -8,7 +8,6 @@ import studentImage from '../../assets/image/footer.png'
 import globeImage from '../../assets/image/landing-1/h1-content-2-globe.png'
 
 const journey = 'Jornada do Jovem'
-const themeDark = true
 
 export default function StudentPoints({itemsText}) {
   return (
@@ -16,7 +15,11 @@ export default function StudentPoints({itemsText}) {
       <div className="content-area-2-l1" id="jornada-jovem">
         <div className="container">
           <div className="row justify-content-center align-items-center">
-            <ItemsSection itemsText={itemsText} dark={themeDark}>
+            <ItemsSection
+              itemsText={itemsText}
+              kindColor='primary'
+              title="O que posso descobrir nessa jornada?"
+            >
               {journey}
             </ItemsSection>
 

@@ -22,7 +22,9 @@ export default function Navbar({
       <nav className="navbar site-navbar">
         <div className="container-fluid">
           <LogoSemear />
-          <NavbarItems items={contentInfo} />
+          <div className="centerPosition">
+            <NavbarItems items={contentInfo} />
+          </div>
           {btnInfo.label && (
             <Button size="compact" bgColor="secondary" href="/login">
               {btnInfo.label}

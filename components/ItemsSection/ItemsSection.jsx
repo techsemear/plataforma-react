@@ -1,13 +1,14 @@
-import {OrderedItems} from '../OrderedItems'
+import {OrderedItems} from '../ItemsSection'
 import {Heading} from '../Heading'
 import {Underline} from '../Underline'
 
-const titleSection = 'O que posso descobrir nessa jornada?'
+import styles from './ItemsSection.module.css'
+
 export default function ItemsSection({
   children,
   itemsText,
-  dark = false,
-  title = titleSection,
+  kindColor = 'default',
+  title = '',
 }) {
   return (
     <div
@@ -16,19 +17,17 @@ export default function ItemsSection({
       data-aos-delay={500}
       data-aos-duration={1000}
     >
-      <div className="content-box-2-l1">
-        <div>
-          <Heading ftColor={dark ? 'primary' : 'default'}>{title}</Heading>
-          <Underline
-            level="h4"
-            ftColor={dark ? 'quartenary' : 'secondary'}
-            underline={true}
-          >
-            <span>{children}</span>
-          </Underline>
-        </div>
-        <OrderedItems itemsTextList={itemsText} colorDefault={dark} />
+      <div>
+        <Heading ftColor={kindColor}>{title}</Heading>
+        <Underline
+          level="h4"
+          ftColor={kindColor === 'default' ? 'secondary' : 'quartenary'}
+          underline={true}
+        >
+          <span>{children}</span>
+        </Underline>
       </div>
+      <OrderedItems itemsTextList={itemsText} kindColor={kindColor} />
     </div>
   )
 }

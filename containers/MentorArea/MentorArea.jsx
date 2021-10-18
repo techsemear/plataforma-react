@@ -47,11 +47,11 @@ const itemsText = [
   },
   {
     index: '2',
-    text: 'Gere Mudanças ! Impacte a vida de jovens que serão o futuro da nossa nação',
+    text: 'Gere Mudanças! Impacte a vida de jovens que são o futuro da nossa nação',
   },
   {
     index: '3',
-    text: 'O ISemear possui uma ampla rede de contatos, faça parte gerando futuro para os jovens',
+    text: 'Conecte-se e faça parte da ampla rede de contatos do Instituto Semear',
   },
 ]
 
@@ -73,7 +73,7 @@ export default function MentorArea() {
                 </div>
               </div>
             </div>
-            <ItemsSection itemsText={itemsText}>
+            <ItemsSection itemsText={itemsText} title="O que posso descobrir nessa jornada?">
               {content.journey}
             </ItemsSection>
           </div>

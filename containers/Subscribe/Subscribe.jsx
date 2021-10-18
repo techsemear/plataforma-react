@@ -26,8 +26,8 @@ export default function Subscribe() {
               <p>
                 Estamos trabalhando para trazer para vocês a melhor e mais amada
                 plataforma de mentoria do Brasil, se você tem interesse em ser
-                um jovem ou mentor, inscreva-se e receba todas as novidades e
-                atualizações sobre o funcionamento da nossa plataforma.{' '}
+                jovem ou mentor, inscreva-se e receba todas as novidades e
+                atualizações sobre o funcionamento da nossa plataforma.
               </p>
             </div>
           </div>
