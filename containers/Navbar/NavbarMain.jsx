@@ -1,4 +1,19 @@
-import {Navbar} from '../../components/Navbar'
+import {HeaderNavigation} from '../../components/HeaderNavigation'
+import { Button } from '../../components/Button'
+
+import styles from './Navbar.module.css'
+
+export default function NavbarMain() {
+  return (
+    <HeaderNavigation contentInfo={menuItems} navItemsPosition="center">
+      <div className={styles.loginButton}>
+        <Button size="compact" bgColor="secondary" disabled>
+          Login
+        </Button>
+      </div>
+    </HeaderNavigation>
+  )
+}
 
 const menuItems = [
   {
@@ -52,8 +67,3 @@ const btnInfo = {
   linkTo: '/login'
 }
 
-export default function NavbarMain() {
-  return (
-    <Navbar contentInfo={menuItems} btnInfo={btnInfo} />
-  )
-}

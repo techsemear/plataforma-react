@@ -2,7 +2,7 @@ import React from 'react'
 
 // Containers
 import { LoginPage } from '../containers/LoginPage'
-import {NavbarGeneral} from '../containers/NavbarMain'
+import {NavbarGeneral} from '../containers/Navbar'
 
 
 // Components

@@ -27,7 +27,7 @@ import '../components/Video/Video.css'
 
 // Containers
 // Home
-import '../components/Navbar/Navbar.css'
+import '../components/HeaderNavigation/HeaderNavigation.css'
 import '../containers/About/About.css'
 import '../containers/Hero/Hero.css'
 import '../containers/LoginPage/LoginPage.css'

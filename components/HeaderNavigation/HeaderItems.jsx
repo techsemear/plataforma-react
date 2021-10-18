@@ -27,6 +27,17 @@ export function NavbarItems({items = []}) {
                     className="nav-link-item drop-trigger"
                   >
                     {menuItem.label}
+                    {menuItem.image && (
+                      <div className="iconNavItem">
+                        <Image
+                          src={menuItem.image}
+                          className="mx-2"
+                          alt="icon"
+                          width={30}
+                          height={30}
+                        />
+                      </div>
+                    )}
                     <i className="fas fa-angle-down" />
                   </a>
                   <ul className="sub-menu" id="submenu-1">
@@ -44,8 +55,8 @@ export function NavbarItems({items = []}) {
                 <li key={`nav-item-${index}`} className="nav-item">
                   <a href={menuItem.linkTo} className="nav-link-item">
                     {menuItem.label}
-                    {menuItem.image ? (
-                      <div className="mx-2">
+                    {menuItem.image && (
+                      <div className="iconNavItem">
                         <Image
                           src={menuItem.image}
                           alt="icon"
@@ -53,7 +64,7 @@ export function NavbarItems({items = []}) {
                           height={30}
                         />
                       </div>
-                    ) : null}
+                    )}
                   </a>
                 </li>
               ),

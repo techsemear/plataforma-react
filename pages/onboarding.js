@@ -7,7 +7,7 @@ import {IndexPage} from '../components/IndexPage'
 import {IntroOnboarding} from '../containers/IntroOnboarding'
 import {Challenges} from '../containers/Challenges'
 import {MaslowPoints} from '../containers/MaslowPoints'
-import {NavbarGeneral} from '../containers/NavbarMain'
+import {NavbarGeneral} from '../containers/Navbar'
 import {StepsMentoring} from '../containers/StepsMentoring'
 import {GetStarted} from '../containers/GetStarted'
 
