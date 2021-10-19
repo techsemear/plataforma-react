@@ -390,17 +390,6 @@ div#loading img {
   }
 }
 
-.section__heading p {
-  opacity: 0.7;
-  color: #213053;
-  font-size: 17px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 30px;
-  margin-bottom: 0;
-}
-
 /*Section heading style-2*/
 .section__heading-2 h2 {
   color: #1D263A;

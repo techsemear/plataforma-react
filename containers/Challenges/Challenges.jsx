@@ -73,25 +73,27 @@ function TextConfig({contentInfo}) {
   return (
     <Fragment>
       <div
-        className="col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1"
+        className="challengeSection col-xl-6 col-lg-7 col-md-8 col-sm-12 order-lg-1 order-1"
         data-aos="fade-right"
         data-aos-duration={800}
         data-aos-once="true"
       >
         <div className="content">
-          <Underline
-            level="h3"
-            ftColor="primary"
-            color={contentInfo.underColor}
-            horizontalPosition="start"
-          >
-            {contentInfo.title}
-          </Underline>
-          <div className={contentInfo.title ? "mt-5" : ""}>
+          {contentInfo.title && (
+            <Underline
+              level="h3"
+              ftColor="primary"
+              color={contentInfo.underColor}
+              horizontalPosition="start"
+            >
+              {contentInfo.title}
+            </Underline>
+          )}
+          <div className="textChallengeSection">
             {contentInfo.text.map((item, index) => (
-              <Heading level="h6" ftColor={contentInfo.textColor} key={index}>
+              <p className="ft-primary" key={index}>
                 {item}
-              </Heading>
+              </p>
             ))}
           </div>
         </div>

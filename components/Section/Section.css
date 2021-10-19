@@ -38,13 +38,3 @@
     line-height: 40px;
   }
 }
-
-.section__heading p {
-  opacity: 0.7;
-  color: #213053;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  margin-bottom: 0;
-}

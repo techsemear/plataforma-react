@@ -29,7 +29,7 @@ body {
 */
 
 .bg-default {
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .bg-primary {
@@ -37,7 +37,7 @@ body {
 }
 
 .bg-secondary {
-  background-color: #FF7139;
+  background-color: #ff7139;
 }
 
 .bg-dark {
@@ -55,8 +55,6 @@ body {
 .bg-secondBlue {
   background-color: #004aad;
 }
-
-
 
 /*
 * Button Alignment
@@ -79,13 +77,29 @@ body {
 */
 
 .ft-default {
-  color:#11115d;
+  color: #213053;
 }
 
 .ft-primary {
-  color:#FFF;
+  color: #fff;
 }
 
 .ft-secondary {
-  color: #004aad;
+  color: #ababac;
+}
+
+.ft-dark {
+  color: #000;
+}
+
+/*
+* Paragraph
+*/
+p {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #213053;
+  opacity: 0.8;
 }
