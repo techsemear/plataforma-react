@@ -1,7 +1,5 @@
-import Link from 'next/link'
-import Image from 'next/image'
-
-import {NavbarItems} from './HeaderItems'
+import {HeaderItems} from './HeaderItems'
+import { Logo } from '../Logo'
 
 import semearLogo from '../../assets/image/semear/logo-light.png'
 
@@ -19,6 +17,11 @@ const positionClasses = {
   end: 'navItemsEnd',
 }
 
+const logoSemear = {
+  image: semearLogo,
+  link: '#',
+}
+
 export default function HeaderNavigation({
   children,
   contentInfo = [],
@@ -32,21 +35,15 @@ export default function HeaderNavigation({
       <nav className="navbar site-navbar">
         <div className="container-fluid">
           <div className="brandLogo">
-            <a href="/">
-              <Image
-                src={semearLogo}
-                alt="Instituto Semear"
-                objectFit="contain"
-              />
-            </a>
+            <Logo logo={logoSemear} />
           </div>
           <div className={positionClasses[navItemsPosition]}>
-            <NavbarItems items={contentInfo} />
+            <HeaderItems items={contentInfo} />
           </div>
           {/* mobile menu trigger */}
           <div className="mobile-menu-trigger">
             <span />
-            <NavbarItems items={contentInfo} />
+            <HeaderItems items={contentInfo} />
           </div>
         </div>
         {children}

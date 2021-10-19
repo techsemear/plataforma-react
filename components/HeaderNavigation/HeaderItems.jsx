@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export function NavbarItems({items = []}) {
+export function HeaderItems({items = []}) {
   return (
     <div className="menu-block-wrapper">
       <div className="menu-overlay" />
