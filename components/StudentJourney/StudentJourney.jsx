@@ -42,9 +42,11 @@ export default function StudentJourney() {
                     se tornar protagonista da sua própria carreira.
                   </strong>
                 </p>
-                  <Button href="#subscribe" class="w-100 getStartButton">
+                <div className="getStartButton">
+                  <Button href="#subscribe" class="w-100">
                     Inscreva-se
                   </Button>
+                </div>
                 <p>
                   Com a rede de contatos do ISemear, contamos com apoio de{' '}
                   <strong>mais de 600 mentores</strong> cadastrados de todas as{' '}

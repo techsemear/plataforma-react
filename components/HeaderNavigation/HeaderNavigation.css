@@ -883,44 +883,8 @@ li.sub-menu--item.nav-item-has-children i {
   border-bottom: 1px solid rgba(29, 36, 58, 0.12);
 }
 
-.landing-2-menu.reveal-header .sign-in-btn {
-  color: #1d263a !important;
-}
-
-.landing-5-menu.reveal-header .l5-header-btn .btn {
-  color: #1d263a !important;
-}
-
-.landing-6-menu.reveal-header .l6-header-btn .btn {
-  color: #1d263a !important;
-}
-
-.landing-6-menu.reveal-header .l6-header-btn .btn:hover {
-  color: #fff !important;
-}
-
 .mega-menu-image {
   padding-right: 30px;
-}
-
-.mega-menu-image img {
-  border-radius: 5px;
-}
-
-.landing-1-menu .header-btn-l1 .btn {
-  min-width: 129px;
-  height: 45px;
-  box-shadow: 0 16px 36px rgba(241, 139, 98, 0.3);
-  border-radius: 15px;
-  background-color: #ff7139;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 26px;
-  margin-left: 15px;
-  margin-right: 5px;
 }
 
 .navItemsStart {

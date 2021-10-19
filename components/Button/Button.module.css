@@ -2,7 +2,7 @@
   font-family: Poppins;
   font-weight: 420;
   border: none;
-  margin: 10px 0;
+  margin: 0;
   justify-content: center;
   flex-direction: row;
   cursor: pointer;
@@ -128,20 +128,4 @@
   width: 58px;
   height: 58px;
   padding: 1px;
-}
-
-/*
-* Button Alignment
-*/
-
-.btnStart {
-  align: left !important;
-}
-
-.btnEnd {
-  align: right !important;
-}
-
-.btnCenter {
-  align: center !important;
 }

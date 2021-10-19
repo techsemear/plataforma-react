@@ -23,6 +23,7 @@ const KIND = {
   secondary: bgSecond,
   tertiary: bgDefault,
   minimal: bgMinimal,
+  other: 'bgOther',
 }
 
 const SIZE = {

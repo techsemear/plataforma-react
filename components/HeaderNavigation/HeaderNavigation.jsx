@@ -40,13 +40,13 @@ export default function HeaderNavigation({
           <div className={positionClasses[navItemsPosition]}>
             <HeaderItems items={contentInfo} />
           </div>
+          {children}
           {/* mobile menu trigger */}
           <div className="mobile-menu-trigger">
             <span />
             <HeaderItems items={contentInfo} />
           </div>
         </div>
-        {children}
       </nav>
     </header>
   )
