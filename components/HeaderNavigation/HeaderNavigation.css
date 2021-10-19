@@ -898,3 +898,7 @@ li.sub-menu--item.nav-item-has-children i {
 .brandLogo {
   cursor: pointer;
 }
+
+.iconNavItem {
+  padding: 0 10px;
+}
