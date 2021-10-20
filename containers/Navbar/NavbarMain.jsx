@@ -62,8 +62,3 @@ const menuItems = [
   },
 ]
 
-const btnInfo = {
-  label: 'Login',
-  linkTo: '/login'
-}
-
