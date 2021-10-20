@@ -937,3 +937,7 @@ li.sub-menu--item.nav-item-has-children i {
   justify-content: center;
   align-items: center;
 }
+
+.bg-other {
+background-image: linear-gradient(-225deg, #304070 0%, #5753C9 48%, #2c3a9b 100%);
+}

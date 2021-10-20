@@ -9,7 +9,6 @@ const bgClasses = {
   default: 'bg-default',
   primary: 'bg-primary',
   secondary: 'bg-secondary',
-  tertiary: 'bg-tertiary',
   dark: 'bg-dark',
   other: 'bg-other',
 }
