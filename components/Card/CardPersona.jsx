@@ -31,8 +31,7 @@ export default function CardPersona({personasProfile}) {
             </div>
             <div className="identity">
               <Logo logo={persona} width={height} height={height} level="h6">
-                {' '}
-                <strong className="namePersona">{persona.name}</strong>{' '}
+                <strong className="namePersona">{persona.name}</strong>
               </Logo>
               <small>{persona.profession}</small>
             </div>

@@ -7,19 +7,13 @@ export default function Logo({
   logo,
   height,
   width,
-  classAdd = '',
   hover = false,
   target,
 }) {
   const classHover = hover ? styles.resizeImage : ''
 
   return (
-    <div
-      className={`${classHover} ${classAdd}`}
-      data-aos="fade-right"
-      data-aos-duration={500}
-      data-aos-once="true"
-    >
+    <div className={`${styles.logoImage} ${classHover}`}>
       <a href={logo.link} target={target} rel="noreferrer">
         <Image
           src={logo.image}
