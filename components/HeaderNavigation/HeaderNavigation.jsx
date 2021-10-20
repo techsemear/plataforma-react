@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import {HeaderItems} from './HeaderItems'
-import {Logo} from '../Logo'
 
 import semearLogo from '../../assets/image/semear/logo-light.png'
 
