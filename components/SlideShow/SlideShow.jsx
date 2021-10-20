@@ -2,6 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import {Fade} from 'react-slideshow-image'
 
+import 'react-slideshow-image/dist/styles.css'
+
 const SlideShow = ({contentInfo = []}) => {
   return (
     <div className="slide-container">
