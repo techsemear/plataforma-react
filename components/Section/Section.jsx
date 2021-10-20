@@ -1,5 +1,7 @@
 import {Fragment} from 'react'
 
+import styles from './Section.module.css'
+
 import {Wave} from '../Wave'
 
 const backgroundClasses = {
@@ -25,9 +27,11 @@ export default function Section({
 
       <section
         id={id}
-        className={`content-area-2-l1 ${backgroundClasses[bgColor]}`}
+        className={`${styles.sectionContent} ${
+          backgroundClasses[bgColor]
+        }`}
       >
-        <div className={!fullWidth ? 'container' : ''}>{children}</div>
+        <div className={!fullWidth && 'container'}>{children}</div>
       </section>
 
       {wave && waveDirection === 'down' && (
