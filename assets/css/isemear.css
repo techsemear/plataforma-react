@@ -40,6 +40,10 @@ body {
   background-color: #ff7139;
 }
 
+.bg-tertiary {
+  background-color: #213053;
+}
+
 .bg-dark {
   background-color: #212529;
 }

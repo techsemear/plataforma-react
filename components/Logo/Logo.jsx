@@ -15,7 +15,7 @@ export default function Logo({
 
   return (
     <div
-      className={`${styles.singleBrand} ${classHover} ${classAdd}`}
+      className={`${classHover} ${classAdd}`}
       data-aos="fade-right"
       data-aos-duration={500}
       data-aos-once="true"

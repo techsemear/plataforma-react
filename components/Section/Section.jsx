@@ -31,7 +31,7 @@ export default function Section({
           backgroundClasses[bgColor]
         }`}
       >
-        <div className={!fullWidth && 'container'}>{children}</div>
+        <div className={!fullWidth ? 'container' : ''}>{children}</div>
       </section>
 
       {wave && waveDirection === 'down' && (

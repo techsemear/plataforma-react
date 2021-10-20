@@ -180,10 +180,6 @@
   }
 }
 
-.top-contact-menu-wraper .header-btn {
-  order: 3;
-}
-
 .top-contact-menu-wraper .mobile-menu-trigger {
   order: 4;
 }
@@ -204,9 +200,6 @@
     min-width: 40%;
     order: 1;
     padding-bottom: 30px;
-  }
-  .top-contact-menu-wraper .header-btn {
-    order: 4;
   }
   .top-contact-menu-wraper .menu-block-wrapper {
     min-width: calc(100% - 256px);
@@ -331,18 +324,6 @@
   text-decoration: none;
 }
 
-.navbar {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-@media (min-width: 992px) {
-  .navbar {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
 .site-menu-main .nav-item {
   display: inherit;
 }
@@ -359,10 +340,7 @@
 
 @media (min-width: 992px) {
   .site-menu-main .nav-link-item {
-    padding-top: 30px !important;
-    padding-bottom: 25px !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding: 0 20px !important;
   }
 }
 
@@ -700,7 +678,6 @@
     font-weight: 500;
     color: #000000;
     visibility: hidden;
-
   }
   .site-header .menu-block .mobile-menu-head.active .current-menu-title {
     visibility: visible;
@@ -888,6 +865,10 @@ li.sub-menu--item.nav-item-has-children i {
   padding-right: 30px;
 }
 
+/* 
+* Size Navbar
+*/
+
 .navItemsStart {
   margin-left: 20px;
   margin-right: auto;
@@ -898,14 +879,61 @@ li.sub-menu--item.nav-item-has-children i {
 
 .brandLogo {
   cursor: pointer;
+  margin: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brandLogo a {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sizeNavDefault .brandLogo {
+  width: 120px;
 }
 
 @media (max-width: 576px) {
-  .brandLogo {
+  .sizeNavLarge .brandLogo {
     width: 50%;
   }
+  .brandLogo {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .sizeNavLarge .brandLogo {
+    width: 45%;
+    margin: 0;
+  }
+  .brandLogo {
+    margin: 0;
+  }
+}
+
+.sizeNavLarge .navbar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .sizeNavLarge .navbar {
+    padding-top: 10;
+    padding-bottom: 10;
+  }
+}
+
+.sizeNavDefault .navbar {
+  padding: 10px;
 }
 
 .iconNavItem {
   padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

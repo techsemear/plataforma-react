@@ -12,3 +12,4 @@ const menuItems = [
 export default function NavbarLoginSignUp() {
   return <HeaderNavigation contentInfo={menuItems} bgColor="other" />
 }
+

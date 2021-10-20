@@ -24,5 +24,5 @@ const menuItems = [
 ]
 
 export default function NavbarGeneral() {
-  return <HeaderNavigation contentInfo={menuItems} bgColor="other" />
+  return <HeaderNavigation contentInfo={menuItems} bgColor="dark" />
 }
