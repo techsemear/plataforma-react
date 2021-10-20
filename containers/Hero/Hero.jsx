@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="container">
           <div className="row justify-content-center align-items-center">
             <div
-              className="col-xxl-5 col-xl-6 col-lg-6 col-md-10 order-lg-1 order-1"
+              className="col-xxl-5 col-xl-6 col-lg-6 col-md-11 order-lg-1 order-1"
               data-aos="fade-right"
               data-aos-delay={500}
               data-aos-duration={1000}
@@ -42,7 +42,7 @@ export default function Hero() {
             </div>
 
             <div
-              className="offset-xxl-2 col-xxl-5 offset-xl-1 col-xl-5 col-lg-6 col-md-8 order-lg-1 order-0"
+              className="offset-xxl-2 col-xxl-5 offset-xl-1 col-xl-5 col-lg-5 col-md-9 order-lg-1 order-0"
               data-aos="fade-left"
               data-aos-delay={700}
               data-aos-duration={1000}

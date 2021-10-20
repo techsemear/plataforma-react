@@ -100,32 +100,6 @@
   margin-top: 23px;
 }
 
-.l1-create-acc-btn i {
-  margin-left: 30px;
-}
-
-.l1-create-acc-btn .btn {
-  min-width: 268px;
-  border-radius: 30px;
-  background-color: #ff7139;
-  color: #fff;
-  font-family: Poppins;
-  font-size: 17px;
-  font-weight: 400;
-  padding: 14px;
-  font-style: normal;
-  letter-spacing: normal;
-  box-shadow: 0 10px 20px rgba(241, 139, 98, 0.2);
-  margin-top: 22px;
-}
-
-.l1-create-acc-btn .btn:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  animation-delay: 1;
-  background-color: #004aad;
-}
 
 .hero-image-group-l1 {
   position: relative;

@@ -359,8 +359,8 @@
 
 @media (min-width: 992px) {
   .site-menu-main .nav-link-item {
-    padding-top: 35px !important;
-    padding-bottom: 33px !important;
+    padding-top: 30px !important;
+    padding-bottom: 25px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
@@ -700,6 +700,7 @@
     font-weight: 500;
     color: #000000;
     visibility: hidden;
+
   }
   .site-header .menu-block .mobile-menu-head.active .current-menu-title {
     visibility: visible;
@@ -897,6 +898,12 @@ li.sub-menu--item.nav-item-has-children i {
 
 .brandLogo {
   cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .brandLogo {
+    width: 50%;
+  }
 }
 
 .iconNavItem {
