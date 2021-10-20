@@ -29,7 +29,7 @@ export default function Hero() {
               data-aos-delay={500}
               data-aos-duration={1000}
             >
-              <div className="content">
+              <div className="content heroText">
                 <Heading ftColor="tertiary"> {content.title} </Heading>
                 <p>{content.text}</p>
                 <Heading level="h5" ftColor="primary">

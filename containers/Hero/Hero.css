@@ -136,3 +136,7 @@
 .heroButton {
   margin-left: 0 !important;
 }
+
+.heroText p {
+  margin-bottom: 16px;
+}
