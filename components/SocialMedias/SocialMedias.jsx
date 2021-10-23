@@ -38,7 +38,7 @@ export default function SocialMedias() {
       </a>
       <a href=''>
         <Image
-          src={You}
+          src={YouTube}
           alt="Instagram Logo"
           objectFit="contain"
           className="light-version-logo"
