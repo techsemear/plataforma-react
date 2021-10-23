@@ -31,7 +31,6 @@ import '../containers/Testimonial/Testimonial.css'
 import '../containers/LoginPage/LoginPage.css'
 
 //Onboarding
-import '../containers/IntroOnboarding/IntroOnboarding.css'
 import '../containers/MaslowPoints/MaslowPoints.css'
 import '../containers/StepsMentoring/StepsMentoring.css'
 
