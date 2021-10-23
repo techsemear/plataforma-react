@@ -23,7 +23,6 @@ import '../components/Card/Card.css'
 // Containers
 // Home
 import '../containers/MentorArea/MentorArea.css'
-import '../containers/Partners/Partners.css'
 import '../containers/Presentation/Presentation.css'
 import '../containers/StudentArea/StudentArea.css'
 import '../containers/Subscribe/Subscribe.css'
