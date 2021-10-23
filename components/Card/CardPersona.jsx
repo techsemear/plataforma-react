@@ -26,7 +26,7 @@ export default function CardPersona({personasProfile}) {
             <div className="image">
               <Image src={persona.imageProfile} alt="image" />
             </div>
-            <div className="content mt-2">
+            <div className="content mt-2 cardText">
               <p>{persona.text}</p>
             </div>
             <div className="identity">

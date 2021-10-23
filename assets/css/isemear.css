@@ -58,25 +58,7 @@ body {
 
 .bg-secondBlue {
   background-color: #004aad;
-}
-
-/*
-* Button Alignment
-*/
-
-.button-start {
-  align: left !important;
-}
-
-.button-end {
-  align: right !important;
-}
-
-.button-center {
-  align: center !important;
-}
-
-/*
+}/*
 * Text Color
 */
 
