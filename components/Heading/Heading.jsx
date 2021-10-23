@@ -62,19 +62,24 @@ export default function Heading({
   underline = 'default',
 }) {
   let output = ''
+  let childrenCustom = children
+
+  if (underline !== 'default') {
+    childrenCustom= <span>{children}</span>
+  }
 
   if (level == 'h1') {
-    output = <h1>{children}</h1>
+    output = <h1>{childrenCustom}</h1>
   } else if (level == 'h2') {
-    output = <h2>{children}</h2>
+    output = <h2>{childrenCustom}</h2>
   } else if (level == 'h3') {
-    output = <h3>{children}</h3>
+    output = <h3>{childrenCustom}</h3>
   } else if (level == 'h4') {
-    output = <h4>{children}</h4>
+    output = <h4>{childrenCustom}</h4>
   } else if (level == 'h5') {
-    output = <h5>{children}</h5>
+    output = <h5>{childrenCustom}</h5>
   } else if (level == 'h6') {
-    output = <h6>{children}</h6>
+    output = <h6>{childrenCustom}</h6>
   }
 
   return (

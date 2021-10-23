@@ -39,7 +39,7 @@ export default function GetStarted() {
                     <a>perfil pessoal</a> ou através do botão abaixo
                   </Heading>
                   <Heading
-                    level="h2"
+                    level="h1"
                     ftColor="primary"
                     horizontalPosition="center"
                   >
