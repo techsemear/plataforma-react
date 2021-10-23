@@ -101,52 +101,27 @@
   font-style: italic;
 }
 
-.underlineBlack h1,
-.underlineBlack h2,
-.underlineBlack h3,
-.underlineBlack h4,
-.underlineBlack h5,
-.underlineBlack h6 {
+.underlineBlack span {
   border-bottom: 3px solid black;
   display: inline-block;
 }
 
-.underlineGrey h1,
-.underlineGrey h2,
-.underlineGrey h3,
-.underlineGrey h4,
-.underlineGrey h5,
-.underlineGrey h6 {
+.underlineGrey span {
   border-bottom: 3px solid #d3d3d3;
   display: inline-block;
 }
 
-.underlineOrange h1,
-.underlineOrange h2,
-.underlineOrange h3,
-.underlineOrange h4,
-.underlineOrange h5,
-.underlineOrange h6 {
+.underlineOrange span {
   border-bottom: 3px solid #fc5919;
   display: inline-block;
 }
 
-.underlineBlue h1,
-.underlineBlue h2,
-.underlineBlue h3,
-.underlineBlue h4,
-.underlineBlue h5,
-.underlineBlue h6 {
+.underlineBlue span {
   border-bottom: 3px solid #004aad;
   display: inline-block;
 }
 
-.underlineGreen h1,
-.underlineGreen h2,
-.underlineGreen h3,
-.underlineGreen h4,
-.underlineGreen h5,
-.underlineGreen h6 {
+.underlineGreen span {
   border-bottom: 3px solid #79ff8b;
-  display: inline-block;
+
 }
