@@ -61,7 +61,7 @@ export default function StepsMentoring() {
       </Section>
       <Image
         src={waveImage}
-        className="wave-coloring"
+        className="waveColoring"
         max-height={30}
         margin={-50}
       />
