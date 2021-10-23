@@ -5,6 +5,7 @@ import 'react-slideshow-image/dist/styles.css'
 
 import {VideoSide} from '../../components/Video'
 import {Section} from '../../components/Section'
+import {Heading} from '../../components/Heading'
 
 import cover from '../../assets/image/l6/l6-hero-img.png'
 import cover2 from '../../assets/image/l8/background-semear-corner.png'
