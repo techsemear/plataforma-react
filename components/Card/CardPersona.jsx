@@ -30,7 +30,7 @@ export default function CardPersona({personasProfile}) {
               <p>{persona.text}</p>
             </div>
             <div className="identity">
-              <Logo logo={persona} width={height} height={height} level="h6">
+              <Logo logoSource={persona.image} logoHref={persona.link} width={height} height={height} level="h6">
                 <strong className="namePersona">{persona.name}</strong>
               </Logo>
               <small>{persona.profession}</small>

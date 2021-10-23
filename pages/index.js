@@ -17,7 +17,7 @@ import { IndexPage } from '../components/IndexPage'
 export default function Home() {
   return (
     <React.Fragment>
-      <IndexPage/>
+      <IndexPage />
       <NavbarMain />
       <Hero />
       <Presentation />
