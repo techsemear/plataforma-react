@@ -2,6 +2,7 @@ import React, {Fragment} from 'react'
 
 import {Heading} from '../Heading'
 
+
 export default function CardItems({contentInfo = [], reverse = true}) {
   return (
     <Fragment>

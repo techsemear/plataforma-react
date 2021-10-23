@@ -1,0 +1,134 @@
+/*
+* Text Alignment
+*/
+
+.textStart {
+  text-align: left !important;
+}
+
+.textEnd {
+  text-align: right !important;
+}
+
+.textCenter {
+  text-align: center !important;
+}
+
+
+.textStart h1,
+.textEnd h1,
+.textCenter h1 {
+  font-size: 48px;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: 60px;
+
+}
+.textStart h2,
+.textEnd h2,
+.textCenter h2 {
+  font-size: 36px;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.textStart h3,
+.textEnd h3,
+.textCenter h3 {
+  font-size: 28px;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.textStart h4,
+.textEnd h4,
+.textCenter h4 {
+  font-size: 24px;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.textStart h5,
+.textEnd h5,
+.textCenter h5 {
+  font-size: 20px;
+  font-family: Poppins;
+  line-height: 28px;
+}
+
+.textStart h6,
+.textEnd h6,
+.textCenter h6 {
+  font-size: 16px;
+  font-family: Poppins;
+  line-height: 25px;
+}
+
+.ftDefault {
+  color: #213053;
+}
+
+.ftPrimary {
+  color: #fff;
+}
+
+.ftSecondary {
+  color: #6b6b6b;
+}
+
+.ftTertiary {
+  color: #79ff8b;
+}
+
+.ftQuartenary {
+  color: rgba(135, 160, 170, 0.7);
+}
+
+.ftQuinary {
+  color: #2e2e2e;
+}
+
+.styleDefault {
+  text-decoration: none;
+}
+
+.ftBold {
+  font-weight: 600;
+}
+
+.ftItalic {
+  font-style: italic;
+}
+
+.noneUnderline {
+
+}
+
+.underlineBlack {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+.underlineGrey {
+  
+  text-decoration: underline;
+  text-decoration-color: #d3d3d3;
+}
+
+.underlineOrange {
+  text-decoration: underline;
+  text-decoration-color: #fc5919;
+}
+
+.underlineBlue {
+  text-decoration: underline;
+  text-decoration-color: #004aad;
+}
+
+.underlineGreen {
+  text-decoration: underline;
+  text-decoration-color: #79ff8b;
+}

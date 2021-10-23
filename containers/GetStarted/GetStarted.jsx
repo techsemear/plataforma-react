@@ -40,6 +40,7 @@ export default function GetStarted() {
                     level="h2"
                     ftColor="primary"
                     horizontalPosition="center"
+                    
                   >
                     Comece sua jornada aqui com a gente!
                   </Heading>

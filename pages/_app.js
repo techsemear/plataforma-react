@@ -15,13 +15,18 @@ import '../assets/fonts/icon-font/css/style.css'
 import '../assets/fonts/typography-font/typo.css'
 
 // Components
-import '../components/Card/Card.css'
-import '../components/Heading/Heading.css'
 import '../components/LeadForm/LeadForm.css'
+<<<<<<< Updated upstream
 import '../components/StudentJourney/StudentJourney.css'
 import '../components/Underline/Underline.css'
 import '../components/Video/Video.css'
 import '../components/HeaderNavigation/HeaderNavigation.css'
+=======
+import '../components/Section/Section.css'
+import '../components/SlideShow/SlideShow.css'
+import '../components/Video/Video.css'
+import '../components/Card/Card.css'
+>>>>>>> Stashed changes
 
 // Containers
 // Home

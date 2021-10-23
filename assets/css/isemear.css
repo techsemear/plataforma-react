@@ -12,15 +12,15 @@ body {
 * Text Alignment
 */
 
-.text-start {
+.textStart {
   text-align: left !important;
 }
 
-.text-end {
+.textEnd {
   text-align: right !important;
 }
 
-.text-center {
+.textCenter {
   text-align: center !important;
 }
 

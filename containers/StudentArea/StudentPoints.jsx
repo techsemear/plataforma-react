@@ -1,10 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 
-import {Section} from '../Section'
-import {OrderedItems} from '../OrderedItems'
-import { Heading } from '../Heading'
-import { Underline } from '../Underline'
+import {Section} from '../../components/Section'
+import {OrderedItems} from '../../components/OrderedItems'
+import { Heading } from '../../components/Heading'
 
 import studentImage from '../../assets/image/footer.png'
 import globeImage from '../../assets/image/landing-1/h1-content-2-globe.png'
@@ -28,9 +27,9 @@ export default function StudentPoints({itemsText}) {
             >
               <div>
                 <Heading ftColor="primary">{content.title}</Heading>
-                <Underline level="h4" ftColor="quartenary">
+                <Heading level="h4" ftColor="quartenary" underline="orange">
                   {content.subtitle}
-                </Underline>
+                </Heading>
               </div>
               <OrderedItems itemsTextList={itemsText} boxColor="primary" textColor="primary" />
             </div>

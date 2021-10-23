@@ -4,7 +4,6 @@ import {Testimonial} from '../Testimonial'
 import {ItemsSection, OrderedItems} from '../../components/OrderedItems'
 import {Section} from '../../components/Section'
 import {Heading} from '../../components/Heading'
-import {Underline} from '../../components/Underline'
 
 import mentorImage from '../../assets/image/mentor1.png'
 import imageProfile1 from '../../assets/image/landing-1/mentor1.png'
@@ -83,7 +82,7 @@ export default function MentorArea() {
             >
               <div>
                 <Heading>{content.title[0]}</Heading>
-                <Underline level="h4" ftColor="secondary">{content.subtitle}</Underline>
+                <Heading level="h4" ftColor="secondary" underline="orange">{content.subtitle}</Heading>
               </div>
               <OrderedItems itemsTextList={itemsText} textColor="secondary" />
             </div>

@@ -1,12 +1,13 @@
 import Image from 'next/image'
 
-import {Button} from '../Button'
-import {Heading} from '../Heading'
-import {Section} from '../Section'
+import {Button} from '../../components/Button'
+import {Heading} from '../../components/Heading'
+import {Section} from '../../components/Section'
 
 import journeyImage from '../../assets/image/journeyImage.png'
 
 const title = 'A cada nova DESCOBERTA, uma nova CONQUISTA!'
+const paragraph = ' A sua Jornada no ISemear é construída com base em um conjunto de ferramentas e métodos que servem para jovens que sentem na pele as dificuldades de se graduar e se tornar protagonista da sua própria carreira.'
 
 export default function StudentJourney() {
   return (
@@ -35,12 +36,7 @@ export default function StudentJourney() {
               <div>
                 <Heading level="h4">{title}</Heading>
                 <p>
-                  A sua Jornada no ISemear é construída com base em um conjunto
-                  de ferramentas e métodos que servem para jovens que sentem na
-                  pele as dificuldades de se graduar e{' '}
-                  <strong>
-                    se tornar protagonista da sua própria carreira.
-                  </strong>
+                  {paragraph}
                 </p>
                 <div className="getStartButton">
                   <Button href="#subscribe" class="w-100">

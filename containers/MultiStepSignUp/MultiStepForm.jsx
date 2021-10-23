@@ -2,6 +2,8 @@ import React, {createElement, useReducer} from 'react'
 import styles from './MultiStepSignUp.module.css'
 
 import {StepProgressBar} from '../../components/StepProgressBar'
+import {Button} from '../../components/Button'
+
 import StepTemplate from './StepTemplate'
 import Step1Form from './Step1Form'
 import Step2Form from './Step2Form'
@@ -169,23 +171,36 @@ const MultiStepForm = () => {
 
         <div className={styles.btnContainer}>
           {stepIndex > 0 && (
-            <button className={styles.btnSignup} onClick={onClickPreviousStep}>
+            <Button 
+              className={styles.btnSignup} 
+              onClick={onClickPreviousStep}
+              size="compact" 
+              bgColor="secondary"
+            >
               Anterior
-            </button>
+            </Button>
           )}
 
           {stepIndex < steps.length - 1 && (
-            <button
+            <Button
               disabled={currentStepData.disabled}
               className={styles.btnSignup}
               onClick={onClickNextStep}
+              size="compact" 
+              bgColor="secondary"
             >
               Próximo
-            </button>
+            </Button>
           )}
 
           {stepIndex === steps.length - 1 && (
-            <button className={styles.btnSignup}>Enviar</button>
+            <Button 
+              className={styles.btnSignup}
+              size="compact" 
+              bgColor="secondary"
+            >
+              Enviar
+            </Button>
           )}
         </div>
       </form>
