@@ -28,13 +28,12 @@ export default function Partners() {
             data-aos-once="true"
           >
             {logos.map((item, index) => (
-              <div className={styles.partnersBrand}>
+              <div className={styles.partnersBrand} key={index}>
                 <Logo
                   width={120}
                   height={60}
                   logoSource={item.image}
                   logoHref={item.link}
-                  key={index}
                   hover={true}
                   target={'__blank'}
                 />
