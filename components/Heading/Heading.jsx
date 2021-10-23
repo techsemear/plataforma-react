@@ -15,7 +15,6 @@ const {
     styleDefault,
     ftBold,
     ftItalic,
-    noneUnderline,
     underlineBlack,
     underlineGrey,
     underlineOrange, 
@@ -46,7 +45,7 @@ const textStyle = {
 }
 
 const textUnderline = {
-  default: noneUnderline,
+  default: 'noneUnderline',
   black: underlineBlack,
   grey: underlineGrey,
   orange: underlineOrange, 
@@ -80,9 +79,7 @@ export default function Heading({
 
   return (
     <div
-      className={[alignment[horizontalPosition], textStyle[ftStyle], textUnderline[underline], colorClasses[ftColor]].join(
-        ' ',
-      )}
+      className={`${alignment[horizontalPosition]} ${textStyle[ftStyle]} ${textUnderline[underline]} ${colorClasses[ftColor]}`}
     >
       {output}
     </div>
