@@ -1,12 +1,16 @@
 import {Fragment} from 'react'
 import Image from 'next/image'
 
+import styles from './Hero.module.css'
+
 import {Button} from '../../components/Button'
 import {Wave} from '../../components/Wave'
 import {Heading} from '../../components/Heading'
 
 import headerImage from '../../assets/image/personagens/header.png'
 import headerBackgroundImage from '../../assets/image/background-header.png'
+import chatIcon from '../../assets/image/landing-1/chat-icon.svg'
+import heartIcon from '../../assets/image/landing-1/icon-3d-heart.svg'
 
 const content = {
   title: 'As conexões que mudarão o seu futuro!',
@@ -18,7 +22,7 @@ export default function Hero() {
   return (
     <Fragment>
       <div
-        className="hero-area-l1  position-relative background-property"
+        className={`${styles.heroArea}  position-relative background-property`}
         style={{background: {headerBackgroundImage}}}
       >
         <div className="container">
@@ -29,14 +33,19 @@ export default function Hero() {
               data-aos-delay={500}
               data-aos-duration={1000}
             >
-              <div className="content heroText">
+              <div className={`${styles.content} ${styles.heroText}`}>
                 <Heading ftColor="tertiary"> {content.title} </Heading>
                 <p>{content.text}</p>
                 <Heading level="h5" ftColor="primary">
                   <strong> {content.subtitle} </strong>
                 </Heading>
-                <div className="heroButtonContent">
-                  <Button href="#subscribe" class="w-100 heroButton">Inscreva-se</Button>
+                <div className={`${styles.heroButtonContent}`}>
+                  <Button
+                    href="#subscribe"
+                    class={`w-100 ${styles.heroButton}`}
+                  >
+                    Inscreva-se
+                  </Button>
                 </div>
               </div>
             </div>
@@ -47,21 +56,21 @@ export default function Hero() {
               data-aos-delay={700}
               data-aos-duration={1000}
             >
-              <div className="hero-image-group-l1">
-                <div className="image-1">
+              <div className={styles.heroImageSection}>
+                <div className={styles.image1}>
                   <Image src={headerImage} alt="logo" objectFit="contain" />
                 </div>
-                <div className="image-2">
-                  <img
+                <div className={styles.image2}>
+                  <Image
                     className="horizontal-move"
-                    src="https://plataformasemear.netlify.app/image/landing-1/chat-icon.svg"
+                    src={chatIcon}
                     alt="image"
                   />
                 </div>
-                <div className="image-3">
-                  <img
+                <div className={styles.image3}>
+                  <Image
                     className="vertical-move"
-                    src="https://plataformasemear.netlify.app/image/landing-1/icon-3d-heart.svg"
+                    src={heartIcon}
                     alt="image"
                   />
                 </div>
