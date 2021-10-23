@@ -1,5 +1,4 @@
 .clients-l8-items {
-<<<<<<< Updated upstream
   margin-bottom: -30px;
   padding-top: 20px;
 }
@@ -53,19 +52,18 @@
   padding-bottom: 50px;
 }
 
-@media (min-width: 768px) {
+  @media (min-width: 768px) {
   .clients-area-l8 {
-=======
-    margin-bottom: -30px;
->>>>>>> Stashed changes
     padding-top: 20px;
   }
+}
   
   @media (min-width: 768px) {
     .clients-l8-items {
       padding-top: 30px;
     }
   }
+
   
   @media (min-width: 992px) {
     .clients-l8-items {
