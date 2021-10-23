@@ -66,19 +66,6 @@
   }
 }
 
-
-.btn-area
-{
-  margin:auto
-}
-
-.wave-coloring
-{
-  width: 100%;
-  margin-top: -150px;
-  margin-bottom: -150px;
-}
-
 .newsletterAreaImage .image1 {
   position: absolute;
   right: 25%;
@@ -102,3 +89,13 @@
   width: 60%;
   padding: 10px;
 }
+
+
+  .introWave{
+      margin-top: -200px;
+  }
+  
+  .waveImage
+  {
+      margin-bottom: -500px;
+  }

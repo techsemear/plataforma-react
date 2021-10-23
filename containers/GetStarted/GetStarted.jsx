@@ -14,7 +14,7 @@ export default function GetStarted() {
   return (
     <Fragment>
       <Wave
-        className="wave introWave"
+        className={`wave ${styles.introWave}`}
         direction="up"
         color="#1D263A"
         bgColor="#1D263A"
