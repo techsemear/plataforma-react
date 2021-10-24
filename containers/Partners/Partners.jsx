@@ -1,3 +1,5 @@
+import styles from './Partners.module.css'
+
 import logos from '../../assets/image/apoiadores/index.js'
 import {Logo} from '../../components/Logo'
 import {Section} from '../../components/Section'
@@ -20,21 +22,22 @@ export default function Partners() {
         </div>
         <div className="col-xl-11 col-lg-11">
           <div
-            className="brand-area-l-17-items d-flex justify-content-center flex-wrap"
+            className={`${styles.brandAreaItems} d-flex justify-content-center flex-wrap`}
             data-aos="fade-right"
             data-aos-duration={500}
             data-aos-once="true"
           >
             {logos.map((item, index) => (
-              <Logo
-                width={120}
-                height={60}
-                logo={item}
-                key={index}
-                hover={true}
-                classAdd="partnersBrand"
-                target={"__blank"}
-              />
+              <div className={styles.partnersBrand} key={index}>
+                <Logo
+                  width={120}
+                  height={60}
+                  logoSource={item.image}
+                  logoHref={item.link}
+                  hover={true}
+                  target={'__blank'}
+                />
+              </div>
             ))}
           </div>
         </div>

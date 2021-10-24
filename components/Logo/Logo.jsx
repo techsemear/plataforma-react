@@ -4,7 +4,8 @@ import styles from './Logo.module.css'
 
 export default function Logo({
   children,
-  logo,
+  logoSource,
+  logoHref,
   height,
   width,
   hover = false,
@@ -14,9 +15,9 @@ export default function Logo({
 
   return (
     <div className={`${styles.logoImage} ${classHover}`}>
-      <a href={logo.link} target={target} rel="noreferrer">
+      <a href={logoHref} target={target} rel="noreferrer">
         <Image
-          src={logo.image}
+          src={logoSource}
           alt="logo"
           objectFit="contain"
           width={width}

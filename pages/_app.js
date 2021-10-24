@@ -22,9 +22,6 @@ import '../components/Card/Card.css'
 
 // Containers
 // Home
-import '../containers/Hero/Hero.css'
-import '../containers/MentorArea/MentorArea.css'
-import '../containers/Partners/Partners.css'
 import '../containers/Presentation/Presentation.css'
 import '../containers/StudentArea/StudentArea.css'
 import '../containers/Subscribe/Subscribe.css'
@@ -34,9 +31,6 @@ import '../containers/Testimonial/Testimonial.css'
 import '../containers/LoginPage/LoginPage.css'
 
 //Onboarding
-import '../containers/GetStarted/GetStarted.css'
-import '../containers/IntroOnboarding/IntroOnboarding.css'
-import '../containers/LoginPage/LoginPage.css'
 import '../containers/MaslowPoints/MaslowPoints.css'
 import '../containers/StepsMentoring/StepsMentoring.css'
 

@@ -113,7 +113,7 @@
     }
   }
   
-  p {
+ .cardText p {
     font-size: 11pt;
     color: grey;
     line-height: 14pt;

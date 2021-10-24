@@ -14,7 +14,6 @@
   text-align: center !important;
 }
 
-
 .textStart h1,
 .textEnd h1,
 .textCenter h1 {
@@ -22,7 +21,6 @@
   font-family: Poppins;
   font-weight: 600;
   line-height: 60px;
-
 }
 .textStart h2,
 .textEnd h2,
@@ -103,32 +101,27 @@
   font-style: italic;
 }
 
-.noneUnderline {
-
+.underlineBlack span {
+  border-bottom: 3px solid black;
+  display: inline-block;
 }
 
-.underlineBlack {
-  text-decoration: underline;
-  text-decoration-color: black;
+.underlineGrey span {
+  border-bottom: 3px solid #d3d3d3;
+  display: inline-block;
 }
 
-.underlineGrey {
-  
-  text-decoration: underline;
-  text-decoration-color: #d3d3d3;
+.underlineOrange span {
+  border-bottom: 3px solid #fc5919;
+  display: inline-block;
 }
 
-.underlineOrange {
-  text-decoration: underline;
-  text-decoration-color: #fc5919;
+.underlineBlue span {
+  border-bottom: 3px solid #004aad;
+  display: inline-block;
 }
 
-.underlineBlue {
-  text-decoration: underline;
-  text-decoration-color: #004aad;
-}
+.underlineGreen span {
+  border-bottom: 3px solid #79ff8b;
 
-.underlineGreen {
-  text-decoration: underline;
-  text-decoration-color: #79ff8b;
 }

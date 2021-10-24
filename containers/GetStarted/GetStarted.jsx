@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import {Fragment} from 'react'
 
+import styles from './GetStarted.module.css'
+
 import {Heading} from '../../components/Heading'
 import {Wave} from '../../components/Wave'
 import {Button} from '../../components/Button'
@@ -12,12 +14,12 @@ export default function GetStarted() {
   return (
     <Fragment>
       <Wave
-        className="wave introWave"
+        className={`wave ${styles.introWave}`}
         direction="up"
         color="#1D263A"
         bgColor="#1D263A"
       />
-      <div className="newsletter-area-l-12 bg-mirage">
+      <div className={`${styles.newsletterArea} bg-mirage`}>
         <div className="position-relative overflow-hidden">
           <div
             className="container"
@@ -33,35 +35,34 @@ export default function GetStarted() {
                     ftColor="primary"
                     horizontalPosition="center"
                   >
-                    Você pode preencher a Roda da Trilha ao acessar seu{' '}
+                    Você pode preencher a Roda da Trilha ao acessar seu
                     <a>perfil pessoal</a> ou através do botão abaixo
                   </Heading>
                   <Heading
-                    level="h2"
+                    level="h1"
                     ftColor="primary"
                     horizontalPosition="center"
-                    
                   >
                     Comece sua jornada aqui com a gente!
                   </Heading>
-                    <Button
-                      size="large"
-                      href="/assessment"
-                      class="centerButton"
-                      hoverScale="true"
-                    >
-                      Quero Preencher Agora!
-                    </Button>
+                  <Button
+                    size="large"
+                    href="/assessment"
+                    class={styles.centerButton}
+                    hoverScale="true"
+                  >
+                    Quero Preencher Agora!
+                  </Button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="newsletter-area-l-image-group position-relative">
-          <div className="image-2 ">
+        <div className={`${styles.newsletterAreaImage} position-relative`}>
+          <div className={styles.image1}>
             <Image className="w-100 spin" src={blurImage} alt="image" />
           </div>
-          <div className="image-3 ">
+          <div className={styles.image2}>
             <Image className="w-100" src={rocket} alt="image" />
           </div>
         </div>

@@ -26,11 +26,11 @@ export default function CardPersona({personasProfile}) {
             <div className="image">
               <Image src={persona.imageProfile} alt="image" />
             </div>
-            <div className="content mt-2">
+            <div className="content mt-2 cardText">
               <p>{persona.text}</p>
             </div>
             <div className="identity">
-              <Logo logo={persona} width={height} height={height} level="h6">
+              <Logo logoSource={persona.image} logoHref={persona.link} width={height} height={height} level="h6">
                 <strong className="namePersona">{persona.name}</strong>
               </Logo>
               <small>{persona.profession}</small>

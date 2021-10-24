@@ -1,41 +1,23 @@
-.newsletter-area-l-12 {
+.newsletterArea {
   padding-top: 10px;
   padding-bottom: 100px;
 }
 
 @media (min-width: 768px) {
-  .newsletter-area-l-12 {
+  .newsletterArea {
     padding-top: 10px;
     padding-bottom: 80px;
   }
 }
 
 @media (min-width: 992px) {
-  .newsletter-area-l-12 {
+  .newsletterArea {
     padding-top: 10px;
     padding-bottom: 130px;
   }
 }
 
-.newsletter-area-l-12 .news-letter-l-12-shape {
-  position: absolute;
-  right: -15%;
-  top: -47%;
-}
-
-.newsletter-area-l-12 span {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 18px;
-  text-align: center;
-  letter-spacing: 2.8125px;
-  text-transform: uppercase;
-  color: #666666;
-}
-
-.newsletter-area-l-12 h2 {
+.newsletterArea h1 {
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -47,20 +29,20 @@
 }
 
 @media (min-width: 576px) {
-  .newsletter-area-l-12 h2 {
+  .newsletterArea h1 {
     font-size: 42px;
     line-height: 53px;
   }
 }
 
 @media (min-width: 768px) {
-  .newsletter-area-l-12 h2 {
+  .newsletterArea h1 {
     font-size: 48px;
     line-height: 57px;
   }
 }
 
-.newsletter-area-l-12 .btn {
+.newsletterArea .btn {
   height: 48px;
   background: #ff7139;
   border-radius: 15px;
@@ -73,49 +55,31 @@
 }
 
 @media (min-width: 768px) {
-  .newsletter-area-l-12 .btn {
+  .newsletterArea .btn {
     width: 90%;
   }
 }
 
 @media (max-width: 576px) {
-  .newsletter-area-l-12 .btn {
+  .newsletterArea .btn {
     width: 70%;
   }
 }
 
-
-.btn-area
-{
-  margin:auto
-}
-
-.newsletter-area-l-12 .btn:hover
-{
-  background: #004aad;
-}
-
-.wave-coloring
-{
-  width: 100%;
-  margin-top: -150px;
-  margin-bottom: -150px;
-}
-
-.newsletter-area-l-image-group .image-2 {
+.newsletterAreaImage .image1 {
   position: absolute;
   right: 25%;
   transform: translate(-70%, -150%);
 }
 
-.newsletter-area-l-image-group .image-3 {
+.newsletterAreaImage .image2 {
   position: absolute;
   bottom: 100%;
   transform: translate(20%, 40%);
 }
 
 @media (min-width: 992px) {
-  .newsletter-area-l-image-group .image-3 {
+  .newsletterAreaImage .image2 {
     right: 20%;
   }
 }
@@ -125,3 +89,13 @@
   width: 60%;
   padding: 10px;
 }
+
+
+  .introWave{
+      margin-top: -200px;
+  }
+  
+  .waveImage
+  {
+      margin-bottom: -500px;
+  }

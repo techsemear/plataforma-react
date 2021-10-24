@@ -1,4 +1,4 @@
-.hero-area-l6 {
+.onboardingArea {
     background: linear-gradient(180deg, rgba(23, 135, 252, 0.26) 0%, rgba(32, 191, 169, 0.16) 55.21%, rgba(199, 210, 240, 0) 100%);
     position: relative;
     z-index: 1;
@@ -6,104 +6,68 @@
   }
   
   @media (min-width: 480px) {
-    .hero-area-l6 {
+    .onboardingArea {
       padding-top: 60px;
     }
   }
   
   @media (min-width: 768px) {
-    .hero-area-l6 {
+    .onboardingArea {
       padding-top: 60px;
     }
   }
   
   @media (min-width: 992px) {
-    .hero-area-l6 {
+    .onboardingArea {
       padding-top: 187px;
     }
   }
   
-  .hero-area-l6 .hero-l6-content {
+  .onboardingArea .onboardingContent {
     padding-top: 45px;
     margin-bottom: 80px;
   }
   
   @media (min-width: 992px) {
-    .hero-area-l6 .hero-l6-content {
+    .onboardingArea .onboardingContent {
       padding-top: 0;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .text-paragraph {
-      margin-bottom: 100px;
     }
   }
   
   @media (min-width: 576px) {
-    .hero-area-l6 .hero-l6-content h2 {
+    .onboardingArea .onboardingContent h2 {
       font-size: 40px;
       line-height: 46px;
     }
   }
   
   @media (min-width: 768px) {
-    .hero-area-l6 .hero-l6-content h2 {
+    .onboardingArea .onboardingContent h2 {
       font-size: 48px;
       line-height: 54px;
     }
   }
   
   @media (min-width: 992px) {
-    .hero-area-l6 .hero-l6-content h2 {
+    .onboardingArea .onboardingContent h2 {
       font-size: 80px;
       line-height: 86px;
     }
   }
   
-  .hero-btn-l6 {
-    margin-top: 35px;
-  }
-  
-  @media (min-width: 768px) {
-    .hero-btn-l6 {
-      margin-top: 45px;
-    }
-  }
-  
-  @media (min-width: 992px) {
-    .hero-btn-l6 {
-      margin-top: 55px;
-    }
-  }
-  
-  .hero-btn-l6 .btn {
-    background: #1D263A;
-    border-radius: 10px;
-    width: 258px;
-    height: 55px;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 26px;
-    color: #fff;
-  }
-  
-  .hero-l6-content-image {
+  .onboardingContentImage {
     margin-bottom: -50px;
   }
   
   
-  .hero-l6-content-image img {
+  .onboardingContentImage img {
     box-shadow: 0px 204px 150px -30px rgba(10, 4, 60, 0.05);
     border-radius: 0px 0px 30px 30px;
   }
 
-  .introWave{
-      margin-top: -200px;
-  }
-  
-  .wave-image
-  {
-      margin-bottom: -500px;
+  @media (max-width: 576px) {
+    .textParagraph {
+      margin-bottom: 100px;
+    }
   }
 

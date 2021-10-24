@@ -1,7 +1,9 @@
 import Image from 'next/image'
 
+import styles from './MentorArea.module.css'
+
 import {Testimonial} from '../Testimonial'
-import {ItemsSection, OrderedItems} from '../../components/OrderedItems'
+import {OrderedItems} from '../../components/OrderedItems'
 import {Section} from '../../components/Section'
 import {Heading} from '../../components/Heading'
 
@@ -58,13 +60,14 @@ const itemsText = [
 
 export default function MentorArea() {
   return (
-    <div className="mentor-area" id="jornada-mentor">
-      <div className="content-area-2-l1">
+    <div className="mentor-area">
+      <Section id={styles.jornadaMentor} bgColor="default">
+      <div className={styles.mentorContentArea}>
         <div className="container">
           <div className="row justify-content-center align-items-center">
             <div className="offset-xxl-1 col-xxl-5 col-xl-6 col-lg-6 col-md-10">
               <div
-                className="content-2-l1-image-group"
+                className={styles.mentorContentImage}
                 data-aos="fade-up"
                 data-aos-delay={800}
                 data-aos-duration={1000}
@@ -89,7 +92,8 @@ export default function MentorArea() {
           </div>
         </div>
       </div>
-      <Section id="testemunho-mentor" bgColor="secondary">
+      </Section>
+      <Section id={styles.testemunhoMentor} bgColor="secondary">
         <Testimonial personas={personas}>{content.title[1]}</Testimonial>
       </Section>
     </div>
