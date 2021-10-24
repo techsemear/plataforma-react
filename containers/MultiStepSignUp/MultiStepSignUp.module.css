@@ -4,13 +4,13 @@
 }
 
 .signUpPage {
-  padding-top: 250px;
+  padding-top: 90px;
   align-items: center;
   background-image:  url('../../assets/image/color-background.png');
   background-repeat: repeat-y;
   display: flex;
   flex-direction: column;
-  height: calc(100vh);
+  height: calc(150vh);
   justify-content: center;
 }
 
