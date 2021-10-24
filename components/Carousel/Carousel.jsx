@@ -4,7 +4,7 @@ import {Fade} from 'react-slideshow-image'
 
 import 'react-slideshow-image/dist/styles.css'
 
-const SlideShow = ({contentInfo = []}) => {
+const Carousel = ({contentInfo = []}) => {
   return (
     <div className="slide-container">
       <Fade>
@@ -24,4 +24,4 @@ const SlideShow = ({contentInfo = []}) => {
     </div>
   )
 }
-export default SlideShow
+export default Carousel

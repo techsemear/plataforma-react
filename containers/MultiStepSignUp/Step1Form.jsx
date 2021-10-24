@@ -3,14 +3,9 @@ import React, {Fragment} from 'react'
 const Step1Form = ({handleChange, fields}) => {
   return (
     <Fragment>
-      <input
-        type="text"
-        name="email"
-        placeholder="Digite seu melhor email:"
-        value={fields.email}
-        onChange={handleChange}
-      />
-
+      <label htmlFor="">
+        Nome Completo
+      </label>
       <input
         type="text"
         name="name"
@@ -18,15 +13,32 @@ const Step1Form = ({handleChange, fields}) => {
         value={fields.name}
         onChange={handleChange}
       />
+      
+      <label htmlFor="">
+        Email
+      </label>
+      <input
+        type="text"
+        name="email"
+        placeholder="exemplo: janedoe@email.com"
+        value={fields.email}
+        onChange={handleChange}
+      />
 
+      <label htmlFor="">
+        Nome de Usuário
+      </label>
       <input
         type="text"
         name="username"
-        placeholder="Crie seu nome de usuário:"
+        placeholder="exemplo: janeDoe"
         value={fields.username}
         onChange={handleChange}
       />
 
+      <label htmlFor="">
+        Senha
+      </label>
       <input
         type="password"
         name="password"
@@ -35,6 +47,9 @@ const Step1Form = ({handleChange, fields}) => {
         onChange={handleChange}
       />
 
+      <label htmlFor="">
+       Confirmação de Senha
+      </label>
       <input
         type="password"
         name="passwordConfirmation"

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import {Heading} from '../../components/Heading'
-import {SlideShow} from '../../components/SlideShow'
+import {Carousel} from '../../components/Carousel'
 import {Button} from '../../components/Button'
 
 import plataformaLogo from '../../assets/image/logo-semear.png'
@@ -60,7 +60,7 @@ export default function LoginPage() {
                       autoComplete="off"
                       required
                     />
-                    <label>Usuário</label>
+                    <label className = "loginLabel">Usuário</label>
                   </div>
                   <div className="input-wrap">
                     <input
@@ -70,7 +70,7 @@ export default function LoginPage() {
                       autoComplete="off"
                       required
                     />
-                    <label>Senha</label>
+                    <label className ="loginLabel" >Senha</label>
                   </div>
                   <Button
                     size="compact"
@@ -131,7 +131,7 @@ export default function LoginPage() {
             </form>
           </div>
           <div className="slider">
-            <SlideShow
+            <Carousel
               duration={500}
               transitionDuration={500}
               contentInfo={content}

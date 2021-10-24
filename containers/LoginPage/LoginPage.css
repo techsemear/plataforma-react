@@ -19,6 +19,7 @@ input {
   min-height: 100vh;
   overflow: hidden;
   background-image: url('../../assets/image/color-background.png');
+  background-repeat: repeat-y;
   padding: 2rem;
   display: flex;
   align-items: center;
@@ -138,7 +139,7 @@ form.sign-up-form {
   transition: 0.4s;
 }
 
-label {
+.loginLabel {
   position: absolute;
   left: 0;
   top: 50%;
