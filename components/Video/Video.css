@@ -158,11 +158,6 @@
   text-align: center !important;
 }
 
-.justify-content-center {
-  justify-content: center !important;
-}
-
-
 /* Video Slide */
 .hero-video-l12 .video-icon {
   position: absolute;
@@ -181,21 +176,7 @@
   color: #fff;
 }
 
-.position-relative {
-  position: relative !important;
-}
-
-.d-inline-block {
-  display: inline-block !important;
-}
-
-.overflow-hidden {
-  overflow: hidden !important;
-}
-
-
 /* Video Column */
-
 .card--testimonial-l-12 {
   background: #FFFFFF;
   border: 1px solid #E5E5E5;
@@ -229,27 +210,6 @@
   text-align: center;
   background: #4EBE86;
   color: #fff;
-}
-
-.d-flex {
-  display: flex !important;
-}
-
-.justify-content-between {
-  justify-content: space-between !important;
-}
-
-.align-items-center {
-  align-items: center !important;
-}
-
-.focus-reset:focus {
-  box-shadow: none;
-  outline: none;
-}
-
-.d-inline-block {
-  display: inline-block !important;
 }
 
 .fa-align-center:before {
