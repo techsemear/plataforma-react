@@ -1,13 +1,3 @@
-.content-2-l1-image-group {
-  position: relative;
-}
-
-.content-2-l1-image-group .image-2 {
-  position: absolute;
-  top: 17%;
-  left: 0%;
-}
-
 .testimonial-area-l1-items {
   padding-top: 40px;
   margin-bottom: -30px;
@@ -111,5 +101,84 @@
 .testimonial-area-l-image-group .image-2 {
   position: absolute;
   bottom: 10%;
-  right: 10%;
+  right: 1%;
+}
+
+/* Card Persona */
+.clients-l8-items {
+  margin-bottom: -30px;
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .clients-l8-items {
+    padding-top: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .clients-l8-items {
+    padding-top: 60px;
+  }
+}
+
+.clients-l8-items .col-lg-4 {
+  margin-bottom: 30px;
+}
+
+.cardTestimonial {
+  margin: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .cardTestimonial {
+    margin: 0 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cardTestimonial {
+    margin: 0;
+  }
+}
+
+.client-l8-card {
+  padding: 30px;
+  height: 100%;
+}
+
+.client-l8-card p {
+  color: grey;
+  font-size: 15px;
+  line-height: 18px;
+  opacity: 1;
+  padding: 10px 0;
+}
+
+.client-l8-card .image img {
+  width: 179px;
+  height: 179px;
+  border-radius: 10px;
+  align-content: center;
+}
+
+.clients-area-l8 {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .clients-area-l8 {
+    padding-top: 20px;
+  }
+}
+.cardText p {
+  font-size: 11pt;
+  color: grey;
+  line-height: 14pt;
+  text-align: left;
+}
+
+.namePersona {
+  vertical-align: super;
 }

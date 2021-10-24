@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 
 import styles from './Card.module.css'
 
@@ -63,7 +62,7 @@ const {
   }
 
   export default function Card (props) {
-    const bgCard = KIND[props.bgColor] ? KIND[props.bgColor] : KIND['secondary'];
+    const bgCard = KIND[props.bgColor] ? KIND[props.bgColor] : KIND['primary'];
     const widthCard = WIDTH[props.width] ? WIDTH[props.width] : WIDTH['small'];
     const heightCard = HEIGHT[props.height] ? HEIGHT[props.height] : HEIGHT['compact'];
     const borderCard = BORDER[props.border] ? BORDER[props.border] : BORDER['default'];
