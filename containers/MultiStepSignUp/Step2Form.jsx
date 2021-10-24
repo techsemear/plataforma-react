@@ -28,8 +28,33 @@ const classes = [
 const Step2Form = ({handleChange, handleSelectChange, fields}) => {
   return (
     <Fragment>
-      <Heading level="h6">Nível de Escolaridade:</Heading>
 
+<label 
+        className={styles.subtitle}
+        htmlFor=""
+      >
+        Classificação:
+      </label>
+      <Select
+        defaultValue={fields.classes}
+        name="classes"
+        onChange={handleSelectChange}
+        options={classes}
+        placeholder="Como você se classifica em nossa plataforma:"
+        required
+        className="select-input"
+      ></Select>
+
+      <label htmlFor="">CPF</label>
+      <input
+        type="number"
+        name="cpf"
+        placeholder="Você poderia nos informar seu CPF ? (examplo: 12345678910)"
+        value={fields.cpf}
+        onChange={handleChange}
+      />
+      
+      <label htmlFor="">Nível de Escolaridade</label>
       <Select
         defaultValue={fields.schooling}
         name="schooling"
@@ -39,32 +64,12 @@ const Step2Form = ({handleChange, handleSelectChange, fields}) => {
         required
       ></Select>
 
-      <Heading
-        level="h6"
-        horizontalPosition="start"
-        ftColor="default"
+      <label
+        htmlFor=""
         className={styles.subtitle}
       >
-        Classificação:
-      </Heading>
-
-      <Select
-        defaultValue={fields.classes}
-        name="classes"
-        onChange={handleSelectChange}
-        options={classes}
-        placeholder="Como você se classifica em nossa plataforma:"
-        required
-      ></Select>
-
-      <Heading
-        level="h6"
-        horizontalPosition="start"
-        ftColor="default"
-        className={styles.subtitle}
-      >
-        Digite seu cpf:
-      </Heading>
+        Whatsapp
+      </label>
 
       <input
         value={fields.phone}
@@ -73,22 +78,15 @@ const Step2Form = ({handleChange, handleSelectChange, fields}) => {
         placeholder="Qual seu Whatsapp:(examplo: 1198382788)"
         onChange={handleChange}
       />
-
+      <label htmlFor="">Data de Nascimento</label>
       <input
         type="date"
         name="birthday"
-        placeholder="Qual sua data de aniversário:"
+        placeholder="Qual sua data de nascimento ?"
         value={fields.birthday}
         onChange={handleChange}
       />
 
-      <input
-        type="number"
-        name="cpf"
-        placeholder="Você poderia nos informar seu CPF ? (examplo: 12345678910)"
-        value={fields.cpf}
-        onChange={handleChange}
-      />
     </Fragment>
   )
 }
