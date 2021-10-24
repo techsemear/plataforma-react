@@ -50,8 +50,7 @@ export default function Video({youtubeID, contentText = content}) {
               <div className="video-content text-center">
                 <a onClick={handleClick}>
                   <i
-                    className="fas 
-                fa-play font-size-7"
+                    className="fas fa-play font-size-7"
                   />
                 </a>
                 <Heading horizontalPosition="center">{contentText.title}</Heading>
