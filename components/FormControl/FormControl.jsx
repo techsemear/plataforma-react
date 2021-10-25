@@ -45,11 +45,7 @@ export default function FormControl(props) {
 
   else if (props.textArea == 'true'){
    <div>
-    <label htmlFor className="">
      {labels.textAreaTitle}
-    </label> 
-    <textarea>
-
     </textarea>
    </div>
   }
