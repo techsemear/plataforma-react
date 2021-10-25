@@ -17,7 +17,7 @@ export default function FormControl(props) {
 
   if (props.emailInput == 'true'){
     <div>
-      <label htmlfor>
+      <label htmlFor>
         {labels.emailInputTitle}
       </label>
       <input
@@ -30,7 +30,7 @@ export default function FormControl(props) {
 
   else if (props.phoneInput == 'true'){
     <div>
-      <label htmlfor classname="">
+      <label htmlFor className="">
         {labels.phoneTitle}
       </label>
       <input 
@@ -45,7 +45,7 @@ export default function FormControl(props) {
 
   else if (props.textArea == 'true'){
    <div>
-    <label htmlfor classname="">
+    <label htmlFor className="">
      {labels.textAreaTitle}
     </label> 
     <textarea>
@@ -56,7 +56,7 @@ export default function FormControl(props) {
 
   else if (props.checkBox == 'true'){
    <div>
-   <label htmlfor classname="">
+   <label htmlFor className="">
     {labels.checkboxTitle}
    </label> 
    <input type="checkbox" />
