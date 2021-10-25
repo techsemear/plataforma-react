@@ -32,7 +32,7 @@ export default function Testimonial({
               data-aos-delay={500}
               data-aos-duration={1000}
             >
-              <Heading horizontalPosition="center" ftColor="primary">
+              <Heading level ="h6" horizontalPosition="center" ftColor="primary">
                 {children}
               </Heading>
             </div>
@@ -64,7 +64,9 @@ function CardPersona({personasProfile}) {
           data-aos-duration={1000}
           key={index}
         >
-          <Card >
+          <Card 
+            heightCard = "large"
+          >
             <div className="client-l8-card">
               <div className="image">
                 <Image src={persona.imageProfile} alt="image" />

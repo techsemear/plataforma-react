@@ -49,19 +49,19 @@
 /* Height */
 
 .heightSmall {
-  height: 100px;
+  height: 20%;
 }
 
 .heightDefault {
-  height: 250px;
+  height: 40%;
 }
 
 .heightCompact {
-  height: 400px;
+  height: 80%;
 }
 
 .heightLarge {
-  height: 800px;
+  height: 100%;
 }
 
 /*
