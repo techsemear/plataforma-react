@@ -1,6 +1,5 @@
 import {Heading} from '../../components/Heading'
 import {Section} from '../../components/Section'
-import {Underline} from '../../components/Underline'
 
 const content = {
   title: 'A Universidade foi o primeiro passo, e agora?',
@@ -22,9 +21,9 @@ export default function Presentation() {
         <div className="col-xl-6 col-lg-5 col-md-10 ">
           <div className="section__heading">
             <Heading level="h2">{content.title}</Heading>
-            <Underline level="h5" ftColor="secondary">
+            <Heading level="h5" ftColor="secondary" underline= "orange">
               {content.subtitle}
-            </Underline>
+            </Heading>
             <p data-aos="fade-up" data-aos-delay={800} data-aos-duration={1000}>
               <br className="d-none d-sm-block d-md-none d-xl-block mt-4" />
               {content.text[0]}

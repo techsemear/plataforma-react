@@ -26,6 +26,10 @@
   }
 }
 
+.content-area-l7-2 p {
+  opacity: 0.9;
+}
+
 .content-area-l7-2-heading {
   padding-bottom: 45px;
 }

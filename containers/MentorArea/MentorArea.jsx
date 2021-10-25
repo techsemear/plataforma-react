@@ -1,8 +1,11 @@
 import Image from 'next/image'
 
+import styles from './MentorArea.module.css'
+
 import {Testimonial} from '../Testimonial'
-import {ItemsSection} from '../../components/ItemsSection'
+import {OrderedItems} from '../../components/OrderedItems'
 import {Section} from '../../components/Section'
+import {Heading} from '../../components/Heading'
 
 import mentorImage from '../../assets/image/mentor1.png'
 import imageProfile1 from '../../assets/image/landing-1/mentor1.png'
@@ -10,8 +13,8 @@ import imageProfile2 from '../../assets/image/landing-1/mentor2.png'
 import imageProfile3 from '../../assets/image/landing-1/mentor3.png'
 
 const content = {
-  title: 'Mentores da Rede Semear',
-  journey: 'Jornada do Mentor',
+  title: ['O que posso descobrir nessa jornada?', 'Mentores da Rede Semear'],
+  subtitle: 'Jornada do Mentor',
 }
 
 const personas = [
@@ -47,23 +50,24 @@ const itemsText = [
   },
   {
     index: '2',
-    text: 'Gere Mudanças ! Impacte a vida de jovens que serão o futuro da nossa nação',
+    text: 'Gere Mudanças! Impacte a vida de jovens que são o futuro da nossa nação',
   },
   {
     index: '3',
-    text: 'O ISemear possui uma ampla rede de contatos, faça parte gerando futuro para os jovens',
+    text: 'Conecte-se e faça parte da ampla rede de contatos do Instituto Semear',
   },
 ]
 
 export default function MentorArea() {
   return (
-    <div className="mentor-area" id="jornada-mentor">
-      <div className="content-area-2-l1">
+    <div className="mentor-area">
+      <Section id={styles.jornadaMentor} bgColor="default">
+      <div className={styles.mentorContentArea}>
         <div className="container">
           <div className="row justify-content-center align-items-center">
             <div className="offset-xxl-1 col-xxl-5 col-xl-6 col-lg-6 col-md-10">
               <div
-                className="content-2-l1-image-group"
+                className={styles.mentorContentImage}
                 data-aos="fade-up"
                 data-aos-delay={800}
                 data-aos-duration={1000}
@@ -73,14 +77,24 @@ export default function MentorArea() {
                 </div>
               </div>
             </div>
-            <ItemsSection itemsText={itemsText}>
-              {content.journey}
-            </ItemsSection>
+            <div
+              className="offset-xxl-1 col-xxl-4 col-xl-5 col-lg-6 col-md-10"
+              data-aos="fade-up"
+              data-aos-delay={500}
+              data-aos-duration={1000}
+            >
+              <div>
+                <Heading>{content.title[0]}</Heading>
+                <Heading level="h4" ftColor="secondary" underline="orange">{content.subtitle}</Heading>
+              </div>
+              <OrderedItems itemsTextList={itemsText} textColor="secondary" />
+            </div>
           </div>
         </div>
       </div>
-      <Section id="testemunho-mentor" bgColor="secondary">
-        <Testimonial personas={personas}>{content.title}</Testimonial>
+      </Section>
+      <Section id={styles.testemunhoMentor} bgColor="secondary">
+        <Testimonial personas={personas}>{content.title[1]}</Testimonial>
       </Section>
     </div>
   )

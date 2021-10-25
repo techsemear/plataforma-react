@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 // Containers
-import {NavbarGeneral} from '../containers/NavbarMain'
+import {NavbarLoginSignUp} from '../containers/Navbar'
 import {MultiStepSignUp} from '../containers/MultiStepSignUp'
 
 // Components
@@ -12,8 +12,7 @@ export default function SignUp() {
   return (
     <React.Fragment>
       <IndexPage />
-      <NavbarGeneral />
-
+      <NavbarLoginSignUp />
       <MultiStepSignUp />
     </React.Fragment>
   )

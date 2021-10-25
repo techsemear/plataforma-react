@@ -12,15 +12,15 @@ body {
 * Text Alignment
 */
 
-.text-start {
+.textStart {
   text-align: left !important;
 }
 
-.text-end {
+.textEnd {
   text-align: right !important;
 }
 
-.text-center {
+.textCenter {
   text-align: center !important;
 }
 
@@ -29,7 +29,7 @@ body {
 */
 
 .bg-default {
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .bg-primary {
@@ -37,7 +37,11 @@ body {
 }
 
 .bg-secondary {
-  background-color: #FF7139;
+  background-color: #ff7139;
+}
+
+.bg-tertiary {
+  background-color: #213053;
 }
 
 .bg-dark {
@@ -48,33 +52,40 @@ body {
   background-color: #ababac;
 }
 
-
 .bg-mint {
   background-color: #8aec82;
 }
 
 .bg-secondBlue {
   background-color: #004aad;
-}
-
-.bg-grey1 {
-  background-color: #ababac;
-}
-
-
-
-/*
-* Button Alignment
+}/*
+* Text Color
 */
 
-.button-start {
-  align: left !important;
+.ft-default {
+  color: #213053;
 }
 
-.button-end {
-  align: right !important;
+.ft-primary {
+  color: #fff;
 }
 
-.button-center {
-  align: center !important;
+.ft-secondary {
+  color: #ababac;
+}
+
+.ft-dark {
+  color: #000;
+}
+
+/*
+* Paragraph
+*/
+p {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #213053;
+  opacity: 0.8;
 }

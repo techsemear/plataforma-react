@@ -1,1 +1,1 @@
-export {default as OrderedItems} from './OrderedItems'
+export { default as OrderedItems } from './OrderedItems'

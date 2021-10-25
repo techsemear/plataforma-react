@@ -82,9 +82,9 @@ export default function MaslowPoints() {
                 {contentText.title}
               </Heading>
               <br />
-              <Heading level="h6" horizontalPosition="center" ftColor="primary">
+              <p className="ft-primary">
                 {contentText.subtitle}
-              </Heading>
+              </p>
             </div>
           </div>
           <Fade>

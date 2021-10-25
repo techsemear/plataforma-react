@@ -1,0 +1,106 @@
+/* Config. Card Component*/
+.div{
+    font-family: Poppins;
+    font-weight: 420;
+    border: none;
+    margin: 0;
+    justify-content: center;
+    flex-direction: row;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+/*Background*/
+
+.bgPrimary {
+  background-color: #fff;
+}
+
+.bgSecond {
+  background-color: #fc5919; 
+}
+
+.bgDefault {
+  background-color: #004aad; 
+}
+
+.bgMinimal {
+  background-color:#d3d3d3; 
+}
+
+.bgTransparent {
+  background-color: none; 
+}
+
+/* Width */
+
+.widthSmall {
+  width: 300px;
+}
+
+.widthCompact {
+  width: 600px;
+}
+
+.widthLarge {
+  width: 800px;
+}
+
+/* Height */
+
+.heightSmall {
+  height: 100px;
+}
+
+.heightDefault {
+  height: 250px;
+}
+
+.heightCompact {
+  height: 400px;
+}
+
+.heightLarge {
+  height: 800px;
+}
+
+/*
+* Shapes
+*/
+.shapeDefault {
+  border-radius: 10px;
+}
+
+.shapeRectangular {
+  border-radius: 50px;
+}
+
+.shapeSquare {
+  border-radius: 0px;
+}
+
+
+/*
+* Border
+*/
+.borderDefault {
+  border: none;
+}
+
+.borderGrey { 
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d3d3d3;
+}
+
+.borderBlue {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #004aad;
+}
+
+.borderWhite{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fff;
+ }

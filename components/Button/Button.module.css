@@ -1,0 +1,131 @@
+.btn {
+  font-family: Poppins;
+  font-weight: 420;
+  border: none;
+  margin: 0;
+  justify-content: center;
+  flex-direction: row;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.1rem rgb(23 135 252 / 25%);
+  outline: none;
+}
+
+.btnScale:hover {
+  transform: scale(1.05);
+}
+
+/*
+* Disabled
+*/
+.btn:disabled {
+  opacity: 0.7;
+}
+
+.btn:disabled:hover {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/*
+* Background Colors
+*/
+.bgPrimary {
+  background-color: #ff7139;
+  color: #fff;
+}
+
+.bgPrimary:hover {
+  background-color: #fc5919;
+  color: #fff;
+}
+
+.bgSecond {
+  background-color: #004aad;
+  color: #fff;
+}
+
+.bgSecond:hover {
+  background-color: #0460da;
+  color: #fff;
+}
+
+.bgDefault {
+  background-color: #fff;
+  color: #004aad;
+}
+
+.bgDefault:hover {
+  background-color: #004aad;
+  color: #fff;
+}
+
+.bgMinimal {
+  background-color: #ffffff00;
+  color: #004aad;
+}
+
+.bgMinimal:hover {
+  background-color: rgb(201, 201, 201);
+  color: #fff;
+}
+
+/*
+* Sizes
+*/
+.sizeSmall {
+  font-size: 12px;
+  padding: 6px 8px;
+}
+.sizeDefault {
+  font-size: 16px;
+  padding: 14px 16px;
+}
+.sizeCompact {
+  font-size: 14px;
+  padding: 10px 12px;
+}
+.sizeLarge {
+  font-size: 18px;
+  padding: 16px 20px;
+}
+
+/*
+* Shapes
+*/
+.shapeDefault {
+  border-radius: 10px;
+}
+.shapeCircle {
+  border-radius: 50%;
+}
+.shapeRectangular {
+  border-radius: 0;
+}
+.shapeCircle.sizeSmall,
+.shapeSquare.sizeSmall {
+  width: 30px;
+  height: 30px;
+  padding: 1px;
+}
+.shapeCircle.sizeDefault,
+.shapeSquare.sizeDefault {
+  width: 44px;
+  height: 44px;
+  padding: 1px;
+}
+.shapeCircle.sizeCompact,
+.shapeSquare.sizeCompact {
+  width: 40px;
+  height: 40px;
+  padding: 1px;
+}
+.shapeCircle.sizeLarge,
+.shapeSquare.sizeLarge {
+  width: 58px;
+  height: 58px;
+  padding: 1px;
+}

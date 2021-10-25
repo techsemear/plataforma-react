@@ -27,15 +27,12 @@ export default function CardItems({contentInfo = [], reverse = true}) {
   )
 }
 
-function ContentCard({item, index}) {
+function ContentCard({item}) {
   return (
     <div className="feature-box-l2 h-100">
       <div className="d-flex">
         <div
-          className={[
-            'color-box',
-            item.color ? item.color : 'bg-secondBlue',
-          ].join(' ')}
+          className={`color-box ${item.color ? item.color : 'bg-secondBlue'}`}
         />
         <div className="content-box">
           <Heading level="h4" ftColor="primary">

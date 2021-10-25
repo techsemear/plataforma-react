@@ -1,0 +1,79 @@
+.numberContentBox {
+  margin-top: 30px;
+  margin-bottom: -60px;
+}
+
+@media (min-width: 768px) {
+  .numberContentBox {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .numberContentBox {
+    margin-top: 70px;
+  }
+}
+
+.numberContentBox li {
+  margin-bottom: 36px;
+}
+
+.numberContentBox .number {
+  width: 100px;
+  height: 66px;
+  line-height: 66px;
+  box-shadow: 0 5px 0 rgba(23, 135, 252, 0.65);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.numberContentBox .number span {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: -0.4px;
+}
+
+.numberContentBox .numberDefault {
+  box-shadow: 0 5px 0 rgba(255, 113, 57, 0.65);
+  background-color: #ff7139;
+}
+
+.numberContentBox .numberPrimary {
+  box-shadow: 0 5px 0 green;
+  background-color: #7fff70;
+}
+
+.numberContentBox .numberSecondary {
+  box-shadow: 0 5px 0 rgb(0, 0, 201)0da;
+  background-color: #0460da;
+}
+
+
+.contentText {
+  margin-left: 20px;
+}
+
+.contentText p {
+  text-align: left;
+  font-size: 17px;
+  line-height: 28px;
+  opacity: 0.8;
+  font-family: Poppins;
+  font-style: normal;
+  letter-spacing: normal;
+}
+
+.textColorDefault p {
+  color: #213053;
+}
+
+.textColorPrimary p {
+  color: #fff;
+}
+
+.textColorSecondary p {
+  color: black;
+}

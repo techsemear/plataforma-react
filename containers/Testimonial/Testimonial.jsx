@@ -1,10 +1,12 @@
 import Image from 'next/image'
 
-import {CardPersona} from '../../components/Card'
+import {Card} from '../../components/Card'
+import {Logo} from '../../components/Logo'
 import {Heading} from '../../components/Heading'
 
 import heartShape from '../../assets/image/landing-1/h1-client-heart-shape.png'
-import startShape from '../../assets/image/landing-1/h1-client-start-shape.png'
+import starShape from '../../assets/image/landing-1/h1-client-start-shape.png'
+import linkedinImage from '../../assets/image/landing-1/linkedin-2.png'
 
 export default function Testimonial({
   personas,
@@ -18,7 +20,7 @@ export default function Testimonial({
           <Image className="w-100 vertical-move" src={heartShape} alt="image" />
         </div>
         <div className="image-2">
-          <Image className="w-100 spin" src={startShape} alt="image" />
+          <Image className="w-100 spin" src={starShape} alt="image" />
         </div>
       </div>
       <div className="clients-area-l8">
@@ -40,6 +42,52 @@ export default function Testimonial({
           <CardPersona personasProfile={personas} />
         </div>
       </div>
+    </div>
+  )
+}
+
+function CardPersona({personasProfile}) {
+  const height = 24
+
+  personasProfile.map((persona) => {
+    persona.image = linkedinImage
+    persona.link = persona.linkedin
+  })
+
+  return (
+    <div className="row justify-content-center clients-l8-items">
+      {personasProfile.map((persona, index) => (
+        <div
+          className="col-lg-4 col-md-6 col-sm-10 cardTestimonial"
+          data-aos="fade-right"
+          data-aos-delay={500}
+          data-aos-duration={1000}
+          key={index}
+        >
+          <Card >
+            <div className="client-l8-card">
+              <div className="image">
+                <Image src={persona.imageProfile} alt="image" />
+              </div>
+              <div className="content mt-2 cardText">
+                <p>{persona.text}</p>
+              </div>
+              <div className="identity">
+                <Logo
+                  logoSource={persona.image}
+                  logoHref={persona.link}
+                  width={height}
+                  height={height}
+                  level="h6"
+                >
+                  <strong className="namePersona">{persona.name}</strong>
+                </Logo>
+                <small>{persona.profession}</small>
+              </div>
+            </div>
+          </Card>
+        </div>
+      ))}
     </div>
   )
 }

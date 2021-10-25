@@ -1,12 +1,14 @@
 import {Testimonial} from '../Testimonial'
-import {StudentJourney} from '../../components/StudentJourney'
-import {StudentPoints} from '../../components/StudentPoints'
+import StudentJourney from './StudentJourney'
+import StudentPoints from './StudentPoints'
 
 import imageProfile1 from '../../assets/image/landing-1/student1.png'
 import imageProfile2 from '../../assets/image/landing-1/student2.png'
 import imageProfile3 from '../../assets/image/landing-1/student4.jpg'
 import {Section} from '../../components/Section'
 import { Wave } from '../../components/Wave'
+import { Card } from '../../components/Card'
+import { Heading } from '../../components/Heading'
 
 const content = { 
   title: 'Quem já venceu essa jornada',
@@ -55,7 +57,8 @@ export default function studentArea() {
       <StudentJourney />
       <StudentPoints itemsText={itemsText}/>
       <Section bgColor="primary" id="testemunho-jovem">
-        <Testimonial personas={personas}>{content.title}</Testimonial>
+        <Heading level="h2" horizontalPosition="center" ftColor="primary">{content.title}</Heading>
+        <Testimonial personas={personas}></Testimonial>
       </Section>
     </div>
   )

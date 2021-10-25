@@ -174,6 +174,7 @@
   text-decoration: none;
   transition: transform .2s;
   width: 100%;
+  margin: 0;
 }
 
 .error-message {
@@ -186,12 +187,6 @@
   color: #1D263A;
 }
 
-.submitButton:hover
-{
-  background-color: #004aad;
-  transform: scale(1.1);
-}
-
 .submitButton.submitButton--success {
   color: #212529;
   background-color: #79FF8B;
@@ -200,5 +195,6 @@
 .submitButton.submitButton--success:hover
 {
   background-color: #79FF8B;
-  transform: scale(1);
 }
+
+

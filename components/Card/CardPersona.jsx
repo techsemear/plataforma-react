@@ -1,15 +1,15 @@
 import Image from 'next/image'
 
-import {LogoImage} from '../Logo'
+import {Logo} from '../Logo'
 
 import linkedinImage from '../../assets/image/landing-1/linkedin-2.png'
 
-const height = 24;
+const height = 24
 
 export default function CardPersona({personasProfile}) {
   personasProfile.map((persona) => {
-    persona.image = linkedinImage;
-    persona.link = persona.linkedin;
+    persona.image = linkedinImage
+    persona.link = persona.linkedin
   })
 
   return (
@@ -26,11 +26,13 @@ export default function CardPersona({personasProfile}) {
             <div className="image">
               <Image src={persona.imageProfile} alt="image" />
             </div>
-            <div className="content mt-2">
+            <div className="content mt-2 cardText">
               <p>{persona.text}</p>
             </div>
             <div className="identity">
-              <LogoImage logo={persona} width={height} height={height} level="h6"> <strong className="namePersona">{persona.name}</strong> </LogoImage>
+              <Logo logoSource={persona.image} logoHref={persona.link} width={height} height={height} level="h6">
+                <strong className="namePersona">{persona.name}</strong>
+              </Logo>
               <small>{persona.profession}</small>
             </div>
           </div>

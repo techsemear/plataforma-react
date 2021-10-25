@@ -15,41 +15,22 @@ import '../assets/fonts/icon-font/css/style.css'
 import '../assets/fonts/typography-font/typo.css'
 
 // Components
-import '../components/Button/Button.css'
-import '../components/Card/Card.css'
-import '../components/Heading/Heading.css'
-import '../components/ItemsSection/ItemsSection.css'
 import '../components/LeadForm/LeadForm.css'
-import '../components/Logo/Logo.css'
-import '../components/PersonaTestimonial/PersonaTestimonial.css'
-import '../components/Section/Section.css'
-import '../components/SlideShow/SlideShow.css'
-import '../components/StudentJourney/StudentJourney.css'
-import '../components/Underline/Underline.css'
 import '../components/Video/Video.css'
+import '../components/HeaderNavigation/HeaderNavigation.css'
+import '../components/Card/Card.css'
 
 // Containers
 // Home
-import '../components/Navbar/Navbar.css'
-import '../containers/About/About.css'
-import '../containers/Hero/Hero.css'
-import '../containers/LoginPage/LoginPage.css'
-import '../containers/LoginPage/LoginPage.css'
-import '../containers/MentorArea/MentorArea.css'
-import '../containers/Partners/Partners.css'
 import '../containers/Presentation/Presentation.css'
 import '../containers/StudentArea/StudentArea.css'
 import '../containers/Subscribe/Subscribe.css'
 import '../containers/Testimonial/Testimonial.css'
 
 //Login
-//import '../containers/LoginPage/LoginPage.css'
+import '../containers/LoginPage/LoginPage.css'
 
 //Onboarding
-import '../containers/Challenges/Challenges.css'
-import '../containers/GetStarted/GetStarted.css'
-import '../containers/IntroOnboarding/IntroOnboarding.css'
-import '../containers/LoginPage/LoginPage.css'
 import '../containers/MaslowPoints/MaslowPoints.css'
 import '../containers/StepsMentoring/StepsMentoring.css'
 

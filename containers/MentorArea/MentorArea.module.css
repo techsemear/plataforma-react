@@ -1,0 +1,19 @@
+.mentorContentImage {
+  position: relative;
+}
+
+.mentorContentImage .image-2 {
+  position: absolute;
+  top: 17%;
+  left: 0%;
+}
+
+#testemunhoMentor
+{
+  border-radius: 250px 250px 0px 0px;
+}
+
+#jornadaMentor
+{
+  background-color: #fff;
+}

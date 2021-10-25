@@ -1,0 +1,101 @@
+.newsletterArea {
+  padding-top: 10px;
+  padding-bottom: 100px;
+}
+
+@media (min-width: 768px) {
+  .newsletterArea {
+    padding-top: 10px;
+    padding-bottom: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  .newsletterArea {
+    padding-top: 10px;
+    padding-bottom: 130px;
+  }
+}
+
+.newsletterArea h1 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: -2.53px;
+  margin: 25px 0px 40px 0px;
+}
+
+@media (min-width: 576px) {
+  .newsletterArea h1 {
+    font-size: 42px;
+    line-height: 53px;
+  }
+}
+
+@media (min-width: 768px) {
+  .newsletterArea h1 {
+    font-size: 48px;
+    line-height: 57px;
+  }
+}
+
+.newsletterArea .btn {
+  height: 48px;
+  background: #ff7139;
+  border-radius: 15px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+  .newsletterArea .btn {
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .newsletterArea .btn {
+    width: 70%;
+  }
+}
+
+.newsletterAreaImage .image1 {
+  position: absolute;
+  right: 25%;
+  transform: translate(-70%, -150%);
+}
+
+.newsletterAreaImage .image2 {
+  position: absolute;
+  bottom: 100%;
+  transform: translate(20%, 40%);
+}
+
+@media (min-width: 992px) {
+  .newsletterAreaImage .image2 {
+    right: 20%;
+  }
+}
+
+.centerButton {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+
+  .introWave{
+      margin-top: -200px;
+  }
+  
+  .waveImage
+  {
+      margin-bottom: -500px;
+  }

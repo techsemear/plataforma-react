@@ -1,0 +1,23 @@
+.brandArea {
+padding-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+.brandArea {
+    padding-bottom: 80px;
+}
+}
+
+@media (min-width: 992px) {
+.brandArea {
+    padding-bottom: 130px;
+}
+}
+.brandAreaItems {
+padding-top: 50px;
+}
+
+.brandAreaItems .partnersBrand {
+ padding: 10px;
+}
+

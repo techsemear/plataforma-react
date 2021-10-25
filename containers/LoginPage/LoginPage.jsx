@@ -1,9 +1,10 @@
 import React from 'react'
-import Image from 'next/dist/client/image'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import {Heading} from '../../components/Heading'
-import {SlideShow} from '../../components/SlideShow'
+import {Carousel} from '../../components/Carousel'
+import {Button} from '../../components/Button'
 
 import plataformaLogo from '../../assets/image/logo-semear.png'
 import facebookLogo from '../../assets/image/facebook-logo2.png'
@@ -36,16 +37,17 @@ export default function LoginPage() {
               className="sign-in-form"
             >
               <div className="plataforma-logo">
-                <Image src={plataformaLogo} width={550} height={550} alt="" />
+                <Image src={plataformaLogo} alt="logo" layout="responsive"/>
               </div>
               <div className="actual-form">
                 <div className="heading">
-                  <Heading level="h2">Bem-vindo</Heading>
+                  <Heading level="h2" horizontalPosition="center">
+                    Bem-vindo
+                  </Heading>
                   <Heading level="h6">
                     Ainda não se registrou?
                     <a href="/signup" className="toggle">
-                      {' '}
-                      Entre aqui
+                      {' Entre aqui'}
                     </a>
                   </Heading>
                 </div>
@@ -58,7 +60,7 @@ export default function LoginPage() {
                       autoComplete="off"
                       required
                     />
-                    <label>Usuário</label>
+                    <label className = "loginLabel">Usuário</label>
                   </div>
                   <div className="input-wrap">
                     <input
@@ -68,13 +70,16 @@ export default function LoginPage() {
                       autoComplete="off"
                       required
                     />
-                    <label>Senha</label>
+                    <label className ="loginLabel" >Senha</label>
                   </div>
-                  <input
+                  <Button
+                    size="compact"
+                    bgColor="secondary"
+                    class="signInBtn w-100"
                     type="submit"
-                    defaultValue="Sign In"
-                    className="sign-btn"
-                  />
+                  >
+                    Entrar
+                  </Button>
                   <div className="sign-with">
                     <Heading
                       level="h6"
@@ -82,17 +87,39 @@ export default function LoginPage() {
                       horizontalPosition="center"
                       className="login-with"
                     >
-                      Login With
+                      Entre com
                     </Heading>
                     <div className="sign-with-btn">
-                      <a href="#" className="btn-face">
-                        <Image src={facebookLogo} alt="FACEBOOK" />
+                      <Button
+                        size="compact"
+                        bgColor="minimal"
+                        href="#"
+                        class="btn-face"
+                      >
+                        <Image
+                          src={facebookLogo}
+                          alt="FACEBOOK"
+                          className="iconLogin"
+                          width={18}
+                          height={18}
+                        />
                         Facebook
-                      </a>
-                      <a href="#" className="btn-google">
-                        <Image src={googleLogo} alt="GOOGLE" />
+                      </Button>
+                      <Button
+                        size="compact"
+                        bgColor="minimal"
+                        href="#"
+                        class="btn-google"
+                      >
+                        <Image
+                          src={googleLogo}
+                          alt="GOOGLE"
+                          className="iconLogin"
+                          width={18}
+                          height={18}
+                        />
                         Google
-                      </a>
+                      </Button>
                     </div>
                   </div>
                   <p className="text">
@@ -104,7 +131,7 @@ export default function LoginPage() {
             </form>
           </div>
           <div className="slider">
-            <SlideShow
+            <Carousel
               duration={500}
               transitionDuration={500}
               contentInfo={content}
@@ -115,7 +142,7 @@ export default function LoginPage() {
               ftColor="default"
               horizontalPosition="center"
             >
-              Faça parte dessa jornada !
+              Faça parte dessa jornada!
             </Heading>
           </div>
         </div>
