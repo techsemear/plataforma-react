@@ -12,7 +12,7 @@ html {
   /*Image only BG fallback*/
 
   /*background = gradient + image pattern combo*/
-  background-image: url('../../assets/image/background-login-plantyou.png');
+  background-image: url('../../assets/image/color-background.png');
 }
 
 body {
