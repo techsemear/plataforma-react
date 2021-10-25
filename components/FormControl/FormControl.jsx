@@ -38,7 +38,6 @@ export default function FormControl(props) {
         type="number" 
         name="phone" 
         placeholder="Qual seu Whatsapp:(examplo: 1198382788)" 
-        onchange={handleChange} 
         />
       </div>
   }
