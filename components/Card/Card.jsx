@@ -39,6 +39,7 @@ const {
     small: widthSmall,
     compact: widthCompact,
     large: widthLarge,
+    other: 'widthOther',
   }
   
   const HEIGHT = {
@@ -46,6 +47,7 @@ const {
     small: heightSmall,
     compact: heightCompact,
     large: heightLarge,
+    other: 'heightOther',
   }
 
   const SHAPE = {
