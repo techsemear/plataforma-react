@@ -8,10 +8,7 @@ import heartShape from '../../assets/image/landing-1/h1-client-heart-shape.png'
 import starShape from '../../assets/image/landing-1/h1-client-start-shape.png'
 import linkedinImage from '../../assets/image/landing-1/linkedin-2.png'
 
-export default function Testimonial({
-  personas,
-  children,
-}) {
+export default function Testimonial({personas, children}) {
   return (
     <div className="testimonial-area2-l1 position-relative bg-testimonial">
       <div className="curve-image-l1"></div>
@@ -32,9 +29,7 @@ export default function Testimonial({
               data-aos-delay={500}
               data-aos-duration={1000}
             >
-              <Heading level ="h6" horizontalPosition="center" ftColor="primary">
-                {children}
-              </Heading>
+              {children}
             </div>
           </div>
         </div>
@@ -64,9 +59,7 @@ function CardPersona({personasProfile}) {
           data-aos-duration={1000}
           key={index}
         >
-          <Card 
-            heightCard = "large"
-          >
+          <Card heightCard="large">
             <div className="client-l8-card">
               <div className="image">
                 <Image src={persona.imageProfile} alt="image" />

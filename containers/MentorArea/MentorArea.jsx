@@ -62,39 +62,45 @@ export default function MentorArea() {
   return (
     <div className="mentor-area">
       <Section id={styles.jornadaMentor} bgColor="default">
-      <div className={styles.mentorContentArea}>
-        <div className="container">
-          <div className="row justify-content-center align-items-center">
-            <div className="offset-xxl-1 col-xxl-5 col-xl-6 col-lg-6 col-md-10">
-              <div
-                className={styles.mentorContentImage}
-                data-aos="fade-up"
-                data-aos-delay={800}
-                data-aos-duration={1000}
-              >
-                <div className="image-1">
-                  <Image src={mentorImage} alt="image" />
+        <div className={styles.mentorContentArea}>
+          <div className="container">
+            <div className="row justify-content-center align-items-center">
+              <div className="offset-xxl-1 col-xxl-5 col-xl-6 col-lg-6 col-md-10">
+                <div
+                  className={styles.mentorContentImage}
+                  data-aos="fade-up"
+                  data-aos-delay={800}
+                  data-aos-duration={1000}
+                >
+                  <div className="image-1">
+                    <Image src={mentorImage} alt="image" />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="offset-xxl-1 col-xxl-4 col-xl-5 col-lg-6 col-md-10"
-              data-aos="fade-up"
-              data-aos-delay={500}
-              data-aos-duration={1000}
-            >
-              <div>
-                <Heading>{content.title[0]}</Heading>
-                <Heading level="h4" ftColor="secondary" underline="orange">{content.subtitle}</Heading>
+              <div
+                className="offset-xxl-1 col-xxl-4 col-xl-5 col-lg-6 col-md-10"
+                data-aos="fade-up"
+                data-aos-delay={500}
+                data-aos-duration={1000}
+              >
+                <div>
+                  <Heading>{content.title[0]}</Heading>
+                  <Heading level="h4" ftColor="secondary" underline="orange">
+                    {content.subtitle}
+                  </Heading>
+                </div>
+                <OrderedItems itemsTextList={itemsText} textColor="secondary" />
               </div>
-              <OrderedItems itemsTextList={itemsText} textColor="secondary" />
             </div>
           </div>
         </div>
-      </div>
       </Section>
       <Section id={styles.testemunhoMentor} bgColor="secondary">
-        <Testimonial personas={personas}>{content.title[1]}</Testimonial>
+        <Testimonial personas={personas}>
+          <Heading horizontalPosition="center" ftColor="primary">
+            {content.title[1]}
+          </Heading>
+        </Testimonial>
       </Section>
     </div>
   )

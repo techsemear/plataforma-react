@@ -1,16 +1,15 @@
 import {Testimonial} from '../Testimonial'
 import StudentJourney from './StudentJourney'
 import StudentPoints from './StudentPoints'
+import {Section} from '../../components/Section'
+import {Wave} from '../../components/Wave'
+import {Heading} from '../../components/Heading'
 
 import imageProfile1 from '../../assets/image/landing-1/student1.png'
 import imageProfile2 from '../../assets/image/landing-1/student2.png'
 import imageProfile3 from '../../assets/image/landing-1/student4.jpg'
-import {Section} from '../../components/Section'
-import { Wave } from '../../components/Wave'
-import { Card } from '../../components/Card'
-import { Heading } from '../../components/Heading'
 
-const content = { 
+const content = {
   title: 'Quem já venceu essa jornada',
 }
 const personas = [
@@ -35,7 +34,7 @@ const personas = [
     imageProfile: imageProfile3,
     linkedin: 'https://www.linkedin.com/in/gonsalvesjessica/',
   },
-];
+]
 const itemsText = [
   {
     text: 'Converse com mentores que tiveram sucesso na escolha de suas carreiras',
@@ -46,19 +45,22 @@ const itemsText = [
   {
     text: 'Encontre jovens que passaram pela mesma vivência e hoje são destaques no mercado',
   },
-];
+]
 export default function studentArea() {
   return (
     <div className="jovem-area">
       <div style={{height: 150, overflow: 'hidden'}}>
-        <Wave/>
+        <Wave />
       </div>
 
       <StudentJourney />
-      <StudentPoints itemsText={itemsText}/>
+      <StudentPoints itemsText={itemsText} />
       <Section bgColor="primary" id="testemunho-jovem">
-        <Heading level="h2" horizontalPosition="center" ftColor="primary">{content.title}</Heading>
-        <Testimonial personas={personas}></Testimonial>
+        <Testimonial personas={personas}>
+          <Heading horizontalPosition="center" ftColor="primary">
+            {content.title}
+          </Heading>
+        </Testimonial>
       </Section>
     </div>
   )
