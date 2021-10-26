@@ -37,7 +37,7 @@ export default function LoginPage() {
               className="sign-in-form"
             >
               <div className="plataforma-logo">
-                <Image src={plataformaLogo} alt="logo" layout="responsive"/>
+                <Image src={plataformaLogo} alt="logo" layout="responsive" />
               </div>
               <div className="actual-form">
                 <div className="heading">
@@ -55,22 +55,22 @@ export default function LoginPage() {
                   <div className="input-wrap">
                     <input
                       type="text"
+                      placeholder="Usuário"
                       minLength={4}
-                      className="input-field"
+                      className="inputFieldLogin"
                       autoComplete="off"
                       required
                     />
-                    <label className = "loginLabel">Usuário</label>
                   </div>
                   <div className="input-wrap">
                     <input
                       type="password"
-                      minLength={4}
-                      className="input-field"
+                      placeholder="Senha"
+                      minLength={6}
+                      className="inputFieldLogin"
                       autoComplete="off"
                       required
                     />
-                    <label className ="loginLabel" >Senha</label>
                   </div>
                   <Button
                     size="compact"
