@@ -7,7 +7,7 @@ import {IndexPage} from '../components/IndexPage'
 import {IntroOnboarding} from '../containers/IntroOnboarding'
 import {Challenges} from '../containers/Challenges'
 import {MaslowPoints} from '../containers/MaslowPoints'
-import {NavbarGeneral} from '../containers/Navbar'
+import {NavbarOnboarding} from '../containers/Navbar'
 import {StepsMentoring} from '../containers/StepsMentoring'
 import {GetStarted} from '../containers/GetStarted'
 
@@ -16,7 +16,7 @@ export default function Onboarding() {
   return (
     <React.Fragment>
       <IndexPage />
-      <NavbarGeneral />
+      <NavbarOnboarding />
       <IntroOnboarding />
       <Challenges />
       <MaslowPoints />
