@@ -7,7 +7,7 @@ export default function NavbarMain() {
   return (
     <HeaderNavigation contentInfo={menuItems} navItemsPosition="center" size="large">
       <div className={styles.loginButton}>
-        <Button size="compact" bgColor="secondary" href="/login" >
+        <Button size="compact" bgColor="secondary" href="/login" disabled>
           Login
         </Button>
       </div>
