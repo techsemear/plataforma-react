@@ -1,25 +1,3 @@
-/*custom font*/
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-/*basic reset*/
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  height: 100%;
-  /*Image only BG fallback*/
-
-  /*background = gradient + image pattern combo*/
-  background-image: url('../../assets/image/color-background.png');
-}
-
-body {
-  font-family: Poppins;
-  margin-top: 70px;
-  margin-bottom: 50px;
-}
 
 .plataforma-logo2 {
   width: 20%;
