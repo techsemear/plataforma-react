@@ -61,7 +61,11 @@ const itemsText = [
 export default function MentorArea() {
   return (
     <div className="mentor-area">
-      <Section id={styles.jornadaMentor} bgColor="default">
+      <Section
+        className={styles.jornadaMentor}
+        id="jornada-mentor"
+        bgColor="default"
+      >
         <div className={styles.mentorContentArea}>
           <div className="container">
             <div className="row justify-content-center align-items-center">
@@ -95,7 +99,11 @@ export default function MentorArea() {
           </div>
         </div>
       </Section>
-      <Section id={styles.testemunhoMentor} bgColor="secondary">
+      <Section
+        className={styles.testemunhoMentor}
+        id="testemunho-mentor"
+        bgColor="secondary"
+      >
         <Testimonial personas={personas}>
           <Heading horizontalPosition="center" ftColor="primary">
             {content.title[1]}

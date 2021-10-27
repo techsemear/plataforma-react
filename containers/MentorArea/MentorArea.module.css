@@ -8,12 +8,12 @@
   left: 0%;
 }
 
-#testemunhoMentor
+.testemunhoMentor
 {
   border-radius: 250px 250px 0px 0px;
 }
 
-#jornadaMentor
+.jornadaMentor
 {
   background-color: #fff;
 }

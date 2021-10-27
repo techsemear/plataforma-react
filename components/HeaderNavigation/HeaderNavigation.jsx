@@ -24,11 +24,6 @@ const sizeNavbar = {
   large: 'sizeNavLarge',
 }
 
-const logoSemear = {
-  image: semearLogo,
-  link: '#',
-}
-
 export default function HeaderNavigation({
   children,
   contentInfo = [],
@@ -44,7 +39,7 @@ export default function HeaderNavigation({
         <div className="container-fluid">
           <div className="brandLogo">
             {
-              <Link href="#">
+              <Link href="/">
                 <a>
                   <Image src={semearLogo} alt="semearLogo" />
                 </a>
