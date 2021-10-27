@@ -4,8 +4,6 @@ import StepWelcome from './StepWelcome'
 import StepInfos from './StepInfos'
 import StepAssessment from './StepAssessment'
 
-import {StepProgressBar} from '../StepProgressBar'
-
 const numberOfSteps = 8
 
 class AssessmentForm extends Component {
@@ -210,11 +208,6 @@ class AssessmentForm extends Component {
         onSubmit={this.handleSubmit}
         ref={this.myRef}
       >
-        <StepProgressBar
-          currentStep={this.state.currentStep}
-          handleChange={this.handleChange}
-          numberOfSteps={this.constant.steps}
-        />
         <StepWelcome
           currentStep={this.state.currentStep}
           handleChange={this.handleChange}

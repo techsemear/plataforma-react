@@ -19,6 +19,7 @@ import '../components/LeadForm/LeadForm.css'
 import '../components/Video/Video.css'
 import '../components/HeaderNavigation/HeaderNavigation.css'
 import '../components/Card/Card.css'
+import '../components/AssessmentForm/AssessmentForm.css'
 
 // Containers
 // Home
@@ -33,6 +34,9 @@ import '../containers/LoginPage/LoginPage.css'
 //Onboarding
 import '../containers/MaslowPoints/MaslowPoints.css'
 import '../containers/StepsMentoring/StepsMentoring.css'
+
+//Assessment
+import '../containers/AssessmentPage/AssessmentPage.css'
 
 function MyApp({Component, pageProps}) {
   return (

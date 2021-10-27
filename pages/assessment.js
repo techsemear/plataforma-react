@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 // Containers
-import {NavbarGeneral} from '../containers/NavbarMain'
+import {NavbarGeneral} from '../containers/Navbar'
 import {AssessmentPage} from '../containers/AssessmentPage'
 
 // Components
