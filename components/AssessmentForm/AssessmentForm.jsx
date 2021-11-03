@@ -203,44 +203,42 @@ class AssessmentForm extends Component {
       },
     ]
     return (
-      <form
-        id="msform2"
-        onSubmit={this.handleSubmit}
-        ref={this.myRef}
-      >
-        <StepWelcome
-          currentStep={this.state.currentStep}
-          handleChange={this.handleChange}
-          stepStatus={1}
-        />
-        <StepInfos
-          currentStep={this.state.currentStep}
-          handleChange={this.handleChange}
-          schooling={this.state.schooling}
-          college={this.state.college}
-          course={this.state.course}
-          area={this.state.area}
-          subarea={this.state.subarea}
-          personalSite={this.state.personalSite}
-          imageProfile={this.state.imageProfile}
-          stepStatus={2}
-        />
-        {contentInfo.map((item, index) => (
-          <StepAssessment
-            content={item}
-            rating={item.rating}
+      <main>
+        <form id="msform2" onSubmit={this.handleSubmit} ref={this.myRef}>
+          <StepWelcome
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
-            key={index}
-            stepStatus={index + 3}
+            stepStatus={1}
           />
-        ))}
-        <div className="btn-container">
-          {this.previousbutton}
-          {this.nextbutton}
-          {this.submitbutton}
-        </div>
-      </form>
+          <StepInfos
+            currentStep={this.state.currentStep}
+            handleChange={this.handleChange}
+            schooling={this.state.schooling}
+            college={this.state.college}
+            course={this.state.course}
+            area={this.state.area}
+            subarea={this.state.subarea}
+            personalSite={this.state.personalSite}
+            imageProfile={this.state.imageProfile}
+            stepStatus={2}
+          />
+          {contentInfo.map((item, index) => (
+            <StepAssessment
+              content={item}
+              rating={item.rating}
+              currentStep={this.state.currentStep}
+              handleChange={this.handleChange}
+              key={index}
+              stepStatus={index + 3}
+            />
+          ))}
+          <div className="btn-container">
+            {this.previousbutton}
+            {this.nextbutton}
+            {this.submitbutton}
+          </div>
+        </form>
+      </main>
     )
   }
 }

@@ -1,8 +1,8 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import Head from 'next/head'
 
 // Containers
-import {NavbarLoginSignUp} from '../containers/Navbar'
 import {AssessmentPage} from '../containers/AssessmentPage'
 
 // Components
@@ -12,7 +12,6 @@ export default function SignUp() {
   return (
     <React.Fragment>
       <IndexPage />
-      <NavbarLoginSignUp/>
       <AssessmentPage />
     </React.Fragment>
   )
