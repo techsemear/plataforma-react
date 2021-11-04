@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from 'react'
-import {Col, Row, Button, Popover, Modal} from 'antd'
+import {Col, Row, Button, Popover, Rate} from 'antd'
 import Image from 'next/image'
 import {InfoCircleOutlined} from '@ant-design/icons'
 
@@ -32,7 +32,7 @@ const StepAssessment = (props) => {
           </h2>
           <h5>{props.content.subtitle}</h5>
           <div className="mt-5">
-            <NumberInput />
+            <NumberRate />
           </div>
         </Col>
         <Col
@@ -102,50 +102,47 @@ const assessmentStatus = {
   },
 }
 
-function NumberInput() {
+function ButtonRate(props) {
+  return props.index <= props.inputAssessment ? (
+    <Button
+      key={`btn-${props.index + 1}`}
+      shape="circle"
+      onClick={props.handleChange}
+      value={props.index}
+      type="primary"
+    >
+      {props.index}
+    </Button>
+  ) : (
+    <Button
+      key={`btn-${props.index + 1}`}
+      shape="circle"
+      onClick={props.handleChange}
+      value={props.index}
+    >
+      {props.index}
+    </Button>
+  )
+}
+
+function NumberRate() {
   const [inputAssessment, setInputAssessment] = useState(7)
 
   const handleChange = (event) => {
     const value = event.currentTarget.value
     setInputAssessment(value)
   }
-
   return (
-    <Row align="middle" justify="space-around">
-      <Col
-        span={8}
-        offset={1}
-        xs={{span: 18, offset: 0}}
-        sm={{span: 16}}
-        md={{span: 24}}
-        lg={{offset: 1}}
-      >
-        {Object.keys(assessmentStatus).map((item) =>
-          parseInt(item) <= inputAssessment ? (
-            <Button
-              key={`btn-${parseInt(item) + 1}`}
-              onClick={handleChange}
-              value={parseInt(item)}
-              shape="circle"
-              type="primary"
-              className="mx-1 my-1"
-            >
-              {item}
-            </Button>
-          ) : (
-            <Button
-              key={`btn-${parseInt(item) + 1}`}
-              onClick={handleChange}
-              shape="circle"
-              value={parseInt(item)}
-              className="mx-1 my-1"
-            >
-              {item}
-            </Button>
-          ),
-        )}
-        <input type="hidden" value={inputAssessment} />
-      </Col>
-    </Row>
+    <Rate
+      defaultValue={7}
+      count={10}
+      character={({index}) => (
+        <ButtonRate
+          index={index + 1}
+          inputAssessment={inputAssessment}
+          handleChange={handleChange}
+        />
+      )}
+    />
   )
 }
