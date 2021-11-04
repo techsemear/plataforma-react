@@ -2,10 +2,9 @@ import React, {Fragment, useState} from 'react'
 import {Steps, Button, message, Col, Row, Card} from 'antd'
 import 'antd/dist/antd.css'
 
-import welcomeImage from '../../assets/image/personagens/footer.png'
-
 import StepWelcome from './StepWelcome'
 import StepAssessment from './StepAssessment'
+import StepInfos from './StepInfos'
 
 const {Step} = Steps
 
@@ -66,7 +65,7 @@ const steps = [
   },
   {
     title: 'Infos Complementares',
-    content: <StepAssessment content={contentAssessment[0]} />,
+    content: <StepInfos />,
   },
   {
     title: 'Desafio 1',
@@ -107,21 +106,15 @@ export default function AssessmentPage() {
 
   return (
     <Fragment>
-      <Card>
         <Row align="middle">
           <Col
-            xs={{offset: 0}}
-            sm={{offset: 0}}
-            md={{offset: 1}}
+            xs={{span: 1, offset: 0}}
+            sm={{span: 6, offset: 0}}
+            md={{span: 6, offset: 0}}
             lg={{offset: 1}}
-            xl={{offset: 1}}
+            xl={{span: 4, offset: 1}}
           >
-            <Steps
-              current={current}
-              progressDot={true}
-              size="small"
-              direction="vertical"
-            >
+            <Steps current={current} size="small" direction="vertical">
               {steps.map((item) => (
                 <Step key={item.title} title={item.title} />
               ))}
@@ -130,10 +123,10 @@ export default function AssessmentPage() {
           <Col
             span={18}
             offset={1}
-            xs={{span: 14, offset: 0}}
-            sm={{span: 18, offset: 0}}
-            md={{span: 16, offset: 1}}
-            lg={{span: 20, offset: 1}}
+            xs={{span: 20, offset: 2}}
+            sm={{span: 16, offset: 1}}
+            md={{span: 17, offset: 1}}
+            lg={{span: 16, offset: 1}}
             xl={{span: 18, offset: 1}}
           >
             <div className="steps-content">{steps[current].content}</div>
@@ -159,7 +152,6 @@ export default function AssessmentPage() {
             </Button>
           )}
         </div>
-      </Card>
     </Fragment>
   )
 }

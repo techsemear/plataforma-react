@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from 'react'
-import {Col, Row, Button, Popover} from 'antd'
+import {Col, Row, Button, Popover, Modal} from 'antd'
 import Image from 'next/image'
 import {InfoCircleOutlined} from '@ant-design/icons'
 
@@ -10,11 +10,6 @@ const StepAssessment = (props) => {
         <Col
           span={8}
           offset={1}
-          xs={20}
-          sm={20}
-          md={20}
-          lg={20}
-          xl={10}
           xs={{span: 24, offset: 0}}
           sm={{span: 22, offset: 0}}
           md={{span: 20, offset: 1}}
@@ -29,14 +24,16 @@ const StepAssessment = (props) => {
               title="Nível Neutro"
               placement="right"
               overlayStyle={{
-                width: '20vw',
+                width: '35vw',
               }}
             >
               <InfoCircleOutlined />
             </Popover>
           </h1>
           <h5>{props.content.subtitle}</h5>
-          <NumberInput />
+          <div className="mt-5">
+            <NumberInput />
+          </div>
         </Col>
         <Col
           span={6}
@@ -114,8 +111,16 @@ function NumberInput() {
   }
 
   return (
-    <Fragment>
-      <Row gutter={[6, 6]} align="middle" justify="space-around">
+    <Row align="middle" justify="space-around">
+      <Col
+        span={8}
+        offset={1}
+        xs={{span: 18, offset: 0}}
+        sm={{span: 16, offset: 0}}
+        md={{span: 22, offset: 0}}
+        lg={{span: 22, offset: 1}}
+        xl={{span: 22, offset: 1}}
+      >
         {Object.keys(assessmentStatus).map((item) =>
           parseInt(item) <= inputAssessment ? (
             <Button
@@ -124,6 +129,7 @@ function NumberInput() {
               value={parseInt(item)}
               shape="circle"
               type="primary"
+              className="mx-1 my-1"
             >
               {item}
             </Button>
@@ -133,13 +139,14 @@ function NumberInput() {
               onClick={handleChange}
               shape="circle"
               value={parseInt(item)}
+              className="mx-1 my-1"
             >
               {item}
             </Button>
           ),
         )}
         <input type="hidden" value={inputAssessment} />
-      </Row>
-    </Fragment>
+      </Col>
+    </Row>
   )
 }

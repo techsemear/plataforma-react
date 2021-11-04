@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Image from 'next/image'
-import {Col, Row, Modal, Button, Icon} from 'antd'
+import {Col, Row, Modal, Button} from 'antd'
 import {DoubleRightOutlined} from '@ant-design/icons'
 
 import welcomeImage from '../../assets/image/personagens/footer.png'
