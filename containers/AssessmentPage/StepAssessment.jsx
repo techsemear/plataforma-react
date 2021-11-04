@@ -16,7 +16,7 @@ const StepAssessment = (props) => {
           lg={{span: 20, offset: 1}}
           xl={{span: 12, offset: 1}}
         >
-          <h1>
+          <h2>
             {props.content.title}
             <Popover
               className="mx-3"
@@ -29,7 +29,7 @@ const StepAssessment = (props) => {
             >
               <InfoCircleOutlined />
             </Popover>
-          </h1>
+          </h2>
           <h5>{props.content.subtitle}</h5>
           <div className="mt-5">
             <NumberInput />
