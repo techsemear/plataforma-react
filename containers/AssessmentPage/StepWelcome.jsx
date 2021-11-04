@@ -37,7 +37,7 @@ const StepWelcome = () => {
           icon={<DoubleRightOutlined />}
           align="middle"
         >
-          Saiba mais sobre a Calculadora de Matches
+          Saiba mais
         </Button>
         <Modal
           title="Como funciona nossa Calculadora de Matches?"

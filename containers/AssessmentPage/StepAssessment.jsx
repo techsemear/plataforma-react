@@ -116,10 +116,9 @@ function NumberInput() {
         span={8}
         offset={1}
         xs={{span: 18, offset: 0}}
-        sm={{span: 16, offset: 0}}
-        md={{span: 22, offset: 0}}
-        lg={{span: 22, offset: 1}}
-        xl={{span: 22, offset: 1}}
+        sm={{span: 16}}
+        md={{span: 24}}
+        lg={{offset: 1}}
       >
         {Object.keys(assessmentStatus).map((item) =>
           parseInt(item) <= inputAssessment ? (

@@ -108,11 +108,10 @@ export default function AssessmentPage() {
     <Fragment>
         <Row align="middle">
           <Col
-            xs={{span: 1, offset: 0}}
-            sm={{span: 6, offset: 0}}
-            md={{span: 6, offset: 0}}
-            lg={{offset: 1}}
-            xl={{span: 4, offset: 1}}
+            xs={{span: 1, offset: 1}}
+            sm={{span: 6}}
+            md={{span: 6}}
+            xl={{span: 4}}
           >
             <Steps current={current} size="small" direction="vertical">
               {steps.map((item) => (
@@ -121,13 +120,9 @@ export default function AssessmentPage() {
             </Steps>
           </Col>
           <Col
-            span={18}
             offset={1}
             xs={{span: 20, offset: 2}}
             sm={{span: 16, offset: 1}}
-            md={{span: 17, offset: 1}}
-            lg={{span: 16, offset: 1}}
-            xl={{span: 18, offset: 1}}
           >
             <div className="steps-content">{steps[current].content}</div>
           </Col>
