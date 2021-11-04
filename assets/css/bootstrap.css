@@ -278,10 +278,7 @@ figure {
   margin: 0 0 1rem;
 }
 
-img,
-svg {
-  vertical-align: middle;
-}
+
 
 table {
   caption-side: bottom;
@@ -9897,10 +9894,7 @@ figure {
   margin: 0 0 1rem;
 }
 
-img,
-svg {
-  vertical-align: middle;
-}
+
 
 table {
   caption-side: bottom;
@@ -16456,6 +16450,8 @@ fieldset:disabled .btn {
   text-transform: lowercase !important;
 }
 
+
+
 .text-uppercase {
   text-transform: uppercase !important;
 }
@@ -19410,3 +19406,4 @@ fieldset:disabled .btn {
 }
 
 /*# sourceMappingURL=maps/bootstrap.css.map */
+
