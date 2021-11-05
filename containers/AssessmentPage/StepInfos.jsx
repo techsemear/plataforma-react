@@ -146,20 +146,27 @@ const StepInfos = () => {
 export default StepInfos
 
 const macroArea = [
-  {area: 'Administração '},
-  {area: 'Artes: Visuais ou Digitais '},
+  {area: 'Ciências Agrárias'},
+  {area: 'Ciências Biológicas'},
+  {area: 'Ciências Exatas e da Terra'},
+  {area: 'Ciências Humanas'},
+  {area: 'Ciências Sociais Aplicadas'},
   {area: 'Comunicação'},
   {area: 'Consultoria'},
   {area: 'Direito'},
   {area: 'Educação'},
   {area: 'Empreendedorismo'},
-  {area: 'Engenharia '},
+  {area: 'Engenharia e Tecnologia'},
   {area: 'Finanças'},
-  {area: 'Gestão '},
+  {area: 'Gestão'},
+  {area: 'Linguística, Letras e Artes'},
   {area: 'Marketing'},
-  {area: 'Química'},
   {area: 'Saúde'},
-  {area: 'Tecnologia'},
   {area: 'Vendas'},
   {area: 'Não encontrei minha área'},
 ]
+
+
+
+
+
