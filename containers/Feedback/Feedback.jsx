@@ -21,12 +21,11 @@ import 'antd/dist/antd.css'
 const CheckboxGroup = Checkbox.Group
 const {TextArea} = Input
 
-
 export default function Feedback({}) {
   const [current, setCurrent] = useState(0)
-      const [checked, setBoxChecked] = useState([])
-      const [editClicked, setEditClicked] = useState(false)
-      const options = ['Sim', 'Não']
+  const [checked, setBoxChecked] = useState([])
+  const [editClicked, setEditClicked] = useState(false)
+  const options = ['Sim', 'Não']
 
   const next = () => {
     setCurrent(current + 1)
@@ -92,18 +91,20 @@ export default function Feedback({}) {
     return (
       <Fragment>
         <Col span={20} offset={2}>
-          <h2> Feedback </h2>
-          <h5> Pergunta 1 </h5>
-          <TextArea rows={4} />
+          <h1> Feedback </h1>
           <h5 style={{margin: '20px 0'}}> Como foi a mentoria para você? </h5>
           <Row justify="center">
             <Rate
               align="center"
-              style={{transform: 'scale(2)'}}
+              style={{transform: 'scale(2)', marginBottom: '60px'}}
               defaultValue={3}
               character={({index}) => customIcons[index + 1]}
             />
           </Row>
+          <h5>
+            Este espaço é para você nos contar um pouco mais da sua experiência
+          </h5>
+          <TextArea rows={4} />
         </Col>
       </Fragment>
     )
@@ -122,11 +123,16 @@ export default function Feedback({}) {
           <h1 style={{marginBottom: '20px'}}>
             Sentimos muito <FrownOutlined />
           </h1>
-          <h5 style={{marginTop: '40px'}}>
-            {' '}
-            Porque a mentoria não aconteceu?{' '}
-          </h5>
-          <Radio.Group value={value} onChange={onChange}>
+          <h5 style={{marginTop: '40px'}}>Porque a mentoria não aconteceu?</h5>
+          <Radio.Group
+            value={value}
+            onChange={onChange}
+            style={{
+              transform: 'scale(1.2)',
+              paddingLeft: '40px',
+              paddingTop: '15px',
+            }}
+          >
             <Space direction="vertical">
               <Radio value={1}>
                 Não pude realizar a mentoria devido a falta de disponibilidade
@@ -135,12 +141,10 @@ export default function Feedback({}) {
                 Tive problemas para me comunicar com o mentor
               </Radio>
               <Radio value={3}>
-                {' '}
                 Marquei o encontro e o mentor não apareceu
               </Radio>
 
               <Radio value={4}>
-                {' '}
                 Entrei em contato e o mentor não respondeu
               </Radio>
               <Radio value={5}>

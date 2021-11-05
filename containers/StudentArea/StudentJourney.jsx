@@ -35,17 +35,15 @@ export default function StudentJourney() {
             <div className="content-box-l1-1 section__heading">
               <div>
                 <Heading level="h4">{title}</Heading>
-                <p>
-                  {paragraph}
-                </p>
+                <p>{paragraph}</p>
                 <div className="getStartButton">
                   <Button href="#subscribe" class="w-100">
                     Inscreva-se
                   </Button>
                 </div>
                 <p>
-                  Com a rede de contatos do ISemear, contamos com apoio de{' '}
-                  <strong>mais de 600 mentores</strong> cadastrados de todas as{' '}
+                  Com a rede de contatos do ISemear, contamos com apoio de
+                  <strong>mais de 600 mentores</strong> cadastrados de todas as
                   <strong>empresas parceiras</strong> e das mais diversas áreas!
                 </p>
               </div>

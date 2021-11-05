@@ -129,16 +129,6 @@ const StepInfos = () => {
           </Select>
         </Col>
       </Row>
-      <Row align="middle" justify="center">
-        <Col span={16} xl={11}>
-          <label> Site Pessoal </label>
-          <Input
-            addonBefore="http://"
-            placeholder="meusite.com"
-            style={{width: '100%'}}
-          />
-        </Col>
-      </Row>
     </Fragment>
   )
 }
