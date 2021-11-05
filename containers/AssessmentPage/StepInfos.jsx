@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react'
 import Image from 'next/image'
-import {Col, Row, Select, Typography, Input} from 'antd'
+import {Col, Row, Select, Input} from 'antd'
 import 'antd/dist/antd.css'
 
 import AreasList from '././AreasList'
@@ -11,23 +11,23 @@ import plataformaLogo from '../../assets/image/logo-semear.png'
 
 const {Option} = Select
 
-function onChange(value) {
-  console.log(`selected ${value}`)
-}
-
-function onBlur() {
-  console.log('blur')
-}
-
-function onFocus() {
-  console.log('focus')
-}
-
-function onSearch(val) {
-  console.log('search:', val)
-}
-
 const StepInfos = () => {
+  const onChange = (value) => {
+    console.log(value)
+  }
+
+  const onBlur = () => {
+    console.log('blur')
+  }
+
+  const onFocus = () => {
+    console.log('focus')
+  }
+
+  const onSearch = (value) => {
+    console.log('search:', value)
+  }
+
   return (
     <Fragment>
       <div align="center">
@@ -165,8 +165,3 @@ const macroArea = [
   {area: 'Vendas'},
   {area: 'Não encontrei minha área'},
 ]
-
-
-
-
-
