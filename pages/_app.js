@@ -38,6 +38,9 @@ import '../containers/StepsMentoring/StepsMentoring.css'
 //Assessment
 import '../containers/AssessmentPage/AssessmentPage.css'
 
+//Profile
+import '../containers/ProfilePage/ProfilePage.css'
+
 function MyApp({Component, pageProps}) {
   return (
     <>

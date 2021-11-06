@@ -11,7 +11,6 @@ export default function Login() {
   return (
     <React.Fragment>
       <IndexPage />
-      <NavbarProfile />
       <ProfilePage />
     </React.Fragment>
   )
