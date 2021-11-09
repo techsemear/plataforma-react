@@ -20,6 +20,6 @@ const selectBefore = (
   
 export default function PersonalSite (){
     return(
-      <Input addonBefore={selectBefore} addonAfter={selectAfter} defaultValue="mysite" />      
+      <Input addonBefore={selectBefore} addonAfter={selectAfter} defaultValue="escreva-seu-site-pessoal" />      
 )
 };

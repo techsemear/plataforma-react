@@ -1,10 +1,11 @@
 import React, {Fragment, useState} from 'react'
-import {Button, message, Col, Row, Card, Typography, Upload, Input, Space } from 'antd'
+import {Button, message, Col, Row, Card, Typography, Upload, Input, Space, Progress } from 'antd'
 import { UploadOutlined} from '@ant-design/icons';
 import 'antd/dist/antd.css'
  
 import AvatarImage from './AvatarImage'
 import PersonalSite from './PersonalSite'
+import AddInfos from './AddInfos'
 
 const { Title } = Typography;
 const {TextArea} = Input;
@@ -31,21 +32,21 @@ const props = {
 export default function ProfilePage() {
   return (
     <Fragment>
-     <div className="first-column-profile"> 
+     <div className="page-profile"> 
      <Row align="middle">
           <Col
-          offset={1}
-          xs={{span: 20, offset: 2}}
-          sm={{span: 20, offset: 1}}
-          md={{span: 10}}
+          xs={{span: 20, offset: 1}}
+          sm={{span: 20}}
+          md={{span: 20}}
           xl={{span: 15}}
           >
+      <div className="first-column-profile">
       <Card>
         <Row>
           <Col span={8}>
           <AvatarImage></AvatarImage>   
           <Upload {...props}>
-            <Button icon={<UploadOutlined />}>Atualize sua foto</Button>
+            <Button type="primary" icon={<UploadOutlined />}>Atualize sua foto</Button>
           </Upload>
           </Col>
           <Col span={15}>
@@ -56,6 +57,14 @@ export default function ProfilePage() {
           </Col>
         </Row>
       </Card>
+      </div>
+      <Progress
+         strokeColor={{
+            '0%': '#108ee9',
+            '100%': '#87d068',
+         }}
+         percent={99.9}
+    />
           </Col>
           <Col
             xs={{span: 1, offset: 1}}
@@ -69,7 +78,7 @@ export default function ProfilePage() {
                   <Button className="button-profile" type="primary">Preencher Roda da Trilha</Button>
                 </Space>
                 <Space direction="vertical">
-                  <Button className="button-profile" type="primary">Completar Cadastro</Button>  
+                  <AddInfos/>
                 </Space>
                 <Space direction="vertical">
                   <Button className="button-profile" type="primary" disabled >Encontrar Mentor(a) Ideal</Button>  
