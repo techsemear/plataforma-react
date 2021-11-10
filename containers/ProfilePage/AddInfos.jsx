@@ -1,10 +1,10 @@
 
-import React, { useState } from 'react';
-import { Modal, Button, Select, Form, Checkbox } from 'antd';
+import React, { useState, Fragment } from 'react';
+import { Modal, Button, Select, Form, Radio, Space } from 'antd';
+
+import RadioInfo from './RadioInfo'
 
 const { Option } = Select;
-
-const plainOptions = ['Sim', 'Não'];
 
 function onChange(value) {
   console.log(`selected ${value}`);
@@ -37,8 +37,10 @@ export default function AddInfos () {
     setIsModalVisible(false);
   };
 
+
+
   return (
-    <>
+    <Fragment>
       <Button type="primary" onClick={showModal} className="button-profile">
         Conclua seu Cadastro
       </Button>
@@ -122,11 +124,11 @@ export default function AddInfos () {
                 name="deficiency"
                 rules={[{ required: true, message: 'Por favor, preencha o campo acima' }]}
             >
-                 <Checkbox.Group options={plainOptions}  onChange={onChange} />
+                 <RadioInfo/>
             </Form.Item>
         </Form>
       </Modal>
-    </>
+    </Fragment>
   );
 };
 
