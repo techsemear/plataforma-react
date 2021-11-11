@@ -1,7 +1,7 @@
 import React, {Fragment, useState, useEffect} from 'react'
 import Image from 'next/image'
-import {Button, message, Col, Row, Avatar, Card, Modal} from 'antd'
-import {DoubleRightOutlined} from '@ant-design/icons'
+import {Button, Col, Row, Card, Modal, Popover} from 'antd'
+import {DoubleRightOutlined, InfoCircleOutlined} from '@ant-design/icons'
 import 'antd/dist/antd.css'
 
 import imageProfile1 from '../../assets/image/landing-1/mentor1.png'
@@ -16,6 +16,7 @@ const personas = [
   {
     name: ' Camila Cintra',
     age: '33',
+    pronoun: 'Ela/Dela',
     description:
       'Há tempos eu vinha sentindo vontade de contribuir com o crescimento de outras pessoas e colocar minha vivência a serviço disso. Conforme vou crescendo, percebo que recebi muito da vida e que às vezes uma palavra, um gesto ou uma dica, pode transformar a vida de alguém, assim como a minha foi também transformada.',
     profession: 'Researcher & Brand Strategist',
@@ -28,6 +29,7 @@ const personas = [
   {
     name: ' Giovanni Luigi',
     age: '28',
+    pronoun: 'Ele/Dele',
     description:
       'Eu encontrei muitas histórias parecidas com a minha, o que me fez refletir muito sobre propósito, acho incrível o efeito que os jovens têm sobre a gente. Assim como compartilhamos experiência e conhecimentos, eles fornecem energia e esperança!',
     profession: 'Digital Data Marketing Specialist',
@@ -40,6 +42,7 @@ const personas = [
   {
     name: ' Lucas Carvalho',
     age: '32',
+    pronoun: 'Ele/Dele',
     description:
       'A oportunidade de dividir anseios, dúvidas, perspectivas de carreira e ensinamentos com jovens tão atentos é, sem dúvida, excepcional e um exercício de aprendizado. Tenho um carinho especial pela mentoria que me possibilitou conhecer um jovem inteligente, cheio de sonhos e que tem uma trajetória muito parecida com a que eu tive.',
     profession: 'Advogado Júnior',
@@ -51,14 +54,85 @@ const personas = [
   },
 ]
 
-export default function MatchingCalculate({}) {
+export default function MatchingCalculated({}) {
+  const [isFirstClicked, setIsFirstClicked] = useState(false)
+  const [isSecondClicked, setIsSecondClicked] = useState(false)
+  const [isThirdClicked, setIsThirdClicked] = useState(false)
+
+  const firstMentorSelected = () => {
+    setIsFirstClicked(true)
+  }
+
+  const secondMentorSelected = () => {
+    setIsSecondClicked(true)
+  }
+  const thirdMentorSelected = () => {
+    setIsThirdClicked(true)
+  }
+
   return (
     <Fragment>
-      <div className="site-card-wrapper">
+      <div>
+        {isFirstClicked || isSecondClicked || isThirdClicked ? (
+          <h4 style={{margin: '10px 0 10px 80px'}}>
+            Estamos preparando tudo para a sua mentoria e em breve entraremos em
+            contato!
+          </h4>
+        ) : (
+          <h2 style={{margin: '10px 0 10px 80px'}}>
+            Esses são os seus três melhores matches!
+            <Popover
+              className="mx-3"
+              content="Conheça-os e escolha um para realizar a mentoria"
+              overlayStyle={{
+                width: '25vw',
+              }}
+            >
+              <InfoCircleOutlined />
+            </Popover>
+          </h2>
+        )}
         <Row gutter={48} justify="center">
-          <CardProfile persona={personas[0]} key="primary" />
-          <CardProfile persona={personas[1]} key="secondary" />
-          <CardProfile persona={personas[2]} key="tertiary" />
+          {isFirstClicked ? (
+            <CardProfile
+              persona={personas[0]}
+              key="primary"
+              isMatchClicked={isFirstClicked}
+            />
+          ) : isSecondClicked ? (
+            <CardProfile
+              persona={personas[1]}
+              key="secondary"
+              isMatchClicked={isSecondClicked}
+            />
+          ) : isThirdClicked ? (
+            <CardProfile
+              persona={personas[2]}
+              key="tertiary"
+              isMatchClicked={isThirdClicked}
+            />
+          ) : (
+            <Fragment>
+              <CardProfile
+                persona={personas[0]}
+                key="primary"
+                onClick={firstMentorSelected}
+                isMatchClicked={isFirstClicked}
+              />
+              <CardProfile
+                persona={personas[1]}
+                key="secondary"
+                onClick={secondMentorSelected}
+                isMatchClicked={isSecondClicked}
+              />
+              <CardProfile
+                persona={personas[2]}
+                key="tertiary"
+                onClick={thirdMentorSelected}
+                isMatchClicked={isThirdClicked}
+              />
+            </Fragment>
+          )}
         </Row>
       </div>
     </Fragment>
@@ -67,7 +141,6 @@ export default function MatchingCalculate({}) {
 
 function CardProfile(props) {
   const [isModalVisible, setIsModalVisible] = useState(false)
-  const [isMatchClicked, setIsMatchClicked] = useState(false)
 
   const widthProfile = 200
 
@@ -94,6 +167,7 @@ function CardProfile(props) {
       onCancel() {},
       okText: 'Confirmar',
       cancelText: 'Voltar',
+      afterClose: props.onClick,
     })
   }
 
@@ -149,8 +223,8 @@ function CardProfile(props) {
           <Button
             type="primary"
             key="confirm"
-            loading={isMatchClicked}
             onClick={showPromiseConfirm}
+            disabled={props.isMatchClicked}
           >
             Deu Match!
           </Button>,
@@ -172,21 +246,23 @@ function CardProfile(props) {
               height="24"
             />
           </a>
-          {`${props.persona.name}, ${props.persona.age}`}
+          {`${props.persona.name} (${props.persona.pronoun}), ${props.persona.age}`}
         </div>
         <p>{props.persona.description}</p>
-        <Card.Grid style={{width: '100%'}}>
-          <h6> Informações Profissionais</h6>
-          <a>{`Empresa: ${props.persona.company}`}</a>
-          <br />
-          <a>{`Cargo: ${props.persona.profession}`}</a>
-        </Card.Grid>
-        <Card.Grid style={{width: '100%'}}>
-          <h6> Informações Acadêmicas</h6>
-          <a>{`Faculdade: ${props.persona.college}`}</a>
-          <br />
-          <a>{`Curso: ${props.persona.course}`}</a>
-        </Card.Grid>
+        <Card>
+          <Card.Grid style={{width: '100%'}}>
+            <h6> Informações Profissionais</h6>
+            <a>{`Empresa: ${props.persona.company}`}</a>
+            <br />
+            <a>{`Cargo: ${props.persona.profession}`}</a>
+          </Card.Grid>
+          <Card.Grid style={{width: '100%'}}>
+            <h6> Informações Acadêmicas</h6>
+            <a>{`Faculdade: ${props.persona.college}`}</a>
+            <br />
+            <a>{`Curso: ${props.persona.course}`}</a>
+          </Card.Grid>
+        </Card>
       </Modal>
     </Col>
   )

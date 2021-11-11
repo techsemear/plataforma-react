@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Containers
-import {MatchingCalculate} from '../containers/MatchingCalculate'
+import {MatchingCalculated} from '../containers/MatchingCalculated'
 
 // Components
 import {IndexPage} from '../components/IndexPage'
@@ -10,7 +10,7 @@ export default function SignUp() {
   return (
     <React.Fragment>
       <IndexPage />
-      <MatchingCalculate />
+      <MatchingCalculated />
     </React.Fragment>
   )
 }
