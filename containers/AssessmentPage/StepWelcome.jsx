@@ -64,3 +64,4 @@ const StepWelcome = () => {
 }
 
 export default StepWelcome
+
