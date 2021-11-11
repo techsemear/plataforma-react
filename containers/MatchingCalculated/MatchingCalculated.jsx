@@ -1,6 +1,6 @@
 import React, {Fragment, useState, useEffect} from 'react'
 import Image from 'next/image'
-import {Button, Col, Row, Card, Modal, Popover} from 'antd'
+import {Button, message, Col, Row, Card, Modal, Popover} from 'antd'
 import {DoubleRightOutlined, InfoCircleOutlined} from '@ant-design/icons'
 import 'antd/dist/antd.css'
 
@@ -159,15 +159,16 @@ function CardProfile(props) {
       title: `Deseja confirmar a sua escolha com ${props.persona.name}?`,
       content: 'Lembre-se: você não poderá voltar atrás na sua decisão',
       onOk() {
+        setIsModalVisible(false)
+        props.onClick()
+        message.success('Escolha realizada com sucesso!')
         return new Promise((resolve, reject) => {
           setTimeout(Math.random() > 0.5 ? resolve : reject, 800)
-          setIsModalVisible(false)
         }).catch(() => console.log('Oops errors!'))
       },
       onCancel() {},
       okText: 'Confirmar',
       cancelText: 'Voltar',
-      afterClose: props.onClick,
     })
   }
 
