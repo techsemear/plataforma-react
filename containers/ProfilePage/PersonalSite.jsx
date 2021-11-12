@@ -9,17 +9,12 @@ const selectBefore = (
       <Option value="https://">https://</Option>
     </Select>
   );
-  const selectAfter = (
-    <Select defaultValue=".com" className="select-after">
-      <Option value=".com">.com</Option>
-      <Option value=".jp">.com.br</Option>
-      <Option value=".cn">.net</Option>
-      <Option value=".org">.org</Option>
-    </Select>
-  );
   
 export default function PersonalSite (){
     return(
-      <Input addonBefore={selectBefore} addonAfter={selectAfter} defaultValue="escreva-seu-site-pessoal" />      
+      <Input 
+      addonBefore={selectBefore}  
+      placeholder="Escreva seu site pessoal"
+      />      
 )
 };

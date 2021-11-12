@@ -71,8 +71,12 @@ export default function AddInfos () {
                       option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
                     }
                 >
-                    <Option value="jack">Jack</Option>
-                    <Option value="lucy">Lucy</Option>
+                    <Option value="cis_woman">Mulher Cisgenero</Option>
+                    <Option value="trans_woman">Mulher Transgenero</Option>
+                    <Option value="cis_man">Homem Cisgenero</Option>
+                    <Option value="trans_man">Homem Transgenero</Option>
+                    <Option value="non-binary">Pessoa Não-binária</Option>
+                    <Option value="not-inform">Prefiro não informar</Option>
                 </Select>
             </Form.Item>
             <Form.Item
@@ -93,8 +97,11 @@ export default function AddInfos () {
                       option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
                     }
                 >
-                    <Option value="jack">Jack</Option>
-                    <Option value="lucy">Lucy</Option>
+                    <Option value="black">Preta/Parda</Option>
+                    <Option value="white">Branca</Option>
+                    <Option value="red">Indigena</Option>
+                    <Option value="yellow">Amarela</Option>
+                    <Option value="not-inform">Prefiro não informar</Option>
                 </Select>
             </Form.Item>
             <Form.Item
@@ -115,8 +122,10 @@ export default function AddInfos () {
                       option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
                     }
                 >
-                    <Option value="jack">Jack</Option>
-                    <Option value="lucy">Lucy</Option>
+                    <Option value="hetero">Heterossexual</Option>
+                    <Option value="homo">Homossexual</Option>
+                    <Option value="bi">Pansexual</Option>
+                    <Option value="not-inform">Prefiro não informar</Option>
                 </Select>
             </Form.Item>
             <Form.Item
