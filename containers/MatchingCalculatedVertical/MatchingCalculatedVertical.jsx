@@ -54,7 +54,7 @@ const personas = [
   },
 ]
 
-export default function MatchingCalculated({}) {
+export default function MatchingCalculatedVertical({}) {
   const [isFirstClicked, setIsFirstClicked] = useState(false)
   const [isSecondClicked, setIsSecondClicked] = useState(false)
   const [isThirdClicked, setIsThirdClicked] = useState(false)
@@ -92,7 +92,7 @@ export default function MatchingCalculated({}) {
             </Popover>
           </h2>
         )}
-        <Row gutter={48} justify="center">
+        <Row gutter={50} justify="center">
           {isFirstClicked ? (
             <CardProfile
               persona={personas[0]}

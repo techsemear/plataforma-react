@@ -44,7 +44,13 @@ export default function AddInfos () {
       <Button type="primary" onClick={showModal} className="button-profile">
         Conclua seu Cadastro
       </Button>
-      <Modal title="Conclua seu Cadastro 📋" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+      <Modal 
+        title="Conclua seu Cadastro 📋" 
+        visible={isModalVisible} 
+        okText={'Enviar'}
+        cancelText={'Cancelar'} 
+        onOk={handleOk} 
+        onCancel={handleCancel}>
         <Form
             name="basic"
             labelCol={{ span: 8 }}
