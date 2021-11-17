@@ -14,6 +14,7 @@ const {confirm} = Modal
 
 const personas = [
   {
+    id: '1',
     name: ' Camila Cintra',
     age: '33',
     pronoun: 'Ela/Dela',
@@ -27,6 +28,7 @@ const personas = [
     linkedin: 'https://www.linkedin.com/in/camila-cintra-0064348a/',
   },
   {
+    id: '2',
     name: ' Giovanni Luigi',
     age: '28',
     pronoun: 'Ele/Dele',
@@ -40,6 +42,7 @@ const personas = [
     linkedin: 'https://www.linkedin.com/in/giovanni-luigi-mkt/',
   },
   {
+    id: '3',
     name: ' Lucas Carvalho',
     age: '32',
     pronoun: 'Ele/Dele',
@@ -55,85 +58,78 @@ const personas = [
 ]
 
 export default function MatchingCalculatedVertical({}) {
-  const [isFirstClicked, setIsFirstClicked] = useState(false)
-  const [isSecondClicked, setIsSecondClicked] = useState(false)
-  const [isThirdClicked, setIsThirdClicked] = useState(false)
+  const personaList = personas.map((item) => {
+    item.isSelected = false
+    return (({id, isSelected}) => ({id, isSelected}))(item)
+  })
 
-  const firstMentorSelected = () => {
-    setIsFirstClicked(true)
-  }
+  const [isConfirmClicked, setConfirmClicked] = useState(personaList)
+  const [cardPosition, setCardPosition] = useState(-1)
+  const [disabledMatch, setDisabledMatch] = useState(false)
 
-  const secondMentorSelected = () => {
-    setIsSecondClicked(true)
-  }
-  const thirdMentorSelected = () => {
-    setIsThirdClicked(true)
+  const mentorSelected = (id) => {
+    setConfirmClicked(
+      personaList.map((item) => {
+        if (item.id == id) return (item.isSelected = true)
+      }),
+    )
+    setCardPosition(
+      parseInt(
+        personaList
+          .map((item, index) => {
+            if (item.id == id) return index
+          })
+          .filter(Number)
+          .toString(),
+      ),
+    )
+    setDisabledMatch(true)
   }
 
   return (
     <Fragment>
       <div>
-        {isFirstClicked || isSecondClicked || isThirdClicked ? (
-          <h4 style={{margin: '10px 0 10px 80px'}}>
-            Estamos preparando tudo para a sua mentoria e em breve entraremos em
-            contato!
-          </h4>
+        {cardPosition >= 0 ? (
+          <div>
+            <h4 style={{margin: '10px 0 10px 80px'}}>
+              Estamos preparando tudo para a sua mentoria e em breve entraremos
+              em contato!
+            </h4>
+            <Row gutter={50} justify="center">
+              <CardProfile
+                persona={personas[cardPosition]}
+                key={`card-${cardPosition}`}
+                onClick={mentorSelected}
+                disabledMatch={disabledMatch}
+              />
+            </Row>
+          </div>
         ) : (
-          <h2 style={{margin: '10px 0 10px 80px'}}>
-            Esses são os seus três melhores matches!
-            <Popover
-              className="mx-3"
-              content="Conheça-os e escolha um para realizar a mentoria"
-              overlayStyle={{
-                width: '25vw',
-              }}
-            >
-              <InfoCircleOutlined />
-            </Popover>
-          </h2>
+          <div>
+            <h2 style={{margin: '10px 0 10px 80px'}}>
+              Esses são os seus três melhores matches!
+              <Popover
+                className="mx-3"
+                content="Conheça-os e escolha um para realizar a mentoria"
+                overlayStyle={{
+                  width: '25vw',
+                }}
+              >
+                <InfoCircleOutlined />
+              </Popover>
+            </h2>
+            <Row gutter={50} justify="center">
+              {personas.map((item, index) => (
+                <CardProfile
+                  persona={item}
+                  key={`card-${index}`}
+                  onClick={mentorSelected}
+                  isMatchClicked={isConfirmClicked}
+                />
+              ))}
+            </Row>
+          </div>
         )}
-        <Row gutter={50} justify="center">
-          {isFirstClicked ? (
-            <CardProfile
-              persona={personas[0]}
-              key="primary"
-              isMatchClicked={isFirstClicked}
-            />
-          ) : isSecondClicked ? (
-            <CardProfile
-              persona={personas[1]}
-              key="secondary"
-              isMatchClicked={isSecondClicked}
-            />
-          ) : isThirdClicked ? (
-            <CardProfile
-              persona={personas[2]}
-              key="tertiary"
-              isMatchClicked={isThirdClicked}
-            />
-          ) : (
-            <Fragment>
-              <CardProfile
-                persona={personas[0]}
-                key="primary"
-                onClick={firstMentorSelected}
-                isMatchClicked={isFirstClicked}
-              />
-              <CardProfile
-                persona={personas[1]}
-                key="secondary"
-                onClick={secondMentorSelected}
-                isMatchClicked={isSecondClicked}
-              />
-              <CardProfile
-                persona={personas[2]}
-                key="tertiary"
-                onClick={thirdMentorSelected}
-                isMatchClicked={isThirdClicked}
-              />
-            </Fragment>
-          )}
-        </Row>
       </div>
     </Fragment>
   )
@@ -152,19 +148,17 @@ function CardProfile(props) {
     setIsModalVisible(false)
   }
 
-  const handleOk = () => {}
-
   const showPromiseConfirm = () => {
     confirm({
       title: `Deseja confirmar a sua escolha com ${props.persona.name}?`,
       content: 'Lembre-se: você não poderá voltar atrás na sua decisão',
       onOk() {
         setIsModalVisible(false)
-        props.onClick()
+        props.onClick(props.persona.id)
         message.success('Escolha realizada com sucesso!')
-        return new Promise((resolve, reject) => {
-          setTimeout(Math.random() > 0.5 ? resolve : reject, 800)
-        }).catch(() => console.log('Oops errors!'))
+        return new Promise((resolve) => {
+          setTimeout(resolve, 800)
+        })
       },
       onCancel() {},
       okText: 'Confirmar',
@@ -211,7 +205,6 @@ function CardProfile(props) {
       <Modal
         visible={isModalVisible}
         centered={true}
-        onOk={handleOk}
         onCancel={handleCancel}
         footer={[
           <Button
@@ -225,7 +218,7 @@ function CardProfile(props) {
             type="primary"
             key="confirm"
             onClick={showPromiseConfirm}
-            disabled={props.isMatchClicked}
+            disabled={props.disabledMatch}
           >
             Deu Match!
           </Button>,
