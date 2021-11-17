@@ -61,26 +61,33 @@ export default function MatchingCalculatedHorizontal({}) {
   const [isSecondClicked, setIsSecondClicked] = useState(false)
   const [isThirdClicked, setIsThirdClicked] = useState(false)
 
-  const firstMentorSelected = () => {
+  const firstYoungSelected = () => {
     setIsFirstClicked(true)
   }
 
-  const secondMentorSelected = () => {
+  const secondYoungSelected = () => {
     setIsSecondClicked(true)
   }
-  const thirdMentorSelected = () => {
+  const thirdYoungSelected = () => {
     setIsThirdClicked(true)
   }
+
+  const firstYoungNegated = () => {
+    setIsFirstClicked(true)
+  }
+
+  const secondYoungNegated = () => {
+    setIsSecondClicked(true)
+  }
+  const thirdYoungNegated = () => {
+    setIsThirdClicked(true)
+  }
+
+
 
   return (
     <Fragment>
       <div>
-        {isFirstClicked || isSecondClicked || isThirdClicked ? (
-          <h4 style={{margin: '10px 0 10px 80px'}}>
-            Estamos preparando tudo para a sua mentoria e em breve entraremos em
-            contato!
-          </h4>
-        ) : (
           <h2 style={{margin: '10px 0 20px 80px'}}>
             Acompanhe os seus melhores matches!
             <Popover
@@ -93,7 +100,7 @@ export default function MatchingCalculatedHorizontal({}) {
               <InfoCircleOutlined />
             </Popover>
           </h2>
-        )}
+
         <Row>
         <Col 
           span = {4}
@@ -104,11 +111,18 @@ export default function MatchingCalculatedHorizontal({}) {
         <Col span = {19}
           justify="center">
           {isFirstClicked ? (
+            <Fragment>
             <CardProfile
-              persona={personas[0]}
-              key="primary"
-              isMatchClicked={isFirstClicked}
+              persona={personas[1]}
+              key="secondary"
+              isMatchClicked={isSecondClicked}
             />
+            <CardProfile
+            persona={personas[2]}
+            key="tertiary"
+            isMatchClicked={isThirdClicked}
+            />
+            </Fragment>
           ) : isSecondClicked ? (
             <CardProfile
               persona={personas[1]}
@@ -126,19 +140,19 @@ export default function MatchingCalculatedHorizontal({}) {
               <CardProfile
                 persona={personas[0]}
                 key="primary"
-                onClick={firstMentorSelected}
+                onClick={firstYoungSelected}
                 isMatchClicked={isFirstClicked}
               />
               <CardProfile
                 persona={personas[1]}
                 key="secondary"
-                onClick={secondMentorSelected}
+                onClick={secondYoungSelected}
                 isMatchClicked={isSecondClicked}
               />
               <CardProfile
                 persona={personas[2]}
                 key="tertiary"
-                onClick={thirdMentorSelected}
+                onClick={thirdYoungSelected}
                 isMatchClicked={isThirdClicked}
               />
             </Fragment>
@@ -168,7 +182,7 @@ function CardProfile(props) {
   const showPromiseConfirm = () => {
     confirm({
       title: `Deseja confirmar a sua escolha com ${props.persona.name}?`,
-      content: 'Lembre-se: você está confirmando seu interesse em realizar uma mentoria com esse jovem',
+      content: 'Lembre-se: você está confirmando seu interesse em realizar uma mentoria com esse jovem, e garantindo que realizará a mentoria dentro do período de 1 mês',
       onOk() {
         setIsModalVisible(false)
         props.onClick()
@@ -182,6 +196,25 @@ function CardProfile(props) {
       cancelText: 'Voltar',
     })
   }
+
+  const showPromiseNegative = () => {
+    confirm({
+      title: `Deseja confirmar exclusão da solicitação enviada por ${props.persona.name}?`,
+      content: 'Lembre-se: A recusa do convite é irreversível',
+      onOk() {
+        setIsModalVisible(false)
+        props.onClick()
+        message.success('Exclusão realizada com sucesso!')
+        return new Promise((resolve, reject) => {
+          setTimeout(Math.random() > 0.5 ? resolve : reject, 800)
+        }).catch(() => console.log('Oops errors!'))
+      },
+      onCancel() {},
+      okText: 'Confirmar',
+      cancelText: 'Voltar',
+    })
+  }
+
 
   return (
     <Col span={20} justify="center">
@@ -239,13 +272,20 @@ function CardProfile(props) {
           >
             Voltar
           </Button>,
+           <Button
+           key="confirm"
+           onClick={showPromiseNegative}
+           disabled={props.isMatchClicked}
+         >
+           Excluir Solicitação
+         </Button>,
           <Button
             type="primary"
             key="confirm"
             onClick={showPromiseConfirm}
             disabled={props.isMatchClicked}
           >
-            Deu Match!
+            Aceitar Solicitação
           </Button>,
         ]}
       >
@@ -269,12 +309,6 @@ function CardProfile(props) {
         </div>
         <p>{props.persona.description}</p>
         <Card>
-          <Card.Grid style={{width: '100%'}}>
-            <h6> Informações Profissionais</h6>
-            <a>{`Empresa: ${props.persona.company}`}</a>
-            <br />
-            <a>{`Cargo: ${props.persona.profession}`}</a>
-          </Card.Grid>
           <Card.Grid style={{width: '100%'}}>
             <h6> Informações Acadêmicas</h6>
             <a>{`Faculdade: ${props.persona.college}`}</a>

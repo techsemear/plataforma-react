@@ -1,13 +1,15 @@
 import React, {Fragment, useState} from 'react'
-import {Button, message, Col, Row, Card, Typography, Upload, Input, Space, Progress } from 'antd'
+import {Button, message, Col, Row, Card, Typography, Upload, Input, Space, Progress, Select} from 'antd'
 import { UploadOutlined} from '@ant-design/icons';
 import 'antd/dist/antd.css'
  
 import AvatarImage from './AvatarImage'
 import PersonalSite from './PersonalSite'
 import AddInfos from './AddInfos'
+import Paragraph from 'antd/lib/skeleton/Paragraph';
 
-const { Title } = Typography;
+const { Option } = Select;
+const { Title, Text } = Typography;
 const {TextArea} = Input;
 
 
@@ -50,9 +52,13 @@ export default function ProfilePage() {
           </Upload>
           </Col>
           <Col span={15}>
-            <Title>Nome de Usuário</Title>
+            <Row>
+            <Title level={2} >Nome de Usuário</Title>
+            <PronomeInfo/>
+            </Row>
             <Title level={4} >Instituição (Ensino ou Trabalho)</Title>
-            <TextArea rows={4} showCount maxLength={250} />
+            <Text> Nos conte mais sobre você em uma mini-bio:</Text>
+            <TextArea placeholder="Escreva sobre você" rows={4} showCount maxLength={250} />
             <PersonalSite/>
           </Col>
         </Row>
@@ -92,5 +98,19 @@ export default function ProfilePage() {
         </Row>
       </div>
   </Fragment>
+  )
+}
+
+
+
+function PronomeInfo(){
+  return (
+    <>
+    <Select defaultValue="Ela/Dela" style={{ width: 100, height: 32}} bordered={false}>
+      <Option value="Ele/Dele">Ele/Dele</Option>
+      <Option value="Ela/Dela">Ela/Dela</Option>
+      <Option value="Elu/Delu">Elu/Delu</Option>
+    </Select>
+  </>
   )
 }
