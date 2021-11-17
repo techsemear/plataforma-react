@@ -8,7 +8,6 @@ import StepTemplate from './StepTemplate'
 import Step1Form from './Step1Form'
 import Step2Form from './Step2Form'
 
-console.log(styles)
 
 const initialState = {
   currentStep: 1,
@@ -150,8 +149,6 @@ const MultiStepForm = () => {
       },
     })
   }
-
-  console.log({currentStepData})
 
   return (
     <div className={styles.signUpPage}>

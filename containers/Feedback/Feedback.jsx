@@ -35,14 +35,12 @@ export default function Feedback({}) {
     setCurrent(current - 1)
   }
 
-  const onChange = (value) => {}
-
   const IntroductionStep = ({mentorName = 'Nome Mentor'}) => {
     const options = ['Sim', 'Não']
-
     const onChange = (value) => {
       setBoxChecked(value)
     }
+
     return (
       <Fragment>
         <h1 align="center" className="my-5">
@@ -179,8 +177,6 @@ export default function Feedback({}) {
     },
   ]
 
-  console.log(options[0] === checked.toString())
-
   return (
     <Fragment>
       <div className="steps-content">
@@ -194,7 +190,6 @@ export default function Feedback({}) {
             style={{float: 'right', marginTop: '50px', marginRight: '200px'}}
             type="primary"
             onClick={() => next()}
-            onChange={onChange}
             disabled={checked.length > 0 ? false : true}
           >
             Próximo
@@ -204,7 +199,7 @@ export default function Feedback({}) {
           <Button
             style={{float: 'right', marginTop: '50px', marginRight: '200px'}}
             type="primary"
-            onClick={() => message.success('Processing complete!')}
+            onClick={() => message.success('Resposta salva com sucesso!')}
           >
             Enviar
           </Button>
