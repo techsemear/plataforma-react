@@ -86,9 +86,6 @@ export default function MatchingCalculatedHorizontal({}) {
     )
   }
 
-  console.log('D:', getDecisionList)
-  console.log('C:', getConfirmedList)
-
   const studentRejected = (id) => {
     setDecisionList(
       getDecisionList
