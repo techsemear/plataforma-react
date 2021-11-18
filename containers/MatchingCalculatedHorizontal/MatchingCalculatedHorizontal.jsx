@@ -16,6 +16,7 @@ const {confirm} = Modal
 
 const personas = [
   {
+    id: '1',
     name: ' Camila Cintra',
     age: '33',
     pronoun: 'Ela/Dela',
@@ -29,6 +30,7 @@ const personas = [
     linkedin: 'https://www.linkedin.com/in/camila-cintra-0064348a/',
   },
   {
+    id: '2',
     name: ' Giovanni Luigi',
     age: '28',
     pronoun: 'Ele/Dele',
@@ -42,6 +44,7 @@ const personas = [
     linkedin: 'https://www.linkedin.com/in/giovanni-luigi-mkt/',
   },
   {
+    id: '3',
     name: ' Lucas Carvalho',
     age: '32',
     pronoun: 'Ele/Dele',
@@ -57,107 +60,83 @@ const personas = [
 ]
 
 export default function MatchingCalculatedHorizontal({}) {
-  const [isFirstClicked, setIsFirstClicked] = useState(false)
-  const [isSecondClicked, setIsSecondClicked] = useState(false)
-  const [isThirdClicked, setIsThirdClicked] = useState(false)
+  const personaList = personas.map((item) => ({
+    ...item,
+    isConfirmed: false,
+    isRejected: false,
+  }))
 
-  const firstYoungSelected = () => {
-    setIsFirstClicked(true)
+  const [getDecisionList, setDecisionList] = useState(personaList)
+  const [getConfirmedList, setConfirmedList] = useState([])
+
+  const studentConfirmed = (id) => {
+    const confirmedList = getDecisionList.map((item) => {
+      if (item.id === id) {
+        item.isConfirmed = true
+      }
+      return item
+    })
+
+    setDecisionList(
+      confirmedList.filter(function (item) {
+        return item.isConfirmed === false
+      }),
+    )
+
+    setConfirmedList(
+      getConfirmedList.concat(
+        confirmedList.filter(function (item) {
+          return item.isConfirmed === true
+        }),
+      ),
+    )
   }
 
-  const secondYoungSelected = () => {
-    setIsSecondClicked(true)
+  const studentRejected = (id) => {
+    setDecisionList(
+      getDecisionList
+        .map((item) => {
+          if (item.id === id) {
+            item.isRejected = true
+          }
+          return item
+        })
+        .filter(function (item) {
+          return item.isRejected === false
+        }),
+    )
   }
-  const thirdYoungSelected = () => {
-    setIsThirdClicked(true)
-  }
-
-  const firstYoungNegated = () => {
-    setIsFirstClicked(true)
-  }
-
-  const secondYoungNegated = () => {
-    setIsSecondClicked(true)
-  }
-  const thirdYoungNegated = () => {
-    setIsThirdClicked(true)
-  }
-
-
 
   return (
     <Fragment>
       <div>
-          <h2 style={{margin: '10px 0 20px 80px'}}>
-            Acompanhe os seus melhores matches!
-            <Popover
-              className="mx-3"
-              content="Conheça-os e confirme seu interesse em realizar a mentoria"
-              overlayStyle={{
-                width: '25vw',
-              }}
-            >
-              <InfoCircleOutlined />
-            </Popover>
-          </h2>
+        <h2 style={{margin: '10px 0 20px 80px'}}>
+          Acompanhe os seus melhores matches!
+          <Popover
+            className="mx-3"
+            content="Conheça-os e confirme seu interesse em realizar a mentoria"
+            overlayStyle={{
+              width: '25vw',
+            }}
+          >
+            <InfoCircleOutlined />
+          </Popover>
+        </h2>
 
         <Row>
-        <Col 
-          span = {4}
-          style={{margin: '10px 0 10px 50px'}}
-        >
-          <TimelineCheck/>
-        </Col>
-        <Col span = {19}
-          justify="center">
-          {isFirstClicked ? (
-            <Fragment>
-            <CardProfile
-              persona={personas[1]}
-              key="secondary"
-              isMatchClicked={isSecondClicked}
-            />
-            <CardProfile
-            persona={personas[2]}
-            key="tertiary"
-            isMatchClicked={isThirdClicked}
-            />
-            </Fragment>
-          ) : isSecondClicked ? (
-            <CardProfile
-              persona={personas[1]}
-              key="secondary"
-              isMatchClicked={isSecondClicked}
-            />
-          ) : isThirdClicked ? (
-            <CardProfile
-              persona={personas[2]}
-              key="tertiary"
-              isMatchClicked={isThirdClicked}
-            />
-          ) : (
-            <Fragment>
+          <Col span={4} style={{margin: '10px 0 10px 50px'}}>
+            <TimelineCheck />
+          </Col>
+          <Col span={19} justify="center">
+            {getDecisionList.map((item, index) => (
               <CardProfile
-                persona={personas[0]}
-                key="primary"
-                onClick={firstYoungSelected}
-                isMatchClicked={isFirstClicked}
+                persona={item}
+                key={`card-${index}`}
+                onClickConfirm={studentConfirmed}
+                onClickReject={studentRejected}
               />
-              <CardProfile
-                persona={personas[1]}
-                key="secondary"
-                onClick={secondYoungSelected}
-                isMatchClicked={isSecondClicked}
-              />
-              <CardProfile
-                persona={personas[2]}
-                key="tertiary"
-                onClick={thirdYoungSelected}
-                isMatchClicked={isThirdClicked}
-              />
-            </Fragment>
-          )}
-        </Col>
+            ))}
+          </Col>
         </Row>
       </div>
     </Fragment>
@@ -177,19 +156,18 @@ function CardProfile(props) {
     setIsModalVisible(false)
   }
 
-  const handleOk = () => {}
-
   const showPromiseConfirm = () => {
     confirm({
       title: `Deseja confirmar a sua escolha com ${props.persona.name}?`,
-      content: 'Lembre-se: você está confirmando seu interesse em realizar uma mentoria com esse jovem, e garantindo que realizará a mentoria dentro do período de 1 mês',
+      content:
+        'Lembre-se: você está confirmando seu interesse em realizar uma mentoria com esse jovem, e garantindo que realizará a mentoria dentro do período de 1 mês',
       onOk() {
         setIsModalVisible(false)
-        props.onClick()
+        props.onClickConfirm(props.persona.id)
         message.success('Escolha realizada com sucesso!')
-        return new Promise((resolve, reject) => {
-          setTimeout(Math.random() > 0.5 ? resolve : reject, 800)
-        }).catch(() => console.log('Oops errors!'))
+        return new Promise((resolve) => {
+          setTimeout(resolve, 800)
+        })
       },
       onCancel() {},
       okText: 'Confirmar',
@@ -203,7 +181,7 @@ function CardProfile(props) {
       content: 'Lembre-se: A recusa do convite é irreversível',
       onOk() {
         setIsModalVisible(false)
-        props.onClick()
+        props.onClickReject(props.persona.id)
         message.success('Exclusão realizada com sucesso!')
         return new Promise((resolve, reject) => {
           setTimeout(Math.random() > 0.5 ? resolve : reject, 800)
@@ -215,54 +193,51 @@ function CardProfile(props) {
     })
   }
 
-
   return (
     <Col span={20} justify="center">
       <Card hoverable type="inner" bordered={true}>
         <Row>
-        <Col style={{margin: '10px 20px 10px 10px'}} span={4}>
-        <Image
-          src={props.persona.imageProfile}
-          alt="mentor"
-          width={widthProfile}
-          height={widthProfile}
-        />
-        </Col>
-        <Col span={18}>
-        <div style={{fontSize: '20px', margin: '10px 0'}}>
-          <a href={props.persona.linkedin} target="_blank" rel="noreferrer">
+          <Col style={{margin: '10px 20px 10px 10px'}} span={4}>
             <Image
-              src={linkedinIcon}
-              alt="logo"
-              objectFit="contain"
-              width="20"
-              height="20"
-              marginRadius="10"
+              src={props.persona.imageProfile}
+              alt="mentor"
+              width={widthProfile}
+              height={widthProfile}
             />
-          </a>
-          {props.persona.name}
-        </div>
-        <p>{`"${props.persona.description.slice(0, 60)}..."`}</p>
-        <Card.Meta title={`Curso: ${props.persona.course}`} />
-        <h6></h6>
+          </Col>
+          <Col span={18}>
+            <div style={{fontSize: '20px', margin: '10px 0'}}>
+              <a href={props.persona.linkedin} target="_blank" rel="noreferrer">
+                <Image
+                  src={linkedinIcon}
+                  alt="logo"
+                  objectFit="contain"
+                  width="20"
+                  height="20"
+                />
+              </a>
+              {props.persona.name}
+            </div>
+            <p>{`"${props.persona.description.slice(0, 60)}..."`}</p>
+            <Card.Meta title={`Curso: ${props.persona.course}`} />
+            <h6></h6>
 
-        <Button
-          type="primary"
-          size="small"
-          onClick={showModal}
-          icon={<DoubleRightOutlined />}
-          align="middle"
-          style={{marginTop: '20px', alignSelf:'end' }}
-        >
-          Saiba mais
-        </Button>
-        </Col>
+            <Button
+              type="primary"
+              size="small"
+              onClick={showModal}
+              icon={<DoubleRightOutlined />}
+              align="middle"
+              style={{marginTop: '20px', alignSelf: 'end'}}
+            >
+              Saiba mais
+            </Button>
+          </Col>
         </Row>
       </Card>
       <Modal
         visible={isModalVisible}
         centered={true}
-        onOk={handleOk}
         onCancel={handleCancel}
         footer={[
           <Button
@@ -272,19 +247,10 @@ function CardProfile(props) {
           >
             Voltar
           </Button>,
-           <Button
-           key="confirm"
-           onClick={showPromiseNegative}
-           disabled={props.isMatchClicked}
-         >
-           Excluir Solicitação
-         </Button>,
-          <Button
-            type="primary"
-            key="confirm"
-            onClick={showPromiseConfirm}
-            disabled={props.isMatchClicked}
-          >
+          <Button key="reject" onClick={showPromiseNegative}>
+            Excluir Solicitação
+          </Button>,
+          <Button type="primary" key="confirm" onClick={showPromiseConfirm}>
             Aceitar Solicitação
           </Button>,
         ]}

@@ -58,30 +58,23 @@ const personas = [
 ]
 
 export default function MatchingCalculatedVertical({}) {
-  const personaList = personas.map((item) => {
-    item.isSelected = false
-    return (({id, isSelected}) => ({id, isSelected}))(item)
-  })
+  const personaList = personas.map((item) => ({...item, isSelected: false}))
 
   const [isConfirmClicked, setConfirmClicked] = useState(personaList)
-  const [cardPosition, setCardPosition] = useState(-1)
   const [disabledMatch, setDisabledMatch] = useState(false)
 
   const mentorSelected = (id) => {
     setConfirmClicked(
-      personaList.map((item) => {
-        if (item.id == id) return (item.isSelected = true)
-      }),
-    )
-    setCardPosition(
-      parseInt(
-        personaList
-          .map((item, index) => {
-            if (item.id == id) return index
-          })
-          .filter(Number)
-          .toString(),
-      ),
+      personaList
+        .map((item) => {
+          if (item.id === id) {
+            item.isSelected = true
+          }
+          return item
+        })
+        .filter(function (item) {
+          return item.isSelected === true
+        }),
     )
     setDisabledMatch(true)
   }
@@ -89,47 +82,35 @@ export default function MatchingCalculatedVertical({}) {
   return (
     <Fragment>
       <div>
-        {cardPosition >= 0 ? (
-          <div>
-            <h4 style={{margin: '10px 0 10px 80px'}}>
-              Estamos preparando tudo para a sua mentoria e em breve entraremos
-              em contato!
-            </h4>
-            <Row gutter={50} justify="center">
-              <CardProfile
-                persona={personas[cardPosition]}
-                key={`card-${cardPosition}`}
-                onClick={mentorSelected}
-                disabledMatch={disabledMatch}
-              />
-            </Row>
-          </div>
+        {isConfirmClicked.length === 1 ? (
+          <h4 style={{margin: '10px 0 10px 80px'}}>
+            Estamos preparando tudo para a sua mentoria e em breve entraremos em
+            contato!
+          </h4>
         ) : (
-          <div>
-            <h2 style={{margin: '10px 0 10px 80px'}}>
-              Esses são os seus três melhores matches!
-              <Popover
-                className="mx-3"
-                content="Conheça-os e escolha um para realizar a mentoria"
-                overlayStyle={{
-                  width: '25vw',
-                }}
-              >
-                <InfoCircleOutlined />
-              </Popover>
-            </h2>
-            <Row gutter={50} justify="center">
-              {personas.map((item, index) => (
-                <CardProfile
-                  persona={item}
-                  key={`card-${index}`}
-                  onClick={mentorSelected}
-                  isMatchClicked={isConfirmClicked}
-                />
-              ))}
-            </Row>
-          </div>
+          <h2 style={{margin: '10px 0 10px 80px'}}>
+            Esses são os seus três melhores matches!
+            <Popover
+              className="mx-3"
+              content="Conheça-os e escolha um para realizar a mentoria"
+              overlayStyle={{
+                width: '25vw',
+              }}
+            >
+              <InfoCircleOutlined />
+            </Popover>
+          </h2>
         )}
+        <Row gutter={50} justify="center">
+          {isConfirmClicked.map((item, index) => (
+            <CardProfile
+              persona={item}
+              key={`card-${index}`}
+              onClick={mentorSelected}
+              isMatchClicked={isConfirmClicked}
+            />
+          ))}
+        </Row>
       </div>
     </Fragment>
   )
