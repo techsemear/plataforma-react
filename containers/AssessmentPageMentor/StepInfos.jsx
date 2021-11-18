@@ -1,31 +1,48 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useState, useEffect} from 'react'
 import Image from 'next/image'
-import {Col, Row, Select, Input} from 'antd'
+import {Select, Form, Input} from 'antd'
 import 'antd/dist/antd.css'
 
-import AreasList from './AreasList'
-import CoursesList from './CoursesList'
-import UniversitiesList from './UniversitiesList'
+import AreasList from '././AreasList'
+import CoursesList from '././CoursesList'
+import UniversitiesList from '././UniversitiesList'
 
 import plataformaLogo from '../../assets/image/logo-semear.png'
 
 const {Option} = Select
 
-const StepInfos = () => {
-  const onChange = (value) => {
-    console.log(value)
+const StepInfos = (props) => {
+  const [college, setCollege] = useState('')
+  const [course, setCourse] = useState('')
+  const [company, setCompany] = useState('')
+  const [area, setArea] = useState('')
+  const [subarea, setSubarea] = useState([])
+
+  const onChangeCollege = (value) => {
+    setCollege(value)
+  }
+  const onChangeCourse = (value) => {
+    setCourse(value)
+  }
+  const onChangeCompany = (value) => {
+    setCompany(value)
+  }
+  const onChangeArea = (value) => {
+    setArea(value)
+  }
+  const onChangeSubarea = (value) => {
+    setSubarea(value)
   }
 
-  const onBlur = () => {
-    console.log('blur')
-  }
+  useEffect(() => {
+    props.onChange(
+      !(!college || !course || !company || !area || subarea.length === 0),
+    )
+  })
 
-  const onFocus = () => {
-    console.log('focus')
-  }
-
-  const onSearch = (value) => {
-    console.log('search:', value)
+  const layout = {
+    labelCol: {span: 6},
+    wrapperCol: {span: 16},
   }
 
   return (
@@ -34,101 +51,102 @@ const StepInfos = () => {
         <Image src={plataformaLogo} width={90} height={90} />
       </div>
       <h4 align="center">Infos Acadêmicas e Profissionais 📋</h4>
-      <Row gutter={[24, 12]} align="middle" justify="center">
-        <Col span={22} xl={11}>
-          <label> Faculdade </label>
-          <Select
-            showSearch
-            placeholder="Qual sua instituição de ensino?"
-            optionFilterProp="children"
-            onChange={onChange}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            onSearch={onSearch}
-            style={{width: '100%'}}
-            filterOption={(input, option) =>
-              option.toLowerCase().indexOf(input.toLowerCase()) >= 0
-            }
-          >
-            {UniversitiesList.map((item, index) => (
-              <Option value={item.faculdade} key={index}>
-                {item.faculdade}
-              </Option>
-            ))}
-          </Select>
-        </Col>
-        <Col span={22} xl={11}>
-          <label> Curso </label>
-          <Select
-            showSearch
-            placeholder="Qual seu curso?"
-            optionFilterProp="children"
-            onChange={onChange}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            onSearch={onSearch}
-            style={{width: '100%'}}
-            filterOption={(input, option) =>
-              option.toLowerCase().indexOf(input.toLowerCase()) >= 0
-            }
-          >
-            {CoursesList.map((item, index) => (
-              <Option value={item.curso} key={index}>
-                {item.curso}
-              </Option>
-            ))}
-          </Select>
-        </Col>
-      </Row>
-      <Row gutter={[24, 12]} justify="center">
-        <Col span={22} xl={11}>
-          <label> Área de Interesse </label>
-          <Select
-            showSearch
-            placeholder="Qual sua principal área de interesse?"
-            optionFilterProp="children"
-            onChange={onChange}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            onSearch={onSearch}
-            style={{width: '100%'}}
-            filterOption={(input, option) =>
-              option.toLowerCase().indexOf(input.toLowerCase()) >= 0
-            }
-          >
-            {macroArea.map((item, index) => (
-              <Option value={item.area} key={index}>
-                {item.area}
-              </Option>
-            ))}
-          </Select>
-        </Col>
-        <Col span={22} xl={11}>
-          <label> Subárea de Interesse </label>
-          <Select
-            showSearch
-            placeholder="Quais são as suas subáreas de interesse?"
-            optionFilterProp="children"
-            mode="multiple"
-            style={{width: '100%'}}
-            maxTagCount="responsive"
-            onChange={onChange}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            onSearch={onSearch}
-            style={{width: '100%'}}
-            filterOption={(input, option) =>
-              option.toLowerCase().indexOf(input.toLowerCase()) >= 0
-            }
-          >
-            {AreasList.map((item, index) => (
-              <Option value={item.label} key={index}>
-                {item.label}
-              </Option>
-            ))}
-          </Select>
-        </Col>
-      </Row>
+      <Form.Item
+        label="Faculdade"
+        name="college"
+        {...layout}
+        rules={[{required: true, message: 'Por favor, preencha o campo acima'}]}
+      >
+        <Select
+          showSearch
+          placeholder="Qual sua instituição de ensino?"
+          optionFilterProp="children"
+          onChange={onChangeCollege}
+          style={{width: '100%'}}
+        >
+          {UniversitiesList.map((item, index) => (
+            <Option value={item.faculdade} key={index}>
+              {item.faculdade}
+            </Option>
+          ))}
+        </Select>
+      </Form.Item>
+      <Form.Item
+        label="Curso"
+        name="course"
+        rules={[{required: true, message: 'Por favor, preencha o campo acima'}]}
+        {...layout}
+      >
+        <Select
+          showSearch
+          placeholder="Qual seu curso?"
+          optionFilterProp="children"
+          onChange={onChangeCourse}
+          style={{width: '100%'}}
+        >
+          {CoursesList.map((item, index) => (
+            <Option value={item.curso} key={index}>
+              {item.curso}
+            </Option>
+          ))}
+        </Select>
+      </Form.Item>
+      <Form.Item
+        label="Empresa"
+        name="company"
+        rules={[{required: true, message: 'Por favor, preencha o campo acima'}]}
+        {...layout}
+      >
+        <Input
+          showSearch
+          placeholder="Em qual empresa você trabalha?"
+          optionFilterProp="children"
+          onChange={onChangeCompany}
+          style={{width: '100%'}}
+        />
+      </Form.Item>
+      <Form.Item
+        label="Área de Atuação"
+        name="area"
+        rules={[{required: true, message: 'Por favor, preencha o campo acima'}]}
+        {...layout}
+      >
+        <Select
+          showSearch
+          placeholder="Qual sua principal área de atuação?"
+          optionFilterProp="children"
+          onChange={onChangeArea}
+          style={{width: '100%'}}
+        >
+          {macroArea.map((item, index) => (
+            <Option value={item.area} key={index}>
+              {item.area}
+            </Option>
+          ))}
+        </Select>
+      </Form.Item>
+      <Form.Item
+        label="Subárea de Atuação"
+        name="subarea"
+        rules={[{required: true, message: 'Por favor, preencha o campo acima'}]}
+        {...layout}
+      >
+        <Select
+          showSearch
+          placeholder="Quais são as suas subáreas de atuação?"
+          optionFilterProp="children"
+          mode="multiple"
+          maxTagCount="responsive"
+          onChange={onChangeSubarea}
+          style={{width: '100%'}}
+        >
+          {AreasList.map((item, index) => (
+            <Option value={item.label} key={index}>
+              {item.label}
+            </Option>
+          ))}
+        </Select>
+      </Form.Item>
     </Fragment>
   )
 }

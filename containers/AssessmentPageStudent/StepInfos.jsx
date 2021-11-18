@@ -1,6 +1,6 @@
 import React, {Fragment, useState, useEffect} from 'react'
 import Image from 'next/image'
-import {Col, Row, Select, Form} from 'antd'
+import {Select, Form} from 'antd'
 import 'antd/dist/antd.css'
 
 import AreasList from '././AreasList'

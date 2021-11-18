@@ -1,1 +1,1 @@
-export {default as AssessmentPageStudent} from './AssessmentPageStudent'
+export {default as AssessmentPageMentor} from './AssessmentPageMentor'

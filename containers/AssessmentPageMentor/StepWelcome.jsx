@@ -3,7 +3,7 @@ import Image from 'next/image'
 import {Col, Row, Modal, Button} from 'antd'
 import {DoubleRightOutlined} from '@ant-design/icons'
 
-import welcomeImage from '../../assets/image/personagens/footer.png'
+import welcomeImage from '../../assets/image/mentor1.png'
 
 const StepWelcome = () => {
 
@@ -20,8 +20,8 @@ const StepWelcome = () => {
   return (
     <Row gutter={[32, 16]} align="middle" justify="space-around">
       <Col span={12} offset={2} xs={20} sm={20} md={12} lg={12} xl={12}>
-        <h1>Você chegou!!!</h1>
-        <h5>Falta pouco para encontrarmos um mentor que combina com você...</h5>
+        <h1>Você chegou!</h1>
+        <h5>Falta pouco para encontrarmos jovens que combinam com você...</h5>
         <p>
           Agora você passará pela fase que chamamos de
           <strong> Roda da Trilha</strong>, em que aqui te ajudaremos a mapear
