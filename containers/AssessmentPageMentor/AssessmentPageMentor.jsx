@@ -9,7 +9,7 @@ import StepInfos from './StepInfos'
 
 const {Step} = Steps
 
-export default function AssessmentPageStudent() {
+export default function AssessmentPageMentor() {
   const [current, setCurrent] = useState(0)
   const [stepInfoCompleted, setStepInfoCompleted] = useState(false)
 
