@@ -36,7 +36,7 @@ import '../containers/MaslowPoints/MaslowPoints.css'
 import '../containers/StepsMentoring/StepsMentoring.css'
 
 //Assessment
-import '../containers/AssessmentPage/AssessmentPage.css'
+import '../containers/AssessmentPageStudent/AssessmentPageStudent.css'
 
 //Profile
 import '../containers/ProfilePage/ProfilePage.css'

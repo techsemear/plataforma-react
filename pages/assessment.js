@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import Head from 'next/head'
 
 // Containers
-import {AssessmentPage} from '../containers/AssessmentPage'
+import {AssessmentPageStudent} from '../containers/AssessmentPageStudent'
 
 // Components
 import {IndexPage} from '../components/IndexPage'
@@ -12,7 +12,7 @@ export default function SignUp() {
   return (
     <React.Fragment>
       <IndexPage />
-      <AssessmentPage />
+      <AssessmentPageStudent />
     </React.Fragment>
   )
 }

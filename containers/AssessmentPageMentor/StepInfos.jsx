@@ -3,9 +3,9 @@ import Image from 'next/image'
 import {Col, Row, Select, Input} from 'antd'
 import 'antd/dist/antd.css'
 
-import AreasList from '././AreasList'
-import CoursesList from '././CoursesList'
-import UniversitiesList from '././UniversitiesList'
+import AreasList from './AreasList'
+import CoursesList from './CoursesList'
+import UniversitiesList from './UniversitiesList'
 
 import plataformaLogo from '../../assets/image/logo-semear.png'
 

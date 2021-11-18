@@ -103,7 +103,7 @@ export default function ProfilePage() {
 
 
 
-function PronomeInfo(){
+function PronounInfo(){
   return (
     <>
     <Select defaultValue="Ela/Dela" style={{ width: 100, height: 32}} bordered={false}>

@@ -58,95 +58,106 @@ const contentAssessment = [
   },
 ]
 
-const steps = [
-  {
-    title: 'Bem vindo',
-    content: <StepWelcome />,
-  },
-  {
-    title: 'Infos Complementares',
-    content: <StepInfos />,
-  },
-  {
-    title: 'Desafio 1',
-    content: <StepAssessment content={contentAssessment[0]} />,
-  },
-  {
-    title: 'Desafio 2',
-    content: <StepAssessment content={contentAssessment[1]} />,
-  },
-  {
-    title: 'Desafio 3',
-    content: <StepAssessment content={contentAssessment[2]} />,
-  },
-  {
-    title: 'Desafio 4',
-    content: <StepAssessment content={contentAssessment[3]} />,
-  },
-  {
-    title: 'Desafio 5',
-    content: <StepAssessment content={contentAssessment[4]} />,
-  },
-  {
-    title: 'Desafio 6',
-    content: <StepAssessment content={contentAssessment[5]} />,
-  },
-]
-
-export default function AssessmentPage() {
+export default function AssessmentPageStudent() {
   const [current, setCurrent] = useState(0)
+  const [stepInfoCompleted, setStepInfoCompleted] = useState(false)
 
   const next = () => {
     setCurrent(current + 1)
   }
-
   const prev = () => {
     setCurrent(current - 1)
   }
 
+  const onChangeStepInfo = (value) => {
+    setStepInfoCompleted(value)
+  }
+      console.log(stepInfoCompleted || current === 0)
+
+  const disableNext = () => {
+    if (stepInfoCompleted || current === 0)
+      return false
+    else return true
+  }
+
+  const steps = [
+    {
+      title: 'Bem vindo',
+      content: <StepWelcome />
+    },
+    {
+      title: 'Infos Complementares',
+      content: <StepInfos onChange={onChangeStepInfo} />,
+    },
+    {
+      title: 'Desafio 1',
+      content: <StepAssessment content={contentAssessment[0]} />,
+    },
+    {
+      title: 'Desafio 2',
+      content: <StepAssessment content={contentAssessment[1]} />,
+    },
+    {
+      title: 'Desafio 3',
+      content: <StepAssessment content={contentAssessment[2]} />,
+    },
+    {
+      title: 'Desafio 4',
+      content: <StepAssessment content={contentAssessment[3]} />,
+    },
+    {
+      title: 'Desafio 5',
+      content: <StepAssessment content={contentAssessment[4]} />,
+    },
+    {
+      title: 'Desafio 6',
+      content: <StepAssessment content={contentAssessment[5]} />,
+    },
+  ]
+
   return (
     <Fragment>
-        <Row align="middle">
-          <Col
-            xs={{span: 1, offset: 1}}
-            sm={{span: 6}}
-            md={{span: 6}}
-            xl={{span: 4}}
+      <Row align="middle">
+        <Col
+          xs={{span: 1, offset: 1}}
+          sm={{span: 6}}
+          md={{span: 6}}
+          xl={{span: 4}}
+        >
+          <Steps current={current} size="small" direction="vertical">
+            {steps.map((item) => (
+              <Step key={item.title} title={item.title} />
+            ))}
+          </Steps>
+        </Col>
+        <Col offset={1} xs={{span: 20, offset: 2}} sm={{span: 16, offset: 1}}>
+          <div className="steps-content">{steps[current].content}</div>
+        </Col>
+      </Row>
+      <div
+        className="steps-action"
+        align="right"
+        style={{marginRight: '105px'}}
+      >
+        {current > 0 && (
+          <Button style={{margin: '0 8px'}} onClick={() => prev()}>
+            Anterior
+          </Button>
+        )}
+        {current < steps.length - 1 && (
+          <Button type="primary" onClick={() => next()} disabled={disableNext()}>
+            Próximo
+          </Button>
+        )}
+        {current === steps.length - 1 && (
+          <Button
+            type="primary"
+            onClick={() => message.success('Processo Completo')}
           >
-            <Steps current={current} size="small" direction="vertical">
-              {steps.map((item) => (
-                <Step key={item.title} title={item.title} />
-              ))}
-            </Steps>
-          </Col>
-          <Col
-            offset={1}
-            xs={{span: 20, offset: 2}}
-            sm={{span: 16, offset: 1}}
-          >
-            <div className="steps-content">{steps[current].content}</div>
-          </Col>
-        </Row>
-        <div className="steps-action">
-          {current < steps.length - 1 && (
-            <Button type="primary" onClick={() => next()}>
-              Próximo
-            </Button>
-          )}
-          {current === steps.length - 1 && (
-            <Button
-              type="primary"
-              onClick={() => message.success('Processo Completo')}
-            >
-              Enviar
-            </Button>
-          )}
-          {current > 0 && (
-            <Button style={{margin: '0 8px'}} onClick={() => prev()}>
-              Anterior
-            </Button>
-          )}
-        </div>
+            Enviar
+          </Button>
+        )}
+      </div>
     </Fragment>
   )
 }
