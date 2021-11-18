@@ -1,6 +1,6 @@
 import React, {Fragment, useState, useEffect} from 'react'
 import Image from 'next/image'
-import {Col, Row, Select} from 'antd'
+import {Col, Row, Select, Form} from 'antd'
 import 'antd/dist/antd.css'
 
 import AreasList from '././AreasList'
@@ -33,96 +33,101 @@ const StepInfos = (props) => {
   useEffect(() => {
     props.onChange(!(!college || !course || !area || subarea.length === 0))
   })
-  
+
+  const layout = {
+    labelCol: {span: 6},
+    wrapperCol: {span: 16},
+  }
+
   return (
     <Fragment>
       <div align="center">
         <Image src={plataformaLogo} width={90} height={90} />
       </div>
-      <h4 align="center">Infos Acadêmicas e Profissionais 📋</h4>
-      <Row gutter={[24, 12]} align="middle" justify="center">
-        <Col span={22} xl={11}>
-          <label> Faculdade </label>
-          <Select
-            showSearch
-            placeholder="Qual sua instituição de ensino?"
-            optionFilterProp="children"
-            onChange={onChangeCollege}
-            style={{width: '100%'}}
-            filterOption={(input, option) =>
-              option.toLowerCase().indexOf(input.toLowerCase()) >= 0
-            }
-          >
-            {UniversitiesList.map((item, index) => (
-              <Option value={item.faculdade} key={index}>
-                {item.faculdade}
-              </Option>
-            ))}
-          </Select>
-        </Col>
-        <Col span={22} xl={11}>
-          <label> Curso </label>
-          <Select
-            showSearch
-            placeholder="Qual seu curso?"
-            optionFilterProp="children"
-            onChange={onChangeCourse}
-            style={{width: '100%'}}
-            filterOption={(input, option) =>
-              option.toLowerCase().indexOf(input.toLowerCase()) >= 0
-            }
-          >
-            {CoursesList.map((item, index) => (
-              <Option value={item.curso} key={index}>
-                {item.curso}
-              </Option>
-            ))}
-          </Select>
-        </Col>
-      </Row>
-      <Row gutter={[24, 12]} justify="center">
-        <Col span={22} xl={11}>
-          <label> Área de Interesse </label>
-          <Select
-            showSearch
-            placeholder="Qual sua principal área de interesse?"
-            optionFilterProp="children"
-            onChange={onChangeArea}
-            style={{width: '100%'}}
-            filterOption={(input, option) =>
-              option.toLowerCase().indexOf(input.toLowerCase()) >= 0
-            }
-          >
-            {macroArea.map((item, index) => (
-              <Option value={item.area} key={index}>
-                {item.area}
-              </Option>
-            ))}
-          </Select>
-        </Col>
-        <Col span={22} xl={11}>
-          <label> Subárea de Interesse </label>
-          <Select
-            showSearch
-            placeholder="Quais são as suas subáreas de interesse?"
-            optionFilterProp="children"
-            mode="multiple"
-            style={{width: '100%'}}
-            maxTagCount="responsive"
-            onChange={onChangeSubarea}
-            style={{width: '100%'}}
-            filterOption={(input, option) =>
-              option.toLowerCase().indexOf(input.toLowerCase()) >= 0
-            }
-          >
-            {AreasList.map((item, index) => (
-              <Option value={item.label} key={index}>
-                {item.label}
-              </Option>
-            ))}
-          </Select>
-        </Col>
-      </Row>
+      <h4 align="center">Infos Acadêmicas e Profissionais 📋</h4>{' '}
+      <Form.Item
+        label="Faculdade"
+        name="college"
+        {...layout}
+        rules={[{required: true, message: 'Por favor, preencha o campo acima'}]}
+      >
+        <Select
+          showSearch
+          placeholder="Qual sua instituição de ensino?"
+          optionFilterProp="children"
+          onChange={onChangeCollege}
+          style={{width: '100%'}}
+        >
+          {UniversitiesList.map((item, index) => (
+            <Option value={item.faculdade} key={index}>
+              {item.faculdade}
+            </Option>
+          ))}
+        </Select>
+      </Form.Item>
+      <Form.Item
+        label="Curso"
+        name="course"
+        rules={[{required: true, message: 'Por favor, preencha o campo acima'}]}
+        {...layout}
+      >
+        <Select
+          showSearch
+          placeholder="Qual seu curso?"
+          optionFilterProp="children"
+          onChange={onChangeCourse}
+          style={{width: '100%'}}
+        >
+          {CoursesList.map((item, index) => (
+            <Option value={item.curso} key={index}>
+              {item.curso}
+            </Option>
+          ))}
+        </Select>
+      </Form.Item>
+      <Form.Item
+        label="Área de Interesse"
+        name="area"
+        rules={[{required: true, message: 'Por favor, preencha o campo acima'}]}
+        {...layout}
+      >
+        <Select
+          showSearch
+          placeholder="Qual sua principal área de interesse?"
+          optionFilterProp="children"
+          onChange={onChangeArea}
+          style={{width: '100%'}}
+        >
+          {macroArea.map((item, index) => (
+            <Option value={item.area} key={index}>
+              {item.area}
+            </Option>
+          ))}
+        </Select>
+      </Form.Item>
+      <Form.Item
+        label="Subárea de Interesse"
+        name="subarea"
+        rules={[{required: true, message: 'Por favor, preencha o campo acima'}]}
+        {...layout}
+      >
+        <Select
+          showSearch
+          placeholder="Quais são as suas subáreas de interesse?"
+          optionFilterProp="children"
+          mode="multiple"
+          style={{width: '100%'}}
+          maxTagCount="responsive"
+          onChange={onChangeSubarea}
+          style={{width: '100%'}}
+        >
+          {AreasList.map((item, index) => (
+            <Option value={item.label} key={index}>
+              {item.label}
+            </Option>
+          ))}
+        </Select>
+      </Form.Item>
     </Fragment>
   )
 }

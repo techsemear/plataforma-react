@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Head from 'next/head'
+
 
 // Containers
 import {AssessmentPageStudent} from '../containers/AssessmentPageStudent'
