@@ -70,27 +70,24 @@ export default function MatchingCalculatedHorizontal({}) {
   const [getConfirmedList, setConfirmedList] = useState([])
 
   const studentConfirmed = (id) => {
-    const confirmedList = getDecisionList.map((item) => {
+    setDecisionList(
+      getDecisionList.map((item) => {
       if (item.id === id) {
         item.isConfirmed = true
       }
       return item
-    })
-
-    setDecisionList(
-      confirmedList.filter(function (item) {
-        return item.isConfirmed === false
-      }),
+      })
     )
 
     setConfirmedList(
-      getConfirmedList.concat(
-        confirmedList.filter(function (item) {
+      getDecisionList.filter(function (item) {
           return item.isConfirmed === true
         }),
-      ),
     )
   }
+
+  console.log('D:', getDecisionList)
+  console.log('C:', getConfirmedList)
 
   const studentRejected = (id) => {
     setDecisionList(
@@ -101,9 +98,6 @@ export default function MatchingCalculatedHorizontal({}) {
           }
           return item
         })
-        .filter(function (item) {
-          return item.isRejected === false
-        }),
     )
   }
 
@@ -128,14 +122,18 @@ export default function MatchingCalculatedHorizontal({}) {
             <TimelineCheck />
           </Col>
           <Col span={19} justify="center">
-            {getDecisionList.map((item, index) => (
-              <CardProfile
-                persona={item}
-                key={`card-${index}`}
-                onClickConfirm={studentConfirmed}
-                onClickReject={studentRejected}
-              />
-            ))}
+            {getDecisionList
+              .filter(function (item) {
+                return (!item.isConfirmed & !item.isRejected)
+              })
+              .map((item, index) => (
+                <CardProfile
+                  persona={item}
+                  key={`card-${index}`}
+                  onClickConfirm={studentConfirmed}
+                  onClickReject={studentRejected}
+                />
+              ))}
           </Col>
         </Row>
       </div>
