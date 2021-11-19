@@ -1,6 +1,6 @@
 import React, {Fragment, useState, useEffect} from 'react'
 import Image from 'next/image'
-import {Button, message, Col, Row, Card, Modal, Popover} from 'antd'
+import {Button, message, Col, Row, Card, Modal, Popover, Breadcrumb} from 'antd'
 import {DoubleRightOutlined, InfoCircleOutlined} from '@ant-design/icons'
 import 'antd/dist/antd.css'
 
@@ -98,10 +98,19 @@ export default function MatchingCalculatedHorizontal({}) {
     )
   }
 
+
   return (
     <Fragment>
+        <Breadcrumb>
+          <Breadcrumb.Item>
+            <a href="/matchingready-mentor">Convites</a>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>
+            <a href="/accepted-invites-mentor">Convites Aceitos</a>
+          </Breadcrumb.Item>
+        </Breadcrumb>
       <div>
-        <h2 style={{margin: '10px 0 20px 80px'}}>
+        <h2 align = "center">
           Acompanhe os seus melhores matches!
           <Popover
             className="mx-3"

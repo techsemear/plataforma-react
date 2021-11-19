@@ -5,8 +5,9 @@ import 'antd/dist/antd.css'
  
 import AvatarImage from './AvatarImage'
 import PersonalSite from './PersonalSite'
+import BioInfos from './BioInfos'
+
 import AddInfos from './AddInfos'
-import Paragraph from 'antd/lib/skeleton/Paragraph';
 
 const { Option } = Select;
 const { Title, Text } = Typography;
@@ -58,7 +59,7 @@ export default function ProfilePage() {
             </Row>
             <Title level={4} >Instituição (Ensino ou Trabalho)</Title>
             <Text> Nos conte mais sobre você em uma mini-bio:</Text>
-            <TextArea placeholder="Escreva sobre você" rows={4} showCount maxLength={250} />
+            <BioInfos/>
             <PersonalSite/>
           </Col>
         </Row>
@@ -114,3 +115,26 @@ function PronounInfo(){
   </>
   )
 }
+
+
+const CommentList = ({ comments }) => (
+  <List
+    dataSource={comments}
+    header={`${comments.length} ${comments.length > 1 ? 'replies' : 'reply'}`}
+    itemLayout="horizontal"
+    renderItem={props => <Comment {...props} />}
+  />
+);
+
+const Editor = ({ onChange, onSubmit, submitting, value }) => (
+  <>
+    <Form.Item>
+      <TextArea rows={4} onChange={onChange} value={value} />
+    </Form.Item>
+    <Form.Item>
+      <Button htmlType="submit" loading={submitting} onClick={onSubmit} type="primary">
+        Add Comment
+      </Button>
+    </Form.Item>
+  </>
+);
