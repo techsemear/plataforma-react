@@ -27,6 +27,8 @@ const personas = [
     course: 'Engenharia de Produção',
     imageProfile: imageProfile2,
     linkedin: 'https://www.linkedin.com/in/mariana-ferraz-991181215/',
+    email: 'example@gmail.com', 
+    whatsapp: '(12) 345678910', 
   },
   {
     id: '2',
@@ -39,6 +41,8 @@ const personas = [
     course: 'Engenharia Elétrica',
     imageProfile: imageProfile3,
     linkedin: 'https://www.linkedin.com/in/gonsalvesjessica/',
+    email: 'example@gmail.com', 
+    whatsapp: '(12) 345678910', 
   },
   {
     id: '3',
@@ -51,6 +55,8 @@ const personas = [
     college: 'UNESP - Universidade Estadual Paulista',
     course: 'Engenharia Ambiental',
     imageProfile: imageProfile1,
+    email: 'example@gmail.com', 
+    whatsapp: '(12) 345678910', 
   },
 ]
 
@@ -93,17 +99,28 @@ export default function MatchingCalculatedHorizontal({}) {
     )
   }
 
+ const [screen, setScreen] = useState(1);
+
+ const onClickAll = () => {
+   setScreen (1);
+ }
+
+ const onClickAccepted = () => {
+  setScreen (2);
+}
 
   return (
     <Fragment>
         <Breadcrumb style={{margin: '20px 0 0px 50px'}}>
-          <Breadcrumb.Item>
-            <a href="/matchingready-mentor">Convites</a>
+          <Breadcrumb.Item onClick = {onClickAll}>
+            <a>Convites</a>
           </Breadcrumb.Item>
-          <Breadcrumb.Item>
-            <a href="/invites-accepted">Convites Aceitos</a>
+          <Breadcrumb.Item onClick = {onClickAccepted}>
+            <a>Convites Aceitos</a>
           </Breadcrumb.Item>
         </Breadcrumb>
+      
+      {screen == 1 ? (
       <div>
         <h2 align = "center">
           Acompanhe os seus melhores matches!
@@ -138,9 +155,89 @@ export default function MatchingCalculatedHorizontal({}) {
           </Col>
         </Row>
       </div>
+      ) : (
+        <div>
+        <h2 align = "center">
+          Acompanhe suas mentorias aceitas!
+          <Popover
+            className="mx-3"
+            content="Conheça-os e confirme seu interesse em realizar a mentoria"
+            overlayStyle={{
+              width: '25vw',
+            }}
+          >
+            <InfoCircleOutlined />
+          </Popover>
+        </h2>
+
+        <Row>
+          <Col span={4} style={{margin: '10px 0 10px 50px'}}>
+            <TimelineCheck />
+          </Col>
+          <Col span={19} justify="center">
+            {getDecisionList
+              .filter(function (item) {
+                return (item.isConfirmed)
+              })
+              .map((item, index) => (
+                <CardContact
+                  persona={item}
+                  key={`card-${index}`}
+                  onClickConfirm={studentConfirmed}
+                  onClickReject={studentRejected}
+                />
+              ))}
+          </Col>
+        </Row>
+      </div> 
+      )}
     </Fragment>
   )
 }
+
+
+function CardContact (props) {
+  return (
+    <Col span={20} justify="center">
+      <Card hoverable type="inner" bordered={true}>
+        <Row>
+          <Col style={{margin: '10px 20px 10px 10px'}} span={4}>
+            <Image
+              src={props.persona.imageProfile}
+              alt="mentor"
+              width={200}
+              height={200}
+            />
+          </Col>
+          <Col span={18}>
+            <div style={{fontSize: '20px', margin: '10px 0'}}>
+              <a href={props.persona.linkedin} target="_blank" rel="noreferrer">
+                <Image
+                  src={linkedinIcon}
+                  alt="logo"
+                  objectFit="contain"
+                  width="20"
+                  height="20"
+                />
+              </a>
+              
+              {props.persona.name}
+             
+            </div>
+            <p>
+              <strong>Linkedin: </strong><a href={props.persona.linkedin}>{props.persona.linkedin}</a>
+              <br />
+              <strong>Email: </strong>{props.persona.email}
+              <br />
+              <strong>Telefone: </strong>{props.persona.whatsapp}
+            </p>
+            <Card.Meta title={`Curso: ${props.persona.course}`} />
+            <h6></h6>
+          </Col>
+        </Row>
+      </Card>
+    </Col>
+  )}
 
 function CardProfile(props) {
   const [isModalVisible, setIsModalVisible] = useState(false)

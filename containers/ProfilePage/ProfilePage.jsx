@@ -55,7 +55,7 @@ export default function ProfilePage() {
           <Col span={15}>
             <Row>
             <Title level={2} >Nome de Usuário</Title>
-            <PronomeInfo/>
+            <PronounInfo/>
             </Row>
             <Title level={4} >Instituição (Ensino ou Trabalho)</Title>
             <Text> Nos conte mais sobre você em uma mini-bio:</Text>

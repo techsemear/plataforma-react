@@ -6,9 +6,9 @@ import 'antd/dist/antd.css'
 
 import TimelineCheck from './TimelineCheck'
 
-import imageProfile1 from '../../assets/image/landing-1/mentor1.png'
-import imageProfile2 from '../../assets/image/landing-1/mentor2.png'
-import imageProfile3 from '../../assets/image/landing-1/mentor3.png'
+import imageProfile1 from '../../assets/image/landing-1/student1.png'
+import imageProfile2 from '../../assets/image/landing-1/student2.png'
+import imageProfile3 from '../../assets/image/landing-1/student4.jpg'
 import linkedinIcon from '../../assets/image/landing-1/linkedin-2.png'
 import { changeConfirmLocale } from 'antd/lib/modal/locale'
 import { getDomainLocale } from 'next/dist/shared/lib/router/router'
@@ -19,47 +19,39 @@ const {confirm} = Modal
 const personas = [
   {
     id: '1',
-    name: ' Camila Cintra',
-    age: '33',
+    name: ' Mariana Ferraz',
+    age: '22',
     pronoun: 'Ela/Dela',
-    description:
-      'Há tempos eu vinha sentindo vontade de contribuir com o crescimento de outras pessoas e colocar minha vivência a serviço disso. Conforme vou crescendo, percebo que recebi muito da vida e que às vezes uma palavra, um gesto ou uma dica, pode transformar a vida de alguém, assim como a minha foi também transformada.',
-    profession: 'Researcher & Brand Strategist',
-    company: 'Float',
-    college: 'Universidade de São Paulo',
-    course: 'Ciências Sociais',
-    imageProfile: imageProfile1,
-    linkedin: 'https://www.linkedin.com/in/camila-cintra-0064348a/',
-    email: 'camila@gmail.com', 
-    whatsapp: '(11) 123456789',
+    description: 
+    'Na primeira mentoria eu não sabia quem eu era, definir meus sonhos ou para onde eu estava indo. Ter a oportunidade de ser mentorada no primeiro semestre da minha (tão sonhada) faculdade fez total diferença. Hoje, sinto que me conheço mais, sei como e o que estou fazendo para alcançar meus sonhos.',
+    college: 'UNESP - Universidade Estadual Paulista',
+    course: 'Engenharia de Produção',
+    imageProfile: imageProfile2,
+    linkedin: 'https://www.linkedin.com/in/mariana-ferraz-991181215/',
   },
   {
     id: '2',
-    name: ' Giovanni Luigi',
-    age: '28',
-    pronoun: 'Ele/Dele',
-    description:
-      'Eu encontrei muitas histórias parecidas com a minha, o que me fez refletir muito sobre propósito, acho incrível o efeito que os jovens têm sobre a gente. Assim como compartilhamos experiência e conhecimentos, eles fornecem energia e esperança!',
-    profession: 'Digital Data Marketing Specialist',
-    company: 'Publicis Brasil',
+    name: ' Jéssica Gonsalves',
+    age: '22',
+    pronoun: 'Ela/Dela',
+    description: 
+    'Ser mentoranda me permitiu tomar consciência do meu próprio protagonismo e em como consigo pontencializá-lo na minha jornada. Mais do que isso, me permitiu construir em conjunto com a minha mentora, um processo sistêmico de reflexão, concepção e tomada de decisões.',
     college: 'Universidade de São Paulo',
-    course: 'Publicidade',
-    imageProfile: imageProfile2,
-    linkedin: 'https://www.linkedin.com/in/giovanni-luigi-mkt/',
+    course: 'Engenharia Elétrica',
+    imageProfile: imageProfile3,
+    linkedin: 'https://www.linkedin.com/in/gonsalvesjessica/',
   },
   {
     id: '3',
-    name: ' Lucas Carvalho',
-    age: '32',
+    name: ' Pedro Masetti',
+    age: '21',
     pronoun: 'Ele/Dele',
-    description:
-      'A oportunidade de dividir anseios, dúvidas, perspectivas de carreira e ensinamentos com jovens tão atentos é, sem dúvida, excepcional e um exercício de aprendizado. Tenho um carinho especial pela mentoria que me possibilitou conhecer um jovem inteligente, cheio de sonhos e que tem uma trajetória muito parecida com a que eu tive.',
-    profession: 'Advogado Júnior',
-    company: 'Demarest Advogados',
-    college: 'Universidade de São Paulo',
-    course: 'Direito',
-    imageProfile: imageProfile3,
-    linkedin: 'https://www.linkedin.com/in/lucas-vieira-carvalho-62a8aa18b/',
+    description: 
+    'A oportunidade de poder me conectar através das mentorias com pessoas já ambientadas no mercado de trabalho vêm trazendo diversos benefícios, e principalmente, auxiliando no meu autoconhecimento',
+    linkedin: 'https://www.linkedin.com/in/pedro-masetti-3535321a9/',
+    college: 'UNESP - Universidade Estadual Paulista',
+    course: 'Engenharia Ambiental',
+    imageProfile: imageProfile1,
   },
 ]
 
@@ -107,10 +99,10 @@ export default function InvitesAcceptPage({}) {
     <Fragment>
         <Breadcrumb style={{margin: '20px 0 0px 50px'}}>
           <Breadcrumb.Item>
-            <a href="#">Convites</a>
+            <a href="/matchingready-mentor">Convites</a>
           </Breadcrumb.Item>
           <Breadcrumb.Item>
-            <a href="" onClick="" >Convites Aceitos</a>
+            <a href="/invites-accept" onClick="" >Convites Aceitos</a>
           </Breadcrumb.Item>
         </Breadcrumb>
       <div>
