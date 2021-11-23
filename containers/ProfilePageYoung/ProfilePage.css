@@ -1,0 +1,54 @@
+.profileMain {
+  margin-top: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 135, 252, 0.26) 0%,
+    rgba(32, 191, 169, 0.16) 55.21%,
+    rgba(199, 210, 240, 0) 100%
+  );
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardButtons {
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 50px;
+}
+
+.buttonProfile {
+  margin: 20px 30px;
+}
+
+@media (min-width: 992px) {
+  .buttonProfile {
+    margin: 20px 30px;
+  }
+}
+
+.page-profile{
+  background: linear-gradient(
+    180deg,
+    rgba(23, 135, 252, 0.26) 0%,
+    rgba(32, 191, 169, 0.16) 55.21%,
+    rgba(199, 210, 240, 0) 100%
+  );
+}
+
+.first-column-profile{
+  margin-top: 85px;
+}
+
+.avatar-image{
+  border-radius: 20px;
+}
+
+.button-profile{
+  margin-top: 20px;
+  width: 17vw;
+}

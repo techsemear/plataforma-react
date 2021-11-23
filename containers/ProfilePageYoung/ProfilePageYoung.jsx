@@ -1,11 +1,11 @@
 import React, {Fragment, useState} from 'react'
-import {Button, message, Col, Row, Card, Typography, Upload, Input, Space, Progress, Select} from 'antd'
-import { UploadOutlined} from '@ant-design/icons';
+import {Button, message, Col, Row, Card, Typography, Upload, Input, Space, Progress, Select, Modal, Tooltip, Form} from 'antd'
+import { UploadOutlined, EditOutlined} from '@ant-design/icons';
 import 'antd/dist/antd.css'
  
 import AvatarImage from './AvatarImage'
 import PersonalSite from './PersonalSite'
-import BioInfos from './BioInfos'
+import EditInfos from './EditInfos'
 
 import AddInfos from './AddInfos'
 
@@ -53,15 +53,21 @@ export default function ProfilePage() {
           </Upload>
           </Col>
           <Col span={15}>
-            <Row>
+            <Row >
             <Title level={2} >Nome de Usuário</Title>
             <PronounInfo/>
             </Row>
+            <Row gutter= {10} align="bottom" justify="start">
             <Title level={4} >Instituição (Ensino ou Trabalho)</Title>
-            <Text> Nos conte mais sobre você em uma mini-bio:</Text>
-            <BioInfos/>
-            <PersonalSite/>
-          </Col>
+            <EditInfos />
+            </Row>
+            <Col>
+            <Title level={5}>Sobre Você:<br/></Title>
+            <Text id='about'> <br/></Text>
+            <Title level={5}>Site Pessoal:<br/></Title>
+            <Text id='personal_site'> <br/></Text>
+            </Col>
+           </Col>
         </Row>
       </Card>
       </div>
@@ -80,7 +86,7 @@ export default function ProfilePage() {
             xl={{span: 5}}
           >
             <Card>
-              <Col span={15}>
+              <Col span={15} >
                 <Space direction="vertical">
                   <Button className="button-profile" type="primary">Preencher Roda da Trilha</Button>
                 </Space>
@@ -117,24 +123,4 @@ function PronounInfo(){
 }
 
 
-const CommentList = ({ comments }) => (
-  <List
-    dataSource={comments}
-    header={`${comments.length} ${comments.length > 1 ? 'replies' : 'reply'}`}
-    itemLayout="horizontal"
-    renderItem={props => <Comment {...props} />}
-  />
-);
 
-const Editor = ({ onChange, onSubmit, submitting, value }) => (
-  <>
-    <Form.Item>
-      <TextArea rows={4} onChange={onChange} value={value} />
-    </Form.Item>
-    <Form.Item>
-      <Button htmlType="submit" loading={submitting} onClick={onSubmit} type="primary">
-        Add Comment
-      </Button>
-    </Form.Item>
-  </>
-);

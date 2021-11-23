@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Containers
-import {ProfilePage} from '../containers/ProfilePage'
+import {ProfilePageYoung} from '../containers/ProfilePageYoung'
 import {NavbarProfile} from '../containers/Navbar'
 
 // Components
@@ -11,7 +11,7 @@ export default function Login() {
   return (
     <React.Fragment>
       <IndexPage />
-      <ProfilePage />
+      <ProfilePageYoung />
     </React.Fragment>
   )
 }

@@ -39,7 +39,7 @@ import '../containers/StepsMentoring/StepsMentoring.css'
 import '../containers/AssessmentPageStudent/AssessmentPageStudent.css'
 
 //Profile
-import '../containers/ProfilePage/ProfilePage.css'
+import '../containers/ProfilePageYoung/ProfilePage.css'
 
 function MyApp({Component, pageProps}) {
   return (
