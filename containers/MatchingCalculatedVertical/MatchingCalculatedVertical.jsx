@@ -1,4 +1,4 @@
-import React, {Fragment, useState, useEffect} from 'react'
+import React, {Fragment, useState} from 'react'
 import Image from 'next/image'
 import {Button, message, Col, Row, Card, Modal, Popover} from 'antd'
 import {DoubleRightOutlined, InfoCircleOutlined} from '@ant-design/icons'

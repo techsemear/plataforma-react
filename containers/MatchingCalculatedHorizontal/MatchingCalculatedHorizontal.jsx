@@ -1,4 +1,4 @@
-import React, {Fragment, useState, useEffect} from 'react'
+import React, {Fragment, useState} from 'react'
 import Image from 'next/image'
 import {
   Button,
@@ -14,12 +14,9 @@ import {
 import {DoubleRightOutlined, InfoCircleOutlined} from '@ant-design/icons'
 import 'antd/dist/antd.css'
 
-import TimelineCheck from './TimelineCheck'
-
 import imageProfile1 from '../../assets/image/landing-1/student1.png'
 import imageProfile2 from '../../assets/image/landing-1/student2.png'
 import imageProfile3 from '../../assets/image/landing-1/student4.jpg'
-
 import linkedinIcon from '../../assets/image/landing-1/linkedin-2.png'
 
 const {Meta} = Card
@@ -43,6 +40,11 @@ const personas = [
     email: 'example@gmail.com',
     whatsapp: '(12) 345678910',
     invitedDate: Date.parse('2021-11-22T14:48:00'),
+        isConfirmed: false,
+    isRejected: false,
+    isExperired: false,
+    acceptedDate: Date.parse('00-00-0000T00:00:00'),
+    rejectedDate: Date.parse('00-00-0000T00:00:00'),
   },
   {
     id: '2',
@@ -58,6 +60,11 @@ const personas = [
     email: 'example@gmail.com',
     whatsapp: '(12) 345678910',
     invitedDate: Date.parse('2021-11-23T14:48:00'),
+        isConfirmed: false,
+    isRejected: false,
+    isExperired: false,
+    acceptedDate: Date.parse('00-00-0000T00:00:00'),
+    rejectedDate: Date.parse('00-00-0000T00:00:00'),
   },
   {
     id: '3',
@@ -73,25 +80,18 @@ const personas = [
     email: 'example@gmail.com',
     whatsapp: '(12) 345678910',
     invitedDate: Date.parse('2021-11-22T14:48:00'),
-  },
-]
-
-const statusContent = [
-  {
-    status: 'Matching Realizado em DD.MM.AA',
-    description: 'O seu convite expira em x dias',
+        isConfirmed: false,
+    isRejected: false,
+    isExperired: false,
+    acceptedDate: Date.parse('00-00-0000T00:00:00'),
+    rejectedDate: Date.parse('00-00-0000T00:00:00'),
   },
 ]
 
 export default function MatchingCalculatedHorizontal({}) {
   const personaList = personas.map((item) => ({
     ...item,
-    isConfirmed: false,
-    isRejected: false,
     isExperired: setExpiredDate(item.invitedDate),
-    diffDates: getInvitedDate(item.invitedDate),
-    acceptedDate: Date.parse('00-00-0000T00:00:00'),
-    rejectedDate: Date.parse('00-00-0000T00:00:00'),
   }))
 
   const [getDecisionList, setDecisionList] = useState(
@@ -178,7 +178,7 @@ export default function MatchingCalculatedHorizontal({}) {
             Acompanhe suas mentorias aceitas!
             <Popover
               className="mx-3"
-              content="Conheça-os e confirme seu interesse em realizar a mentoria"
+              content="Entre em contato com os jovens que você aceitou!"
               overlayStyle={{
                 width: '25vw',
               }}
@@ -218,7 +218,7 @@ function CardContact(props) {
           />
         </Steps>
       </Col>
-      <Col span={19} justify="center">
+      <Col span={18} justify="center">
         <Card hoverable type="inner" bordered={true}>
           <Row>
             <Col style={{margin: '10px 20px 10px 10px'}} span={4}>
@@ -308,9 +308,9 @@ function CardProfile(props) {
         setIsModalVisible(false)
         props.onClickReject(props.persona.id)
         message.success('Exclusão realizada com sucesso!')
-        return new Promise((resolve, reject) => {
-          setTimeout(Math.random() > 0.5 ? resolve : reject, 800)
-        }).catch(() => console.log('Oops errors!'))
+        return new Promise((resolve) => {
+          setTimeout(resolve, 800)
+        })
       },
       onCancel() {},
       okText: 'Confirmar',
@@ -340,7 +340,7 @@ function CardProfile(props) {
           />
         </Steps>
       </Col>
-      <Col span={19} justify="center">
+      <Col span={18} justify="center">
         <Card hoverable type="inner" bordered={true}>
           <Row>
             <Col style={{margin: '10px 20px 10px 10px'}} span={4}>
