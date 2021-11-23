@@ -17,9 +17,6 @@ export default function TimelineCheck (props){
     <>
         <Steps progressDot current={4} direction="vertical">
             <Step title={status[0].status} description = {status[0].description} style={{margin: '20px 0px 80px 0px'}}/>
-            <Step title={status[0].status} description = {status[0].description} style={{margin: '20px 0px 80px 0px'}}/>
-            <Step title={status[0].status} description = {status[0].description} style={{margin: '20px 0px 80px 0px'}}/>
-            <Step title={status[0].status} description = {status[0].description} style={{margin: '20px 0px 80px 0px'}}/>
         </Steps>
     </>
     )

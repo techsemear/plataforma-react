@@ -1,6 +1,16 @@
 import React, {Fragment, useState, useEffect} from 'react'
 import Image from 'next/image'
-import {Button, message, Col, Row, Card, Modal, Popover, Breadcrumb} from 'antd'
+import {
+  Button,
+  message,
+  Col,
+  Row,
+  Card,
+  Modal,
+  Popover,
+  Breadcrumb,
+  Steps,
+} from 'antd'
 import {DoubleRightOutlined, InfoCircleOutlined} from '@ant-design/icons'
 import 'antd/dist/antd.css'
 
@@ -14,6 +24,9 @@ import linkedinIcon from '../../assets/image/landing-1/linkedin-2.png'
 
 const {Meta} = Card
 const {confirm} = Modal
+const {Step} = Steps
+
+const daysLimit = 3
 
 const personas = [
   {
@@ -21,42 +34,52 @@ const personas = [
     name: ' Mariana Ferraz',
     age: '22',
     pronoun: 'Ela/Dela',
-    description: 
-    'Na primeira mentoria eu não sabia quem eu era, definir meus sonhos ou para onde eu estava indo. Ter a oportunidade de ser mentorada no primeiro semestre da minha (tão sonhada) faculdade fez total diferença. Hoje, sinto que me conheço mais, sei como e o que estou fazendo para alcançar meus sonhos.',
+    description:
+      'Na primeira mentoria eu não sabia quem eu era, definir meus sonhos ou para onde eu estava indo. Ter a oportunidade de ser mentorada no primeiro semestre da minha (tão sonhada) faculdade fez total diferença. Hoje, sinto que me conheço mais, sei como e o que estou fazendo para alcançar meus sonhos.',
     college: 'UNESP - Universidade Estadual Paulista',
     course: 'Engenharia de Produção',
     imageProfile: imageProfile2,
     linkedin: 'https://www.linkedin.com/in/mariana-ferraz-991181215/',
-    email: 'example@gmail.com', 
-    whatsapp: '(12) 345678910', 
+    email: 'example@gmail.com',
+    whatsapp: '(12) 345678910',
+    invitedDate: Date.parse('2021-11-22T14:48:00'),
   },
   {
     id: '2',
     name: ' Jéssica Gonsalves',
     age: '22',
     pronoun: 'Ela/Dela',
-    description: 
-    'Ser mentoranda me permitiu tomar consciência do meu próprio protagonismo e em como consigo pontencializá-lo na minha jornada. Mais do que isso, me permitiu construir em conjunto com a minha mentora, um processo sistêmico de reflexão, concepção e tomada de decisões.',
+    description:
+      'Ser mentoranda me permitiu tomar consciência do meu próprio protagonismo e em como consigo pontencializá-lo na minha jornada. Mais do que isso, me permitiu construir em conjunto com a minha mentora, um processo sistêmico de reflexão, concepção e tomada de decisões.',
     college: 'Universidade de São Paulo',
     course: 'Engenharia Elétrica',
     imageProfile: imageProfile3,
     linkedin: 'https://www.linkedin.com/in/gonsalvesjessica/',
-    email: 'example@gmail.com', 
-    whatsapp: '(12) 345678910', 
+    email: 'example@gmail.com',
+    whatsapp: '(12) 345678910',
+    invitedDate: Date.parse('2021-11-23T14:48:00'),
   },
   {
     id: '3',
     name: ' Pedro Masetti',
     age: '21',
     pronoun: 'Ele/Dele',
-    description: 
-    'A oportunidade de poder me conectar através das mentorias com pessoas já ambientadas no mercado de trabalho vêm trazendo diversos benefícios, e principalmente, auxiliando no meu autoconhecimento',
+    description:
+      'A oportunidade de poder me conectar através das mentorias com pessoas já ambientadas no mercado de trabalho vêm trazendo diversos benefícios, e principalmente, auxiliando no meu autoconhecimento',
     linkedin: 'https://www.linkedin.com/in/pedro-masetti-3535321a9/',
     college: 'UNESP - Universidade Estadual Paulista',
     course: 'Engenharia Ambiental',
     imageProfile: imageProfile1,
-    email: 'example@gmail.com', 
-    whatsapp: '(12) 345678910', 
+    email: 'example@gmail.com',
+    whatsapp: '(12) 345678910',
+    invitedDate: Date.parse('2021-11-22T14:48:00'),
+  },
+]
+
+const statusContent = [
+  {
+    status: 'Matching Realizado em DD.MM.AA',
+    description: 'O seu convite expira em x dias',
   },
 ]
 
@@ -65,179 +88,185 @@ export default function MatchingCalculatedHorizontal({}) {
     ...item,
     isConfirmed: false,
     isRejected: false,
+    isExperired: setExpiredDate(item.invitedDate),
+    diffDates: getInvitedDate(item.invitedDate),
+    acceptedDate: Date.parse('00-00-0000T00:00:00'),
+    rejectedDate: Date.parse('00-00-0000T00:00:00'),
   }))
 
-  const [getDecisionList, setDecisionList] = useState(personaList)
-  const [getConfirmedList, setConfirmedList] = useState([])
+  const [getDecisionList, setDecisionList] = useState(
+    personaList.filter(function (item) {
+      return !item.isExperired
+    }),
+  )
 
   const studentConfirmed = (id) => {
     setDecisionList(
       getDecisionList.map((item) => {
-      if (item.id === id) {
-        item.isConfirmed = true
-      }
-      return item
-      })
-    )
-
-    setConfirmedList(
-      getDecisionList.filter(function (item) {
-          return item.isConfirmed === true
-        }),
+        if (item.id === id) {
+          item.isConfirmed = true
+          item.acceptedDate = new Date()
+        }
+        return item
+      }),
     )
   }
 
   const studentRejected = (id) => {
     setDecisionList(
-      getDecisionList
-        .map((item) => {
-          if (item.id === id) {
-            item.isRejected = true
-          }
-          return item
-        })
+      getDecisionList.map((item) => {
+        if (item.id === id) {
+          item.isRejected = true
+          item.rejectedDate = new Date()
+        }
+        return item
+      }),
     )
   }
 
- const [screen, setScreen] = useState(1);
+  const [screen, setScreen] = useState(1)
 
- const onClickAll = () => {
-   setScreen (1);
- }
+  const onClickAll = () => {
+    setScreen(1)
+  }
 
- const onClickAccepted = () => {
-  setScreen (2);
-}
+  const onClickAccepted = () => {
+    setScreen(2)
+  }
 
   return (
     <Fragment>
-        <Breadcrumb style={{margin: '20px 0 0px 50px'}}>
-          <Breadcrumb.Item onClick = {onClickAll}>
-            <a>Convites</a>
-          </Breadcrumb.Item>
-          <Breadcrumb.Item onClick = {onClickAccepted}>
-            <a>Convites Aceitos</a>
-          </Breadcrumb.Item>
-        </Breadcrumb>
-      
-      {screen == 1 ? (
-      <div>
-        <h2 align = "center">
-          Acompanhe os seus melhores matches!
-          <Popover
-            className="mx-3"
-            content="Conheça-os e confirme seu interesse em realizar a mentoria"
-            overlayStyle={{
-              width: '25vw',
-            }}
-          >
-            <InfoCircleOutlined />
-          </Popover>
-        </h2>
+      <Breadcrumb style={{margin: '20px 0 0px 50px'}}>
+        <Breadcrumb.Item onClick={onClickAll}>
+          <a>Convites</a>
+        </Breadcrumb.Item>
+        <Breadcrumb.Item onClick={onClickAccepted}>
+          <a>Convites Aceitos</a>
+        </Breadcrumb.Item>
+      </Breadcrumb>
 
-        <Row>
-          <Col span={4} style={{margin: '10px 0 10px 50px'}}>
-            <TimelineCheck />
-          </Col>
-          <Col span={19} justify="center">
-            {getDecisionList
-              .filter(function (item) {
-                return (!item.isConfirmed & !item.isRejected)
-              })
-              .map((item, index) => (
-                <CardProfile
-                  persona={item}
-                  key={`card-${index}`}
-                  onClickConfirm={studentConfirmed}
-                  onClickReject={studentRejected}
-                />
-              ))}
-          </Col>
-        </Row>
-      </div>
+      {screen == 1 ? (
+        <div>
+          <h2 align="center">
+            Acompanhe os seus melhores matches!
+            <Popover
+              className="mx-3"
+              content="Conheça-os e confirme seu interesse em realizar a mentoria"
+              overlayStyle={{
+                width: '25vw',
+              }}
+            >
+              <InfoCircleOutlined />
+            </Popover>
+          </h2>
+          {getDecisionList
+            .filter(function (item) {
+              return !item.isConfirmed & !item.isRejected
+            })
+            .map((item, index) => (
+              <CardProfile
+                persona={item}
+                key={`card-${index}`}
+                onClickConfirm={studentConfirmed}
+                onClickReject={studentRejected}
+              />
+            ))}
+        </div>
       ) : (
         <div>
-        <h2 align = "center">
-          Acompanhe suas mentorias aceitas!
-          <Popover
-            className="mx-3"
-            content="Conheça-os e confirme seu interesse em realizar a mentoria"
-            overlayStyle={{
-              width: '25vw',
-            }}
-          >
-            <InfoCircleOutlined />
-          </Popover>
-        </h2>
-
-        <Row>
-          <Col span={4} style={{margin: '10px 0 10px 50px'}}>
-            <TimelineCheck />
-          </Col>
-          <Col span={19} justify="center">
-            {getDecisionList
-              .filter(function (item) {
-                return (item.isConfirmed)
-              })
-              .map((item, index) => (
-                <CardContact
-                  persona={item}
-                  key={`card-${index}`}
-                  onClickConfirm={studentConfirmed}
-                  onClickReject={studentRejected}
-                />
-              ))}
-          </Col>
-        </Row>
-      </div> 
+          <h2 align="center">
+            Acompanhe suas mentorias aceitas!
+            <Popover
+              className="mx-3"
+              content="Conheça-os e confirme seu interesse em realizar a mentoria"
+              overlayStyle={{
+                width: '25vw',
+              }}
+            >
+              <InfoCircleOutlined />
+            </Popover>
+          </h2>
+          {getDecisionList
+            .filter(function (item) {
+              return item.isConfirmed
+            })
+            .map((item, index) => (
+              <CardContact
+                persona={item}
+                key={`card-${index}`}
+                onClickConfirm={studentConfirmed}
+                onClickReject={studentRejected}
+              />
+            ))}
+        </div>
       )}
     </Fragment>
   )
 }
 
+function CardContact(props) {
+  const invitedDate = new Date(props.persona.acceptedDate)
+  const dateFormated = `${invitedDate.getDate()}-${invitedDate.getMonth()}-${invitedDate.getFullYear()}`
 
-function CardContact (props) {
   return (
-    <Col span={20} justify="center">
-      <Card hoverable type="inner" bordered={true}>
-        <Row>
-          <Col style={{margin: '10px 20px 10px 10px'}} span={4}>
-            <Image
-              src={props.persona.imageProfile}
-              alt="mentor"
-              width={200}
-              height={200}
-            />
-          </Col>
-          <Col span={18}>
-            <div style={{fontSize: '20px', margin: '10px 0'}}>
-              <a href={props.persona.linkedin} target="_blank" rel="noreferrer">
-                <Image
-                  src={linkedinIcon}
-                  alt="logo"
-                  objectFit="contain"
-                  width="20"
-                  height="20"
-                />
-              </a>
-              
-              {props.persona.name}
-             
-            </div>
-            <p>
-              <strong>Linkedin: </strong><a href={props.persona.linkedin}>{props.persona.linkedin}</a>
-              <br />
-              <strong>Email: </strong>{props.persona.email}
-              <br />
-              <strong>Telefone: </strong>{props.persona.whatsapp}
-            </p>
-            <Card.Meta title={`Curso: ${props.persona.course}`} />
-            <h6></h6>
-          </Col>
-        </Row>
-      </Card>
-    </Col>
-  )}
+    <Row>
+      <Col span={4} style={{margin: '10px 0 10px 50px'}}>
+        <Steps progressDot current={2} direction="vertical">
+          <Step
+            title={`Convite foi aceito em ${dateFormated}`}
+            style={{margin: '20px 0px 80px 0px'}}
+          />
+        </Steps>
+      </Col>
+      <Col span={19} justify="center">
+        <Card hoverable type="inner" bordered={true}>
+          <Row>
+            <Col style={{margin: '10px 20px 10px 10px'}} span={4}>
+              <Image
+                src={props.persona.imageProfile}
+                alt="mentor"
+                width={200}
+                height={200}
+              />
+            </Col>
+            <Col span={18}>
+              <div style={{fontSize: '20px', margin: '10px 0'}}>
+                <a
+                  href={props.persona.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image
+                    src={linkedinIcon}
+                    alt="logo"
+                    objectFit="contain"
+                    width="20"
+                    height="20"
+                  />
+                </a>
+                {`${props.persona.name} (${props.persona.pronoun})`}
+              </div>
+              <Card bordered={false}>
+                <Card.Grid style={{width: '100%'}} hoverable={false}>
+                  <h6> Informações de Contato</h6>
+                  <a> Linkedin: </a>
+                  <a href={props.persona.linkedin} target="_blank">
+                    {props.persona.linkedin}
+                  </a>
+                  <br />
+                  <a>{`E-mail: ${props.persona.email}`}</a>
+                  <br />
+                  <a>{`Telefone: ${props.persona.whatsapp}`}</a>
+                </Card.Grid>
+              </Card>
+              <h6></h6>
+            </Col>
+          </Row>
+        </Card>
+      </Col>
+    </Row>
+  )
+}
 
 function CardProfile(props) {
   const [isModalVisible, setIsModalVisible] = useState(false)
@@ -289,96 +318,136 @@ function CardProfile(props) {
     })
   }
 
-  return (
-    <Col span={20} justify="center">
-      <Card hoverable type="inner" bordered={true}>
-        <Row>
-          <Col style={{margin: '10px 20px 10px 10px'}} span={4}>
-            <Image
-              src={props.persona.imageProfile}
-              alt="mentor"
-              width={widthProfile}
-              height={widthProfile}
-            />
-          </Col>
-          <Col span={18}>
-            <div style={{fontSize: '20px', margin: '10px 0'}}>
-              <a href={props.persona.linkedin} target="_blank" rel="noreferrer">
-                <Image
-                  src={linkedinIcon}
-                  alt="logo"
-                  objectFit="contain"
-                  width="20"
-                  height="20"
-                />
-              </a>
-              {props.persona.name}
-            </div>
-            <p>{`"${props.persona.description.slice(0, 60)}..."`}</p>
-            <Card.Meta title={`Curso: ${props.persona.course}`} />
-            <h6></h6>
+  const invitedDate = new Date(props.persona.invitedDate)
+  const dateFormated = `${invitedDate.getDate()}-${invitedDate.getMonth()}-${invitedDate.getFullYear()}`
 
-            <Button
-              type="primary"
-              size="small"
-              onClick={showModal}
-              icon={<DoubleRightOutlined />}
-              align="middle"
-              style={{marginTop: '20px', alignSelf: 'end'}}
-            >
-              Saiba mais
-            </Button>
-          </Col>
-        </Row>
-      </Card>
-      <Modal
-        visible={isModalVisible}
-        centered={true}
-        onCancel={handleCancel}
-        footer={[
-          <Button
-            key="cancel"
-            onClick={handleCancel}
-            style={{marginTop: '10px'}}
-          >
-            Voltar
-          </Button>,
-          <Button key="reject" onClick={showPromiseNegative}>
-            Excluir Solicitação
-          </Button>,
-          <Button type="primary" key="confirm" onClick={showPromiseConfirm}>
-            Aceitar Solicitação
-          </Button>,
-        ]}
-      >
-        <Image
-          src={props.persona.imageProfile}
-          alt="mentor"
-          width={widthProfile}
-          height={widthProfile}
-        />
-        <div style={{fontSize: '22px', margin: '20px 0'}}>
-          <a href={props.persona.linkedin} target="_blank" rel="noreferrer">
-            <Image
-              src={linkedinIcon}
-              alt="logo"
-              objectFit="contain"
-              width="24"
-              height="24"
-            />
-          </a>
-          {`${props.persona.name} (${props.persona.pronoun}), ${props.persona.age}`}
-        </div>
-        <p>{props.persona.description}</p>
-        <Card>
-          <Card.Grid style={{width: '100%'}}>
-            <h6> Informações Acadêmicas</h6>
-            <a>{`Faculdade: ${props.persona.college}`}</a>
-            <br />
-            <a>{`Curso: ${props.persona.course}`}</a>
-          </Card.Grid>
+  const [diffHours, diffDays] = getInvitedDate(props.persona.invitedDate)
+  const hoursMissing = 24 - diffHours
+  const daysMissing = daysLimit - diffDays
+
+  return (
+    <Row>
+      <Col span={4} style={{margin: '10px 0 10px 50px'}}>
+        <Steps progressDot current={2} direction="vertical">
+          <Step
+            title={`Matching Realizado em ${dateFormated}`}
+            description={
+              daysMissing > 0
+                ? `Convite expira em ${daysMissing} dia(s)`
+                : `Convite expira em ${hoursMissing} hora(s)`
+            }
+            style={{margin: '20px 0px 80px 0px'}}
+          />
+        </Steps>
+      </Col>
+      <Col span={19} justify="center">
+        <Card hoverable type="inner" bordered={true}>
+          <Row>
+            <Col style={{margin: '10px 20px 10px 10px'}} span={4}>
+              <Image
+                src={props.persona.imageProfile}
+                alt="mentor"
+                width={widthProfile}
+                height={widthProfile}
+              />
+            </Col>
+            <Col span={18}>
+              <div style={{fontSize: '20px', margin: '10px 0'}}>
+                <a
+                  href={props.persona.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image
+                    src={linkedinIcon}
+                    alt="logo"
+                    objectFit="contain"
+                    width="20"
+                    height="20"
+                  />
+                </a>
+                {props.persona.name}
+              </div>
+              <p>{`"${props.persona.description.slice(0, 60)}..."`}</p>
+              <Card.Meta title={`Curso: ${props.persona.course}`} />
+              <h6></h6>
+
+              <Button
+                type="primary"
+                size="small"
+                onClick={showModal}
+                icon={<DoubleRightOutlined />}
+                align="middle"
+                style={{marginTop: '20px', alignSelf: 'end'}}
+              >
+                Saiba mais
+              </Button>
+            </Col>
+          </Row>
         </Card>
-      </Modal>
-    </Col>
+        <Modal
+          visible={isModalVisible}
+          centered={true}
+          onCancel={handleCancel}
+          footer={[
+            <Button
+              key="cancel"
+              onClick={handleCancel}
+              style={{marginTop: '10px'}}
+            >
+              Voltar
+            </Button>,
+            <Button key="reject" onClick={showPromiseNegative}>
+              Excluir Solicitação
+            </Button>,
+            <Button type="primary" key="confirm" onClick={showPromiseConfirm}>
+              Aceitar Solicitação
+            </Button>,
+          ]}
+        >
+          <Image
+            src={props.persona.imageProfile}
+            alt="mentor"
+            width={widthProfile}
+            height={widthProfile}
+          />
+          <div style={{fontSize: '22px', margin: '20px 0'}}>
+            <a href={props.persona.linkedin} target="_blank" rel="noreferrer">
+              <Image
+                src={linkedinIcon}
+                alt="logo"
+                objectFit="contain"
+                width="24"
+                height="24"
+              />
+            </a>
+            {`${props.persona.name} (${props.persona.pronoun}), ${props.persona.age}`}
+          </div>
+          <p>{props.persona.description}</p>
+          <Card>
+            <Card.Grid style={{width: '100%'}}>
+              <h6> Informações Acadêmicas</h6>
+              <a>{`Faculdade: ${props.persona.college}`}</a>
+              <br />
+              <a>{`Curso: ${props.persona.course}`}</a>
+            </Card.Grid>
+          </Card>
+        </Modal>
+      </Col>
+    </Row>
   )
+}
+
+function getInvitedDate(invitedDate) {
+  const todayDate = new Date()
+  const diffTime = Math.abs(invitedDate - todayDate)
+  const diffHours = Math.floor(diffTime / (1000 * 60 * 60)) % 24
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24))
+  return [diffHours, diffDays]
+}
+
+function setExpiredDate(date, experiredDays = daysLimit) {
+  const [diffHours, diffDays] = getInvitedDate(date)
+  if (experiredDays - diffDays < 0) return true
+  else return false
 }
