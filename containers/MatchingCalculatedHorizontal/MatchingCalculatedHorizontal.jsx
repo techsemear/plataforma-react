@@ -100,8 +100,6 @@ export default function MatchingCalculatedHorizontal({}) {
     }),
   )
 
-  console.log(personaList)
-
   const studentConfirmed = (id) => {
     setDecisionList(
       getDecisionList.map((item) => {
@@ -208,14 +206,14 @@ export default function MatchingCalculatedHorizontal({}) {
 
 function CardContact(props) {
   const invitedDate = new Date(props.persona.acceptedDate)
-  const dateFormated = `${invitedDate.getDate()}-${invitedDate.getMonth()}-${invitedDate.getFullYear()}`
+  const invitedDateFormated = `${invitedDate.getDate()}-${invitedDate.getMonth()}-${invitedDate.getFullYear()}`
 
   return (
     <Row>
       <Col span={4} style={{margin: '10px 0 10px 50px'}}>
         <Steps progressDot current={2} direction="vertical">
           <Step
-            title={`Convite foi aceito em ${dateFormated}`}
+            title={`Convite foi aceito em ${invitedDateFormated}`}
             style={{margin: '20px 0px 80px 0px'}}
           />
         </Steps>
@@ -321,7 +319,7 @@ function CardProfile(props) {
   }
 
   const invitedDate = new Date(props.persona.invitedDate)
-  const dateFormated = `${invitedDate.getDate()}-${invitedDate.getMonth()}-${invitedDate.getFullYear()}`
+  const invitedDateFormated = `${invitedDate.getDate()}-${invitedDate.getMonth()}-${invitedDate.getFullYear()}`
 
   const [diffHours, diffDays] = getInvitedDate(props.persona.invitedDate)
   const hoursMissing = 24 - diffHours
@@ -332,7 +330,7 @@ function CardProfile(props) {
       <Col span={4} style={{margin: '10px 0 10px 50px'}}>
         <Steps progressDot current={2} direction="vertical">
           <Step
-            title={`Matching Realizado em ${dateFormated}`}
+            title={`Matching Realizado em ${invitedDateFormated}`}
             description={
               daysMissing > 0
                 ? `Convite expira em ${daysMissing} dia(s)`

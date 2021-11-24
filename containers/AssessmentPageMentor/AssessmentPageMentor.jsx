@@ -23,7 +23,6 @@ export default function AssessmentPageMentor() {
   const onChangeStepInfo = (value) => {
     setStepInfoCompleted(value)
   }
-  console.log(stepInfoCompleted || current === 0)
 
   const disableNext = () => {
     if (stepInfoCompleted || current === 0) return false
