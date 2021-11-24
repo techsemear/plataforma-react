@@ -1,218 +1,243 @@
 import React, {Fragment, useState} from 'react'
-import {
-  Button,
-  message,
-  Col,
-  Row,
-  Checkbox,
-  Input,
-  Rate,
-  Radio,
-  Space,
-} from 'antd'
-import {
-  EditOutlined,
-  FrownOutlined,
-  MehOutlined,
-  SmileOutlined,
-} from '@ant-design/icons'
+import Image from 'next/image'
+import {Button, message, Col, Row, Card, Modal, Popover} from 'antd'
+import {DoubleRightOutlined, InfoCircleOutlined} from '@ant-design/icons'
 import 'antd/dist/antd.css'
 
-const CheckboxGroup = Checkbox.Group
-const {TextArea} = Input
+import imageProfile1 from '../../assets/image/landing-1/mentor1.png'
+import imageProfile2 from '../../assets/image/landing-1/mentor2.png'
+import imageProfile3 from '../../assets/image/landing-1/mentor3.png'
+import linkedinIcon from '../../assets/image/landing-1/linkedin-2.png'
 
-export default function Feedback({}) {
-  const [current, setCurrent] = useState(0)
-  const [checked, setBoxChecked] = useState([])
-  const [editClicked, setEditClicked] = useState(false)
-  const options = ['Sim', 'Não']
+const {confirm} = Modal
 
-  const next = () => {
-    setCurrent(current + 1)
-  }
+const personas = [
+  {
+    id: '1',
+    name: ' Camila Cintra',
+    age: '33',
+    pronoun: 'Ela/Dela',
+    description:
+      'Há tempos eu vinha sentindo vontade de contribuir com o crescimento de outras pessoas e colocar minha vivência a serviço disso. Conforme vou crescendo, percebo que recebi muito da vida e que às vezes uma palavra, um gesto ou uma dica, pode transformar a vida de alguém, assim como a minha foi também transformada.',
+    profession: 'Researcher & Brand Strategist',
+    company: 'Float',
+    college: 'Universidade de São Paulo',
+    course: 'Ciências Sociais',
+    imageProfile: imageProfile1,
+    linkedin: 'https://www.linkedin.com/in/camila-cintra-0064348a/',
+  },
+  {
+    id: '2',
+    name: ' Giovanni Luigi',
+    age: '28',
+    pronoun: 'Ele/Dele',
+    description:
+      'Eu encontrei muitas histórias parecidas com a minha, o que me fez refletir muito sobre propósito, acho incrível o efeito que os jovens têm sobre a gente. Assim como compartilhamos experiência e conhecimentos, eles fornecem energia e esperança!',
+    profession: 'Digital Data Marketing Specialist',
+    company: 'Publicis Brasil',
+    college: 'Universidade de São Paulo',
+    course: 'Publicidade',
+    imageProfile: imageProfile2,
+    linkedin: 'https://www.linkedin.com/in/giovanni-luigi-mkt/',
+  },
+  {
+    id: '3',
+    name: ' Lucas Carvalho',
+    age: '32',
+    pronoun: 'Ele/Dele',
+    description:
+      'A oportunidade de dividir anseios, dúvidas, perspectivas de carreira e ensinamentos com jovens tão atentos é, sem dúvida, excepcional e um exercício de aprendizado. Tenho um carinho especial pela mentoria que me possibilitou conhecer um jovem inteligente, cheio de sonhos e que tem uma trajetória muito parecida com a que eu tive.',
+    profession: 'Advogado Júnior',
+    company: 'Demarest Advogados',
+    college: 'Universidade de São Paulo',
+    course: 'Direito',
+    imageProfile: imageProfile3,
+    linkedin: 'https://www.linkedin.com/in/lucas-vieira-carvalho-62a8aa18b/',
+  },
+]
 
-  const prev = () => {
-    setCurrent(current - 1)
-  }
+export default function MatchingCalculatedVertical({}) {
+  const personaList = personas.map((item) => ({...item, isSelected: false}))
 
-  const IntroductionStep = ({mentorName = 'Nome Mentor'}) => {
-    const options = ['Sim', 'Não']
-    const onChange = (value) => {
-      setBoxChecked(value)
-    }
+  const [isConfirmClicked, setConfirmClicked] = useState(personaList)
+  const [disabledMatch, setDisabledMatch] = useState(false)
 
-    return (
-      <Fragment>
-        <h1 align="center" className="my-5">
-          Lista de Presença
-        </h1>
-        <h6 align="center" className="my-5">
-          Esta página é a garantia da qualidade da sua sessão de mentoria!
-        </h6>
-        <h3 align="center" className="my-5">
-          Sua sessão de mentoria com {mentorName} aconteceu?
-        </h3>
-        <Row align="middle" justify="center">
-          <Col>
-            <CheckboxGroup
-              style={{transform: 'scale(2)'}}
-              options={options}
-              onChange={onChange}
-              value={checked.toString()}
-              disabled={checked.length > 0 ? true : false}
-            />
-          </Col>
-          <Col offset={2}>
-            <Button
-              onClick={() => {
-                setEditClicked(true)
-                setBoxChecked([])
-              }}
-              disabled={checked.length > 0 ? false : true}
-            >
-              Editar <EditOutlined />
-            </Button>
-          </Col>
-        </Row>
-      </Fragment>
+  const mentorSelected = (id) => {
+    setConfirmClicked(
+      personaList
+        .map((item) => {
+          if (item.id === id) {
+            item.isSelected = true
+          }
+          return item
+        })
+        .filter(function (item) {
+          return item.isSelected === true
+        }),
     )
+    setDisabledMatch(true)
   }
-
-  const MentoringHappened = () => {
-    const customIcons = {
-      1: <FrownOutlined />,
-      2: <FrownOutlined />,
-      3: <MehOutlined />,
-      4: <SmileOutlined />,
-      5: <SmileOutlined />,
-    }
-    return (
-      <Fragment>
-        <Col span={20} offset={2}>
-          <h1> Feedback </h1>
-          <h5 style={{margin: '20px 0'}}> Como foi a mentoria para você? </h5>
-          <Row justify="center">
-            <Rate
-              align="center"
-              style={{transform: 'scale(2)', marginBottom: '60px'}}
-              defaultValue={3}
-              character={({index}) => customIcons[index + 1]}
-            />
-          </Row>
-          <h5>
-            Este espaço é para você nos contar um pouco mais da sua experiência
-          </h5>
-          <TextArea rows={4} />
-        </Col>
-      </Fragment>
-    )
-  }
-
-  const MentoringDidntHappened = () => {
-    const [value, setValue] = useState(0)
-
-    const onChange = (event) => {
-      setValue(event.target.value)
-    }
-
-    return (
-      <Fragment>
-        <Col span={20} offset={2}>
-          <h1 style={{marginBottom: '20px'}}>
-            Sentimos muito <FrownOutlined />
-          </h1>
-          <h5 style={{marginTop: '40px'}}>Porque a mentoria não aconteceu?</h5>
-          <Radio.Group
-            value={value}
-            onChange={onChange}
-            style={{
-              transform: 'scale(1.2)',
-              paddingLeft: '40px',
-              paddingTop: '15px',
-            }}
-          >
-            <Space direction="vertical">
-              <Radio value={1}>
-                Não pude realizar a mentoria devido a falta de disponibilidade
-              </Radio>
-              <Radio value={2}>
-                Tive problemas para me comunicar com o mentor
-              </Radio>
-              <Radio value={3}>
-                Marquei o encontro e o mentor não apareceu
-              </Radio>
-
-              <Radio value={4}>
-                Entrei em contato e o mentor não respondeu
-              </Radio>
-              <Radio value={5}>
-                Outro
-                {value === 5 ? (
-                  <Input style={{width: 300, marginLeft: 10}} />
-                ) : null}
-              </Radio>
-            </Space>
-          </Radio.Group>
-          <h5 style={{marginTop: '40px'}}>
-            Deseja contar um pouco mais sobre a sua experiência?
-          </h5>
-          <TextArea rows={4} />
-        </Col>
-      </Fragment>
-    )
-  }
-
-  const steps = [
-    {
-      title: 'Bem vindo',
-      content: <IntroductionStep />,
-    },
-    {
-      title: 'Infos Complementares',
-      content: <MentoringHappened />,
-    },
-    {
-      title: 'Infos Complementares',
-      content: <MentoringDidntHappened />,
-    },
-  ]
 
   return (
     <Fragment>
-      <div className="steps-content">
-        {(checked.toString() === options[0]) | (current === 0)
-          ? steps[current].content
-          : steps[current + 1].content}
-      </div>
-      <div className="steps-action">
-        {current < steps.length - 2 && (
-          <Button
-            style={{float: 'right', marginTop: '50px', marginRight: '200px'}}
-            type="primary"
-            onClick={() => next()}
-            disabled={checked.length > 0 ? false : true}
-          >
-            Próximo
-          </Button>
+      <div>
+        {isConfirmClicked.length === 1 ? (
+          <h4 style={{margin: '10px 0 10px 80px'}}>
+            Estamos preparando tudo para a sua mentoria e em breve entraremos em
+            contato!
+          </h4>
+        ) : (
+          <h2 style={{margin: '10px 0 10px 80px'}}>
+            Esses são os seus três melhores matches!
+            <Popover
+              className="mx-3"
+              content="Conheça-os e escolha um para realizar a mentoria"
+              overlayStyle={{
+                width: '25vw',
+              }}
+            >
+              <InfoCircleOutlined />
+            </Popover>
+          </h2>
         )}
-        {current === steps.length - 2 && (
-          <Button
-            style={{float: 'right', marginTop: '50px', marginRight: '200px'}}
-            type="primary"
-            onClick={() => message.success('Resposta salva com sucesso!')}
-          >
-            Enviar
-          </Button>
-        )}
-        {current > 0 && (
-          <Button
-            style={{float: 'right', marginTop: '50px', marginRight: '8px'}}
-            onClick={() => prev()}
-          >
-            Anterior
-          </Button>
-        )}
+        <Row gutter={50} justify="center">
+          {isConfirmClicked.map((item, index) => (
+            <CardProfile
+              persona={item}
+              key={`card-${index}`}
+              onClick={mentorSelected}
+              isMatchClicked={isConfirmClicked}
+            />
+          ))}
+        </Row>
       </div>
     </Fragment>
+  )
+}
+
+function CardProfile(props) {
+  const [isModalVisible, setIsModalVisible] = useState(false)
+
+  const widthProfile = 200
+
+  const showModal = () => {
+    setIsModalVisible(true)
+  }
+
+  const handleCancel = () => {
+    setIsModalVisible(false)
+  }
+
+  const showPromiseConfirm = () => {
+    confirm({
+      title: `Deseja confirmar a sua escolha com ${props.persona.name}?`,
+      content: 'Lembre-se: você não poderá voltar atrás na sua decisão',
+      onOk() {
+        setIsModalVisible(false)
+        props.onClick(props.persona.id)
+        message.success('Escolha realizada com sucesso!')
+        return new Promise((resolve) => {
+          setTimeout(resolve, 800)
+        })
+      },
+      onCancel() {},
+      okText: 'Confirmar',
+      cancelText: 'Voltar',
+    })
+  }
+
+  return (
+    <Col span={7}>
+      <Card hoverable bordered={true}>
+        <Image
+          src={props.persona.imageProfile}
+          alt="mentor"
+          width={widthProfile}
+          height={widthProfile}
+        />
+        <div style={{fontSize: '20px', margin: '20px 0'}}>
+          <a href={props.persona.linkedin} target="_blank" rel="noreferrer">
+            <Image
+              src={linkedinIcon}
+              alt="logo"
+              objectFit="contain"
+              width="24"
+              height="24"
+            />
+          </a>
+          {props.persona.name}
+        </div>
+        <p>{`"${props.persona.description.slice(0, 60)}..."`}</p>
+        <Card.Meta title={`Empresa: ${props.persona.company}`} />
+        <h6></h6>
+
+        <Button
+          type="primary"
+          size="large"
+          onClick={showModal}
+          icon={<DoubleRightOutlined />}
+          align="middle"
+          style={{marginTop: '20px'}}
+        >
+          Saiba mais
+        </Button>
+      </Card>
+      <Modal
+        visible={isModalVisible}
+        centered={true}
+        onCancel={handleCancel}
+        footer={[
+          <Button
+            key="cancel"
+            onClick={handleCancel}
+            style={{marginTop: '10px'}}
+          >
+            Voltar
+          </Button>,
+          <Button
+            type="primary"
+            key="confirm"
+            onClick={showPromiseConfirm}
+            disabled={props.disabledMatch}
+          >
+            Deu Match!
+          </Button>,
+        ]}
+      >
+        <Image
+          src={props.persona.imageProfile}
+          alt="mentor"
+          width={widthProfile}
+          height={widthProfile}
+        />
+        <div style={{fontSize: '22px', margin: '20px 0'}}>
+          <a href={props.persona.linkedin} target="_blank" rel="noreferrer">
+            <Image
+              src={linkedinIcon}
+              alt="logo"
+              objectFit="contain"
+              width="24"
+              height="24"
+            />
+          </a>
+          {`${props.persona.name} (${props.persona.pronoun}), ${props.persona.age}`}
+        </div>
+        <p>{props.persona.description}</p>
+        <Card>
+          <Card.Grid style={{width: '100%'}}>
+            <h6> Informações Profissionais</h6>
+            <a>{`Empresa: ${props.persona.company}`}</a>
+            <br />
+            <a>{`Cargo: ${props.persona.profession}`}</a>
+          </Card.Grid>
+          <Card.Grid style={{width: '100%'}}>
+            <h6> Informações Acadêmicas</h6>
+            <a>{`Faculdade: ${props.persona.college}`}</a>
+            <br />
+            <a>{`Curso: ${props.persona.course}`}</a>
+          </Card.Grid>
+        </Card>
+      </Modal>
+    </Col>
   )
 }

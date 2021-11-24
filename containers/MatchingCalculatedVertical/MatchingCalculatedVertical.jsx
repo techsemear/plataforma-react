@@ -9,7 +9,6 @@ import imageProfile2 from '../../assets/image/landing-1/mentor2.png'
 import imageProfile3 from '../../assets/image/landing-1/mentor3.png'
 import linkedinIcon from '../../assets/image/landing-1/linkedin-2.png'
 
-const {Meta} = Card
 const {confirm} = Modal
 
 const personas = [
@@ -73,7 +72,7 @@ export default function MatchingCalculatedVertical({}) {
           return item
         })
         .filter(function (item) {
-          return item.isSelected === true
+          return item.isSelected
         }),
     )
     setDisabledMatch(true)
@@ -108,6 +107,7 @@ export default function MatchingCalculatedVertical({}) {
               key={`card-${index}`}
               onClick={mentorSelected}
               isMatchClicked={isConfirmClicked}
+              disabledMatch={disabledMatch}
             />
           ))}
         </Row>
