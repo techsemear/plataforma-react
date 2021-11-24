@@ -23,7 +23,7 @@ const {Meta} = Card
 const {confirm} = Modal
 const {Step} = Steps
 
-const daysLimit = 3
+const daysLimit = 100
 
 const personas = [
   {
@@ -43,8 +43,8 @@ const personas = [
         isConfirmed: false,
     isRejected: false,
     isExperired: false,
-    acceptedDate: Date.parse('00-00-0000T00:00:00'),
-    rejectedDate: Date.parse('00-00-0000T00:00:00'),
+    acceptedDate: Date.parse('2001-01-01T00:00:00'),
+    rejectedDate: Date.parse('2001-01-01T00:00:00'),
   },
   {
     id: '2',
@@ -63,8 +63,8 @@ const personas = [
         isConfirmed: false,
     isRejected: false,
     isExperired: false,
-    acceptedDate: Date.parse('00-00-0000T00:00:00'),
-    rejectedDate: Date.parse('00-00-0000T00:00:00'),
+    acceptedDate: Date.parse('2001-01-01T00:00:00'),
+    rejectedDate: Date.parse('2001-01-01T00:00:00'),
   },
   {
     id: '3',
@@ -83,8 +83,8 @@ const personas = [
         isConfirmed: false,
     isRejected: false,
     isExperired: false,
-    acceptedDate: Date.parse('00-00-0000T00:00:00'),
-    rejectedDate: Date.parse('00-00-0000T00:00:00'),
+    acceptedDate: Date.parse('2001-01-01T00:00:00'),
+    rejectedDate: Date.parse('2001-01-01T00:00:00'),
   },
 ]
 
@@ -99,6 +99,8 @@ export default function MatchingCalculatedHorizontal({}) {
       return !item.isExperired
     }),
   )
+
+  console.log(personaList)
 
   const studentConfirmed = (id) => {
     setDecisionList(
