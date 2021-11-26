@@ -59,7 +59,7 @@ function CardPersona({personasProfile}) {
           data-aos-duration={1000}
           key={index}
         >
-          <Card heightCard="large">
+          <Card heightCard="large" widthCard="large">
             <div className="client-l8-card">
               <div className="image">
                 <Image src={persona.imageProfile} alt="image" />
